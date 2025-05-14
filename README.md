@@ -34,7 +34,7 @@ To learn more about the folder structure of an Astro project, refer to [our guid
 
 All commands are run from the root of the project, from a terminal:
 
-| Command                   | Action                                           |
+| Comandos                   | Accion                                          |
 | :------------------------ | :----------------------------------------------- |
 | `pnpm install`             | Installs dependencies                            |
 | `pnpm dev`             | Starts local dev server at `localhost:4321`      |
