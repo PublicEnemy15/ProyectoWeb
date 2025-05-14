@@ -1,4 +1,4 @@
-# Como instalar Astro
+# Proyecto para Taller Web `Website para la visualizacion y subida de mangas` 🎲
 
 ```sh
 pnpm create astro@latest
