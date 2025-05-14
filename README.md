@@ -1,4 +1,4 @@
-# Proyecto para Taller Web `Website para la visualizacion y subida de mangas` 🎲
+# Proyecto para Taller Web 🎲
 
 ```sh
 pnpm create astro@latest
