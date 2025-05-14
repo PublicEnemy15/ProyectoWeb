@@ -1,4 +1,5 @@
-# 🎲 PROYECTO PARA TALLER WEB 🎲
+# 🎲 KITH 🎲
+**`Proyecto para Taller Web`**
 
 ```sh
 pnpm create astro@latest
