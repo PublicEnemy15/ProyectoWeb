@@ -1,4 +1,4 @@
-# Astro Starter Kit: Basics
+# Como instalar Astro
 
 ```sh
 pnpm create astro@latest -- --template basics
