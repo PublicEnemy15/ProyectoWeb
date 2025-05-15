@@ -72,7 +72,7 @@ Con ello ya estarias trabajando en el proyecto de forma correcta ✅
 >`npm install -g astro (desde el home en powershell)`
 
 >[!NOTE]
->Para iniciar el localhost en tu terminal de Vs code coloca el siguiente comando:
+>Para iniciar el localhost en tu terminal de VS CODE coloca el siguiente comando:
 ```sh
 pnpm run dev
 ```
