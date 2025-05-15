@@ -1,4 +1,4 @@
-# 🎲 KITH 
+# 🎲 <span style="color:red">KITH</span>
 <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Nunito&weight=700&pause=1000&color=B63DEF&width=435&lines=PROYECTO+PARA+TALLER+WEB;DOCENTE%3A+JOSE+ANTONIO+ESPINAL+TEVES" alt="Typing SVG" /></a>
 
 >[!NOTE]
