@@ -58,7 +58,8 @@ git commit -m "Agregué el footer"
 ```
 Con ello ya estarias trabajando en el proyecto de forma correcta ✅
 
-Para iniciar el localhost en tu terminal de Vs code coloca el siguiente comando:
+>[!NOTE]
+>Para iniciar el localhost en tu terminal de Vs code coloca el siguiente comando:
 ```sh
 pnpm run dev
 ```
