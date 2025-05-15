@@ -30,7 +30,7 @@ Entonces ya estaras "conectado" al repositorio y trabajaras de forma `local`  pe
 
 Una vez que se te haya dado acceso como colaborador, deberás seguir estos pasos para trabajar correctamente en el proyecto y evitar errores.
 
-🐸 Comandos iniciales
+<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Nunito&weight=700&pause=1000&color=09FF96&width=435&lines=%F0%9F%90%B8+Comandos+iniciales" alt="Typing SVG" /></a>
 
 | Comando                               | Acción                                                                 |
 |---------------------------------------|------------------------------------------------------------------------|
