@@ -1,7 +1,6 @@
 # 🎲 KITH 
 **`Proyecto para Taller Web (Docente: Jose Antonio Espinal Teves)`**
-> 🧑‍🚀 **1.- Definición general** 
-Kith es una página web, enfocada en ser una vitrina digital para artistas y creadores de contenido visual como mangas, historietas e ilustraciones. Los usuarios pueden iniciar sesión y publicar sus obras bajo su nombre, fomentando así la promoción y visibilidad de su arte. Cada obra publicada incluye el nombre del autor, asegurando el reconocimiento adecuado. La web cuenta con una interfaz moderna, y se organiza en varias secciones clave, incluyendo una pestaña de comunidad, donde los usuarios pueden interactuar, y una sección de lo más popular, destacando los contenidos más vistos o valorados.
+> 🧑‍🚀 **1.- Definición general** Kith es una página web, enfocada en ser una vitrina digital para artistas y creadores de contenido visual como mangas, historietas e ilustraciones. Los usuarios pueden iniciar sesión y publicar sus obras bajo su nombre, fomentando así la promoción y visibilidad de su arte. Cada obra publicada incluye el nombre del autor, asegurando el reconocimiento adecuado. La web cuenta con una interfaz moderna, y se organiza en varias secciones clave, incluyendo una pestaña de comunidad, donde los usuarios pueden interactuar, y una sección de lo más popular, destacando los contenidos más vistos o valorados.
 
 ```sh
 pnpm create astro@latest
