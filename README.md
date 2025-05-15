@@ -9,7 +9,8 @@ Kith es una página web, enfocada en ser una vitrina digital para artistas y cre
 
 >[!IMPORTANT]
 >Tener instalado node.js y el pnpm
->ejecuatr el comando para ejecutar scripts:
+>
+>Ejecutar el comando en cmd para correr scripts:
 ```sh
 Set-ExecutionPolicy RemoteSigned - Alcance CurrentUser
 ```
