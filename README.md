@@ -133,3 +133,6 @@ pnpm run dev
 
 https://drive.google.com/file/d/1YrjhMQ5su-00adn1OajU7SspiXr-zQxM/view?usp=sharing
 
+## 🦎Mockup del proyecto
+
+https://www.figma.com/design/JEysFxBFIBnm6s2GrklMo7/Untitled?node-id=0-1&t=oOIWjFmWB5jakVKQ-1
