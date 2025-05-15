@@ -8,7 +8,7 @@ Kith es una página web, enfocada en ser una vitrina digital para artistas y cre
 </p>
 
 >[!IMPORTANT]
->Tener instalado Git, node.js y el pnpm
+>Tener instalado node.js y el pnpm
 >
 <a href="https://nodejs.org/" rel="nofollow"><img src="https://camo.githubusercontent.com/ab2f6071dd849b60b0ac1934c145fdd092baf9e69363d8c804abc6f00a0d5538/68747470733a2f2f637573746f6d2d69636f6e2d6261646765732e64656d6f6c61622e636f6d2f62616467652f2d4e6f64652e6a732d3333393933333f7374796c653d666f722d7468652d6261646765266c6f676f3d6e6f64652e6a73266c6f676f436f6c6f723d7768697465" alt="Nodo.js" data-canonical-src="https://custom-icon-badges.demolab.com/badge/-Node.js-339933?style=for-the-badge&amp;logo=node.js&amp;logoColor=white" style="max-width: 100%;"></a>
 <a href="https://pnpm.io/installation" rel="nofollow"><img src="https://camo.githubusercontent.com/047d735a434305f169d2e737eed3491fb6b784396b7ca3ff6d6f9fe09c38b8a6/68747470733a2f2f637573746f6d2d69636f6e2d6261646765732e64656d6f6c61622e636f6d2f62616467652f2d496e7374616c6c2532305061636b6167652d676f6c643f7374796c653d666f722d7468652d6261646765266c6f676f3d7061636b616765266c6f676f436f6c6f723d626c61636b" alt="instalar paquete" data-canonical-src="https://custom-icon-badges.demolab.com/badge/-Install%20Package-gold?style=for-the-badge&amp;logo=package&amp;logoColor=black" style="max-width: 100%;"></a>
@@ -24,6 +24,20 @@ continuaras ingresando a la carpeta que acabas de clonar con el siguiente comand
 ```sh
 Cd ProyectoWeb
 ```
+Entonces ya estaras "conectado" al repositorio y trabajaras de forma `local`  pero no estás conectado como colaborador, para ello debo unirte como colaborador por medio de tu ID
+
+## 🤖 Commandos
+
+Una vez te haya dado acceso como colaborador tendras que realizar una serie de comandos para poder trabajar en el proyecto y no cometer fallas:
+
+| Comandos                   | Accion                                          |
+| :------------------------ | :----------------------------------------------- |
+| `git chechkout`             | Te mostrara que estas en la rama main                           |
+| `git checkout -b nombredelarama `             | Ahora crearas tu propia rama para trabajar alli, reemplaza `nombredelarama` por tu nombre (no pongas un nombre falso)    |
+| `pnpm build`           | Build your production site to `./dist/`          |
+| `pnpm preview`         | Preview your build locally, before deploying     |
+| `pnpm astro ...`       | Run CLI commands like `astro add`, `astro check` |
+| `pnpm astro -- --help` | Get help using the Astro CLI                     |
 
 <a href="https://astro.build"><img src="https://astro.badg.es/v2/built-with-astro/small.svg" alt="Built with Astro" width="192" height="32"></a>
 
