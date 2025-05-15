@@ -148,9 +148,6 @@ To learn more about the folder structure of an Astro project, refer to [our guid
 />
 
 <br/>
-<br/>
-
-
 
 ## 👀 Want to learn more?
 
