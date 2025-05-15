@@ -37,6 +37,7 @@ Una vez que se te haya dado acceso como colaborador, deberás seguir estos pasos
 | `git checkout`                        | Muestra en qué rama estás actualmente (por defecto suele ser `main`). |
 | `git checkout -b nombredelarama`     | Crea una nueva rama con tu nombre y se cambia a ella automáticamente. Sustituye `nombredelarama` por tu nombre real (no uses uno falso). |
 | `git branch`                          | Verifica en qué rama estás. Deberías ver marcada con `*` la que acabas de crear. |
+| `git push -u origin nombredelarama`| Empujar tu nueva rama al servidor remoto.   |
 
 
 <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Nunito&weight=700&pause=1000&color=04AAFF&width=435&lines=%F0%9F%94%84+Guardar+y+preparar+cambios" alt="Typing SVG" /></a>
@@ -48,6 +49,7 @@ Después de hacer cambios en los archivos del proyecto, usa los siguientes coman
 | `git status`             | Muestra los archivos modificados, añadidos o eliminados.                    |
 | `git add .`              | Añade todos los archivos modificados al área de preparación (staging).      |
 | `git commit -m "Mensaje"`| Guarda tus cambios localmente con un mensaje que describa lo que hiciste.   |
+
 
 
 <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Nunito&weight=700&pause=1000&color=FF004B&width=435&lines=%F0%9F%94%B4+Ejemplo+de+commit" alt="Typing SVG" /></a>
