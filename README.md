@@ -14,11 +14,14 @@ Kith es una página web, enfocada en ser una vitrina digital para artistas y cre
 <a href="https://pnpm.io/installation" rel="nofollow"><img src="https://camo.githubusercontent.com/047d735a434305f169d2e737eed3491fb6b784396b7ca3ff6d6f9fe09c38b8a6/68747470733a2f2f637573746f6d2d69636f6e2d6261646765732e64656d6f6c61622e636f6d2f62616467652f2d496e7374616c6c2532305061636b6167652d676f6c643f7374796c653d666f722d7468652d6261646765266c6f676f3d7061636b616765266c6f676f436f6c6f723d626c61636b" alt="instalar paquete" data-canonical-src="https://custom-icon-badges.demolab.com/badge/-Install%20Package-gold?style=for-the-badge&amp;logo=package&amp;logoColor=black" style="max-width: 100%;"></a>
 
 ## 🚀 Clonar el repositorio en git
-Para iniciar tendras que clonar el repositorio para que lo tengas de forma local, la forma de clonar el repositorio es con el siguiente comando ejecuntandolo en git:
+Para iniciar tendras que clonar el repositorio para que lo tengas de forma local, la forma de clonar el repositorio es con el siguiente comando ejecuntandolo en GIT:
 
 ```sh
 git clone https://github.com/PublicEnemy15/ProyectoWeb.git
 ```
+## 🧞 Y ahora como me conecto a GIT?
+<p dir="auto">Para "conectarte" a GIT deberas por lo menos configuirar lo basico, para lo cual dejare un video de como hacerlo "<a href="https://youtu.be/VdGzPZ31ts8?si=Dqdt-xA1JGxn8-KS&t=502" rel="nofollow">Configurar GIT</a>"</p>
+
 
 <a href="https://astro.build"><img src="https://astro.badg.es/v2/built-with-astro/small.svg" alt="Built with Astro" width="192" height="32"></a>
 
