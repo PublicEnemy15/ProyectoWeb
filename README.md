@@ -63,26 +63,6 @@ Con ello ya estarias trabajando en el proyecto de forma correcta ✅
 ```sh
 pnpm run dev
 ```
----
-
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
-
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
-
 
 <a href="https://git.io/typing-svg">
   <img 
@@ -149,6 +129,7 @@ To learn more about the folder structure of an Astro project, refer to [our guid
 
 <br/>
 
-## 👀 Want to learn more?
+## 📕 Documentacion del proyecto
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+https://drive.google.com/file/d/1YrjhMQ5su-00adn1OajU7SspiXr-zQxM/view?usp=sharing
+
