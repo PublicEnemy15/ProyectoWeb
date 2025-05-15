@@ -66,10 +66,10 @@ Con ello ya estarias trabajando en el proyecto de forma correcta ✅
 
 >[!IMPORTANT]
 >reinstala las dependencias
->pnpm install
+>`pnpm install`
 >
 >instala el astro globalmente
->npm install -g astro (desde el home en powershell)
+>`npm install -g astro (desde el home en powershell)`
 
 >[!NOTE]
 >Para iniciar el localhost en tu terminal de Vs code coloca el siguiente comando:
