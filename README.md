@@ -26,7 +26,7 @@ Cd ProyectoWeb
 ```
 Entonces ya estaras "conectado" al repositorio y trabajaras de forma `local`  pero no estás conectado como colaborador, para ello debo unirte como `coloaborador` por medio de tu `ID de Github`
 
-## 🤖 Commandos
+## 🤖 Commandos (guia para los taraos)
 
 Una vez que se te haya dado acceso como colaborador, deberás seguir estos pasos para trabajar correctamente en el proyecto y evitar errores.
 
@@ -54,6 +54,7 @@ Ejemplo de commit:
 ```sh
 git commit -m "Agregué el footer"
 ```
+Con ello ya estarias trabajando en el proyecto de forma correcta ✅
 
 <a href="https://astro.build"><img src="https://astro.badg.es/v2/built-with-astro/small.svg" alt="Built with Astro" width="192" height="32"></a>
 
