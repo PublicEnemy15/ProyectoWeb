@@ -1,13 +1,13 @@
 # 🎲 KITH
 <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Nunito&weight=700&pause=1000&color=B63DEF&width=435&lines=PROYECTO+PARA+TALLER+WEB;DOCENTE%3A+JOSE+ANTONIO+ESPINAL+TEVES" alt="Typing SVG" /></a>
 
->[!NOTE]
+>[!NOTA]
 > 🧑‍🚀 **1.- Definición general**
 <p align="justify">
 Kith es una página web, enfocada en ser una vitrina digital para artistas y creadores de contenido visual como mangas, historietas e ilustraciones. Los usuarios pueden iniciar sesión y publicar sus obras bajo su nombre, fomentando así la promoción y visibilidad de su arte. Cada obra publicada incluye el nombre del autor, asegurando el reconocimiento adecuado. La web cuenta con una interfaz moderna, y se organiza en varias secciones clave, incluyendo una pestaña de comunidad, donde los usuarios pueden interactuar, y una sección de lo más popular, destacando los contenidos más vistos o valorados.
 </p>
 
->[!IMPORTANT]
+>[!IMPORTANTE]
 >Tener instalado el node.js y el pnpm
 >
 <a href="https://nodejs.org/" rel="nofollow"><img src="https://camo.githubusercontent.com/ab2f6071dd849b60b0ac1934c145fdd092baf9e69363d8c804abc6f00a0d5538/68747470733a2f2f637573746f6d2d69636f6e2d6261646765732e64656d6f6c61622e636f6d2f62616467652f2d4e6f64652e6a732d3333393933333f7374796c653d666f722d7468652d6261646765266c6f676f3d6e6f64652e6a73266c6f676f436f6c6f723d7768697465" alt="Nodo.js" data-canonical-src="https://custom-icon-badges.demolab.com/badge/-Node.js-339933?style=for-the-badge&amp;logo=node.js&amp;logoColor=white" style="max-width: 100%;"></a>
