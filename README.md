@@ -49,7 +49,6 @@ Después de hacer cambios en los archivos del proyecto, usa los siguientes coman
 | `git add .`              | Añade todos los archivos modificados al área de preparación (staging).      |
 | `git commit -m "Mensaje"`| Guarda tus cambios localmente con un mensaje que describa lo que hiciste.   |
 
-<a href="#" style="text-decoration: none; font-family: monospace;"> <span style="color: red;">ejemplo</span> <span style="color: green;"> de</span> <span style="color: blue;"> commit</span> </a>
 
 <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Nunito&weight=700&pause=1000&color=FF004B&width=435&lines=%F0%9F%94%B4+Ejemplo+de+commit" alt="Typing SVG" /></a>
 
