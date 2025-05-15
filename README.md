@@ -57,6 +57,11 @@ Después de hacer cambios en los archivos del proyecto, usa los siguientes coman
 git commit -m "Agregué el footer"
 ```
 Con ello ya estarias trabajando en el proyecto de forma correcta ✅
+
+Para iniciar el localhost en tu terminal de Vs code coloca el siguiente comando:
+```sh
+pnpm run dev
+```
 ---
 
 ## 🚀 Project Structure
@@ -77,20 +82,8 @@ Inside of your Astro project, you'll see the following folders and files:
 
 To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
 
-## 🧞 Commands
 
-All commands are run from the root of the project, from a terminal:
-
-| Comandos                   | Accion                                          |
-| :------------------------ | :----------------------------------------------- |
-| `pnpm install`             | Installs dependencies                            |
-| `pnpm dev`             | Starts local dev server at `localhost:4321`      |
-| `pnpm build`           | Build your production site to `./dist/`          |
-| `pnpm preview`         | Preview your build locally, before deploying     |
-| `pnpm astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `pnpm astro -- --help` | Get help using the Astro CLI                     |
-
-## Tecnologias usadas para el proyecto:
+<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Nunito&weight=700&pause=1000&color=FFC500&width=435&lines=%F0%9F%9F%A8+Tecnologias+usadas+para+el+proyecto%3A" alt="Typing SVG" /></a>
 <img 
     align="left" 
     alt="HTML"
