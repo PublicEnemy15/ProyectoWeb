@@ -91,16 +91,67 @@ All commands are run from the root of the project, from a terminal:
 | `pnpm astro -- --help` | Get help using the Astro CLI                     |
 
 ## Tecnologias usadas para el proyecto:
-<p dir="auto"><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/ebe0d1c7160f3845c251ae204ba90b58c8106a0a0e31abc61405c7359e00ca38/68747470733a2f2f63646e2e6a7364656c6976722e6e65742f67682f64657669636f6e732f64657669636f6e406c61746573742f69636f6e732f68746d6c352f68746d6c352d6f726967696e616c2e737667"><img align="left" alt="HTML" title="HTML" width="30px" src="https://camo.githubusercontent.com/ebe0d1c7160f3845c251ae204ba90b58c8106a0a0e31abc61405c7359e00ca38/68747470733a2f2f63646e2e6a7364656c6976722e6e65742f67682f64657669636f6e732f64657669636f6e406c61746573742f69636f6e732f68746d6c352f68746d6c352d6f726967696e616c2e737667" data-canonical-src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" style="max-width: 100%;"></a>
-<a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/693dc250d1c982bee56e759187ec3612558051fc57b8ea31146d6138871357aa/68747470733a2f2f63646e2e6a7364656c6976722e6e65742f67682f64657669636f6e732f64657669636f6e406c61746573742f69636f6e732f637373332f637373332d6f726967696e616c2e737667"><img align="left" alt="CSS" title="CSS" width="30px" src="https://camo.githubusercontent.com/693dc250d1c982bee56e759187ec3612558051fc57b8ea31146d6138871357aa/68747470733a2f2f63646e2e6a7364656c6976722e6e65742f67682f64657669636f6e732f64657669636f6e406c61746573742f69636f6e732f637373332f637373332d6f726967696e616c2e737667" data-canonical-src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" style="max-width: 100%;"></a>
-<a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/9e8b3af8a098a645ed25b96b0cf1912032b0bd7bb20b843213b8b5325ee75d24/68747470733a2f2f63646e2e6a7364656c6976722e6e65742f67682f64657669636f6e732f64657669636f6e406c61746573742f69636f6e732f6a6176617363726970742f6a6176617363726970742d6f726967696e616c2e737667"><img align="left" alt="JavaScript" title="JavaScript" width="30px" src="https://camo.githubusercontent.com/9e8b3af8a098a645ed25b96b0cf1912032b0bd7bb20b843213b8b5325ee75d24/68747470733a2f2f63646e2e6a7364656c6976722e6e65742f67682f64657669636f6e732f64657669636f6e406c61746573742f69636f6e732f6a6176617363726970742f6a6176617363726970742d6f726967696e616c2e737667" data-canonical-src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" style="max-width: 100%;"></a>
-<a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/f99a2a0a1155e5f2b7276ee8533a602c2b34e59e8d03c44c48fc4442660e9752/68747470733a2f2f63646e2e6a7364656c6976722e6e65742f67682f64657669636f6e732f64657669636f6e406c61746573742f69636f6e732f747970657363726970742f747970657363726970742d6f726967696e616c2e737667"><img align="left" alt="TypeScript" title="TypeScript" width="30px" src="https://camo.githubusercontent.com/f99a2a0a1155e5f2b7276ee8533a602c2b34e59e8d03c44c48fc4442660e9752/68747470733a2f2f63646e2e6a7364656c6976722e6e65742f67682f64657669636f6e732f64657669636f6e406c61746573742f69636f6e732f747970657363726970742f747970657363726970742d6f726967696e616c2e737667" data-canonical-src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg" style="max-width: 100%;"></a>
-  
-<a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/abba501b95cfaf3f09d6547feb90ee82e26e92e273d23a057bd9d5a3e1e29b1c/68747470733a2f2f63646e2e6a7364656c6976722e6e65742f67682f64657669636f6e732f64657669636f6e406c61746573742f69636f6e732f7461696c77696e646373732f7461696c77696e646373732d6f726967696e616c2e737667"><img align="left" alt="Tailwind" title="Tailwind" width="30px" src="https://camo.githubusercontent.com/abba501b95cfaf3f09d6547feb90ee82e26e92e273d23a057bd9d5a3e1e29b1c/68747470733a2f2f63646e2e6a7364656c6976722e6e65742f67682f64657669636f6e732f64657669636f6e406c61746573742f69636f6e732f7461696c77696e646373732f7461696c77696e646373732d6f726967696e616c2e737667" data-canonical-src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" style="max-width: 100%;"></a>
-<a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/60128f24b3db6513987c90119eafe50df033f8f8b1015ccd1309cb8bc7287303/68747470733a2f2f63646e2e6a7364656c6976722e6e65742f67682f64657669636f6e732f64657669636f6e406c61746573742f69636f6e732f736173732f736173732d6f726967696e616c2e737667"><img align="left" alt="SASS" title="SASS" width="30px" src="https://camo.githubusercontent.com/60128f24b3db6513987c90119eafe50df033f8f8b1015ccd1309cb8bc7287303/68747470733a2f2f63646e2e6a7364656c6976722e6e65742f67682f64657669636f6e732f64657669636f6e406c61746573742f69636f6e732f736173732f736173732d6f726967696e616c2e737667" data-canonical-src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sass/sass-original.svg" style="max-width: 100%;"></a>
+<img 
+    align="left" 
+    alt="HTML"
+    title="HTML" 
+    width="30px" 
+    style="padding-right: 10px;" 
+    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" 
+/>
+<img 
+    align="left" 
+    alt="CSS" 
+    title="CSS"
+    width="30px" 
+    style="padding-right: 10px;" 
+    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" 
+/>
+<img 
+    align="left" 
+    alt="JavaScript" 
+    title="JavaScript"
+    width="30px" 
+    style="padding-right: 10px;" 
+    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" 
+/>
+<img 
+    align="left" 
+    alt="TypeScript"
+    title="TypeScript" 
+    width="30px" 
+    style="padding-right: 10px;" 
+    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg" 
+/>
+<img 
+    align="left" 
+    alt="SASS" 
+    title="SASS"
+    width="30px" 
+    style="padding-right: 10px;" 
+    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sass/sass-original.svg" 
+/>
+<img 
+    align="left" 
+    alt="Git" 
+    title="Git"
+    width="30px" 
+    style="padding-right: 10px;" 
+    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" 
+/>
 
-<a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/80ee24b2f1d1758eeeaa65bc396e11aef6d39a394edc5c8925e2e04a5b5d3297/68747470733a2f2f63646e2e6a7364656c6976722e6e65742f67682f64657669636f6e732f64657669636f6e406c61746573742f69636f6e732f6769742f6769742d6f726967696e616c2e737667"><img align="left" alt="Git" title="Git" width="30px" src="https://camo.githubusercontent.com/80ee24b2f1d1758eeeaa65bc396e11aef6d39a394edc5c8925e2e04a5b5d3297/68747470733a2f2f63646e2e6a7364656c6976722e6e65742f67682f64657669636f6e732f64657669636f6e406c61746573742f69636f6e732f6769742f6769742d6f726967696e616c2e737667" data-canonical-src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" style="max-width: 100%;"></a>
-</p>
+<img 
+    align="left" 
+    alt="Astro" 
+    title="Astro"
+    width="30px" 
+    style="padding-right: 10px;" 
+    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/astro/astro-original.svg" 
+/>
+
+
+<br/>
+<br/>
 
 
 ## 👀 Want to learn more?
