@@ -30,7 +30,7 @@ Entonces ya estaras "conectado" al repositorio y trabajaras de forma `local`  pe
 
 Una vez que se te haya dado acceso como colaborador, deberás seguir estos pasos para trabajar correctamente en el proyecto y evitar errores.
 
-🤖 Comandos iniciales
+🐸 Comandos iniciales
 
 | Comando                               | Acción                                                                 |
 |---------------------------------------|------------------------------------------------------------------------|
@@ -38,7 +38,6 @@ Una vez que se te haya dado acceso como colaborador, deberás seguir estos pasos
 | `git checkout -b nombredelarama`     | Crea una nueva rama con tu nombre y se cambia a ella automáticamente. Sustituye `nombredelarama` por tu nombre real (no uses uno falso). |
 | `git branch`                          | Verifica en qué rama estás. Deberías ver marcada con `*` la que acabas de crear. |
 
----
 
 🔄 Guardar y preparar cambios
 
