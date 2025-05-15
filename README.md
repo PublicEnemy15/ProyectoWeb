@@ -39,7 +39,7 @@ Una vez que se te haya dado acceso como colaborador, deberás seguir estos pasos
 | `git branch`                          | Verifica en qué rama estás. Deberías ver marcada con `*` la que acabas de crear. |
 
 
-🔄 Guardar y preparar cambios
+<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Nunito&weight=700&pause=1000&color=04AAFF&width=435&lines=%F0%9F%94%84+Guardar+y+preparar+cambios" alt="Typing SVG" /></a>
 
 Después de hacer cambios en los archivos del proyecto, usa los siguientes comandos:
 
