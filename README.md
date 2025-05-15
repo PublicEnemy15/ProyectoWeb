@@ -24,20 +24,37 @@ continuaras ingresando a la carpeta que acabas de clonar con el siguiente comand
 ```sh
 Cd ProyectoWeb
 ```
-Entonces ya estaras "conectado" al repositorio y trabajaras de forma `local`  pero no estás conectado como colaborador, para ello debo unirte como colaborador por medio de tu ID
+Entonces ya estaras "conectado" al repositorio y trabajaras de forma `local`  pero no estás conectado como colaborador, para ello debo unirte como `coloaborador` por medio de tu `ID de Github`
 
 ## 🤖 Commandos
 
-Una vez te haya dado acceso como colaborador tendras que realizar una serie de comandos para poder trabajar en el proyecto y no cometer fallas:
+Una vez que se te haya dado acceso como colaborador, deberás seguir estos pasos para trabajar correctamente en el proyecto y evitar errores.
 
-| Comandos                   | Accion                                          |
-| :------------------------ | :----------------------------------------------- |
-| `git chechkout`             | Te mostrara que estas en la rama main                           |
-| `git checkout -b nombredelarama `             | Ahora crearas tu propia rama para trabajar alli, reemplaza `nombredelarama` por tu nombre (no pongas un nombre falso)    |
-| `pnpm build`           | Build your production site to `./dist/`          |
-| `pnpm preview`         | Preview your build locally, before deploying     |
-| `pnpm astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `pnpm astro -- --help` | Get help using the Astro CLI                     |
+🤖 Comandos iniciales
+
+| Comando                               | Acción                                                                 |
+|---------------------------------------|------------------------------------------------------------------------|
+| `git checkout`                        | Muestra en qué rama estás actualmente (por defecto suele ser `main`). |
+| `git checkout -b nombredelarama`     | Crea una nueva rama con tu nombre y se cambia a ella automáticamente. Sustituye `nombredelarama` por tu nombre real (no uses uno falso). |
+| `git branch`                          | Verifica en qué rama estás. Deberías ver marcada con `*` la que acabas de crear. |
+
+---
+
+🔄 Guardar y preparar cambios
+
+Después de hacer cambios en los archivos del proyecto, usa los siguientes comandos:
+
+| Comando                  | Descripción                                                                 |
+|--------------------------|-----------------------------------------------------------------------------|
+| `git status`             | Muestra los archivos modificados, añadidos o eliminados.                    |
+| `git add .`              | Añade todos los archivos modificados al área de preparación (staging).      |
+| `git commit -m "Mensaje"`| Guarda tus cambios localmente con un mensaje que describa lo que hiciste.   |
+
+Ejemplo de commit:
+
+```sh
+git commit -m "Agregué el footer"
+```
 
 <a href="https://astro.build"><img src="https://astro.badg.es/v2/built-with-astro/small.svg" alt="Built with Astro" width="192" height="32"></a>
 
