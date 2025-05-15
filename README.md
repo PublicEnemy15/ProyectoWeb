@@ -49,7 +49,8 @@ Después de hacer cambios en los archivos del proyecto, usa los siguientes coman
 | `git add .`              | Añade todos los archivos modificados al área de preparación (staging).      |
 | `git commit -m "Mensaje"`| Guarda tus cambios localmente con un mensaje que describa lo que hiciste.   |
 
-Ejemplo de commit:
+<a href="#" style="text-decoration: none; font-family: monospace;"> <span style="color: red;">ejemplo</span> <span style="color: green;"> de</span> <span style="color: blue;"> commit</span> </a>
+
 
 ```sh
 git commit -m "Agregué el footer"
