@@ -1,9 +1,12 @@
 # 🎲 KITH 
-**`Proyecto para Taller Web (Docente: Jose Antonio Espinal Teves)`**
+<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Nunito&weight=700&pause=1000&color=B63DEF&width=435&lines=PROYECTO+PARA+TALLER+WEB;DOCENTE%3A+JOSE+ANTONIO+ESPINAL+TEVES" alt="Typing SVG" /></a>
+
 >[!NOTE]
 > 🧑‍🚀 **1.- Definición general**
+<p align="justify">
+Kith es una página web, enfocada en ser una vitrina digital para artistas y creadores de contenido visual como mangas, historietas e ilustraciones. Los usuarios pueden iniciar sesión y publicar sus obras bajo su nombre, fomentando así la promoción y visibilidad de su arte. Cada obra publicada incluye el nombre del autor, asegurando el reconocimiento adecuado. La web cuenta con una interfaz moderna, y se organiza en varias secciones clave, incluyendo una pestaña de comunidad, donde los usuarios pueden interactuar, y una sección de lo más popular, destacando los contenidos más vistos o valorados.
+</p>
 
-<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Nunito&weight=700&pause=1000&color=B63DEF&width=435&lines=PROYECTO+PARA+TALLER+WEB;DOCENTE%3A+JOSE+ANTONIO+ESPINAL+TEVES" alt="Typing SVG" /></a>
 
 >[!IMPORTANT]
 >Tener instalado el node.js y el pnpm
