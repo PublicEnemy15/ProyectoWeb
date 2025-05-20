@@ -31,7 +31,7 @@ Cd ProyectoWeb
 ```
 Entonces ya estaras "conectado" al repositorio y trabajaras de forma `local`  pero no estás conectado como colaborador, para ello debo unirte como `coloaborador` por medio de tu `ID de Github`
 
-## 🤖 Comandos (guia para los taraos)
+## 🤖 Comandos
 
 Una vez que se te haya dado acceso como colaborador, deberás seguir estos pasos para trabajar correctamente en el proyecto y evitar errores.
 
