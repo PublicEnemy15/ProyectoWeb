@@ -1,21 +1,23 @@
 #contenedor-cargando {
     position: fixed;
     top: 0;
+    bottom: 0;
+    right: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: black; /* O el color de fondo que desees */
     align-content: center;
-    align-items: center;
-
-
-    
-    z-index: 9999;
+    text-align: center;
 }
 
 .loader-imagen {
-    width: 200px; /* Ajusta el tamaño de tu imagen */
-    height: 200px; /* Ajusta el tamaño de tu imagen */
+    width: 350px; /* Ajusta el tamaño de tu imagen */
+    height: 350px; /* Ajusta el tamaño de tu imagen */
+    margin-bottom: 50px;
+}
+
+#loading-txt {
+    font-size: 25px;
 }
 
 #contenido-principal {
