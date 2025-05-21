@@ -9,13 +9,18 @@ import './src/styles/Slider.scss'
 /* ==========================================
   2. IMPORTS COMPONENTES
 ===========================================*/
+import RATA_LOAD from "src/components/Content/rata-load.astro";
 import HEADER from "src/components/Header/Header.astro";
 import FOOTER from "src/components/Footer/Footer.astro";
 import SLIDER from "src/components/Content/Slider.astro";
 /* ==========================================
-  2. IMPORTS STYLES COMPONENTES
+  3. IMPORTS STYLES COMPONENTES
 ===========================================*/
 import './src/components/Header/Header.scss'
+import './src/components/Content/rata-load.css'
+/* ==========================================
+  4. IMPORTS JAVASCRIPT COMPONENTES
+===========================================*/
 ---
 
 <!doctype html>
@@ -26,8 +31,12 @@ import './src/components/Header/Header.scss'
 		<title>Taller Web Proyecto</title>
 	</head>
 	<body class="scroll" style="overflow: unset">
-		<HEADER />
-		<SLIDER/>
-		<FOOTER/>
+		<RATA_LOAD/>
+		<div id="contenido-principal">
+			<HEADER />
+			<SLIDER/>
+			<FOOTER/>
+		</div>
+		
 	</body>
 </html>
