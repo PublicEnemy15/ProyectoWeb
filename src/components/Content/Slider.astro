@@ -1,0 +1,129 @@
+<!-- 
+  Estructura principal del sitio web - Sección de inicio 
+  Esta es la sección principal de la página de inicio que contiene un carrusel de destacados
+-->
+<div class="home-landing">
+  <!-- Sección del carrusel de destacados/highlights -->
+  <section class="highlights-slider">
+    <!-- Contenedor de los elementos del carrusel -->
+    <div class="highlights-slider__items">
+      
+      <!-- Primer elemento del carrusel (índice 0) -->
+      <div data-index="0" class="highlights-slider__item">
+        <!-- Enlace principal con imagen -->
+        <a href="/shows/eastern-margins/episodes/eastern-margins-dj-billybool-13th-may-2025" 
+           class="highlights-slider__item-link nts-app Poster-contenedor-hover" 
+           target="_self" 
+           rel="">
+          <!-- Imágenes del banner (una versión grande y otra pequeña para diferentes dispositivos) -->
+          <img class="highlights-slider__large-image" src="src/assets/senaT.webp" alt="">
+          <img class="highlights-slider__small-image" src="src/assets/senaT.webp" alt="">
+          <div class="colorize" style="background-color: rgb(185, 54, 179);"></div>
+        </a>
+        
+        <!-- Contenido del elemento del carrusel -->
+        <div class="highlights-slider__contents">
+          <div class="highlights-slider__contents-wrapper">
+            <!-- Botón de reproducción para el audio -->
+            <button class="highlights-slider__play-button">
+              <!-- Icono SVG de reproducción -->
+              <svg class="nts-icon nts-icon--l nts-icon--overlay nts-icon--overlay--list" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600">
+                <title>Play</title>
+                <g id="_x33_--Hidden-_x28_closing-up_x29_-" transform="translate(-772 -385)">
+                  <g id="Drawer" transform="translate(0 43)">
+                    <g id="_x32_" transform="translate(18)">
+                      <path id="play" d="M1260.4 651.3L882.8 861.2c-4.4 2.4-8.2 2.7-11.2 1-3.1-1.7-4.6-5.1-4.6-10.2V433.2c0-4.8 1.5-8.2 4.6-10.2 3.1-2 6.8-1.7 11.2 1l377.6 210c4.4 2.4 6.6 5.3 6.6 8.7 0 3.3-2.2 6.2-6.6 8.6z"></path>
+                    </g>
+                  </g>
+                </g>
+              </svg>
+            </button>
+            
+            <!-- Contenedor del título y descripción -->
+            <div class="highlights-slider__title-container">
+              <div class="nts-font-primary text-uppercase text-bold highlights-slider__title">
+                <span>EASTERN MARGINS W/ DJ BILLYBOOL</span>
+                <!-- Etiquetas de género musical -->
+                <div class="nts-font-primary text-uppercase button-s highlights-slider__tags">trance</div>
+                <!-- Descripción del episodio -->
+                <div class="nts-font-secondary text-lowercase button-m highlights-slider__description">
+                  <span>An hour of trance bangers from Thaiboy Digital aka Billybool.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Otro elemento del carrusel (índice 18) - Estructura similar al primero -->
+      <div data-index="18" class="highlights-slider__item">
+        <a href="/shows/nts-x-adidas-originals" class="highlights-slider__item-link nts-app" target="_self" rel="">
+          <img class="highlights-slider__large-image" src="src/assets/Banner.jpg" alt="">
+          <img class="highlights-slider__small-image" src="src/assets/Banner.jpg" alt="">
+        </a>
+
+        <!-- Contenido del elemento -->
+        <div class="highlights-slider__contents">
+          <div class="highlights-slider__contents-wrapper">
+            <div class="highlights-slider__title-container">
+              <div class="nts-font-primary text-uppercase text-bold highlights-slider__title">
+                <span>NTS x adidas Originals: Original Sounds</span>
+                <!-- Descripción de la colaboración -->
+                <div class="nts-font-secondary text-lowercase button-m highlights-slider__description">
+                  <span>NTS x adidas Originals have teamed up for Original Sounds, a campaign spotlighting 16 homegrown artists across the UK who are redefining the sounds of their cities.</span>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Llamada a la acción -->
+            <span class="highlights-slider__cta nts-button">LISTEN TO LONDON, MANCHESTER, GLASGOW AND NEWCASTLE MIXES</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Panel de controles del carrusel -->
+    <div class="highlights-panel">
+      <!-- Barra de desplazamiento y contador de elementos -->
+      <div class="highlights-tracker">
+        <div class="highlights-scrollbar">
+          <!-- Indicador de posición en la barra de desplazamiento -->
+          <div style="width: 5.26316%; transform: translateX(0%);" class="highlights-scrollbar-thumb"></div>
+        </div>
+        <!-- Contador de elementos (1 de 19) -->
+        <div class="highlights-tracker__index body-s">1 / 19</div>
+      </div>
+      
+      <!-- Botones de control (anterior, reproducir/pausar, siguiente) -->
+      <div class="highlights-controls">
+        <!-- Botón anterior (flecha izquierda) -->
+        <button>
+          <svg style="transform:rotate(180deg)" class="nts-icon nts-icon--inverted nts-icon--ss" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600">
+            <path d="M150 117l60-61 240 244-240 244-60-61 180-183-180-183z"></path>
+          </svg>
+        </button>
+        
+        <!-- Botón de reproducción -->
+        <button>
+          <svg class="nts-icon nts-icon--inverted nts-icon--ss" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600">
+            <title>Play</title>
+            <g id="_x33_--Hidden-_x28_closing-up_x29_-" transform="translate(-772 -385)">
+              <g id="Drawer" transform="translate(0 43)">
+                <g id="_x32_" transform="translate(18)">
+                  <path id="play" d="M1260.4 651.3L882.8 861.2c-4.4 2.4-8.2 2.7-11.2 1-3.1-1.7-4.6-5.1-4.6-10.2V433.2c0-4.8 1.5-8.2 4.6-10.2 3.1-2 6.8-1.7 11.2 1l377.6 210c4.4 2.4 6.6 5.3 6.6 8.7 0 3.3-2.2 6.2-6.6 8.6z"></path>
+                </g>
+              </g>
+            </g>
+          </svg>
+        </button>
+        
+        <!-- Botón siguiente (flecha derecha) -->
+        <button>
+          <svg class="nts-icon nts-icon--inverted nts-icon--ss" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600">
+            <path d="M150 117l60-61 240 244-240 244-60-61 180-183-180-183z"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </section>
+</div>
