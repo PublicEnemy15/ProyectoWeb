@@ -1,14 +1,13 @@
 <div id="contenedor-cargando">
-  <img src="../../assets/rata.gif" alt="Cargando..." class="loader-imagen">
-  <br>
+  <img src="/src/assets/rat.gif" alt="Cargando..." class="loader-imagen">
+
   <p id="loading-txt">Cargando</p>
 </div>
 
 <script>
-import { ocultarCargando } from "./ocultarCargando.1.mts";
-
-    export const contenedorCargando = document.getElementById('contenedor-cargando');
-    export const contenidoPrincipal = document.getElementById('contenido-principal');
+    const contenedorCargando = document.getElementById('contenedor-cargando');
+    const contenidoPrincipal = document.getElementById('contenido-principal');
+    const txtLoad = document.getElementById('loading-txt')
     function getRandomInt(min: number, max: number) {
     return Math.floor(Math.random() * (max-min)+min);
     }
@@ -16,11 +15,30 @@ import { ocultarCargando } from "./ocultarCargando.1.mts";
     let cargaCompleta = false;
     window.onload = function() {
         cargaCompleta = true;
+        /*txtDots();*/
         ocultarCargandoSiListo();
     };
+    function ocultarCargando() {
+        if (contenedorCargando) contenedorCargando.style.display = 'none';
+        if (contenidoPrincipal) contenidoPrincipal.style.display = 'block';
+    }
     function ocultarCargandoSiListo() {
         if (cargaCompleta) {
-        setTimeout(ocultarCargando, tiempoCarga);
+            /*txtDots();*/
+            setTimeout(ocultarCargando, tiempoCarga);
         }
     }
+
+    /*function vacio(){}
+
+    function txtDots(){
+        for(let i=1; i<=3; i++){
+            setTimeout(vacio, tiempoCarga)
+            switch (i){
+                case 1: if(txtLoad) txtLoad.innerText = 'Cargando.'; break;
+                case 2: if(txtLoad) txtLoad.innerText = 'Cargando..'; break;
+                case 3: if(txtLoad) txtLoad.innerText = 'Cargando...'; break;
+            }
+        } 
+    }*/
 </script>
