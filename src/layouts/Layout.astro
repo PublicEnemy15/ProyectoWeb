@@ -6,6 +6,8 @@ import './src/mixins/utilities.scss'
 import './src/styles/Reboot.scss' 
 import './src/styles/stylefunciona.css' 
 import './src/styles/Slider.scss'
+import './src/styles/SeriesDestacadas.scss'
+import './src/styles/KithArrow.scss'
 /* ==========================================
   2. IMPORTS COMPONENTES
 ===========================================*/
@@ -13,6 +15,7 @@ import RATA_LOAD from "src/components/Content/rata-load.astro";
 import HEADER from "src/components/Header/Header.astro";
 import FOOTER from "src/components/Footer/Footer.astro";
 import SLIDER from "src/components/Content/Slider.astro";
+import DESTACADOS from "src/components/Content/Destacados.astro";
 /* ==========================================
   3. IMPORTS STYLES COMPONENTES
 ===========================================*/
@@ -31,12 +34,10 @@ import './src/components/Content/rata-load.css'
 		<title>Taller Web Proyecto</title>
 	</head>
 	<body class="scroll" style="overflow: unset">
-		<RATA_LOAD/>
-		<div id="contenido-principal">
-			<HEADER />
-			<SLIDER/>
-			<FOOTER/>
-		</div>
-		
+		<HEADER />
+		<SLIDER/>
+		<div class="ArticleStrip"><div class="SpacerStrip" style="height: 70px;"></div></div>
+		<DESTACADOS/>
+		<FOOTER/>
 	</body>
 </html>
