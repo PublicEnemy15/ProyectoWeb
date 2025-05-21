@@ -10,6 +10,11 @@ Kith es una página web, enfocada en ser una vitrina digital para artistas y cre
 >[!IMPORTANT]
 >Tener instalado node.js y el pnpm
 >
+>Ejecutar el comando en cmd para correr scripts:
+```sh
+Set-ExecutionPolicy RemoteSigned - Alcance CurrentUser
+```
+
 <a href="https://nodejs.org/" rel="nofollow"><img src="https://camo.githubusercontent.com/ab2f6071dd849b60b0ac1934c145fdd092baf9e69363d8c804abc6f00a0d5538/68747470733a2f2f637573746f6d2d69636f6e2d6261646765732e64656d6f6c61622e636f6d2f62616467652f2d4e6f64652e6a732d3333393933333f7374796c653d666f722d7468652d6261646765266c6f676f3d6e6f64652e6a73266c6f676f436f6c6f723d7768697465" alt="Nodo.js" data-canonical-src="https://custom-icon-badges.demolab.com/badge/-Node.js-339933?style=for-the-badge&amp;logo=node.js&amp;logoColor=white" style="max-width: 100%;"></a>
 <a href="https://pnpm.io/installation" rel="nofollow"><img src="https://camo.githubusercontent.com/047d735a434305f169d2e737eed3491fb6b784396b7ca3ff6d6f9fe09c38b8a6/68747470733a2f2f637573746f6d2d69636f6e2d6261646765732e64656d6f6c61622e636f6d2f62616467652f2d496e7374616c6c2532305061636b6167652d676f6c643f7374796c653d666f722d7468652d6261646765266c6f676f3d7061636b616765266c6f676f436f6c6f723d626c61636b" alt="instalar paquete" data-canonical-src="https://custom-icon-badges.demolab.com/badge/-Install%20Package-gold?style=for-the-badge&amp;logo=package&amp;logoColor=black" style="max-width: 100%;"></a>
 
@@ -26,7 +31,7 @@ Cd ProyectoWeb
 ```
 Entonces ya estaras "conectado" al repositorio y trabajaras de forma `local`  pero no estás conectado como colaborador, para ello debo unirte como `coloaborador` por medio de tu `ID de Github`
 
-## 🤖 Comandos (guia para los taraos)
+## 🤖 Comandos
 
 Una vez que se te haya dado acceso como colaborador, deberás seguir estos pasos para trabajar correctamente en el proyecto y evitar errores.
 
@@ -59,8 +64,15 @@ git commit -m "Agregué el footer"
 ```
 Con ello ya estarias trabajando en el proyecto de forma correcta ✅
 
+>[!IMPORTANT]
+>reinstala las dependencias
+>`pnpm install`
+>
+>instala el astro globalmente
+>`npm install -g astro (desde el home en powershell)`
+
 >[!NOTE]
->Para iniciar el localhost en tu terminal de Vs code coloca el siguiente comando:
+>Para iniciar el localhost en tu terminal de VS CODE coloca el siguiente comando:
 ```sh
 pnpm run dev
 ```

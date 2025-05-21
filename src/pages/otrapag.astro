@@ -5,13 +5,12 @@
 import './src/mixins/utilities.scss' 
 import './src/styles/Reboot.scss' 
 import './src/styles/stylefunciona.css' 
-import './src/styles/Slider.scss'
 /* ==========================================
   2. IMPORTS COMPONENTES
 ===========================================*/
+import Rata from '@/components/Content/rata.astro';
 import HEADER from "src/components/Header/Header.astro";
 import FOOTER from "src/components/Footer/Footer.astro";
-import SLIDER from "src/components/Content/Slider.astro";
 /* ==========================================
   2. IMPORTS STYLES COMPONENTES
 ===========================================*/
@@ -26,8 +25,7 @@ import './src/components/Header/Header.scss'
 		<title>Taller Web Proyecto</title>
 	</head>
 	<body class="scroll" style="overflow: unset">
-		<HEADER />
-		<SLIDER/>
-		<FOOTER/>
+    <HEADER/>
+		<Rata />
 	</body>
 </html>
