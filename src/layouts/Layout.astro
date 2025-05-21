@@ -6,12 +6,14 @@ import './src/mixins/utilities.scss'
 import './src/styles/Reboot.scss' 
 import './src/styles/stylefunciona.css' 
 import './src/styles/Slider.scss'
+import './src/styles/SeriesDestacadas.scss'
 /* ==========================================
   2. IMPORTS COMPONENTES
 ===========================================*/
 import HEADER from "src/components/Header/Header.astro";
 import FOOTER from "src/components/Footer/Footer.astro";
 import SLIDER from "src/components/Content/Slider.astro";
+import DESTACADOS from "src/components/Content/Destacados.astro";
 /* ==========================================
   2. IMPORTS STYLES COMPONENTES
 ===========================================*/
@@ -28,6 +30,8 @@ import './src/components/Header/Header.scss'
 	<body class="scroll" style="overflow: unset">
 		<HEADER />
 		<SLIDER/>
+		<div class="ArticleStrip"><div class="SpacerStrip" style="height: 70px;"></div></div>
+		<DESTACADOS/>
 		<FOOTER/>
 	</body>
 </html>
