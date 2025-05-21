@@ -1,0 +1,20 @@
+const contenedorCargando = document.getElementById('contenedor-cargando');
+const contenidoPrincipal = document.getElementById('contenido-principal');
+function getRandomInt(min, max) {
+return Math.floor(Math.random() * (max-min)+min);
+}
+const tiempoCarga = getRandomInt(500,4000); // Tiempo en milisegundos (ej: 3 segundos)
+let cargaCompleta = false;
+window.onload = function() {
+    cargaCompleta = true;
+    ocultarCargandoSiListo();
+};
+function ocultarCargando() {
+    contenedorCargando.style.display = 'none';
+    contenidoPrincipal.style.display = 'block';
+}
+function ocultarCargandoSiListo() {
+    if (cargaCompleta) {
+    setTimeout(ocultarCargando, tiempoCarga);
+    }
+}
