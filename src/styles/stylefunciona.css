@@ -16873,6 +16873,7 @@ input[type=checkbox].episode-player-tracklist__checkbox-input:checked::after {
     }
 }
 
+
 @media(min-width: 1025px) {
     .collections-grid-item:focus .collections-grid-item__inner-content::before,.collections-grid-item:hover .collections-grid-item__inner-content::before {
         opacity:1
