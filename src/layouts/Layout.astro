@@ -5,9 +5,8 @@
 import './src/mixins/utilities.scss' 
 import './src/styles/Reboot.scss' 
 import './src/styles/stylefunciona.css' 
-import './src/styles/Slider.scss'
-import './src/styles/SeriesDestacadas.scss'
 import './src/styles/KithArrow.scss'
+
 /* ==========================================
   2. IMPORTS COMPONENTES
 ===========================================*/
@@ -15,10 +14,21 @@ import HEADER from "src/components/Header/Header.astro";
 import FOOTER from "src/components/Footer/Footer.astro";
 import SLIDER from "src/components/Content/Slider.astro";
 import DESTACADOS from "src/components/Content/Destacados.astro";
+import NUEVOSCAPS from "src/components/Content/NuevosCaps.astro";
+import NUEVOSMANGAS from '@/components/Content/NuevosMangas.astro';
+import ADBANNER from '@/components/Content/ADBanner.astro';
 /* ==========================================
   2. IMPORTS STYLES COMPONENTES
 ===========================================*/
 import './src/components/Header/Header.scss'
+import './src/styles/InfoBox.scss'
+import './src/styles/SeriesDestacadas.scss'
+
+import './src/styles/ChapterWheelStrip.scss'
+import './src/styles/KithSlider.scss'
+import './src/styles/Slider.scss'
+
+import './src/styles/NuevosMangas.scss'
 ---
 
 <!doctype html>
@@ -33,6 +43,13 @@ import './src/components/Header/Header.scss'
 		<SLIDER/>
 		<div class="ArticleStrip"><div class="SpacerStrip" style="height: 70px;"></div></div>
 		<DESTACADOS/>
+		<div class="ArticleStrip"><div class="SpacerStrip" style="height: 70px;"></div></div>
+		<NUEVOSCAPS/>
+		<div class="ArticleStrip"><div class="SpacerStrip" style="height: 70px;"></div></div>
+		<NUEVOSMANGAS/>
+		<div class="ArticleStrip grid-set "><div class="SpacerStrip" style="height: 70px;"></div></div>
+		<ADBANNER/>
+		<div class="ArticleStrip"><div class="SpacerStrip" style="height: 70px;"></div></div>
 		<FOOTER/>
 	</body>
 </html>

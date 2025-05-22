@@ -1,0 +1,269 @@
+.KodanshaSlider {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    --slider-width: 1400px;
+    --slider-count: 4;
+    --slider-gap-small: 10px;
+    --slider-gap-large: 15px;
+}
+
+.KodanshaSlider .KodanshaSlider-contentWrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.KodanshaSlider .KodanshaSlider-contentWrapper>h2 {
+    font-weight: 700;
+    font-family: "ProximaNova-Bold", "Proxima Nova", sans-serif;
+    font-size: 34px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-left: -2.5px;
+}
+
+.KodanshaSlider .KodanshaSlider-contentWrapper>h3 {
+    font-weight: 300;
+    font-family: "ProximaNova-Regular", "Proxima Nova", sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+    margin: 0;
+    margin-left: -1.5px;
+}
+
+.KodanshaSlider .KodanshaSlider-sliderWrapper {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    max-width: 100%;
+}
+
+.KodanshaSlider .KodanshaSlider-bullets {
+    display: none;
+    position: absolute;
+    top: -18px;
+    right: 0;
+}
+
+.KodanshaSlider .KodanshaSlider-bullets>button {
+    width: 55px;
+    height: 1px;
+    background-color: #666;
+    border: none;
+    cursor: pointer;
+    transition: background-color 250ms;
+}
+
+.KodanshaSlider .KodanshaSlider-bullets>button.active {
+    background-color: #fff;
+}
+
+.KodanshaSlider .KodanshaSlider-bullets>button:focus {
+    outline: none;
+}
+
+.KodanshaSlider .KodanshaSlider-btnWrapper {
+    display: none;
+    position: absolute;
+    top: 0;
+}
+
+.KodanshaSlider .KodanshaSlider-btnWrapper>button {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    background-color: #f1f1f1;
+    border: none;
+    opacity: 0;
+    visibility: hidden;
+    cursor: pointer;
+    transition: opacity 250ms;
+}
+
+.KodanshaSlider .KodanshaSlider-btnWrapper>button:focus {
+    outline: none;
+}
+
+.KodanshaSlider .KodanshaSlider-btnWrapper>button>svg {
+    width: 35px;
+    height: 35px;
+    fill: #000;
+}
+
+.KodanshaSlider .KodanshaSlider-btnWrapper.prev {
+    left: 0;
+    transform: translateX(-100%);
+    padding-right: 15px;
+}
+
+.KodanshaSlider .KodanshaSlider-btnWrapper.prev>button {
+    justify-content: flex-end;
+}
+
+.KodanshaSlider .KodanshaSlider-btnWrapper.prev>button>svg {
+    transform: rotate(180deg);
+}
+
+.KodanshaSlider .KodanshaSlider-btnWrapper.next {
+    right: 0;
+    transform: translateX(100%);
+    padding-left: 15px;
+}
+
+.KodanshaSlider .KodanshaSlider-btnWrapper.next>button {
+    justify-content: flex-start;
+}
+
+.KodanshaSlider .ItemTitle {
+    font-size: 18px;
+}
+
+@media (min-width: 768px) {
+    .KodanshaSlider .KodanshaSlider-contentWrapper {
+        width: min(100%, 100vw - 130px - 30px);
+    }
+
+    .KodanshaSlider .KodanshaSlider-bullets {
+        display: flex;
+    }
+
+    .KodanshaSlider .KodanshaSlider-btnWrapper {
+        display: flex;
+    }
+
+    .KodanshaSlider:hover .KodanshaSlider-btnWrapper.visible>button {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+.Slider {
+    overflow-x: hidden;
+}
+
+.Slider-tape {
+    display: flex;
+    flex-direction: row;
+    gap: var(--slider-gap-small);
+}
+
+.Slider-item {
+    flex-shrink: 0;
+    display: flex;
+    align-items: flex-end;
+    width: calc((100% - var(--slider-gap-small)) / 2.2);
+}
+
+@media (min-width: 768px) {
+    .Slider-tape {
+        gap: var(--slider-gap-large);
+    }
+
+    .Slider-item {
+        width: min((var(--slider-width) - (var(--slider-count) - 1) * var(--slider-gap-large)) / var(--slider-count), (100% - (var(--slider-count) - 1) * var(--slider-gap-large)) / var(--slider-count));
+    }
+}
+
+.ui-series-poster-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    background-color: #f1f1f1;
+    position: relative;
+    user-select: none;
+    transition: opacity 125ms ease-out, background-color 125ms ease-out;
+}
+
+.ui-series-poster-container .on-sale {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-weight: 100;
+    font-family: Maax-Medium-Core, Maax-Medium, sans-serif;
+    color: #fff;
+    background-color: #000;
+    width: fit-content;
+    padding: 6px 7px 0 7px;
+    height: 27px;
+    font-size: 12px;
+    z-index: 1;
+    letter-spacing: 1px;
+}
+
+.ui-series-poster-container .on-sale-product-page {
+    top: 11.5%;
+    left: 15%;
+    font-size: 16px;
+    padding: 8px 10px 0 10px;
+    height: 35px;
+}
+
+@media screen and (max-width: 950px) {
+    .ui-series-poster-container .on-sale-product-page {
+        top: 0;
+        left: 0;
+        height: 27px;
+        font-size: 12px;
+        padding: 6px 7px 0 7px;
+    }
+}
+
+.ui-series-poster-container .ui-series-poster-container-2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.ui-series-poster-container .ui-series-poster-container-2 .ui-series-poster-wrapper {
+    width: 100%;
+    height: 100%;
+    background-color: #c6c6c6;
+    overflow: hidden;
+}
+
+.ui-series-poster-container .ui-series-poster-container-2 .ui-series-poster-wrapper .ui-series-poster-image {
+    width: 100%;
+    max-width: 100%;
+    filter: grayscale(100%);
+    height: 100%;
+    pointer-events: none;
+    user-select: none;
+    object-fit: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.ui-series-poster-container.ui-series-poster-container-hover .colorize {
+    cursor: pointer;
+}
+
+.ui-series-poster-container.ui-series-poster-container-hover .colorize:hover {
+    opacity: .6;
+}
+
+.ui-underlined-text {
+    width: auto;
+    height: auto;
+    font-weight: 700;
+    font-family: "ProximaNova-Bold", "Proxima Nova", sans-serif;
+    font-size: 13px;
+    text-transform: uppercase;
+    border-bottom: 2px solid #ababab;
+}
+
+.ui-underlined-text:hover {
+    cursor: pointer;
+}

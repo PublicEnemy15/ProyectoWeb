@@ -22712,6 +22712,7 @@ a.page-subscription__cta {
     justify-content: center;
     border-bottom: 1px solid #fff;
     height: 100vw;
+    width: 100%;
     min-height: 320px;
     position: relative
 }
@@ -22748,7 +22749,7 @@ a.page-subscription__cta {
 }
 
 .supporter-ad__info {
-    padding: 0 16px;
+    padding: 0 0px;
     position: relative;
     text-align: center;
     z-index: 2
