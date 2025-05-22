@@ -27,6 +27,18 @@
           </div>
         </div>
       </div>
+      <div data-index="1" class="highlights-slider__item">
+        <a href="/shows/nts-x-adidas-originals" class="highlights-slider__item-link nts-app" target="_self" rel="">
+          <img class="highlights-slider__large-image" src="src/assets/sena.jpg" alt="">
+          <img class="highlights-slider__small-image" src="src/assets/sena.jpg" alt="">
+        </a>
+
+        <!-- Contenido del elemento -->
+        <div class="highlights-slider__contents">
+          <div class="highlights-slider__contents-wrapper">
+          </div>
+        </div>
+      </div>
       
       <!-- Otro elemento del carrusel (índice 18) - Estructura similar al primero -->
       <div data-index="18" class="highlights-slider__item">
@@ -58,14 +70,14 @@
       <!-- Botones de control (anterior, reproducir/pausar, siguiente) -->
       <div class="highlights-controls">
         <!-- Botón anterior (flecha izquierda) -->
-        <button>
+        <button id="prevBtn">
           <svg style="transform:rotate(180deg)" class="nts-icon nts-icon--inverted nts-icon--ss" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600">
             <path d="M150 117l60-61 240 244-240 244-60-61 180-183-180-183z"></path>
           </svg>
         </button>
         
         <!-- Botón de reproducción -->
-        <button>
+        <button id="playBtn">
           <svg class="nts-icon nts-icon--inverted nts-icon--ss" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600">
             <title>Play</title>
             <g id="_x33_--Hidden-_x28_closing-up_x29_-" transform="translate(-772 -385)">
@@ -79,7 +91,7 @@
         </button>
         
         <!-- Botón siguiente (flecha derecha) -->
-        <button>
+        <button id="nextBtn">
           <svg class="nts-icon nts-icon--inverted nts-icon--ss" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600">
             <path d="M150 117l60-61 240 244-240 244-60-61 180-183-180-183z"></path>
           </svg>
@@ -87,6 +99,70 @@
       </div>
     </div>
   </section>
+
+
+
+  <script>
+    const prevBtn = document.getElementById("prevBtn");
+    const slides = document.querySelectorAll(".highlights-slider__item") as NodeListOf<HTMLElement>;
+    const indexDisplay = document.querySelector(".highlights-tracker__index") as HTMLElement | null;
+    const nextBtn = document.getElementById("nextBtn");
+    const playBtn = document.getElementById("playBtn");
+
+    let currentIndex = 0; 
+    let autoplay = true;
+    let interval: number | undefined;
+
+    function showSlide(index: number) { 
+      slides.forEach((slide, i) => {
+      slide.style.display = i === index ? "block" : "none";
+    });
+
+    if (indexDisplay) {
+     indexDisplay.textContent = `${index + 1} / ${slides.length}`;
+    }
+    }
+
+    prevBtn?.addEventListener("click", () => {
+      currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+      showSlide(currentIndex);
+    });
+
+    nextBtn?.addEventListener("click", () => {
+      currentIndex = (currentIndex + 1) % slides.length;
+      showSlide(currentIndex);
+    });
+
+    playBtn?.addEventListener("click", () => {
+      autoplay = !autoplay;
+        if (autoplay) {
+        startAutoplay();
+      }else {
+        stopAutoplay();
+      }
+      });
+
+    function startAutoplay() {
+      stopAutoplay(); // evitar duplicados
+      interval = window.setInterval(() => {
+      currentIndex = (currentIndex + 1) % slides.length;
+      showSlide(currentIndex);
+      }, 3000);
+    }
+
+    function stopAutoplay() {
+      if (interval !== undefined) {
+        clearInterval(interval);
+      }
+    }
+
+        showSlide(currentIndex);
+        startAutoplay(); 
+
+  </script>
+
+
+
 
   <!-- Main Article Info Box -->
   <div class="ArticuloPrincipal-infoBox">
