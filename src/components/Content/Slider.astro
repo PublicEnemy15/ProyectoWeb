@@ -10,48 +10,36 @@
       
       <!-- Primer elemento del carrusel (índice 0) -->
       <div data-index="0" class="highlights-slider__item">
-        <!-- Enlace principal con imagen -->
-        <a href="/shows/eastern-margins/episodes/eastern-margins-dj-billybool-13th-may-2025" 
-           class="highlights-slider__item-link nts-app Poster-contenedor-hover" 
-           target="_self" 
-           rel="">
-          <!-- Imágenes del banner (una versión grande y otra pequeña para diferentes dispositivos) -->
+        <a href="/otrapag" class="highlights-slider__item-link nts-app Poster-contenedor-hover">
           <img class="highlights-slider__large-image" src="src/assets/senaT.webp" alt="">
           <img class="highlights-slider__small-image" src="src/assets/senaT.webp" alt="">
           <div class="colorize" style="background-color: rgb(185, 54, 179);"></div>
         </a>
-        
-        <!-- Contenido del elemento del carrusel -->
-        <div class="highlights-slider__contents">
-          <div class="highlights-slider__contents-wrapper">
-          </div>
-        </div>
+        <div class="highlights-slider__contents"><div class="highlights-slider__contents-wrapper"></div></div>
       </div>
+
       <div data-index="1" class="highlights-slider__item">
-        <a href="/shows/nts-x-adidas-originals" class="highlights-slider__item-link nts-app" target="_self" rel="">
+        <a href="#" class="highlights-slider__item-link">
+          <img class="highlights-slider__large-image" src="src/assets/senaT.webp" alt="">
+          <img class="highlights-slider__small-image" src="src/assets/senaT.webp" alt="">
+        </a>
+        <div class="highlights-slider__contents"><div class="highlights-slider__contents-wrapper"></div></div>
+      </div>
+
+      <div data-index="2" class="highlights-slider__item">
+        <a href="#" class="highlights-slider__item-link">
           <img class="highlights-slider__large-image" src="src/assets/sena.jpg" alt="">
           <img class="highlights-slider__small-image" src="src/assets/sena.jpg" alt="">
         </a>
-
-        <!-- Contenido del elemento -->
-        <div class="highlights-slider__contents">
-          <div class="highlights-slider__contents-wrapper">
-          </div>
-        </div>
+        <div class="highlights-slider__contents"><div class="highlights-slider__contents-wrapper"></div></div>
       </div>
-      
-      <!-- Otro elemento del carrusel (índice 18) - Estructura similar al primero -->
-      <div data-index="18" class="highlights-slider__item">
-        <a href="/shows/nts-x-adidas-originals" class="highlights-slider__item-link nts-app" target="_self" rel="">
+
+      <div data-index="3" class="highlights-slider__item">
+        <a href="#" class="highlights-slider__item-link">
           <img class="highlights-slider__large-image" src="src/assets/Banner.jpg" alt="">
           <img class="highlights-slider__small-image" src="src/assets/Banner.jpg" alt="">
         </a>
-
-        <!-- Contenido del elemento -->
-        <div class="highlights-slider__contents">
-          <div class="highlights-slider__contents-wrapper">
-          </div>
-        </div>
+        <div class="highlights-slider__contents"><div class="highlights-slider__contents-wrapper"></div></div>
       </div>
     </div>
     
@@ -78,7 +66,7 @@
         
         <!-- Botón de reproducción -->
         <button id="playBtn">
-          <svg class="nts-icon nts-icon--inverted nts-icon--ss" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600">
+          <svg id= "icon-play" class="nts-icon nts-icon--inverted nts-icon--ss" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600">
             <title>Play</title>
             <g id="_x33_--Hidden-_x28_closing-up_x29_-" transform="translate(-772 -385)">
               <g id="Drawer" transform="translate(0 43)">
@@ -87,6 +75,10 @@
                 </g>
               </g>
             </g>
+          </svg>
+           <!-- Icono de PAUSA (se muestra cuando está en reproducción) -->
+          <svg id="icon-pause" class="nts-icon nts-icon--inverted nts-icon--ss" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" style="display: none;">
+            <path d="M143.2 118.36h101.19a10 10 0 0 1 10 10v343.32a10 10 0 0 1-10 10H143.2a10 10 0 0 1-9.95-10V128.32a10 10 0 0 1 9.95-9.96zm211.91 0H456.3a10 10 0 0 1 9.95 10v343.32a10 10 0 0 1-9.95 10H355.11a10 10 0 0 1-9.95-10V128.32a10 10 0 0 1 9.95-9.96z"/>
           </svg>
         </button>
         
@@ -101,64 +93,79 @@
   </section>
 
 
-
   <script>
     const prevBtn = document.getElementById("prevBtn");
     const slides = document.querySelectorAll(".highlights-slider__item") as NodeListOf<HTMLElement>;
     const indexDisplay = document.querySelector(".highlights-tracker__index") as HTMLElement | null;
     const nextBtn = document.getElementById("nextBtn");
     const playBtn = document.getElementById("playBtn");
+    const iconPlayEl = document.getElementById("icon-play");
+    const iconPauseEl = document.getElementById("icon-pause");
 
-    let currentIndex = 0; 
+    const iconPlay = iconPlayEl instanceof SVGElement ? iconPlayEl : null;
+    const iconPause = iconPauseEl instanceof SVGElement ? iconPauseEl : null;
+
+    let currentIndex = 0;
     let autoplay = true;
     let interval: number | undefined;
 
-    function showSlide(index: number) { 
-      slides.forEach((slide, i) => {
-      slide.style.display = i === index ? "block" : "none";
-    });
+slides.forEach((slide, i) => {
+  slide.style.position = "absolute";
+  slide.style.transition = "transform 0.5s ease";
+  slide.style.top = "0";
+  slide.style.left = "0";
+  slide.style.width = "100%";
+  slide.style.transform = `translateX(${i * 100}%)`;
+});
 
-    if (indexDisplay) {
-     indexDisplay.textContent = `${index + 1} / ${slides.length}`;
-    }
-    }
+function showSlide(index: number): void {
+  slides.forEach((slide, i) => {
+    slide.style.transform = `translateX(${(i - index) * 100}%)`;
+  });
 
-    prevBtn?.addEventListener("click", () => {
-      currentIndex = (currentIndex - 1 + slides.length) % slides.length;
-      showSlide(currentIndex);
-    });
+  if (indexDisplay) {
+    indexDisplay.textContent = `${index + 1} / ${slides.length}`;
+  }
+}
 
-    nextBtn?.addEventListener("click", () => {
-      currentIndex = (currentIndex + 1) % slides.length;
-      showSlide(currentIndex);
-    });
+function goToPrevious(): void {
+  currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+  showSlide(currentIndex);
+}
 
-    playBtn?.addEventListener("click", () => {
-      autoplay = !autoplay;
-        if (autoplay) {
-        startAutoplay();
-      }else {
-        stopAutoplay();
-      }
-      });
+function goToNext(): void {
+  currentIndex = (currentIndex + 1) % slides.length;
+  showSlide(currentIndex);
+}
 
-    function startAutoplay() {
-      stopAutoplay(); // evitar duplicados
-      interval = window.setInterval(() => {
-      currentIndex = (currentIndex + 1) % slides.length;
-      showSlide(currentIndex);
-      }, 3000);
-    }
+prevBtn?.addEventListener("click", goToPrevious);
+nextBtn?.addEventListener("click", goToNext);
 
-    function stopAutoplay() {
-      if (interval !== undefined) {
-        clearInterval(interval);
-      }
-    }
+playBtn?.addEventListener("click", () => {
+  autoplay = !autoplay;
+  updateIcon();
+  autoplay ? startAutoplay() : stopAutoplay();
+});
 
-        showSlide(currentIndex);
-        startAutoplay(); 
+function startAutoplay(): void {
+  stopAutoplay(); // evitar duplicados
+  interval = window.setInterval(goToNext, 3000);
+}
 
+function stopAutoplay(): void {
+  if (interval !== undefined) {
+    clearInterval(interval);
+  }
+}
+
+function updateIcon(): void {
+  iconPlay!.style.display = autoplay ? "none" : "inline";
+  iconPause!.style.display = autoplay ? "inline" : "none";
+}
+// Inicialización
+showSlide(currentIndex);
+startAutoplay();
+updateIcon();
   </script>
 
 
