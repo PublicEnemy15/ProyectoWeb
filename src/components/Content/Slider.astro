@@ -10,37 +10,22 @@
       
       <!-- Primer elemento del carrusel (índice 0) -->
       <div data-index="0" class="highlights-slider__item">
-        <a href="/otrapag" class="highlights-slider__item-link nts-app Poster-contenedor-hover">
+        <a href="/otrapag" class="highlights-slider__item-link nts-app Poster-contenedor-hover" target="_self" rel="">
           <img class="highlights-slider__large-image" src="src/assets/senaT.webp" alt="">
           <img class="highlights-slider__small-image" src="src/assets/senaT.webp" alt="">
-          <div class="colorize" style="background-color: rgb(185, 54, 179);"></div>
+          <div class="colorize" style="background-color: rgb(185, 54, 179);" ></div>
         </a>
         <div class="highlights-slider__contents"><div class="highlights-slider__contents-wrapper"></div></div>
       </div>
 
-      <div data-index="1" class="highlights-slider__item">
-        <a href="#" class="highlights-slider__item-link">
-          <img class="highlights-slider__large-image" src="src/assets/senaT.webp" alt="">
-          <img class="highlights-slider__small-image" src="src/assets/senaT.webp" alt="">
+      <div data-index="18" class="highlights-slider__item" style="position: absolute;">
+        <a href="/otrapag" class="highlights-slider__item-link nts-app Poster-contenedor-hover" target="_self" rel="">
+          <img class="highlights-slider__large-image" src="src/assets/sena.webp" alt="">
+          <img class="highlights-slider__small-image" src="src/assets/sena.webp" alt="">
         </a>
         <div class="highlights-slider__contents"><div class="highlights-slider__contents-wrapper"></div></div>
       </div>
 
-      <div data-index="2" class="highlights-slider__item">
-        <a href="#" class="highlights-slider__item-link">
-          <img class="highlights-slider__large-image" src="src/assets/sena.jpg" alt="">
-          <img class="highlights-slider__small-image" src="src/assets/sena.jpg" alt="">
-        </a>
-        <div class="highlights-slider__contents"><div class="highlights-slider__contents-wrapper"></div></div>
-      </div>
-
-      <div data-index="3" class="highlights-slider__item">
-        <a href="#" class="highlights-slider__item-link">
-          <img class="highlights-slider__large-image" src="src/assets/Banner.jpg" alt="">
-          <img class="highlights-slider__small-image" src="src/assets/Banner.jpg" alt="">
-        </a>
-        <div class="highlights-slider__contents"><div class="highlights-slider__contents-wrapper"></div></div>
-      </div>
     </div>
     
     <!-- Panel de controles del carrusel -->
@@ -109,14 +94,14 @@
     let autoplay = true;
     let interval: number | undefined;
 
-slides.forEach((slide, i) => {
-  slide.style.position = "absolute";
+    slides.forEach((slide, i) => {
+  slide.style.position = "center";
   slide.style.transition = "transform 0.5s ease";
   slide.style.top = "0";
   slide.style.left = "0";
   slide.style.width = "100%";
   slide.style.transform = `translateX(${i * 100}%)`;
-});
+    });
 
 function showSlide(index: number): void {
   slides.forEach((slide, i) => {
