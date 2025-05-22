@@ -17,6 +17,9 @@
 }
 
 #loading-txt {
+    margin: 0;
+    font-weight: 700;
+    font-family: "ProximaNova-Bold", "Proxima Nova", sans-serif;
     font-size: 25px;
 }
 
