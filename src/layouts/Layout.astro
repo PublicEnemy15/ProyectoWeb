@@ -19,6 +19,10 @@ import NUEVOSCAPS from "src/components/Content/NuevosCaps.astro";
 import NUEVOSMANGAS from '@/components/Content/NuevosMangas.astro';
 import ADBANNER from '@/components/Content/ADBanner.astro';
 import GENEROS from '@/components/Content/Generos.astro';
+import CHATBOT from '@/components/Content/Chatbot/Chatbot.astro';
+import GENEROS1 from '@/components/Content/Genero1.astro';
+import GENEROS2 from '@/components/Content/Genero2.astro';
+import GENEROS3 from '@/components/Content/Genero3.astro';
 /* ==========================================
   3. IMPORTS STYLES COMPONENTES
 ===========================================*/
@@ -35,6 +39,7 @@ import './src/components/Content/rata-load.css'
 
 import './src/styles/Generos.scss'
 
+import './src/components/Content/Chatbot/ChatBot.scss'
 /* ==========================================
   4. IMPORTS JAVASCRIPT COMPONENTES
 ===========================================*/
@@ -52,6 +57,7 @@ import './src/styles/Generos.scss'
 		<RATA_LOAD/>
 		<div id="contenido-principal">
 		<HEADER />
+		<CHATBOT/>
 		<SLIDER/>
 		<div class="ArticleStrip"><div class="SpacerStrip" style="height: 70px;"></div></div>
 		<DESTACADOS/>
@@ -63,6 +69,12 @@ import './src/styles/Generos.scss'
 		<ADBANNER/>
 		<div class="ArticleStrip"><div class="SpacerStrip" style="height: 70px;"></div></div>
 		<GENEROS/>
+		<div class="ArticleStrip"><div class="SpacerStrip" style="height: 70px;"></div></div>
+		<GENEROS1/>
+		<div class="ArticleStrip"><div class="SpacerStrip" style="height: 70px;"></div></div>
+		<GENEROS2/>
+		<div class="ArticleStrip"><div class="SpacerStrip" style="height: 70px;"></div></div>
+		<GENEROS3/>
 		<div class="ArticleStrip"><div class="SpacerStrip" style="height: 70px;"></div></div>
 		<FOOTER/>
 		</div>
