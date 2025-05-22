@@ -1,0 +1,58 @@
+.ChadBot {
+    display: none
+}
+
+@media(min-width: 1024px) {
+    .ChadBot {
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        background-color: #000;
+        border: 1px solid #fff;
+        border-radius: 50%;
+        bottom: 18px;
+        padding: 0;
+        height: 60px;
+        position: fixed;
+        transition: transform 0.3s ease-in-out;
+        right: 24px;
+        width: 60px;
+        z-index: 100;
+    }
+
+    .ChadBot:hover {
+    transform: scale(1.1);
+    }
+
+    .ChadBot>svg>path {
+        fill: #fff;
+        fill-rule: evenodd;
+    }
+
+    .ChadBot:hover>svg>path {
+        fill: #999
+    }
+
+    .ChadBot--anchor-link {
+        display: none
+    }
+}
+
+
+@media(min-width: 1024px)and (prefers-reduced-motion) {
+    .ChadBot--button {
+        display:none
+    }
+
+    .ChadBot--anchor-link {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: flex
+    }
+}
