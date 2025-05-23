@@ -12,7 +12,6 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  background-color: #000;
   color: #fff;
   max-width: 1400px;
   margin-top: 50px;
@@ -26,13 +25,14 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 95%;
-  margin: 30px auto 0;
+  width: 100%;
+  margin: 0px auto 0;
 }
 
 .genre-browse-container .genre-browse-book-header-wrapper .genre-browse-book-header {
-  font-weight: 100;
-  font-family: Maax-Bold-Core, Maax-Bold, sans-serif;
+  font-weight: 700;
+  font-family: "ProximaNova-Bold", "Proxima Nova", sans-serif;
+  text-transform: uppercase;
   height: 100%;
   margin: 0;
   line-height: 30px;
@@ -53,7 +53,7 @@
 }
 
 .genre-browse-container .genre-browse-book-grid-wrapper {
-  width: 95%;
+  width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-column-gap: 20px;
