@@ -1,13 +1,17 @@
 <div id="contenedor-cargando">
-  <img src="/src/assets/rat.gif" alt="Cargando..." class="loader-imagen">
-
-  <p id="loading-txt">CARGANDO</p>
+  <a href="/src/components/Content/txtCargando.astro"><img src="/src/assets/rat.gif" alt="Cargando..." class="loader-imagen"></a>
+  <br>
+  <div class="txt-cargando">
+    <p id="txtLoad">
+        Cargando
+    </p>
+  </div>
+  
 </div>
 
 <script>
     const contenedorCargando = document.getElementById('contenedor-cargando');
     const contenidoPrincipal = document.getElementById('contenido-principal');
-    const txtLoad = document.getElementById('loading-txt')
     function getRandomInt(min: number, max: number) {
     return Math.floor(Math.random() * (max-min)+min);
     }
@@ -15,7 +19,6 @@
     let cargaCompleta = false;
     window.onload = function() {
         cargaCompleta = true;
-        /*txtDots();*/
         ocultarCargandoSiListo();
     };
     function ocultarCargando() {
@@ -24,21 +27,32 @@
     }
     function ocultarCargandoSiListo() {
         if (cargaCompleta) {
-            /*txtDots();*/
             setTimeout(ocultarCargando, tiempoCarga);
         }
     }
 
-    /*function vacio(){}
+    let time=0;
+    function timer(){
+        time=time+500;
+        return time;
+    }
 
-    function txtDots(){
-        for(let i=1; i<=3; i++){
-            setTimeout(vacio, tiempoCarga)
-            switch (i){
-                case 1: if(txtLoad) txtLoad.innerText = 'Cargando.'; break;
-                case 2: if(txtLoad) txtLoad.innerText = 'Cargando..'; break;
-                case 3: if(txtLoad) txtLoad.innerText = 'Cargando...'; break;
-            }
-        } 
-    }*/
+    const txtLoad = document.getElementById('txtLoad');
+    function txtC1(){if(txtLoad) txtLoad.innerText = 'Cargando .';}
+    function txtC2(){if(txtLoad) txtLoad.innerText = 'Cargando . .';}
+    function txtC3(){if(txtLoad) txtLoad.innerText = 'Cargando . . .';}
+    
+    
+    
+    while(time<=4000){
+        cargandoTxt();
+        cargandoTxt();
+        cargandoTxt();
+    }
+    function cargandoTxt(){
+        setTimeout(txtC1, timer())
+        setTimeout(txtC2, timer())
+        setTimeout(txtC3, timer())
+    }
+
 </script>
