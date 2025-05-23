@@ -1,4 +1,55 @@
-<button class="ChadBot ChadBot" aria-label="chadbot">
-    <svg viewBox="0 0 32 21" style="width: 28px; height: 28px;"> <path id="icon_comment" class="cls-1" d="M417,2247l32-2-4,18-10.455-.46L429,2266l0.731-3.6L420,2262Zm9.5,6a1.5,1.5,0,1,1-1.5,1.5A1.5,1.5,0,0,1,426.5,2253Zm6,0a1.5,1.5,0,1,1-1.5,1.5A1.5,1.5,0,0,1,432.5,2253Zm6,0a1.5,1.5,0,1,1-1.5,1.5A1.5,1.5,0,0,1,438.5,2253Z" transform="translate(-417 -2245)"></path>
-    </svg>
-</button>
+<div class="contendor-chatbot" id="container-chat">
+    <button class="ChadBot ChadBot" aria-label="chadbot">
+        <svg viewBox="0 0 32 21" style="width: 28px; height: 28px;">
+            <path id="icon_comment" class="cls-1" d="M417,2247l32-2-4,18-10.455-.46L429,2266l0.731-3.6L420,2262Zm9.5,6a1.5,1.5,0,1,1-1.5,1.5A1.5,1.5,0,0,1,426.5,2253Zm6,0a1.5,1.5,0,1,1-1.5,1.5A1.5,1.5,0,0,1,432.5,2253Zm6,0a1.5,1.5,0,1,1-1.5,1.5A1.5,1.5,0,0,1,438.5,2253Z" transform="translate(-417 -2245)"></path>
+        </svg>
+    </button>
+    <div class="chat-dropup" id="chatDropUp">
+        <div class="chat-head">
+            <p class="chat-name">ChadMNG 1.0 by PlxLabs</p>
+            <img src="https://static-00.iconduck.com/assets.00/window-close-icon-2048x2048-8x7pzds5.png" alt="close-img" class="chat-close" id="chatClose">
+        </div>
+        <div class="chat-body">
+            <!-- ELEMENTOS DEL CHAT (OVERFLOW: AUTO) -->
+             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique, deserunt quia temporibus placeat veritatis perspiciatis ipsam quam magnam delectus eos dicta natus sunt error odio voluptate libero doloremque et voluptas. Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis fugiat ipsum tempora ea. Assumenda iste maxime velit, eveniet dolorum culpa totam quae voluptas voluptatem natus quod consequuntur earum, fuga officiis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi asperiores accusantium, similique distinctio suscipit dignissimos? Vero excepturi, corporis sit animi dolore eum aut ad, vitae blanditiis culpa dolorem, molestias iusto!
+             </p> 
+             <img src="/src/assets/rat.gif" alt="rata-underC">  
+             <br>
+             <p>Under Construction 🔨</p>
+        </div>
+        <div class="chat-msg">
+            <input type="text" id="msg-chat" class="chat-input">
+            <button id="msg-send" type="submit" class="chat-send">Enviar</button>
+        </div>
+    </div>
+</div>
+
+<script>
+    const chatIcon = document.querySelector('.ChadBot');
+    const chatDropUp = document.getElementById('chatDropUp');
+    const chatClose = document.getElementById('chatClose');
+
+
+    // Clic en el icono: alternar el menú
+    if(chatIcon) chatIcon.addEventListener('click', function(event) {
+        event.stopPropagation(); // Evita que el clic también cuente como clic en el documento
+        if(chatDropUp){
+            if (chatDropUp.style.display === 'grid') {
+                chatDropUp.style.display = 'none';
+                chatIcon.classList.remove('active'); // 👈 Quita el borde
+            } else {
+                chatDropUp.style.display = 'grid';
+                chatIcon.classList.add('active'); // 👈 Agrega el borde
+            }
+        }
+    });
+    
+    if(chatClose) chatClose.addEventListener('click', function(){
+        if(chatDropUp){
+            if (chatDropUp.style.display === 'grid') {
+                chatDropUp.style.display = 'none';
+                if(chatIcon) chatIcon.classList.remove('active'); // 👈 Quita el borde también
+            }
+        }
+    });
+</script>
