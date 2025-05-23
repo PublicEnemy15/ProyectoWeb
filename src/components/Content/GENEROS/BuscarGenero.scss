@@ -11,7 +11,7 @@
 .genre-browse-container {
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: 95%;
   color: #fff;
   max-width: 1400px;
   margin-top: 50px;
@@ -78,7 +78,7 @@
   font-size: 12pt;
   border: 2px solid #fff;
   font-weight: 100;
-  font-family: Maax-Medium-Core, Maax-Medium, sans-serif;
+  font-family: "ProximaNova-Regular", "Proxima Nova", sans-serif;
   min-height: 75px;
   letter-spacing: 1px;
 }
@@ -104,7 +104,6 @@
   color: #000;
   text-decoration: none;
   margin-top: 30px;
-  margin-right: 2.5%;
 }
 
 .genre-browse-container .browse-all-link:hover {
@@ -124,7 +123,7 @@
 
 .genre-browse-container .arrow-container .arrow-btn {
   font-weight: 100;
-  font-family: Maax-Medium-Core, Maax-Medium, sans-serif;
+  font-family: "ProximaNova-Regular", "Proxima Nova", sans-serif;
   font-size: 14pt;
   letter-spacing: 0;
 }
