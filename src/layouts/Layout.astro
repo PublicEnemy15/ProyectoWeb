@@ -10,42 +10,37 @@ import './src/styles/KithArrow.scss'
 /* ==========================================
   2. IMPORTS COMPONENTES
 ===========================================*/
-import RATA_LOAD from "src/components/Content/rata-load.astro";
-import HEADER from "src/components/Header/Header.astro";
-import FOOTER from "src/components/Footer/Footer.astro";
-import SLIDER from "src/components/Content/Slider.astro";
-import DESTACADOS from "src/components/Content/Destacados.astro";
-import NUEVOSCAPS from "src/components/Content/NuevosCaps.astro";
-import NUEVOSMANGAS from '@/components/Content/NuevosMangas.astro';
-import ADBANNER from '@/components/Content/ADBanner.astro';
-import ADBANNER2 from '@/components/Content/ADBanner2.astro';
-import GENEROS from '@/components/Content/Generos.astro';
-import CHATBOT from '@/components/Content/Chatbot/Chatbot.astro';
-import GENEROS1 from '@/components/Content/Genero1.astro';
-import GENEROS2 from '@/components/Content/Genero2.astro';
-import GENEROS3 from '@/components/Content/Genero3.astro';
-import BUSCARGENERO from '@/components/Content/BuscarGenero.astro';
+import RATA_LOAD 	from "src/components/Content/rata-load.astro";
+import CHATBOT 		from "src/components/Content/Chatbot/Chatbot.astro";
+import HEADER 		from "src/components/Header/Header.astro";
+import SLIDER 		from "src/components/Content/SLIDER/Slider.astro";
+import DESTACADOS 	from "src/components/Content/DESTACADOS/Destacados.astro";
+import NUEVOSCAPS 	from "src/components/Content/NUEVOS/NuevosCaps.astro";
+import NUEVOSMANGAS from "src/components/Content/NUEVOS/NuevosMangas.astro";
+import ADBANNER 	from "src/components/Content/ADBANNER/ADBanner.astro";
+import GENEROS 		from "src/components/Content/GENEROS/Generos.astro";
+import GENEROS1 	from "src/components/Content/GENEROS/Genero1.astro";
+import GENEROS2 	from "src/components/Content/GENEROS/Genero2.astro";
+import GENEROS3 	from "src/components/Content/GENEROS/Genero3.astro";
+import BUSCARGENERO from "src/components/Content/GENEROS/BuscarGenero.astro";
+import COMUNIDAD 	from "src/components/Content/COMUNIDAD/Comunidad.astro";
+import FOOTER 		from "src/components/Footer/Footer.astro";
+
 /* ==========================================
   3. IMPORTS STYLES COMPONENTES
 ===========================================*/
 import './src/components/Header/Header.scss'
-import './src/styles/InfoBox.scss'
-import './src/styles/SeriesDestacadas.scss'
-
-import './src/styles/ChapterWheelStrip.scss'
-import './src/styles/KithSlider.scss'
-import './src/styles/Slider.scss'
-
-import './src/styles/NuevosMangas.scss'
+import './src/components/Content/SLIDER/InfoBox.scss'
+import './src/components/Content/DESTACADOS/SeriesDestacadas.scss'
+import './src/components/Content/NUEVOS/ChapterWheelStrip.scss'
+import './src/components/Content/SLIDER/KithSlider.scss'
+import './src/components/Content/SLIDER/Slider.scss'
+import './src/components/Content/NUEVOS/NuevosMangas.scss'
 import './src/components/Content/rata-load.css'
-
-import './src/styles/Generos.scss'
-
+import './src/components/Content/GENEROS/Generos.scss'
 import './src/components/Content/Chatbot/ChatBot.scss'
-
-import './src/styles/BuscarGenero.scss'
-
-import './src/styles/ADBANNER2.scss'
+import './src/components/Content/GENEROS/BuscarGenero.scss'
+import './src/components/Content/COMUNIDAD/comunidad.scss'
 /* ==========================================
   4. IMPORTS JAVASCRIPT COMPONENTES
 ===========================================*/
@@ -71,7 +66,7 @@ import './src/styles/ADBANNER2.scss'
 		<NUEVOSCAPS/>
 		<div class="ArticleStrip"><div class="SpacerStrip" style="height: 70px;"></div></div>
 		<NUEVOSMANGAS/>
-		<div class="ArticleStrip grid-set "><div class="SpacerStrip" style="height: 70px;"></div></div>
+		<div class="ArticleStrip grid-set"><div class="SpacerStrip" style="height: 70px;"></div></div>
 		<ADBANNER/>
 		<div class="ArticleStrip"><div class="SpacerStrip" style="height: 70px;"></div></div>
 		<GENEROS/>
@@ -83,7 +78,7 @@ import './src/styles/ADBANNER2.scss'
 		<GENEROS3/>
 		<div class="ArticleStrip"><div class="SpacerStrip" style="height: 70px;"></div></div>
 		<BUSCARGENERO/>
-		<ADBANNER2/>
+		<div class="ArticleStrip"><div class="SpacerStrip" style="height: 70px;"></div></div>
 		<FOOTER/>
 		</div>
 	</body>
