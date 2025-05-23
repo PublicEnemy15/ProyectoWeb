@@ -1,0 +1,36 @@
+---
+/* ==========================================
+  1. IMPORTS STYLES GLOBALES
+===========================================*/
+import './src/mixins/utilities.scss' 
+import './src/styles/Reboot.scss' 
+import './src/styles/stylefunciona.css' 
+import './src/styles/KithArrow.scss'
+import './src/components/Content/NUEVOS/NuevosMangas.scss'
+import './src/components/Content/SLIDER/KithSlider.scss'
+/* ==========================================
+  2. IMPORTS COMPONENTES
+===========================================*/
+import HEADER from "src/components/Header/Header.astro";
+import FOOTER from "src/components/Footer/Footer.astro"; 
+import BODY from "src/components/KithExplorar.astro"; 
+/* ==========================================
+  2. IMPORTS STYLES COMPONENTES
+===========================================*/
+import './src/components/Header/Header.scss'
+import './src/styles/KithExplorar.scss'
+---
+
+<!doctype html>
+<html lang="es" style="padding-right: 0px; overflow: auto; back">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1"> 
+		<title>Taller Web Proyecto</title>
+	</head>
+	<body class="scroll" style="overflow: unset">
+    <HEADER/>
+    <BODY/>
+    <FOOTER/>
+	</body>
+</html>
