@@ -355,8 +355,8 @@ select:focus,select:hover {
 }
 
 input:-webkit-autofill {
-    -webkit-text-fill-color: #000000;
-    -webkit-box-shadow: 0 0 0 1000px #ffffff inset;
+    -webkit-text-fill-color: #ffffff;
+    -webkit-box-shadow: 0 0 0 1000px #2b2b2b inset;
     background-color: #000!important;
     background-clip: content-box!important
 }

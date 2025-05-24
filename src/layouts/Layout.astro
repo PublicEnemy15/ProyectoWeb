@@ -26,6 +26,9 @@ import BUSCARGENERO from "src/components/Content/GENEROS/BuscarGenero.astro";
 import COMUNIDAD 	from "src/components/Content/COMUNIDAD/Comunidad.astro";
 import FOOTER 		from "src/components/Footer/Footer.astro";
 
+import LOGIN 		from "src/components/Header/login.astro";
+import LOGIN2 		from "src/components/Header/login2.astro";
+
 /* ==========================================
   3. IMPORTS STYLES COMPONENTES
 ===========================================*/
@@ -41,6 +44,10 @@ import './src/components/Content/GENEROS/Generos.scss'
 import './src/components/Content/Chatbot/ChatBot.scss'
 import './src/components/Content/GENEROS/BuscarGenero.scss'
 import './src/components/Content/COMUNIDAD/comunidad.scss'
+
+import './src/components/Header/login.scss'
+import './src/components/Header/signup.scss'
+
 /* ==========================================
   4. IMPORTS JAVASCRIPT COMPONENTES
 ===========================================*/
@@ -58,7 +65,7 @@ import './src/components/Content/COMUNIDAD/comunidad.scss'
 		<RATA_LOAD/>
 		<div id="contenido-principal">
 		<HEADER />
-		<CHATBOT/>
+		<CHATBOT/>	
 		<SLIDER/>
 		<div class="ArticleStrip"><div class="SpacerStrip" style="height: 70px;"></div></div>
 		<DESTACADOS/>
