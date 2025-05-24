@@ -51,13 +51,13 @@
         </a>
         
         <!-- Botón de menú hamburguesa para móviles -->
-        <button class="header__menu-toggle nts-link" aria-label="Toggle navigation menu" title="Toggle navigation menu">
+        <button class="header__menu-toggle nts-link" aria-label="Toggle navigation menu" title="Toggle navigation menu" id="menu-toggle">
             <!-- Icono X para cerrar -->
-            <svg class="header__menu-toggle__icon header__menu-toggle__icon--cross" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600">
+            <svg class="header__menu-toggle__icon header__menu-toggle__icon--cross" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" id="btn-close-submenu">
                 <path d="M356.25 300L487.5 431.25l-56.25 56.25L300 356.25 168.75 487.5l-56.25-56.25L243.75 300 112.5 168.75l56.25-56.25L300 243.75 431.25 112.5l56.25 56.25z"></path>
             </svg>
             <!-- Icono de tres puntos -->
-            <svg class="header__menu-toggle__icon header__menu-toggle__icon--ellipsis" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600">
+            <svg class="header__menu-toggle__icon header__menu-toggle__icon--ellipsis" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" id="btn-open-submenu">
                 <path d="M150.39 340a37.5 37.5 0 1 1 37.5-37.5 37.5 37.5 0 0 1-37.5 37.5zm150 0a37.5 37.5 0 1 1 37.5-37.5 37.5 37.5 0 0 1-37.5 37.5zm150 0a37.5 37.5 0 1 1 37.5-37.5 37.5 37.5 0 0 1-37.5 37.5z"></path>
                 <path fill="none" d="M0 2h600v600H0z"></path>
             </svg>
@@ -67,9 +67,9 @@
             </svg>
         </button>
     </header>
-    
+
     <!-- SUBMENÚ DE NAVEGACIÓN -->
-    <div class="nav-submenu-container">
+    <div class="nav-submenu-container" id="submenu">
         <div class="nav-submenu text-uppercase">
             <!-- Primera sección del submenú - Enlaces principales secundarios -->
             <div class="nav-submenu__section">
@@ -134,7 +134,41 @@
         </div>
     </div>
 </div>
+<div id="page-overlay" class="navigation-page-overlay"></div>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const toggleBtn = document.getElementById("menu-toggle");
+    const submenu = document.getElementById("submenu");
+    const overlay = document.getElementById("page-overlay");
 
+    if (!toggleBtn || !submenu || !overlay) return;
+
+    toggleBtn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      const isOpen = toggleBtn.classList.contains("header__menu-toggle--open");
+
+      if (isOpen) {
+        toggleBtn.classList.remove("header__menu-toggle--open");
+        submenu.classList.remove("nav-submenu-container--show");
+        overlay.classList.remove("navigation-page-overlay--show");
+      } else {
+        toggleBtn.classList.add("header__menu-toggle--open");
+        submenu.classList.add("nav-submenu-container--show");
+        overlay.classList.add("navigation-page-overlay--show");
+      }
+    });
+
+    submenu.addEventListener("click", (e) => {
+      e.stopPropagation();
+    });
+
+    overlay.addEventListener("click", () => {
+      toggleBtn.classList.remove("header__menu-toggle--open");
+      submenu.classList.remove("nav-submenu-container--show");
+      overlay.classList.remove("navigation-page-overlay--show");
+    });
+  });
+</script>
 
 <!-- 
   COMPONENTE DE CABEZERAS
