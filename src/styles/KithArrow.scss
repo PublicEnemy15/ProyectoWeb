@@ -70,18 +70,18 @@
 }
 
 .arrow-container.disabled {
-  border: 2px solid #757575;
+  border: 2px solid #75757573;
   cursor: default;
 }
 
 .arrow-container.disabled .arrow-btn {
-  background-color: #f1f1f1;
-  border-color: #757575;
+  background-color: #2b2b2b;
+  border-color: #75757573;
   color: #ababab;
 }
 
 .arrow-container.disabled .icon-wrapper {
-  background-color: #f1f1f1;
+  background-color: #2b2b2b;
 }
 
 .arrow-container.invert {
