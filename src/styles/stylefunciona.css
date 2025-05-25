@@ -6824,7 +6824,7 @@ input[type=checkbox].episode-player-tracklist__checkbox-input:checked::after {
     }
 
     .collection.collection--slider .collection__subtitle,.collection.collection--slider .collection__title {
-        padding-left: 24px
+        padding-left: 24px;
     }
 
     .collection.collection--slider .collection__title>.subheading-l {
@@ -12712,35 +12712,6 @@ input[type=checkbox].episode-player-tracklist__checkbox-input:checked::after {
     display: none
 }
 
-.home-ntspicks {
-    margin-bottom: 0;
-    padding-top: 24px
-}
-
-.home-ntspicks__header {
-    margin-bottom: 14px
-}
-
-.home-ntspicks__subtitle {
-    margin-bottom: 0
-}
-
-.home-ntspicks__loading-state .nts-grid-v2-item__content {
-    height: 100%
-}
-
-.home-ntspicks__loading-state-item-header {
-    height: 90px
-}
-
-.home-ntspicks__grid {
-    display: none
-}
-
-.home-ntspicks .horizontal-scroll-grid__items {
-    padding: 0
-}
-
 .home-incoming__heading {
     font-size: 24px;
     line-height: 28px;
@@ -13206,42 +13177,6 @@ input[type=checkbox].episode-player-tracklist__checkbox-input:checked::after {
     visibility: hidden
 }
 
-.home__scroll-down {
-    display: none
-}
-
-@media(min-width: 768px) {
-    #home {
-        border-top:1px solid #fff
-    }
-
-    #home .collection__subtitle,#home .collection__title {
-        padding-left: 12px
-    }
-
-    #home .horizontal-scroll-grid__items {
-        padding-left: 0
-    }
-
-    .home-ntspicks {
-        padding-bottom: 22px
-    }
-
-    .home-ntspicks #explore__title,.home-ntspicks .page-heading {
-        display: inline-block;
-        margin: 0;
-        margin-right: 16px
-    }
-
-    .home-incoming__heading {
-        margin-bottom: 14px;
-        padding: 0 12px 4px
-    }
-
-    .home-incoming .nts-grid--incoming {
-        padding: 0 24px
-    }
-}
 
 @media(min-width: 1024px) {
     .home-landing {
@@ -13257,113 +13192,11 @@ input[type=checkbox].episode-player-tracklist__checkbox-input:checked::after {
         border-bottom: 1px solid #fff;
         overflow-x: hidden
     }
-
-    
-    .home__scroll-down {
-        -webkit-box-align: center;
-        -webkit-align-items: center;
-        align-items: center;
-        display: -webkit-box;
-        display: -webkit-flex;
-        display: flex;
-        -webkit-box-pack: center;
-        -webkit-justify-content: center;
-        justify-content: center;
-        background-color: #000;
-        border: 1px solid #fff;
-        border-radius: 50%;
-        bottom: 18px;
-        padding: 0;
-        height: 46px;
-        position: absolute;
-        right: 24px;
-        width: 46px;
-        z-index: 100
-    }
-
-    .home__scroll-down>svg>path {
-        fill: #fff
-    }
-
-    .home__scroll-down:hover>svg>path {
-        fill: #999
-    }
-
-    .home__scroll-down--anchor-link {
-        display: none
-    }
-}
-
-@media(min-width: 1024px)and (prefers-reduced-motion) {
-    .home__scroll-down--button {
-        display:none
-    }
-
-    .home__scroll-down--anchor-link {
-        display: -webkit-box;
-        display: -webkit-flex;
-        display: flex
-    }
 }
 
 @media(min-width: 1024px) {
     .home-incoming__heading {
         padding:0 24px 4px
-    }
-}
-
-@media(min-width: 1025px) {
-    #home .collection__subtitle,#home .collection__title {
-        padding-left:24px
-    }
-
-    #home .horizontal-scroll-grid__items {
-        padding-left: 12px
-    }
-
-    .home-landing {
-        margin-top: 0
-    }
-
-    #home .home-ntspicks__header>.collection__title {
-        padding-left: 0
-    }
-
-    .home-ntspicks__slider {
-        display: none
-    }
-
-    .home-ntspicks__grid {
-        display: block;
-        padding: 0 24px
-    }
-
-    .home-ntspicks__grid .nts-grid-v2-item:nth-last-child(-n+4) {
-        display: none
-    }
-
-    .home-ntspicks__loading-state .nts-grid-v2-item__content {
-        height: auto
-    }
-
-    .home-ntspicks__loading-state-item-header {
-        height: 80px
-    }
-}
-
-@media(min-width: 1190px) {
-    .home-ntspicks__grid .nts-grid-v2-item:nth-last-child(-n+4) {
-        display:block
-    }
-
-    .home-ntspicks__grid .nts-grid-v2-item:nth-last-child(-n+2) {
-        display: none
-    }
-}
-
-@media(min-width: 1500px) {
-    .home-ntspicks__grid .nts-grid-v2-item:nth-last-child(-n+2) {
-        display:block
     }
 }
 

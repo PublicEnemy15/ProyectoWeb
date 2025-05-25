@@ -1,4 +1,4 @@
-@import "../mixins/utilities.scss";
+@import "../../../mixins/utilities.scss";
 
 .ArticuloPrincipal-infoBox {
   display: flex;
@@ -11,8 +11,8 @@
     position: absolute;
     bottom: 100px;
     left: 14px;
-    min-width: 1015px;
-    max-width: min(800px, 100vw - 160px);
+    min-width: 760px;
+    max-width: min(760px, 100vw - 160px);
     padding: 30px 20px;
     border: 2px solid black;
   }

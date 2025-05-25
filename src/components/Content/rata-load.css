@@ -16,8 +16,11 @@
     margin-bottom: 50px;
 }
 
-#loading-txt {
-    font-size: 25px;
+#txtLoad {
+    margin: 0;
+    font-weight: 700;
+    font-family: "ProximaNova-Bold", "Proxima Nova", sans-serif;
+    font-size: 30px;
 }
 
 #contenido-principal {

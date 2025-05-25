@@ -6,6 +6,7 @@
     width:min(1400px,95%)
 }
 
+
 .KodanshaWheelItem {
     cursor: pointer;
     height: fit-content;
@@ -34,7 +35,7 @@
 }
 
 .KodanshaWheelItem .KodanshaWheelItem-reader {
-    color: #000;
+    color: #fff;
     text-decoration: none;
     height: 50px;
     align-self: flex-start;
@@ -43,7 +44,7 @@
 }
 
 .KodanshaWheelItem .KodanshaWheelItem-reader:hover {
-    color: #000;
+    color: #fff;
     text-decoration: none;
 }
 
@@ -142,7 +143,7 @@
 }
 
 .KodanshaWheelItem .ItemTitle:hover {
-    color: #000;
+    color: #fff;
     text-decoration: none;
 }
 
@@ -173,8 +174,8 @@
     position: absolute;
     top: 0;
     left: 0;
-    font-weight: 100;
-    font-family: Maax-Medium-Core, Maax-Medium, sans-serif;
+    font-weight: 300;
+    font-family: "ProximaNova-Regular", "Proxima Nova", sans-serif;
     color: #fff;
     background-color: #000;
     width: fit-content;
