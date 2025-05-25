@@ -23,6 +23,9 @@
     const chatIcon = document.querySelector('.ChadBot');
     const chatDropUp = document.getElementById('chatDropUp');
     const chatClose = document.getElementById('chatClose');
+    const contChat = document.getElementById('chat-body') as HTMLElement;
+    const sendBTN = document.getElementById('msg-send');
+    const message = document.getElementById('msg-chat') as HTMLInputElement;
     
 
     // Clic en el icono: alternar el menú
@@ -48,9 +51,14 @@
         }
     });
 
-    const contChat = document.getElementById('chat-body') as HTMLElement;
-    const sendBTN = document.getElementById('msg-send');
-    const message = document.getElementById('msg-chat') as HTMLInputElement;
+    document.addEventListener('click', function(){
+        if(chatDropUp){
+            if (chatDropUp.style.display === 'block') {
+                chatDropUp.style.display = 'none';
+                if(chatIcon) chatIcon.classList.remove('active'); // 👈 Quita el borde también
+            }
+        }
+    });
 
     function addMyMsg(txt:string){
         if (contChat) contChat.innerHTML += 
