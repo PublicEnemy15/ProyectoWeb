@@ -1,14 +1,37 @@
 <section class="supporter-ad">
-    <div class="supporter-ad__bg-image supporter-ad__bg-image--small" style="background-image: url(&quot;https://media2.ntslive.co.uk/resize/1600x1600/445b5eb0-e5ec-4383-8ad2-943c82e82a92_1675728000.jpeg&quot;);"></div>
-    <div class="supporter-ad__bg-image supporter-ad__bg-image--medium" style="background-image: url(&quot;https://media2.ntslive.co.uk/resize/1600x1600/445b5eb0-e5ec-4383-8ad2-943c82e82a92_1675728000.jpeg&quot;);"></div>
-    <video class="supporter-ad__video" preload="auto" loop="">
-        <source src="src/assets/senaT.jpg" type="video/mp4">
-    </video>
-    <div class="supporter-ad__overlay"></div>
-    <div class="supporter-ad__info">
-        <h2 class="supporter-ad__heading">Creado por amantes del manga, para amantes del manga.</h2>
-        <a href="/otrapag" class="nts-app nts-button supporter-ad__cta">Conviértete en un miembro de KITH</a>
-    </div>
+  <video id="bg-video" class="supporter-ad__video" muted loop playsinline>
+    <source src="/DATA.mp4" type="video/mp4">
+  </video>
+
+  <div class="supporter-ad__bg-image supporter-ad__bg-image--small" style="background-image: url('src/assets/senaT.jpg');"></div>
+  <div class="supporter-ad__bg-image supporter-ad__bg-image--medium" style="background-image: url('src/assets/senaT.jpg');"></div>
+
+  <div class="supporter-ad__overlay"></div>
+
+  <div class="supporter-ad__info">
+    <h2 class="supporter-ad__heading">Creado por amantes del manga, para amantes del manga.</h2>
+    <a href="/otrapag" class="nts-app nts-button supporter-ad__cta">Conviértete en un miembro de KITH</a>
+  </div>
+
 </section>
+
+<script is:inline>
+  if (typeof window !== "undefined") {
+    const section = document.querySelector('.supporter-ad');
+    const video = document.getElementById('bg-video');
+
+    if (video && section) {
+      video.pause();
+
+      section.addEventListener('mouseenter', () => {
+        video.play();
+      });
+
+      section.addEventListener('mouseleave', () => {
+        video.pause();
+      });
+    }
+  }
+</script>
 
 
