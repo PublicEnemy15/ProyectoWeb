@@ -1,90 +1,63 @@
 ---
-/* ==========================================
-  1. IMPORTS STYLES GLOBALES
-===========================================*/
-import './src/mixins/utilities.scss' 
-import './src/styles/Reboot.scss' 
-import './src/styles/stylefunciona.css' 
-import './src/styles/KithArrow.scss'
+import "@/styles/styles.css"
+import "@/styles/stylefunciona.css"
+import "@/mixins/utilities.scss"
+import "@/mixins/Reboot.scss"
+import "@/styles/BOTONES.scss"
+import "@/styles/KITHICONOS.scss"
 
-/* ==========================================
-  2. IMPORTS COMPONENTES
-===========================================*/
-import RATA_LOAD 	from "src/components/Content/rata-load.astro";
-import CHATBOT 		from "src/components/Content/Chatbot/Chatbot.astro";
-import HEADER 		from "src/components/Header/Header.astro";
-import SLIDER 		from "src/components/Content/SLIDER/Slider.astro";
-import DESTACADOS 	from "src/components/Content/DESTACADOS/Destacados.astro";
-import NUEVOSCAPS 	from "src/components/Content/NUEVOS/NuevosCaps.astro";
-import NUEVOSMANGAS from "src/components/Content/NUEVOS/NuevosMangas.astro";
-import ADBANNER 	from "src/components/Content/ADBANNER/ADBanner.astro";
-import GENEROS 		from "src/components/Content/GENEROS/Generos.astro";
-import GENEROS1 	from "src/components/Content/GENEROS/Genero1.astro";
-import GENEROS2 	from "src/components/Content/GENEROS/Genero2.astro";
-import GENEROS3 	from "src/components/Content/GENEROS/Genero3.astro";
-import BUSCARGENERO from "src/components/Content/GENEROS/BuscarGenero.astro";
-import COMUNIDAD 	from "src/components/Content/COMUNIDAD/Comunidad.astro";
-import FOOTER 		from "src/components/Footer/Footer.astro";
+import "@/components/HEADER/HEADER.scss"
+import "@/components/HEADER/LOGIN.scss"
+import "@/components/CONTENT/CHATBOT/CHATBOT.scss"
+import "@/components/CONTENT/LUISTHERATLOADER/rata-load.css"
 
-import LOGIN 		from "src/components/Header/login.astro";
 
-/* ==========================================
-  3. IMPORTS STYLES COMPONENTES
-===========================================*/
-import './src/components/Header/Header.scss'
-import './src/components/Content/SLIDER/InfoBox.scss'
-import './src/components/Content/DESTACADOS/SeriesDestacadas.scss'
-import './src/components/Content/NUEVOS/ChapterWheelStrip.scss'
-import './src/components/Content/SLIDER/KithSlider.scss'
-import './src/components/Content/SLIDER/Slider.scss'
-import './src/components/Content/NUEVOS/NuevosMangas.scss'
-import './src/components/Content/rata-load.css'
-import './src/components/Content/GENEROS/Generos.scss'
-import './src/components/Content/Chatbot/ChatBot.scss'
-import './src/components/Content/GENEROS/BuscarGenero.scss'
-import './src/components/Content/COMUNIDAD/comunidad.scss'
+import HEADER from "@/components/HEADER/HEADER.astro";
+import LOGIN from "@/components/HEADER/LOGIN.astro";
+import LOADER from "@/components/CONTENT/LUISTHERATLOADER/rata-load.astro"
+import CHADBOT from "@/components/CONTENT/CHATBOT/CHATBOT.astro"
+import FOOTER from "@/components/FOOTER/FOOTER.astro";
 
-import './src/components/Header/login.scss'
-/* ==========================================
-  4. IMPORTS JAVASCRIPT COMPONENTES
-===========================================*/
+const {
+  title = "KITH | Manga Website",
+  description = "KITH es el hogar de historias originales subidas por los propios usuarios.",
+  showChadbot = true,
+  showFooter = true,
+  showLoader = true,
+  showHeader = true,
+  showLogin = true
+} = Astro.props;
 ---
 
 <!doctype html>
 <html lang="es" style="padding-right: 0px; overflow: auto;">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width,initial-scale=1"> 
-		<title>Taller Web Proyecto</title>
-	</head>
-	<body class="scroll" style="overflow: unset">
-		<RATA_LOAD/>
-		<div id="contenido-principal">
-		<HEADER />
-		<LOGIN/>
-		<CHATBOT/>	
-		<SLIDER/>
-		<div class="ArticleStrip"><div class="SpacerStrip" style="height: 70px;"></div></div>
-		<DESTACADOS/>
-		<div class="ArticleStrip"><div class="SpacerStrip" style="height: 70px;"></div></div>
-		<NUEVOSCAPS/>
-		<div class="ArticleStrip"><div class="SpacerStrip" style="height: 70px;"></div></div>
-		<NUEVOSMANGAS/>
-		<div class="ArticleStrip grid-set"><div class="SpacerStrip" style="height: 70px;"></div></div>
-		<ADBANNER/>
-		<div class="ArticleStrip"><div class="SpacerStrip" style="height: 70px;"></div></div>
-		<GENEROS/>
-		<div class="ArticleStrip"><div class="SpacerStrip" style="height: 70px;"></div></div>
-		<GENEROS1/>
-		<div class="ArticleStrip"><div class="SpacerStrip" style="height: 70px;"></div></div>
-		<GENEROS2/>
-		<div class="ArticleStrip"><div class="SpacerStrip" style="height: 70px;"></div></div>
-		<GENEROS3/>
-		<div class="ArticleStrip"><div class="SpacerStrip" style="height: 70px;"></div></div>
-		<BUSCARGENERO/>
-		<div class="ArticleStrip"><div class="SpacerStrip" style="height: 70px;"></div></div>
-		<FOOTER/>
-		</div>
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="author" content="KITH MANGA" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+    <link rel="preload" href="/src/assets/fonts/proximanova_bold.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/src/assets/fonts/proximanova_regular.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="icon" type="image/svg+xml" href="/rat-favicon.png" />
+
+    <title>{title}</title>
+    <meta name="description" content={description} />
+  </head>
+
+  <body class={`scroll${showLoader ? ' loader-activo' : ''}`} style="overflow: unset;">
+    <div id="root" class="body-bg">
+        {showLoader && <LOADER />}
+      <div class="Contenido-Principal" id="contenido-principal">
+        {showHeader && <HEADER />}
+        {showLogin && <LOGIN />}
+        {showChadbot && <CHADBOT />}
+        <slot />
+        {showFooter && <FOOTER />}
+      </div>
+    </div>
+
+    <script src="src/components/HEADER/LOGIN.js"></script>
+    <script type="module" src="/src/components/CONTENT/NUEVOSCAPS/wa.ts"></script>
+  </body>
 </html>
-<script src="src/scripts/Login/login.js"> </script>

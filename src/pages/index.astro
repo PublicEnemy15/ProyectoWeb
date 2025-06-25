@@ -1,9 +1,52 @@
 ---
 import Layout from '../layouts/Layout.astro';
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import SLIDER from "@/components/CONTENT/SLIDERPRINCIPAL/SLIDERPRINCIPAL.astro"
+import SERIESDESTACADAS from "@/components/CONTENT/SERIESDESTACADAS/SERIESDESTACADAS.astro"
+import NUEVOSCAPS from "@/components/CONTENT/NUEVOSCAPS/NUEVOSCAPS.astro"
+import PROXIMOSLANZAMIENTOS from "@/components/CONTENT/PROXIMOSLANZAMIENTOS/PROXIMOSLANZAMIENTOS.astro"
+import ADBANNER from "@/components/CONTENT/ADBANNER/ADBANNER.astro"
+import GENERO1 from "@/components/CONTENT/GENEROS/SHONNEN/SHONNEN.astro"
+import GENERO2 from "@/components/CONTENT/GENEROS/SEINEN/SEINEN.astro"
+import GENERO3 from "@/components/CONTENT/GENEROS/ROMANCE/ROMANCE.astro"
+import GENERO4 from "@/components/CONTENT/GENEROS/HORROR/HORROR.astro"
+
+import "@/components/CONTENT/SLIDERSGLOBAL/KITHSLIDER.scss"
+import "@/components/CONTENT/SLIDERPRINCIPAL/SLIDERPRINCIPAL.scss"
+import "@/components/CONTENT/NUEVOSCAPS/NUEVOSCAPS.scss"
+import "@/components/CONTENT/SERIESDESTACADAS/SERIESDESTACADAS.scss"
+import "@/components/CONTENT/PROXIMOSLANZAMIENTOS/PROXIMOSLANZAMIENTOS.scss"
+import "@/components/CONTENT/ADBANNER/ADBANNER.scss"
+import "@/components/CONTENT/GENEROS/GENEROS.scss"
 ---
 
-<Layout>
+<Layout showChadbot={true}>
+
+  <SLIDER />
+  <div class="ArticleStrip"><div class="SpacerStrip" style="height: 70px;"></div></div>
+
+  <SERIESDESTACADAS />
+  <div class="ArticleStrip"><div class="SpacerStrip" style="height: 70px;"></div></div>
+
+  <NUEVOSCAPS />
+  <div class="ArticleStrip"><div class="SpacerStrip" style="height: 70px;"></div></div>
+
+  <PROXIMOSLANZAMIENTOS />
+  <div class="ArticleStrip grid-set"><div class="SpacerStrip" style="height: 70px;"></div></div>
+
+  <ADBANNER />
+  <div class="ArticleStrip"><div class="SpacerStrip" style="height: 70px;"></div></div>
+
+  <GENERO1 />
+  <div class="ArticleStrip"><div class="SpacerStrip" style="height: 70px;"></div></div>
+
+  <GENERO2 />
+  <div class="ArticleStrip"><div class="SpacerStrip" style="height: 70px;"></div></div>
+
+  <GENERO3 />
+  <div class="ArticleStrip"><div class="SpacerStrip" style="height: 70px;"></div></div>
+
+  <GENERO4 />
+  <div class="ArticleStrip"><div class="SpacerStrip" style="height: 70px;"></div></div>
+  
 </Layout>

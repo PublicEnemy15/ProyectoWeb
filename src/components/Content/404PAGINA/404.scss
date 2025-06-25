@@ -1,0 +1,41 @@
+#error-page {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    color: #fff;
+    align-content: center;
+    background: url("src/assets/img/404/rat.gif");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center calc(50% - 5vh); 
+    font-family: "ProximaNova-Bold", "Proxima Nova", sans-serif;
+}
+
+#error-page #error--text {
+    position: absolute;
+    max-width: 100%;
+    min-width: 100%;
+    top: calc(50% - 40px);
+    left: 50%;
+    transform: translate(-50%);
+    text-align: center;
+    text-transform: uppercase
+}
+
+#error-page #error--text h1 {
+    margin: 0;
+    font-weight: 700;
+    font-family: "ProximaNova-Bold", "Proxima Nova", sans-serif;
+}
+
+#error-page a {
+    color: #fff
+}
+
+@media(prefers-reduced-motion) {
+    #error-page {
+        background-image: none
+    }
+}

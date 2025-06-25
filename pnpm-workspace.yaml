@@ -1,4 +1,4 @@
-onlyBuiltDependencies:
-  - '@tailwindcss/oxide'
+ignoredBuiltDependencies:
+  - '@prisma/client'
   - esbuild
   - sharp

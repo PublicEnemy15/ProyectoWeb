@@ -1,37 +1,73 @@
-<section class="supporter-ad">
-  <video id="bg-video" class="supporter-ad__video" muted loop playsinline>
-    <source src="/DATA.mp4" type="video/mp4">
-  </video>
+<section class="banner-ad" id="yt-section">
+  <!-- Fondo poster -->
+  <div class="banner-ad__poster" style="background-image: url('https://img.youtube.com/vi/s-jT-Q-fVa0/maxresdefault.jpg');"></div>
 
-  <div class="supporter-ad__bg-image supporter-ad__bg-image--small" style="background-image: url('src/assets/senaT.jpg');"></div>
-  <div class="supporter-ad__bg-image supporter-ad__bg-image--medium" style="background-image: url('src/assets/senaT.jpg');"></div>
+  <!-- Contenedor video -->
+  <div id="youtube-container" class="banner-ad__video"></div>
 
-  <div class="supporter-ad__overlay"></div>
+  <div class="banner-ad__overlay"></div>
 
-  <div class="supporter-ad__info">
-    <h2 class="supporter-ad__heading">Creado por amantes del manga, para amantes del manga.</h2>
-    <a href="/otrapag" class="nts-app nts-button supporter-ad__cta">Conviértete en un miembro de KITH</a>
+  <div class="banner-ad__info">
+    <h2 class="banner-ad__heading">Creado por amantes del manga, para amantes del manga.</h2>
+    <a href="/login" class="nts-app nts-button banner-ad__cta">Únete</a>
   </div>
 
+  <!-- Botón play animado -->
+  <button id="play-button" class="play-button" aria-label="Reproducir video"></button>
 </section>
 
+
 <script is:inline>
-  if (typeof window !== "undefined") {
-    const section = document.querySelector('.supporter-ad');
-    const video = document.getElementById('bg-video');
-
-    if (video && section) {
-      video.pause();
-
-      section.addEventListener('mouseenter', () => {
-        video.play();
-      });
-
-      section.addEventListener('mouseleave', () => {
-        video.pause();
-      });
-    }
+  if (!window.YT) {
+    const tag = document.createElement('script');
+    tag.src = "https://www.youtube.com/iframe_api";
+    document.body.appendChild(tag);
   }
+
+  window.onYouTubeIframeAPIReady = () => {
+    const ytPlayer = new YT.Player('youtube-container', {
+      videoId: 's-jT-Q-fVa0',
+      playerVars: {
+        autoplay: 1,
+        controls: 0,
+        modestbranding: 1,
+        loop: 1,
+        mute: 1,
+        rel: 0,
+        showinfo: 0,
+        playlist: 's-jT-Q-fVa0',
+        enablejsapi: 1,
+        playsinline: 1
+      },
+      events: {
+        onReady: () => {
+          const section = document.getElementById('yt-section');
+          const playBtn = document.getElementById('play-button');
+
+          // Reproducir video on hover
+          section.addEventListener('mouseenter', () => {
+            ytPlayer.playVideo();
+            playBtn.classList.add('playing');
+          });
+
+          section.addEventListener('mouseleave', () => {
+            ytPlayer.pauseVideo();
+            playBtn.classList.remove('playing');
+          });
+
+          // También play/pause al click en el botón (opcional)
+          playBtn.addEventListener('click', () => {
+            const playerState = ytPlayer.getPlayerState();
+            if (playerState !== YT.PlayerState.PLAYING) {
+              ytPlayer.playVideo();
+              playBtn.classList.add('playing');
+            } else {
+              ytPlayer.pauseVideo();
+              playBtn.classList.remove('playing');
+            }
+          });
+        }
+      }
+    });
+  };
 </script>
-
-

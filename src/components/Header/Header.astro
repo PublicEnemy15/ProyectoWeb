@@ -1,486 +1,310 @@
-<!-- 
-  ESTRUCTURA PRINCIPAL DEL ENCABEZADO DE KITH
-  Este código representa la navegación principal del sitio web de KITH
--->
-<div>
-    <!-- Capa de superposición para la navegación -->
-    <div class="navigation-page-overlay"></div>
-    
-    <!-- ENCABEZADO PRINCIPAL -->
-    <header class="header">
-        <!-- Logo de NTS que enlaza a la página principal -->
-        <a class="header__home nts-app nts-link " href="/" data-track="event" data-category="Navigation" data-target="GoTo-Home" data-origin="from: header" aria-label="Home">
-            <svg style="fill:#fff" xmlns="http://www.w3.org/2000/svg" viewBox="0 15 900 340">
-            <path d="M0,191.5V383H900V0H0Zm117-77c0,28.3.3,51.5.8,51.5s18.2-23.2,39.6-51.5L196.3,63h30.9c16.9,0,30.8.2,30.8.5s-16.4,22.2-36.4,48.7l-36.5,48.2,1.6,3c.9,1.7,19.8,37.4,42,79.4S269,319.3,269,319.5s-13.6.4-30.2.3l-30.1-.3-30.1-57.7c-16.6-31.8-30.4-57.7-30.7-57.5s-7.5,8.7-15.7,19.2l-15.1,19-.1,38.7V320H63V63h54Zm252,77V320H315V63h54ZM596,86v23H530V320H476V109H411V63H596Zm98,26.5V162h89V63h54V320H782V212H694V320H640V63h54Z"></path>
-            </svg>
-        </a>
+<header class="header">
 
-        <!-- Navegación principal - enlaces principales -->
-        <nav class="header__nav text-uppercase hidden-phone">
-            <a class="header-nav-item nts-app nts-link" href="/explorar">Explorar</a>
-            <a class="header-nav-item nts-app nts-link" href="/otrapag">Comunidad</a>
-            <a class="header-nav-item nts-app nts-link" href="/otrapag">Populares</a>
-            <a class="header-nav-cta nts-app nts-button nts-link hidden-phone" href="/upload">Subir una historia</a>
-        </nav>
-        
-        <!-- Formulario de búsqueda -->
-        <div class="header__search-form">
-            <form class="search-form" method="get">
-                <button class="search-form__button" aria-label="Search" type="submit">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600">
-                        <path d="M413.38 392.4a169.89 169.89 0 0 0 18.19-27.4c43-83 10.73-185.28-72.09-228.39a168.63 168.63 0 0 0-227.82 72.27c-43 83-10.74 185.28 72.09 228.39a168.49 168.49 0 0 0 183.35-18L461.62 494l26.56-26.62zm-194.25 15.16C152.67 373 126.77 290.9 161.28 224.28a135.43 135.43 0 0 1 182.82-58c66.46 34.6 92.36 116.66 57.85 183.28a135.43 135.43 0 0 1-182.82 58z"></path>
-                    </svg>
-                </button>
-                <input class="search-form__input nts-input search-btn" type="text" name="q" autocomplete="off" aria-label="Search" value="">
-            </form>
-        </div>
-        
-        <!-- Botón de chat -->
-        <button class="header-nav-item nts-link hidden-phone" data-track="event" data-category="Navigation" data-target="Open-Chat" data-origin="from: header" aria-label="Open chat">
-            <svg style="height:20px" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600">
-                <path d="M493 391.73h-45.9v99.35l-128.18-99.35H118V144.92h375z"></path>
-            </svg>
-        </button>
-        
-        <!-- Enlace a My NTS (favoritos) -->
-        <button class="header-nav-item header-nav-item--alt nts-app nts-link hidden-phone" id="login-button" aria-label="My NTS"type="button">
+    <!-- Logo de KITH que enlaza a la página principal -->
+    <a class="header__home KITH-link" href="/" data-track="event" data-category="Navigation" data-target="GoTo-Home" data-origin="from: header" aria-label="Home">
+        <svg style="fill:#fff" xmlns="http://www.w3.org/2000/svg" viewBox="0 15 900 340">
+            <path d="M0,191.5V383H900V0H0Zm117-77c0,28.3.3,51.5.8,51.5s18.2-23.2,39.6-51.5L196.3,63h30.9c16.9,0,30.8.2,30.8.5s-16.4,22.2-36.4,48.7l-36.5,48.2,1.6,3c.9,1.7,19.8,37.4,42,79.4S269,319.3,269,319.5s-13.6.4-30.2.3l-30.1-.3-30.1-57.7c-16.6-31.8-30.4-57.7-30.7-57.5s-7.5,8.7-15.7,19.2l-15.1,19-.1,38.7V320H63V63h54Zm252,77V320H315V63h54ZM596,86v23H530V320H476V109H411V63H596Zm98,26.5V162h89V63h54V320H782V212H694V320H640V63h54Z"></path>
+        </svg>
+    </a>
+
+    <!-- Navegación principal - enlaces principales -->
+    <nav class="header__nav text-uppercase ocultar-en-movil">
+        <a class="header-nav-item KITH-link" href="/explorar">Explorar</a>
+        <a class="header-nav-item KITH-link" href="/otrapag">Comunidad</a>
+        <a class="header-nav-item KITH-link" href="/otrapag">Populares</a>
+        <a class="header-nav-cta  KITH-button KITH-link ocultar-en-movil" href="/otrapag">Subir una historia</a>
+    </nav>
+
+    <!-- Formulario de búsqueda -->
+    <div class="header-buscar-from">
+        <form class="buscar-form" method="get">
+            <button class="buscar-form-boton" aria-label="BUSCAR" type="submit">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600">
+                    <path d="M413.38 392.4a169.89 169.89 0 0 0 18.19-27.4c43-83 10.73-185.28-72.09-228.39a168.63 168.63 0 0 0-227.82 72.27c-43 83-10.74 185.28 72.09 228.39a168.49 168.49 0 0 0 183.35-18L461.62 494l26.56-26.62zm-194.25 15.16C152.67 373 126.77 290.9 161.28 224.28a135.43 135.43 0 0 1 182.82-58c66.46 34.6 92.36 116.66 57.85 183.28a135.43 135.43 0 0 1-182.82 58z"></path>
+                </svg>
+            </button>
+            <input class="buscar-form-input KITH-input btn-buscar" type="text" name="q" autocomplete="" aria-label="BUSCAR" value="">
+        </form>
+    </div>
+
+    <!-- Botón de chat -->
+    <button class="header-nav-item KITH-link ocultar-en-movil" data-track="event" data-category="Navigation" data-target="Open-Chat" data-origin="from: header" aria-label="ABRIR CHAR">
+        <svg style="height:20px" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600">
+            <path d="M493 391.73h-45.9v99.35l-128.18-99.35H118V144.92h375z"></path>
+        </svg>
+    </button>
+
+    <!-- Enlace a Mi KITH (login) -->
+    <button class="header-nav-item header-nav-item--alt nts-app KITH-link ocultar-en-movil" id="login-button" aria-label="My KITH"type="button">
         <svg class="nts-icon--inline nts-icon--inline--xxl" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
             <path d="M12 4.41a2.92 2.92 0 11-2.95 2.92A2.91 2.91 0 0112 4.41m0-1.58a4.5 4.5 0 104.5 4.5 4.5 4.5 0 00-4.5-4.5zm0 11.71c3.26 0 7.41 1.63 7.41 2.91v1.79H4.55v-1.79c0-1.28 4.16-2.91 7.41-2.91M12 13c-3 0-9 1.51-9 4.5v3.38h18v-3.43c0-3-6-4.5-9-4.5z" data-name="Layer 5"></path>
         </svg>
         <span class="text-uppercase visible-desktop">Iniciar Sesion</span>
-        </button>
-        
-        <!-- Botón de menú hamburguesa para móviles -->
-        <button class="header__menu-toggle nts-link" aria-label="Toggle navigation menu" title="Toggle navigation menu" id="menu-toggle">
-            <!-- Icono X para cerrar -->
-            <svg class="header__menu-toggle__icon header__menu-toggle__icon--cross" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" id="btn-close-submenu">
-                <path d="M356.25 300L487.5 431.25l-56.25 56.25L300 356.25 168.75 487.5l-56.25-56.25L243.75 300 112.5 168.75l56.25-56.25L300 243.75 431.25 112.5l56.25 56.25z"></path>
-            </svg>
-            <!-- Icono de tres puntos -->
-            <svg class="header__menu-toggle__icon header__menu-toggle__icon--ellipsis" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" id="btn-open-submenu">
-                <path d="M150.39 340a37.5 37.5 0 1 1 37.5-37.5 37.5 37.5 0 0 1-37.5 37.5zm150 0a37.5 37.5 0 1 1 37.5-37.5 37.5 37.5 0 0 1-37.5 37.5zm150 0a37.5 37.5 0 1 1 37.5-37.5 37.5 37.5 0 0 1-37.5 37.5z"></path>
-                <path fill="none" d="M0 2h600v600H0z"></path>
-            </svg>
-            <!-- Icono de hamburguesa -->
-            <svg class="header__menu-toggle__icon header__menu-toggle__icon--hamburger" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600">
-                <path d="M107,143H507v64H107Zm0,128H507v64H107Zm0,128H507v64H107Z"></path>
-            </svg>
-        </button>
-    </header>
+    </button>
 
-    <!-- SUBMENÚ DE NAVEGACIÓN -->
-    <div class="nav-submenu-container" id="submenu">
-        <div class="nav-submenu text-uppercase">
-            <!-- Primera sección del submenú - Enlaces principales secundarios -->
-            <div class="nav-submenu__section">
-                <a class="nav-submenu-link nts-link nts-app" href="/otrapag">Prueba</a>
-                <a class="nav-submenu-link nts-link nts-app" href="/otrapag">Prueba</a>
-                <a class="nav-submenu-link nts-link nts-app" href="/otrapag">Prueba</a>
-                <a class="nav-submenu-link nts-link nts-app" href="/otrapag">Prueba</a>
-                <a class="nav-submenu-link nts-link nts-app" href="/otrapag">Prueba</a>
-                <a class="nav-submenu-link nts-link nts-app" href="/otrapag">Prueba</a>
-                <a class="nav-submenu-link nts-link nts-app" target="_blank" rel="noopener noreferrer" href="/otrapag">Prueba</a>
-            </div>
-            
-            <!-- Segunda sección del submenú - Enlaces a apps y newsletter -->
-            <div class="nav-submenu__section">         
-                <!-- Enlace a Discord -->
-                <a class="nav-submenu-link nts-link" target="_blank" rel="noopener noreferrer" href="https://discord.gg/nts-chat">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 127.14 96.36" style="height: 14px; margin-top: 4px; margin-bottom: 4px;">
-                        <path d="M107.7 8.07A105.15 105.15 0 0 0 81.47 0a72.06 72.06 0 0 0-3.36 6.83 97.68 97.68 0 0 0-29.11 0A72.37 72.37 0 0 0 45.64 0a105.89 105.89 0 0 0-26.25 8.09C2.79 32.65-1.71 56.6.54 80.21a105.73 105.73 0 0 0 32.17 16.15 77.7 77.7 0 0 0 6.89-11.11 68.42 68.42 0 0 1-10.85-5.18c.91-.66 1.8-1.34 2.66-2a75.57 75.57 0 0 0 64.32 0c.87.71 1.76 1.39 2.66 2a68.68 68.68 0 0 1-10.87 5.19 77 77 0 0 0 6.89 11.1 105.25 105.25 0 0 0 32.19-16.14c2.64-27.38-4.51-51.11-18.9-72.15ZM42.45 65.69C36.18 65.69 31 60 31 53s5-12.74 11.43-12.74S54 46 53.89 53s-5.05 12.69-11.44 12.69Zm42.24 0C78.41 65.69 73.25 60 73.25 53s5-12.74 11.44-12.74S96.23 46 96.12 53s-5.04 12.69-11.43 12.69Z"></path>
-                    </svg>
-                    <span>Prueba</span>
-                </a>
-                
-                <!-- Enlace a Newsletter -->
-                <a class="nav-submenu-link nts-link nts-app" href="/newsletter">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600">
-                        <path d="M529 124H79v360h450zm-65.9 36L304 312.75 144.9 160zM492 448H117V183.65l187.5 180 187.5-180z"></path>
-                    </svg>
-                    <span>Prueba</span>
-                </a>
-            </div>
-            
-            <!-- Pie del submenú - Enlaces a redes sociales -->
-            <div class="nav-submenu__footer">
-                <!-- Instagram -->
-                <a class="nav-submenu__footer__item nts-link" href="https://www.instagram.com/drowned.gabo/" target="_blank" rel="noopener noreferrer" data-track="event" data-category="SocialMedia" data-target="GoTo-Instagram" data-origin="from: header">
-                    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600">
-                        <path d="M303 205.05a93.64 93.64 0 0 1 48.13 13 96.54 96.54 0 0 1 35.16 35.16 95.79 95.79 0 0 1 0 96.26 96.54 96.54 0 0 1-35.16 35.16 95.79 95.79 0 0 1-96.26 0 96.59 96.59 0 0 1-35.15-35.16 95.72 95.72 0 0 1 0-96.26 96.59 96.59 0 0 1 35.1-35.21A93.66 93.66 0 0 1 303 205.05zm0 159q25.95 0 44.37-18.42t18.41-44.36q0-25.95-18.41-44.36T303 238.53q-25.95 0-44.36 18.42t-18.42 44.36q0 25.95 18.42 44.36T303 364.09zm123-163.19a26.14 26.14 0 0 1-7.11 15.91 20.41 20.41 0 0 1-15.49 6.69 22.49 22.49 0 1 1 22.6-22.6zm63.62 22.6q.83 23.44.83 77.85t-1.25 78.26q-1.26 23.87-7.12 41.44a98 98 0 0 1-59.43 59.43q-17.58 5.87-41.43 7.11T303 488.81q-54.4 0-78.26-1.26t-41.43-7.95a89.12 89.12 0 0 1-36.42-22.18 97.68 97.68 0 0 1-23-36.41q-5.85-17.58-7.11-41.44t-1.26-78.26q0-54.4 1.26-78.26t7.11-41.44a98 98 0 0 1 59.44-59.43q17.56-5.85 41.43-7.11t78.24-1.26q54.42 0 78.27 1.26t41.43 7.11a98 98 0 0 1 59.43 59.43q5.82 17.58 7.49 41.85zM449.44 411.8q5-14.24 6.69-45.2.84-18.42.84-51.9v-26.78q0-34.32-.84-51.9-1.67-31.82-6.69-45.2-10.05-25.95-36-36-13.38-5-45.2-6.7-18.4-.84-51.89-.84h-26.79q-33.48 0-51.9.84-31 1.68-45.2 6.7-26 10-36 36-5 13.4-6.7 45.2-.83 18.42-.83 51.9v26.78q0 33.48.83 51.9 1.68 31 6.7 45.2 10.88 25.95 36 36 14.23 5 45.2 6.7 18.42.84 51.9.84h26.79q34.32 0 51.89-.84 31.81-1.68 45.2-6.7 25.95-10.88 36-36z"></path>
-                    </svg>
-                </a>
-                
-                <!-- Facebook -->
-                <a class="nav-submenu__footer__item nts-link" href="https://www.instagram.com/drowned.gabo/" target="_blank" rel="noopener noreferrer" data-track="event" data-category="SocialMedia" data-target="GoTo-Facebook" data-origin="from: header">
-                    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600">
-                        <path d="M262.23 488.81V321.09h-54.68v-66.65h54.68V201.7q0-41.74 22.73-64.82t60.37-23.07q30.54 0 49.72 2.93v59.33H361q-19.17 0-26.27 8.79-5.73 7.32-5.73 23.43v46.15h60.37l-8.52 66.65H329v167.72z"></path>
-                    </svg>
-                </a>
-                
-                <!-- Twitter -->
-                <a class="nav-submenu__footer__item nts-link" href="https://www.instagram.com/drowned.gabo/" target="_blank" rel="noopener noreferrer" data-track="event" data-category="SocialMedia" data-target="GoTo-Twitter" data-origin="from: header">
-                    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600">
-                        <path d="M450 224a43.55 43.55 0 0 1 .73 9.52q0 52.74-25.64 101.81-26.35 52-74 82.76-52 34.43-119.38 34.43-64.46 0-117.92-34.43 8.06.74 18.31.74 53.46 0 95.94-33-25.63 0-45-15a76.45 76.45 0 0 1-26.73-37.72q7.32.74 13.91.74a98 98 0 0 0 20.51-2.2 77.52 77.52 0 0 1-43.95-27.1q-17.56-21.24-17.57-48.34v-1.47A72.37 72.37 0 0 0 163.6 265a85.44 85.44 0 0 1-24.9-27.83 74.62 74.62 0 0 1 1.46-75.44 215.11 215.11 0 0 0 158.21 80.56 106.41 106.41 0 0 1-1.47-17.58 76.32 76.32 0 0 1 10.25-38.45A75.36 75.36 0 0 1 335 158.08a74.32 74.32 0 0 1 38.08-10.25 73.45 73.45 0 0 1 31.13 6.59A87.28 87.28 0 0 1 429.47 172a156.49 156.49 0 0 0 49.07-18.31q-8.79 27.1-33.69 42.48a165 165 0 0 0 43.95-12.45A169.41 169.41 0 0 1 450 224z"></path>
-                    </svg>
-                </a>
-                
-                <!-- YouTube -->
-                <a class="nav-submenu__footer__item nts-link" href="https://www.instagram.com/drowned.gabo/" target="_blank" rel="noopener noreferrer" data-track="event" data-category="SocialMedia" data-target="GoTo-Youtube" data-origin="from: header">
-                    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600">
-                        <path d="M482.9 209.18q4.8 18.62 6.87 56.53l.68 34.46-.68 34.47q-2.07 38.61-6.87 57.22a48.18 48.18 0 0 1-12.36 20.68 47.55 47.55 0 0 1-21.3 12.4q-17.85 4.83-83.79 6.9l-62.5.69-62.5-.69q-65.92-2.07-83.79-6.9a47.51 47.51 0 0 1-21.29-12.4A48.18 48.18 0 0 1 123 391.86q-4.82-18.62-6.87-57.22l-.69-34.47q0-15.17.69-34.46 2.06-37.92 6.87-56.53a48.09 48.09 0 0 1 33.65-33.78q17.86-4.82 83.79-6.89l62.5-.69 62.5.69q65.94 2.07 83.79 6.89a48.08 48.08 0 0 1 33.66 33.78zM264.49 356.7l98.22-56.53-98.22-55.83z"></path>
-                    </svg>
-                </a>
-            </div>
-        </div>
+    <!-- Botón de menú hamburguesa para móviles -->
+    <button class="header__menu-alternar KITH-link" aria-label="Alternar menú de navegación" title="Alternar menú de navegación">
+
+         <!-- Icono X para cerrar -->
+        <svg class="header__menu-alternar-icono header__menu-alternar-icono-x" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600">
+            <path d="M356.25 300L487.5 431.25l-56.25 56.25L300 356.25 168.75 487.5l-56.25-56.25L243.75 300 112.5 168.75l56.25-56.25L300 243.75 431.25 112.5l56.25 56.25z"></path>
+        </svg>
+
+        <!-- Icono de tres puntos -->
+        <svg class="header__menu-alternar-icono header__menu-alternar-icono-3puntos" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600">
+            <path d="M150.39 340a37.5 37.5 0 1 1 37.5-37.5 37.5 37.5 0 0 1-37.5 37.5zm150 0a37.5 37.5 0 1 1 37.5-37.5 37.5 37.5 0 0 1-37.5 37.5zm150 0a37.5 37.5 0 1 1 37.5-37.5 37.5 37.5 0 0 1-37.5 37.5z"></path>
+            <path fill="none" d="M0 2h600v600H0z"></path>
+        </svg>
+
+        <!-- Icono de hamburguesa -->
+        <svg class="header__menu-alternar-icono header__menu-alternar-icono-hamburguesa" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600">
+            <path d="M107,143H507v64H107Zm0,128H507v64H107Zm0,128H507v64H107Z"></path>
+        </svg>
+    </button>
+</header>
+
+
+<!-- SUBMENÚ DESKTOP -->
+<div class="nav-submenu-container nav-submenu-container--desktop">
+  <div class="nav-submenu text-uppercase">
+    <!-- Primera sección del submenú - Enlaces principales secundarios -->
+    <div class="nav-submenu__section">
+      <a class="nav-submenu-link KITH-link" href="/otrapag">Prueba</a>
+      <a class="nav-submenu-link KITH-link" href="/otrapag">Prueba</a>
+      <a class="nav-submenu-link KITH-link" href="/otrapag">Prueba</a>
+      <a class="nav-submenu-link KITH-link" href="/otrapag">Prueba</a>
+      <a class="nav-submenu-link KITH-link" href="/otrapag">Prueba</a>
+      <a class="nav-submenu-link KITH-link" href="/otrapag">Prueba</a>
+      <a class="nav-submenu-link KITH-link" target="_blank" rel="noopener noreferrer" href="/otrapag">Prueba</a>
     </div>
+    <!-- Segunda sección del submenú -->
+    <div class="nav-submenu__section">
+      <a class="nav-submenu-link KITH-link" target="_blank" rel="noopener noreferrer" href="/otrapag">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 127.14 96.36" style="height: 14px; margin-top: 4px; margin-bottom: 4px;">
+          <path d="M107.7 8.07A105.15 105.15 0 0 0 81.47 0a72.06 72.06 0 0 0-3.36 6.83 97.68 97.68 0 0 0-29.11 0A72.37 72.37 0 0 0 45.64 0a105.89 105.89 0 0 0-26.25 8.09C2.79 32.65-1.71 56.6.54 80.21a105.73 105.73 0 0 0 32.17 16.15 77.7 77.7 0 0 0 6.89-11.11 68.42 68.42 0 0 1-10.85-5.18c.91-.66 1.8-1.34 2.66-2a75.57 75.57 0 0 0 64.32 0c.87.71 1.76 1.39 2.66 2a68.68 68.68 0 0 1-10.87 5.19 77 77 0 0 0 6.89 11.1 105.25 105.25 0 0 0 32.19-16.14c2.64-27.38-4.51-51.11-18.9-72.15ZM42.45 65.69C36.18 65.69 31 60 31 53s5-12.74 11.43-12.74S54 46 53.89 53s-5.05 12.69-11.44 12.69Zm42.24 0C78.41 65.69 73.25 60 73.25 53s5-12.74 11.44-12.74S96.23 46 96.12 53s-5.04 12.69-11.43 12.69Z"></path>
+        </svg>
+        <span>Prueba</span>
+      </a>
+      <a class="nav-submenu-link KITH-link" href="/otrapag">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600">
+          <path d="M529 124H79v360h450zm-65.9 36L304 312.75 144.9 160zM492 448H117V183.65l187.5 180 187.5-180z"></path>
+        </svg>
+        <span>Prueba</span>
+      </a>
+    </div>
+    <!-- Pie del submenú - Enlaces a redes sociales -->
+    <div class="nav-submenu__footer">
+      <a class="nav-submenu__footer__item KITH-link" href="https://www.instagram.com/drowned.gabo/" target="_blank" rel="noopener noreferrer">
+        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600">
+          <path d="M303 205.05a93.64 93.64 0 0 1 48.13 13 96.54 96.54 0 0 1 35.16 35.16 95.79 95.79 0 0 1 0 96.26 96.54 96.54 0 0 1-35.16 35.16 95.79 95.79 0 0 1-96.26 0 96.59 96.59 0 0 1-35.15-35.16 95.72 95.72 0 0 1 0-96.26 96.59 96.59 0 0 1 35.1-35.21A93.66 93.66 0 0 1 303 205.05zm0 159q25.95 0 44.37-18.42t18.41-44.36q0-25.95-18.41-44.36T303 238.53q-25.95 0-44.36 18.42t-18.42 44.36q0 25.95 18.42 44.36T303 364.09zm123-163.19a26.14 26.14 0 0 1-7.11 15.91 20.41 20.41 0 0 1-15.49 6.69 22.49 22.49 0 1 1 22.6-22.6zm63.62 22.6q.83 23.44.83 77.85t-1.25 78.26q-1.26 23.87-7.12 41.44a98 98 0 0 1-59.43 59.43q-17.58 5.87-41.43 7.11T303 488.81q-54.4 0-78.26-1.26t-41.43-7.95a89.12 89.12 0 0 1-36.42-22.18 97.68 97.68 0 0 1-23-36.41q-5.85-17.58-7.11-41.44t-1.26-78.26q0-54.4 1.26-78.26t7.11-41.44a98 98 0 0 1 59.44-59.43q17.56-5.85 41.43-7.11t78.24-1.26q54.42 0 78.27 1.26t41.43 7.11a98 98 0 0 1 59.43 59.43q5.82 17.58 7.49 41.85zM449.44 411.8q5-14.24 6.69-45.2.84-18.42.84-51.9v-26.78q0-34.32-.84-51.9-1.67-31.82-6.69-45.2-10.05-25.95-36-36-13.38-5-45.2-6.7-18.4-.84-51.89-.84h-26.79q-33.48 0-51.9.84-31 1.68-45.2 6.7-26 10-36 36-5 13.4-6.7 45.2-.83 18.42-.83 51.9v26.78q0 33.48.83 51.9 1.68 31 6.7 45.2 10.88 25.95 36 36 14.23 5 45.2 6.7 18.42.84 51.9.84h26.79q34.32 0 51.89-.84 31.81-1.68 45.2-6.7 25.95-10.88 36-36z"></path>
+        </svg>
+      </a>
+      <a class="nav-submenu__footer__item KITH-link" href="https://www.instagram.com/drowned.gabo/" target="_blank" rel="noopener noreferrer">
+        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600">
+          <path d="M262.23 488.81V321.09h-54.68v-66.65h54.68V201.7q0-41.74 22.73-64.82t60.37-23.07q30.54 0 49.72 2.93v59.33H361q-19.17 0-26.27 8.79-5.73 7.32-5.73 23.43v46.15h60.37l-8.52 66.65H329v167.72z"></path>
+        </svg>
+      </a>
+      <a class="nav-submenu__footer__item KITH-link" href="https://www.instagram.com/drowned.gabo/" target="_blank" rel="noopener noreferrer">
+        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600">
+          <path d="M450 224a43.55 43.55 0 0 1 .73 9.52q0 52.74-25.64 101.81-26.35 52-74 82.76-52 34.43-119.38 34.43-64.46 0-117.92-34.43 8.06.74 18.31.74 53.46 0 95.94-33-25.63 0-45-15a76.45 76.45 0 0 1-26.73-37.72q7.32.74 13.91.74a98 98 0 0 0 20.51-2.2 77.52 77.52 0 0 1-43.95-27.1q-17.56-21.24-17.57-48.34v-1.47A72.37 72.37 0 0 0 163.6 265a85.44 85.44 0 0 1-24.9-27.83 74.62 74.62 0 0 1 1.46-75.44 215.11 215.11 0 0 0 158.21 80.56 106.41 106.41 0 0 1-1.47-17.58 76.32 76.32 0 0 1 10.25-38.45A75.36 75.36 0 0 1 335 158.08a74.32 74.32 0 0 1 38.08-10.25 73.45 73.45 0 0 1 31.13 6.59A87.28 87.28 0 0 1 429.47 172a156.49 156.49 0 0 0 49.07-18.31q-8.79 27.1-33.69 42.48a165 165 0 0 0 43.95-12.45A169.41 169.41 0 0 1 450 224z"></path>
+        </svg>
+      </a>
+      <a class="nav-submenu__footer__item KITH-link" href="https://www.instagram.com/drowned.gabo/" target="_blank" rel="noopener noreferrer">
+        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600">
+          <path d="M482.9 209.18q4.8 18.62 6.87 56.53l.68 34.46-.68 34.47q-2.07 38.61-6.87 57.22a48.18 48.18 0 0 1-12.36 20.68 47.55 47.55 0 0 1-21.3 12.4q-17.85 4.83-83.79 6.9l-62.5.69-62.5-.69q-65.92-2.07-83.79-6.9a47.51 47.51 0 0 1-21.29-12.4A48.18 48.18 0 0 1 123 391.86q-4.82-18.62-6.87-57.22l-.69-34.47q0-15.17.69-34.46 2.06-37.92 6.87-56.53a48.09 48.09 0 0 1 33.65-33.78q17.86-4.82 83.79-6.89l62.5-.69 62.5.69q65.94 2.07 83.79 6.89a48.08 48.08 0 0 1 33.66 33.78zM264.49 356.7l98.22-56.53-98.22-55.83z"></path>
+        </svg>
+      </a>
+    </div>
+  </div>
 </div>
-<div id="page-overlay" class="navigation-page-overlay"></div>
+
+<!-- SUBMENÚ MOBILE -->
+<div class="nav-submenu-container nav-submenu-container--mobile">
+  <div class="nav-submenu text-uppercase">
+    <!-- SECCIÓN RADIO - Enlace principal con flecha -->
+    <div class="nav-submenu__section nav-submenu__section--tight">
+      <a class="nav-submenu-link nav-submenu-link--spaced nav-submenu-link--large KITH-link nts-app text-bold" href="/explorar">
+        Explorar
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" style="width: 14px;">
+          <path d="M150 117l60-61 240 244-240 244-60-61 180-183-180-183z"></path>
+        </svg>
+      </a>
+    </div>
+    <!-- SECCIÓN DE COLUMNAS - Enlaces de radio organizados en 2 columnas -->
+    <div class="nav-submenu__section nav-submenu__section--columns">
+      <div class="nav-submenu__section__column">
+        <a class="nav-submenu-link KITH-link nts-app" href="/comunidad">Comunidad</a>
+        <a class="nav-submenu-link KITH-link nts-app" href="/populares">Populares</a>
+        <a class="nav-submenu-link KITH-link nts-app" href="/radio/collections">Test</a>
+      </div>
+      <div class="nav-submenu__section__column">
+        <a class="nav-submenu-link KITH-link nts-app" href="/otrapag">Test</a>
+        <a class="nav-submenu-link KITH-link nts-app" href="/series">Series</a>
+      </div>
+    </div>
+    <!-- SECCIÓN INFINITE MIXTAPES - Enlace destacado -->
+    <div class="nav-submenu__section nav-submenu__section--tight">
+      <a class="nav-submenu-link nav-submenu-link--spaced nav-submenu-link--large KITH-link nts-app text-bold" href="/otrapag">
+        PRUEBA
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" style="width: 14px;">
+          <path d="M150 117l60-61 240 244-240 244-60-61 180-183-180-183z"></path>
+        </svg>
+      </a>
+    </div>
+    <!-- SECCIÓN Mi kith - Área de usuario -->
+    <div class="nav-submenu__section nav-submenu__section--tight">
+      <a class="nav-submenu-link nav-submenu-link--spaced nav-submenu-link--large KITH-link nts-app text-bold" href="/otrapag">
+        <div>
+          <svg class="nts-icon--inline nts-icon--inline--xxl nts-icon--inverted" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="margin-right: 0.5em;">
+            <path d="M12 4.41a2.92 2.92 0 11-2.95 2.92A2.91 2.91 0 0112 4.41m0-1.58a4.5 4.5 0 104.5 4.5 4.5 4.5 0 00-4.5-4.5zm0 11.71c3.26 0 7.41 1.63 7.41 2.91v1.79H4.55v-1.79c0-1.28 4.16-2.91 7.41-2.91M12 13c-3 0-9 1.51-9 4.5v3.38h18v-3.43c0-3-6-4.5-9-4.5z" data-name="Layer 5"></path>
+          </svg>
+          Iniciar Sesion
+        </div>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" style="width: 14px;">
+          <path d="M150 117l60-61 240 244-240 244-60-61 180-183-180-183z"></path>
+        </svg>
+      </a>
+    </div>
+    <!-- SECCIÓN CTA - Botón destacado para supporters -->
+    <div class="nav-submenu__section">
+      <a class="nts-app nts-button nav-submenu__cta" href="/supporters">SUBIR UNA HISTORIA</a>
+    </div>
+    <!-- SECCIÓN ENLACES ESPECIALES - Shop y Chat con iconos -->
+    <div class="nav-submenu__section">
+      <div class="nav-submenu-link KITH-link" data-track="event" data-category="Navigation" data-target="Open-Chat" data-origin="from: header">
+        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600">
+          <path d="M493 391.73h-45.9v99.35l-128.18-99.35H118V144.92h375z"></path>
+        </svg>
+        Chat
+      </div>
+    </div>
+    <!-- SECCIÓN ENLACES GENERALES - Navegación principal del sitio -->
+    <div class="nav-submenu__section">
+      <a class="nav-submenu-link KITH-link nts-app" href="/otrapag">PRUEBA</a>
+      <a class="nav-submenu-link KITH-link nts-app" href="/otrapag">PRUEBA</a>
+      <a class="nav-submenu-link KITH-link nts-app" href="/otrapag">PRUEBA</a>
+      <a class="nav-submenu-link KITH-link nts-app" href="/otrapag">PRUEBA</a>
+      <a class="nav-submenu-link KITH-link nts-app" href="/otrapag">PRUEBA</a>
+      <a class="nav-submenu-link KITH-link nts-app" href="/otrapag">PRUEBA</a>
+      <a class="nav-submenu-link KITH-link nts-app" target="_blank" rel="noopener noreferrer" href="/otrapag">PRUEBA</a>
+    </div>
+    <!-- SECCIÓN APLICACIONES - Enlaces a apps móviles y redes sociales -->
+    <div class="nav-submenu__section nav-submenu__section--white-border">
+      <a class="nav-submenu-link KITH-link" target="_blank" rel="noopener noreferrer" href="/otrapag">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 127.14 96.36" style="height: 14px; margin-top: 4px; margin-bottom: 4px;">
+          <path d="M107.7 8.07A105.15 105.15 0 0 0 81.47 0a72.06 72.06 0 0 0-3.36 6.83 97.68 97.68 0 0 0-29.11 0A72.37 72.37 0 0 0 45.64 0a105.89 105.89 0 0 0-26.25 8.09C2.79 32.65-1.71 56.6.54 80.21a105.73 105.73 0 0 0 32.17 16.15 77.7 77.7 0 0 0 6.89-11.11 68.42 68.42 0 0 1-10.85-5.18c.91-.66 1.8-1.34 2.66-2a75.57 75.57 0 0 0 64.32 0c.87.71 1.76 1.39 2.66 2a68.68 68.68 0 0 1-10.87 5.19 77 77 0 0 0 6.89 11.1 105.25 105.25 0 0 0 32.19-16.14c2.64-27.38-4.51-51.11-18.9-72.15ZM42.45 65.69C36.18 65.69 31 60 31 53s5-12.74 11.43-12.74S54 46 53.89 53s-5.05 12.69-11.44 12.69Zm42.24 0C78.41 65.69 73.25 60 73.25 53s5-12.74 11.44-12.74S96.23 46 96.12 53s-5.04 12.69-11.43 12.69Z"></path>
+        </svg>
+        <span>PRUEBA</span>
+      </a>
+      <a class="nav-submenu-link KITH-link nts-app" href="/otrapag">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600">
+          <path d="M529 124H79v360h450zm-65.9 36L304 312.75 144.9 160zM492 448H117V183.65l187.5 180 187.5-180z"></path>
+        </svg>
+        <span>PRUEBA</span>
+      </a>
+    </div>
+    <!-- PIE DEL MENÚ - Enlaces a redes sociales -->
+    <div class="nav-submenu__footer">
+      <a class="nav-submenu__footer__item KITH-link" href="https://www.instagram.com/drowned.gabo/" target="_blank" rel="noopener noreferrer">
+        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600">
+          <path d="M303 205.05a93.64 93.64 0 0 1 48.13 13 96.54 96.54 0 0 1 35.16 35.16 95.79 95.79 0 0 1 0 96.26 96.54 96.54 0 0 1-35.16 35.16 95.79 95.79 0 0 1-96.26 0 96.59 96.59 0 0 1-35.15-35.16 95.72 95.72 0 0 1 0-96.26 96.59 96.59 0 0 1 35.1-35.21A93.66 93.66 0 0 1 303 205.05zm0 159q25.95 0 44.37-18.42t18.41-44.36q0-25.95-18.41-44.36T303 238.53q-25.95 0-44.36 18.42t-18.42 44.36q0 25.95 18.42 44.36T303 364.09zm123-163.19a26.14 26.14 0 0 1-7.11 15.91 20.41 20.41 0 0 1-15.49 6.69 22.49 22.49 0 1 1 22.6-22.6zm63.62 22.6q.83 23.44.83 77.85t-1.25 78.26q-1.26 23.87-7.12 41.44a98 98 0 0 1-59.43 59.43q-17.58 5.87-41.43 7.11T303 488.81q-54.4 0-78.26-1.26t-41.43-7.95a89.12 89.12 0 0 1-36.42-22.18 97.68 97.68 0 0 1-23-36.41q-5.85-17.58-7.11-41.44t-1.26-78.26q0-54.4 1.26-78.26t7.11-41.44a98 98 0 0 1 59.44-59.43q17.56-5.85 41.43-7.11t78.24-1.26q54.42 0 78.27 1.26t41.43 7.11a98 98 0 0 1 59.43 59.43q5.82 17.58 7.49 41.85zM449.44 411.8q5-14.24 6.69-45.2.84-18.42.84-51.9v-26.78q0-34.32-.84-51.9-1.67-31.82-6.69-45.2-10.05-25.95-36-36-13.38-5-45.2-6.7-18.4-.84-51.89-.84h-26.79q-33.48 0-51.9.84-31 1.68-45.2 6.7-26 10-36 36-5 13.4-6.7 45.2-.83 18.42-.83 51.9v26.78q0 33.48.83 51.9 1.68 31 6.7 45.2 10.88 25.95 36 36 14.23 5 45.2 6.7 18.42.84 51.9.84h26.79q34.32 0 51.89-.84 31.81-1.68 45.2-6.7 25.95-10.88 36-36z"></path>
+        </svg>
+      </a>
+      <a class="nav-submenu__footer__item KITH-link" href="https://www.instagram.com/drowned.gabo/" target="_blank" rel="noopener noreferrer">
+        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600">
+          <path d="M262.23 488.81V321.09h-54.68v-66.65h54.68V201.7q0-41.74 22.73-64.82t60.37-23.07q30.54 0 49.72 2.93v59.33H361q-19.17 0-26.27 8.79-5.73 7.32-5.73 23.43v46.15h60.37l-8.52 66.65H329v167.72z"></path>
+        </svg>
+      </a>
+      <a class="nav-submenu__footer__item KITH-link" href="https://www.instagram.com/drowned.gabo/" target="_blank" rel="noopener noreferrer">
+        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600">
+          <path d="M450 224a43.55 43.55 0 0 1 .73 9.52q0 52.74-25.64 101.81-26.35 52-74 82.76-52 34.43-119.38 34.43-64.46 0-117.92-34.43 8.06.74 18.31.74 53.46 0 95.94-33-25.63 0-45-15a76.45 76.45 0 0 1-26.73-37.72q7.32.74 13.91.74a98 98 0 0 0 20.51-2.2 77.52 77.52 0 0 1-43.95-27.1q-17.56-21.24-17.57-48.34v-1.47A72.37 72.37 0 0 0 163.6 265a85.44 85.44 0 0 1-24.9-27.83 74.62 74.62 0 0 1 1.46-75.44 215.11 215.11 0 0 0 158.21 80.56 106.41 106.41 0 0 1-1.47-17.58 76.32 76.32 0 0 1 10.25-38.45A75.36 75.36 0 0 1 335 158.08a74.32 74.32 0 0 1 38.08-10.25 73.45 73.45 0 0 1 31.13 6.59A87.28 87.28 0 0 1 429.47 172a156.49 156.49 0 0 0 49.07-18.31q-8.79 27.1-33.69 42.48a165 165 0 0 0 43.95-12.45A169.41 169.41 0 0 1 450 224z"></path>
+        </svg>
+      </a>
+      <a class="nav-submenu__footer__item KITH-link" href="https://www.instagram.com/drowned.gabo/" target="_blank" rel="noopener noreferrer">
+        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600">
+          <path d="M482.9 209.18q4.8 18.62 6.87 56.53l.68 34.46-.68 34.47q-2.07 38.61-6.87 57.22a48.18 48.18 0 0 1-12.36 20.68 47.55 47.55 0 0 1-21.3 12.4q-17.85 4.83-83.79 6.9l-62.5.69-62.5-.69q-65.92-2.07-83.79-6.9a47.51 47.51 0 0 1-21.29-12.4A48.18 48.18 0 0 1 123 391.86q-4.82-18.62-6.87-57.22l-.69-34.47q0-15.17.69-34.46 2.06-37.92 6.87-56.53a48.09 48.09 0 0 1 33.65-33.78q17.86-4.82 83.79-6.89l62.5-.69 62.5.69q65.94 2.07 83.79 6.89a48.08 48.08 0 0 1 33.66 33.78zM264.49 356.7l98.22-56.53-98.22-55.83z"></path>
+        </svg>
+      </a>
+    </div>
+  </div>
+</div>
+
+
 <script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const toggleBtn = document.getElementById("menu-toggle");
-    const submenu = document.getElementById("submenu");
-    const overlay = document.getElementById("page-overlay");
+document.addEventListener('DOMContentLoaded', function () {
+  const menuToggle = document.querySelector('.header__menu-alternar');
+  const submenuDes = document.querySelector('.nav-submenu-container--desktop');
+  const submenuMob = document.querySelector('.nav-submenu-container--mobile');
 
-    if (!toggleBtn || !submenu || !overlay) return;
+  function closeAllMenus() {
+    if (submenuDes) submenuDes.classList.remove('nav-submenu-container--show');
+    if (submenuMob) submenuMob.classList.remove('nav-submenu-container--show');
+    if (menuToggle) menuToggle.classList.remove('header__menu-alternar--open');
+  }
 
-    toggleBtn.addEventListener("click", (e) => {
-      e.stopPropagation();
-      const isOpen = toggleBtn.classList.contains("header__menu-toggle--open");
+  function openMenuForCurrentBreakpoint() {
+    const isMobile = window.matchMedia('(max-width: 767px)').matches;
+    if (isMobile) {
+      if (submenuDes) submenuDes.classList.remove('nav-submenu-container--show');
+      if (submenuMob) submenuMob.classList.add('nav-submenu-container--show');
+      if (menuToggle) menuToggle.classList.add('header__menu-alternar--open');
+    } else {
+      if (submenuMob) submenuMob.classList.remove('nav-submenu-container--show');
+      if (submenuDes) submenuDes.classList.add('nav-submenu-container--show');
+      if (menuToggle) menuToggle.classList.add('header__menu-alternar--open');
+    }
+  }
 
-      if (isOpen) {
-        toggleBtn.classList.remove("header__menu-toggle--open");
-        submenu.classList.remove("nav-submenu-container--show");
-        overlay.classList.remove("navigation-page-overlay--show");
-      } else {
-        toggleBtn.classList.add("header__menu-toggle--open");
-        submenu.classList.add("nav-submenu-container--show");
-        overlay.classList.add("navigation-page-overlay--show");
+  function toggleMenu() {
+    const isMobile = window.matchMedia('(max-width: 767px)').matches;
+    if (isMobile) {
+      if (submenuDes) submenuDes.classList.remove('nav-submenu-container--show');
+      if (submenuMob) submenuMob.classList.toggle('nav-submenu-container--show');
+      if (menuToggle && submenuMob)
+        menuToggle.classList.toggle('header__menu-alternar--open', submenuMob.classList.contains('nav-submenu-container--show'));
+    } else {
+      if (submenuMob) submenuMob.classList.remove('nav-submenu-container--show');
+      if (submenuDes) submenuDes.classList.toggle('nav-submenu-container--show');
+      if (menuToggle && submenuDes)
+        menuToggle.classList.toggle('header__menu-alternar--open', submenuDes.classList.contains('nav-submenu-container--show'));
+    }
+  }
+
+  if (menuToggle && submenuDes && submenuMob) {
+    menuToggle.addEventListener('click', toggleMenu);
+
+    document.addEventListener('click', function (e) {
+      const target = e.target;
+      const isMobile = window.matchMedia('(max-width: 767px)').matches;
+      const submenu = isMobile ? submenuMob : submenuDes;
+      if (
+        submenu.classList.contains('nav-submenu-container--show') &&
+        !(target instanceof Node && submenu.contains(target)) &&
+        !(target instanceof Node && menuToggle.contains(target))
+      ) {
+        closeAllMenus();
       }
     });
 
-    submenu.addEventListener("click", (e) => {
-      e.stopPropagation();
-    });
+    // Mantener el estado del menú al cambiar de breakpoint
+    let lastIsMobile = window.matchMedia('(max-width: 767px)').matches;
+    let wasMenuOpen = false;
 
-    overlay.addEventListener("click", () => {
-      toggleBtn.classList.remove("header__menu-toggle--open");
-      submenu.classList.remove("nav-submenu-container--show");
-      overlay.classList.remove("navigation-page-overlay--show");
+    window.addEventListener('resize', function () {
+      const isMobile = window.matchMedia('(max-width: 767px)').matches;
+
+      wasMenuOpen = lastIsMobile
+        ? submenuMob.classList.contains('nav-submenu-container--show')
+        : submenuDes.classList.contains('nav-submenu-container--show');
+
+      if (isMobile !== lastIsMobile) {
+        closeAllMenus();
+        if (wasMenuOpen) {
+          openMenuForCurrentBreakpoint();
+        }
+        lastIsMobile = isMobile;
+      }
     });
-  });
+  }
+});
 </script>
-
-<!-- 
-  COMPONENTE DE CABEZERAS
-  Este componente muestra información sobre mangas
-  con estados expandido y contraído
--->
-<div id="nts-live-header" class="live-header live-header--collapsed">
-    <!-- SECCIÓN: CANALES CONTRAÍDOS -->
-    <div class="live-header__channels--collapsed live-header__channels">
-        <!-- Etiqueta de "En emisión" -->
-        <div class="live-header__live-now-label">
-            <span>EN EMISIÓN</span>
-            <span style="top:0" class="live-now-circle live-now-circle--live-channel"></span>
-        </div>
-        
-        <!-- Canal 1 contraído -->
-        <button class="live-channel live-channel--collapsed">
-            <!-- Número de canal -->
-            <span class="channel-icon channel-icon--collapsed">1</span>
-            <div class="live-channel--collapsed__broadcast">
-                <!-- Icono de reproducción -->
-                <svg class="nts-icon nts-icon--s nts-icon--inverted live-channel--collapsed__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600">
-                    <title>Play</title>
-                    <g id="_x33_--Hidden-_x28_closing-up_x29_-" transform="translate(-772 -385)">
-                        <g id="Drawer" transform="translate(0 43)">
-                            <g id="_x32_" transform="translate(18)">
-                                <path id="play" d="M1260.4 651.3L882.8 861.2c-4.4 2.4-8.2 2.7-11.2 1-3.1-1.7-4.6-5.1-4.6-10.2V433.2c0-4.8 1.5-8.2 4.6-10.2 3.1-2 6.8-1.7 11.2 1l377.6 210c4.4 2.4 6.6 5.3 6.6 8.7 0 3.3-2.2 6.2-6.6 8.6z"></path>
-                            </g>
-                        </g>
-                    </g>
-                </svg>
-                <!-- Título del programa -->
-                <h3 class="live-channel--collapsed__broadcast__heading">Manga 1</h3>
-                <span class="live-channel--collapsed__broadcast__location broadcast-location">
-                    <span class="text-uppercase text-bold"></span>
-                    <span>Autor</span>
-                </span>
-            </div>
-        </button>
-        
-        <!-- Canal 2 contraído -->
-        <button class="live-channel live-channel--collapsed channel-2">
-            <!-- Número de canal -->
-            <span class="channel-icon channel-icon--collapsed">2</span>
-            <div class="live-channel--collapsed__broadcast">
-                <!-- Icono de reproducción -->
-                <svg class="nts-icon nts-icon--s nts-icon--inverted live-channel--collapsed__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600">
-                    <title>Play</title>
-                    <g id="_x33_--Hidden-_x28_closing-up_x29_-" transform="translate(-772 -385)">
-                        <g id="Drawer" transform="translate(0 43)">
-                            <g id="_x32_" transform="translate(18)">
-                                <path id="play" d="M1260.4 651.3L882.8 861.2c-4.4 2.4-8.2 2.7-11.2 1-3.1-1.7-4.6-5.1-4.6-10.2V433.2c0-4.8 1.5-8.2 4.6-10.2 3.1-2 6.8-1.7 11.2 1l377.6 210c4.4 2.4 6.6 5.3 6.6 8.7 0 3.3-2.2 6.2-6.6 8.6z"></path>
-                            </g>
-                        </g>
-                    </g>
-                </svg>
-                <!-- Título del programa -->
-                <h3 class="live-channel--collapsed__broadcast__heading">Manga 2</h3>
-                <span class="live-channel--collapsed__broadcast__location broadcast-location">
-                    <span class="text-uppercase text-bold"></span>
-                    <span>Autor</span>
-                </span>
-            </div>
-        </button>
-    </div>
-
-    <!-- SECCIÓN: CANALES EXPANDIDOS -->
-    <div class="live-header__channels--expanded live-header__channels">
-        <!-- Canal 1 expandido -->
-        <div class="live-channel">
-            <!-- Cabecera del canal -->
-            <header class="live-channel__header">
-                <div class="live-channel__header__channel-heading">
-                    <div class="channel-heading">
-                        <span class="channel-icon">1</span>
-                        <span class="live-now-circle live-now-circle--live-channel"></span>
-                        <div class="text-overflow-ellipsis">
-                            <span class="text-uppercase text-bold"></span>
-                            <span class="broadcast-location">Autor</span>
-                        </div>
-                    </div>
-                </div>
-                <!-- Horario de emisión -->
-                <span class="live-channel__header__broadcast-times">07:00 - 09:00</span>
-            </header>
-            
-            <!-- Contenido del canal -->
-            <div class="live-channel__content">
-                <!-- Imagen del programa -->
-                <div class="live-channel__content__picture">
-                    <button class="live-channel-picture nts-box-shadow">
-                        <img class="live-channel-picture__img" 
-                             srcset="src/assets/sena.webp 400w, src/assets/sena.webp 800w"
-                             sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw" 
-                             src="src/assets/sena.webp" 
-                             alt="PATRICK FORGE">
-                        <!-- Overlay con botón de reproducción -->
-                        <div class="nts-grid-picture__overlay nts-grid-picture__overlay--live">
-                            <svg class="nts-icon nts-icon--overlay nts-icon--m" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600">
-                                <title>Play</title>
-                                <g id="_x33_--Hidden-_x28_closing-up_x29_-" transform="translate(-772 -385)">
-                                    <g id="Drawer" transform="translate(0 43)">
-                                        <g id="_x32_" transform="translate(18)">
-                                            <path id="play" d="M1260.4 651.3L882.8 861.2c-4.4 2.4-8.2 2.7-11.2 1-3.1-1.7-4.6-5.1-4.6-10.2V433.2c0-4.8 1.5-8.2 4.6-10.2 3.1-2 6.8-1.7 11.2 1l377.6 210c4.4 2.4 6.6 5.3 6.6 8.7 0 3.3-2.2 6.2-6.6 8.6z"></path>
-                                        </g>
-                                    </g>
-                                </g>
-                            </svg>
-                        </div>
-                    </button>
-                </div>
-                
-                <!-- Detalles del programa -->
-                <div class="live-channel__content__details">
-                    <div>
-                        <!-- Enlace al programa -->
-                        <a class="broadcast-link no-underline nts-app" href="/shows/patrickforge/episodes/patrickforge-19th-may-2025">
-                            <h3 class="broadcast-heading nts-link">Manga 1</h3>
-                        </a>
-                        <!-- Descripción del programa -->
-                        <p class="broadcast-description">Descripcion manga 1</p>
-                    </div>
-                    
-                    <!-- Botones de favoritos -->
-                    <div class="live-channel__favourite">
-                        <button class="follow-button follow-button--live">
-                            <svg class="follow-button__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="backface-visibility: hidden; transform: translateZ(0px) scale(1, 1);">
-                                <path d="M16.77 3.88a4 4 0 014 4 3.81 3.81 0 01-.26 1.4 8.2 8.2 0 01-.82 1.37L12 18.56l-7.63-7.89a9.41 9.41 0 01-.83-1.39 3.83 3.83 0 01-.25-1.38 4 4 0 017.33-2.3l1.42 2 1.43-2a4 4 0 013.3-1.72m0-1.79A5.76 5.76 0 0012 4.57 5.76 5.76 0 001.54 7.9a5.56 5.56 0 00.37 2A11.57 11.57 0 003 11.82l9 9.27 9-9.27a11.57 11.57 0 001.12-1.88 5.81 5.81 0 00-5.41-7.82z"></path>
-                            </svg>
-                            <span class="follow-button__text">Follow</span>
-                        </button>
-                        <!-- Botón para móvil -->
-                        <button class="mobile-button nts-link" aria-label="Save Episode" title="Save Episode">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: white; width: 24px;">
-                                <defs></defs>
-                                <path d="M18.09 19.14L12 16.56l-6.09 2.58V4.68a1 1 0 011-.94h10.22a1 1 0 011 .94zM17.71 2H6.29A2.25 2.25 0 004 4.22V22l8-3.33L20 22V4.22A2.26 2.26 0 0017.71 2z"></path>
-                            </svg>
-                        </button>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Pie del canal con información del siguiente programa -->
-            <div class="live-channel__footer">
-                <span class="live-channel__footer__label">
-                    <a class="no-underline nts-app" href="/schedule" data-track="event" data-origin="live_header" data-target="/schedule">
-                        Next on 1
-                        <span>
-                            <svg class="nts-icon nts-icon--xs nts-icon--inline nts-icon--inverted" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600">
-                                <path d="M150 117l60-61 240 244-240 244-60-61 180-183-180-183z"></path>
-                            </svg>
-                        </span>
-                    </a>
-                </span>
-                <span class="live-channel__footer__details">
-                    <span class="next-up-times">09:00 - 10:00</span>
-                    <span class="next-up-title">Manga 3</span>
-                </span>
-            </div>
-        </div>
-
-        <!-- Canal 2 expandido -->
-        <div class="live-channel channel-2">
-            <!-- Cabecera del canal -->
-            <header class="live-channel__header">
-                <div class="live-channel__header__channel-heading">
-                    <div class="channel-heading">
-                        <span class="channel-icon">2</span>
-                        <span class="live-now-circle live-now-circle--live-channel"></span>
-                        <div class="text-overflow-ellipsis">
-                            <span class="text-uppercase text-bold"></span>
-                            <span class="broadcast-location">Autor</span>
-                        </div>
-                    </div>
-                </div>
-                <!-- Horario de emisión -->
-                <span class="live-channel__header__broadcast-times">08:00 - 09:00</span>
-            </header>
-            
-            <!-- Contenido del canal -->
-            <div class="live-channel__content">
-                <!-- Imagen del programa -->
-                <div class="live-channel__content__picture">
-                    <button class="live-channel-picture nts-box-shadow">
-                        <img class="live-channel-picture__img" 
-                             srcset="src/assets/sena.webp 400w, src/assets/sena.webp 800w"
-                             sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw" 
-                             src="src/assets/sena.webp" 
-                             alt="CXEMA w/ Emil Asadow">
-                        <!-- Overlay con botón de reproducción -->
-                        <div class="nts-grid-picture__overlay nts-grid-picture__overlay--live">
-                            <svg class="nts-icon nts-icon--overlay nts-icon--m" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600">
-                                <title>Play</title>
-                                <g id="_x33_--Hidden-_x28_closing-up_x29_-" transform="translate(-772 -385)">
-                                    <g id="Drawer" transform="translate(0 43)">
-                                        <g id="_x32_" transform="translate(18)">
-                                            <path id="play" d="M1260.4 651.3L882.8 861.2c-4.4 2.4-8.2 2.7-11.2 1-3.1-1.7-4.6-5.1-4.6-10.2V433.2c0-4.8 1.5-8.2 4.6-10.2 3.1-2 6.8-1.7 11.2 1l377.6 210c4.4 2.4 6.6 5.3 6.6 8.7 0 3.3-2.2 6.2-6.6 8.6z"></path>
-                                        </g>
-                                    </g>
-                                </g>
-                            </svg>
-                        </div>
-                    </button>
-                </div>
-                
-                <!-- Detalles del programa -->
-                <div class="live-channel__content__details">
-                    <div>
-                        <!-- Enlace al programa -->
-                        <a class="broadcast-link no-underline nts-app" href="/shows/cxema/episodes/cxema-19th-may-2025">
-                            <h3 class="broadcast-heading nts-link">Manga 2</h3>
-                        </a>
-                        <!-- Descripción del programa -->
-                        <p class="broadcast-description">Descripcion manga 2</p>
-                    </div>
-                    
-                    <!-- Botones de favoritos -->
-                    <div class="live-channel__favourite">
-                        <button class="follow-button follow-button--live">
-                            <svg class="follow-button__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="backface-visibility: hidden; transform: translateZ(0px) scale(1, 1);">
-                                <path d="M16.77 3.88a4 4 0 014 4 3.81 3.81 0 01-.26 1.4 8.2 8.2 0 01-.82 1.37L12 18.56l-7.63-7.89a9.41 9.41 0 01-.83-1.39 3.83 3.83 0 01-.25-1.38 4 4 0 017.33-2.3l1.42 2 1.43-2a4 4 0 013.3-1.72m0-1.79A5.76 5.76 0 0012 4.57 5.76 5.76 0 001.54 7.9a5.56 5.56 0 00.37 2A11.57 11.57 0 003 11.82l9 9.27 9-9.27a11.57 11.57 0 001.12-1.88 5.81 5.81 0 00-5.41-7.82z"></path>
-                            </svg>
-                            <span class="follow-button__text">Follow</span>
-                        </button>
-                        <!-- Botón para móvil -->
-                        <button class="mobile-button nts-link" aria-label="Save Episode" title="Save Episode">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: white; width: 24px;">
-                                <defs></defs>
-                                <path d="M18.09 19.14L12 16.56l-6.09 2.58V4.68a1 1 0 011-.94h10.22a1 1 0 011 .94zM17.71 2H6.29A2.25 2.25 0 004 4.22V22l8-3.33L20 22V4.22A2.26 2.26 0 0017.71 2z"></path>
-                            </svg>
-                        </button>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Pie del canal con información del siguiente programa -->
-            <div class="live-channel__footer">
-                <span class="live-channel__footer__label">
-                    <a class="no-underline nts-app" href="/schedule/2" data-track="event" data-origin="live_header" data-target="/schedule/2">
-                        Next on 2
-                        <span>
-                            <svg class="nts-icon nts-icon--xs nts-icon--inline nts-icon--inverted" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600">
-                                <path d="M150 117l60-61 240 244-240 244-60-61 180-183-180-183z"></path>
-                            </svg>
-                        </span>
-                    </a>
-                </span>
-                <span class="live-channel__footer__details">
-                    <span class="next-up-times">09:00 - 10:00</span>
-                    <span class="next-up-title">Manga 4</span>
-                </span>
-            </div>
-        </div>
-
-        <!-- Pie de página para móvil -->
-        <div class="live-header__footer live-header__footer--collapsed live-header__footer--mobile">
-            <!-- Botón de expansión -->
-            <button class="live-header__footer__button" aria-label="Expand live player">
-                <svg class="nts-icon nts-icon--xs nts-icon--inline-alt" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600">
-                    <path d="M117.2 450l-60.9-60L300 150l243.8 240-60.9 60L300 270 117.2 450z"></path>
-                </svg>
-            </button>
-            <!-- Botón para lista de pistas en vivo -->
-            <button class="live-header__live-tracks-trigger" aria-label="Open Live Tracklist">
-                <div class="live-header__live-tracks-trigger-inside">
-                    <svg class="nts-icon nts-icon--inline-alt" style="width:24px;height:24px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                        <path d="M2.87 14.49h8V13h-8zm12-5h-12V11h12zm0-3.5h-12v1.5h12zm6.26 3.34l-2.88-1v7a2.67 2.67 0 01-2 2.61 2.53 2.53 0 01-2.88-1.44 2.73 2.73 0 01.71-3.24 2.49 2.49 0 013.2 0V6l3.84 1.33z"></path>
-                    </svg>
-                </div>
-            </button>
-        </div>
-    </div>
-
-    <!-- Pie de página principal -->
-    <div class="live-header__footer live-header__footer--collapsed">
-        <!-- Botón de expansión -->
-        <button class="live-header__footer__button" aria-label="Expand live player">
-            <svg class="nts-icon nts-icon--xs nts-icon--inline-alt" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600">
-                <path d="M117.2 450l-60.9-60L300 150l243.8 240-60.9 60L300 270 117.2 450z"></path>
-            </svg>
-        </button>
-        <!-- Enlace a mi programación -->
-        <a class="live-header__my-schedule nts-app" href="/otrapag">
-            <svg class="nts-icon nts-icon--s nts-icon--inverted" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                <defs></defs>
-                <path d="M19.5 13V5h-3.45V4a1 1 0 00-2 0v1H8V4a1 1 0 00-2 0v1H2.5v14h11.57L17 22l4.29-4.39a5.56 5.56 0 00.53-.89A2.73 2.73 0 0019.5 13zM4 6.5h2V7h2v-.5h6V7h2v-.5h2V9H4zM4 11h14v2.31a2.77 2.77 0 00-1 .86 2.75 2.75 0 00-5 1.58 2.71 2.71 0 00.17.95 4.84 4.84 0 00.45.78H4z"></path>
-            </svg>
-        </a>
-        <!-- Botón para lista de pistas en vivo -->
-        <button class="live-header__live-tracks-trigger" aria-label="Open Live Tracklist">
-            <div class="live-header__live-tracks-trigger-inside">
-                <svg class="nts-icon nts-icon--inline-alt" style="width:24px;height:24px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                    <path d="M2.87 14.49h8V13h-8zm12-5h-12V11h12zm0-3.5h-12v1.5h12zm6.26 3.34l-2.88-1v7a2.67 2.67 0 01-2 2.61 2.53 2.53 0 01-2.88-1.44 2.73 2.73 0 01.71-3.24 2.49 2.49 0 013.2 0V6l3.84 1.33z"></path>
-                </svg>
-            </div>
-        </button>
-        
-        <!-- Control de volumen -->
-        <div class="volume-control no-text-select hidden-phone">
-            <button class="volume-control__button" aria-label="Volume Control">
-                <svg class="nts-icon volume-control__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 22">
-                    <path d="M11.002 2.999a.81.81 0 0 0-.593.25L6.028 7.63H2.581a.81.81 0 0 0-.593.25.81.81 0 0 0-.25.593v5.051c0 .228.084.426.25.592a.81.81 0 0 0 .593.25h3.447l4.381 4.382a.81.81 0 0 0 .592.25.81.81 0 0 0 .593-.25.809.809 0 0 0 .25-.592V3.841a.81.81 0 0 0-.25-.593.81.81 0 0 0-.592-.25M16.338 12.861a3.39 3.39 0 0 0 0-3.73 3.025 3.025 0 0 0-1.48-1.224.734.734 0 0 0-.33-.066.82.82 0 0 0-.592.243.805.805 0 0 0-.25.6c0 .183.053.339.158.466.105.128.233.237.382.33.149.091.298.192.447.302.15.11.276.265.382.467.105.202.158.452.158.75s-.053.548-.158.75a1.328 1.328 0 0 1-.382.468c-.15.11-.298.21-.447.302-.15.092-.277.202-.382.329a.709.709 0 0 0-.158.467c0 .237.084.437.25.599a.823.823 0 0 0 .592.243.736.736 0 0 0 .33-.065 3.112 3.112 0 0 0 1.48-1.23"></path>
-                    <path d="M19.146 14.717a6.638 6.638 0 0 0 1.119-3.718 6.642 6.642 0 0 0-1.119-3.718 6.495 6.495 0 0 0-2.96-2.48.948.948 0 0 0-.343-.066.81.81 0 0 0-.592.25.81.81 0 0 0-.25.592c0 .343.171.601.514.777.49.254.824.447 1 .579a4.969 4.969 0 0 1 1.52 1.783c.363.715.545 1.476.545 2.283 0 .807-.182 1.568-.546 2.284a4.969 4.969 0 0 1-1.52 1.783c-.175.132-.508.325-1 .579-.342.175-.513.434-.513.776a.81.81 0 0 0 .25.592c.167.167.368.25.605.25a.92.92 0 0 0 .33-.065 6.493 6.493 0 0 0 2.96-2.48"></path>
-                </svg>
-            </button>
-            <!-- Barra de control de volumen -->
-            <div class="volume-control__bar-container">
-                <div class="volume-bar-vertical">
-                    <div class="volume-dot" style="top: -6px;"></div>
-                    <div class="volume-active" style="height: 50px;"></div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>

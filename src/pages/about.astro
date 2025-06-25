@@ -1,168 +1,109 @@
 ---
-/* ==========================================
-  1. IMPORTS STYLES GLOBALES
-===========================================*/
-import './src/mixins/utilities.scss' 
-import './src/styles/Reboot.scss' 
-import './src/styles/stylefunciona.css' 
-import './src/styles/KithAbout.scss'
-/* ==========================================
-  2. IMPORTS COMPONENTES
-===========================================*/
-import Rata from '@/components/Content/rata.astro';
-import HEADER from "src/components/Header/Header.astro";
-import FOOTER from "src/components/Footer/Footer.astro"; 
-/* ==========================================
-  2. IMPORTS STYLES COMPONENTES
-===========================================*/
-import './src/components/Header/Header.scss'
+import Layout from '../layouts/Layout.astro';
+
+import './src/mixins/utilities.scss';
+import './src/mixins/Reboot.scss';
+import './src/styles/stylefunciona.css';
+import './src/styles/styles.css';
+
 ---
 
-<!doctype html>
-<html lang="es" style="padding-right: 0px; overflow: auto;">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width,initial-scale=1"> 
-		<title>Taller Web Proyecto</title>
-	</head>
-	<body class="scroll" style="overflow: unset">
-    <HEADER/>
-        <!-- 
-        Página "Sobre Nosotros" de kith
-        Este archivo contiene la estructura HTML de la sección "About" del sitio web de kith,
-        una editorial japonesa fundada en 1909 que publica manga, libros y otros contenidos.
-        -->
+<Layout showChadbot={true}>
+  
+<div class="kith-about">
+    <!-- Imagen principal de cabecera -->
+    <img class="hero-image" src="src/assets/sena.webp" alt="kith About" />
 
-        <div class="kith-about">
-        <!-- Imagen principal de cabecera -->
-        <img class="hero-image" src="src/assets/sena.jpg" alt="kith About">
-        
-        <!-- Sección introductoria sobre kith -->
-        <div class="kith-about-inner-wrapper">
-            <div class="paired-content paired-content-top">
-            <!-- Título principal de la página -->
-            <div class="paired-content-lhs">
-                <h1>ABOUT <br> US</h1>
+    <!-- Sección introductoria -->
+    <div class="kith-about-inner-wrapper">
+        <div class="paired-content paired-content-top">
+          <div class="paired-content-lhs">
+            <h1>ABOUT KITH</h1>
+          </div>
+          <div class="paired-content-rhs">
+            <div class="kith-about-intro">
+                <br><br>
+              <p class="justificado">
+                Nuestra página web, KITH, está dedicada a publicar cómics, mangas y obras de arte digital creadas por personas que desean compartir sus historias ficticias con una comunidad internacional apasionada. Todo el contenido se publica de forma completamente gratuita, sin fines de lucro ni beneficios para nosotros. KITH nace del amor por el manga, creado por fanáticos para fanáticos, con el único propósito de dar visibilidad y celebrar la creatividad de quienes comparten esta misma pasión. ¡Gracias por ser parte de esta comunidad!
+              </p>
             </div>
-            
-            <!-- Contenido introductorio sobre la historia y misión de kith -->
-            <div class="paired-content-rhs">
-                <div class="kith-about-intro">
-                <h2>KITH....</h2>
-                
-                <p>Nuestra página web, KITH, está dedicada a publicar cómics, mangas y obras de arte digital creadas por personas que desean compartir sus historias ficticias con una comunidad internacional apasionada. Todo el contenido se publica de forma completamente gratuita, sin fines de lucro ni beneficios para nosotros. KITH nace del amor por el manga, creado por fanáticos para fanáticos, con el único propósito de dar visibilidad y celebrar la creatividad de quienes comparten esta misma pasión. ¡Gracias por ser parte de esta comunidad!</p>
-                
-                <h2>Alimentando la creatividad</h2>
-                </div>
-            </div>
-            </div>
+          </div>
         </div>
+      </div>
         
-        <!-- Separador entre secciones -->
-        <div class="about-divider"></div>
-        
-        <!-- Sección de productos y series principales de kith -->
-        <div class="kith-about-inner-wrapper">
-            <!-- Sección sobre manga -->
-            <div class="paired-content">
-            <!-- Imagen ilustrativa de One piece -->
-            <div class="paired-content-lhs">
-                <img src="src/assets/nada.png" alt="Aquinopasonada">
-            </div>
-            
-            <!-- Descripción de la categoría de manga y Attack on Titan -->
-            <div class="paired-content-rhs">
-                <h2>Aquí podrás</h2>
-                
-                <p class="push-down">Explorar historias japonesas únicas que te encantaran, <br>
-                leer desde cualquier lugar del mundo,<br>
-                descubrir mangas en distintos idiomas,<br>
-                y disfrutar lanzamientos sin barreras ni límites.</p>
-                
-                <h4><strong>One Piece</strong></h4>
-                
-                <p class="lean-left">"AQUÍ NO HA PASADO NADA"</p>
-                
-                <a href="/series/attack-on-titan/">Ver</a>
-            </div>
-            </div>
-            
-            <!-- Sección sobre publicación de manhwa -->
-            <div class="paired-content">
-            <!-- Imagen ilustrativa de obras de S.L -->
-            <div class="paired-content-lhs">
-                <img src="src/assets/sus.png" alt="Solo Leveling">
-            </div>
-            
-            <!-- Descripción de la categoría de libros y el fenómeno NISIOSIN -->
-            <div class="paired-content-rhs">
-                <h2>Además</h2>
-                
-                <p class="push-down">Leer los manhwas más emocionantes del momento,<br>
-                seguir historias llenas de acción, drama y fantasía,<br>
-                disfrutar cada capítulo en tu idioma y sin interrupciones,<br>
-                y vivir cada escena como si fueras parte del mundo que imaginas.</p>
-                
-                <h4><strong>Solo Leveling</strong></h4>
-                
-                <p class="lean-left">"..."</p>
-                
-                <a href="/series/attack-on-titan/">Ver</a>
-            </div>
-            </div>
-            
-            <!-- Sección sobre TV, películas y anime -->
-            <div class="paired-content">
-            <!-- Imagen ilustrativa de Your Name -->
-            <div class="paired-content-lhs">
-                <img src="src/assets/y-n.png" alt="Your Name">
-            </div>
-            
-            <!-- Descripción de adaptaciones a medios audiovisuales-->
-            <div class="paired-content-rhs">
-                <h2>Y por si fuera poco</h2>
-                
-                <p class="push-down">Puedes disfrutar de películas y animaciones de culto,<br>
-                sin esperas, sin suscripciones,<br>
-                con acceso desde cualquier parte del mundo,<br>
-                y en la mejor calidad disponible.</p>
-                
-                <h4><strong>Your Name</strong></h4>
-                
-                <p class="lean-left">"¿Cuál es tu nombre?"</p>
-                
-                <a href="/series/attack-on-titan/">Ver</a>
-            </div>
-            </div>
-            </div>
-        
-        <!-- Separador entre secciones -->
-        <div class="about-divider"></div>
-        
-        <!-- Sección de video promocional -->
-        <div class="kith-about-inner-wrapper">
-            <div class="video-wrapper">
-            <div class="video-responsive">
-                <!-- Video incrustado de YouTube -->
-                <iframe 
-                width="100%" 
-                height="100%" 
-                src="https://www.youtube.com/embed/s-jT-Q-fVa0?si=7b3JwG3k5A6y3BqJ" 
-                frameborder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                referrerpolicy="strict-origin-when-cross-origin" 
-                allowfullscreen="" 
-                title="Video">
-                </iframe>
+      <!-- Separador -->
+      <div class="about-divider"></div>
 
+      <!-- Sección de contenidos destacados -->
+      <div class="kith-about-inner-wrapper">
 
-            </div>
-            </div>
+        <!-- Manga -->
+        <div class="paired-content">
+          <div class="paired-content-lhs">
+            <img src="src/assets/img/About/1.webp" alt="Aquinopasonada" />
+          </div>
+          <div class="paired-content-rhs">
+            <h2>Aquí podrás</h2>
+            <p class="lean-left push-down justificado">
+              Explora historias únicas que te encantarán: desde grandes títulos reconocidos hasta obras originales creadas por nuestra comunidad. Lee desde cualquier lugar del mundo, descubre mangas en distintos idiomas y disfruta lanzamientos sin barreras ni límites. </p>
+            <h3><strong>ONE PIECE</strong></h3>
+            <p class="lean-left">One Piece no es solo un manga, es una leyenda viva. Desde 1997, ha conquistado más de 60 países, con más de 500 millones de copias vendidas. Su universo, creado por Eiichiro Oda, dio origen a una exitosa serie de anime, películas y una adaptación live action, convirtiéndolo en un ícono cultural global.</p>
+            <a href="/series/One-Piece/">Ver</a>
+          </div>
         </div>
+            
+        <!-- Manhwa -->
+        <div class="paired-content">
+          <div class="paired-content-lhs">
+            <img src="src/assets/img/About/2.webp" alt="Solo Leveling" />
+          </div>
+          <div class="paired-content-rhs">
+            <h2>Además</h2>
+            <p class="lean-left push-down justificado">
+              Leer los manhwas más emocionantes del momento, seguir historias llenas de acción, drama y fantasía, disfrutar cada capítulo en tu idioma y sin interrupciones,y vivir cada escena como si fueras parte del mundo que imaginas.</p>
+            <h3><strong>SOLO LEVELING</strong></h3>
+            <p class="lean-left justificado">Solo Leveling pasó de ser una novela web a convertirse en un fenómeno global. Traducido a más de 10 idiomas y leído en más de 100 países, su manhwa acumuló miles de millones de vistas. En 2024, dio el salto definitivo con su adaptación al anime, consolidando su lugar como uno de los títulos más influyentes del género.</p>
+            <a href="/series/Solo-Leveling/">Ver</a>
+          </div>
         </div>
-    <FOOTER/>
-	</body>
-</html>
+            
+        <!-- Anime / Películas -->
+        <div class="paired-content">
+          <div class="paired-content-lhs">
+            <img src="src/assets/img/About/3.webp" alt="Your Name" />
+          </div>
+          <div class="paired-content-rhs">
+            <h2>Y por si fuera poco</h2>
+            <p class="lean-left push-down justificado">
+              A medida que el mundo consume cada vez más contenido, las adaptaciones de los títulos de Kith siguen siendo una parte esencial de nuestro catálogo. Ya sea una película, un drama televisivo, un anime o incluso una obra de teatro, dejamos que la pasión de nuestros lectores y la visión de nuestros creadores nos guíen hacia nuevos y emocionantes caminos.</p>
+            <h3><strong>YOUR NAME</strong></h3>
+            <p class="lean-left justificado">Your Name rompió fronteras con su poderosa historia y animación deslumbrante. Estrenada en 2016, la película de Makoto Shinkai se convirtió en un fenómeno global, recaudando más de 380 millones de dólares y emocionando a millones en todo el mundo. Hoy es considerada una de las obras más influyentes del anime moderno.</p>
+            <a href="/series/Your Name/">Ver</a>
+          </div>
+        </div>
+      </div>
+        
+      <!-- Separador -->
+      <div class="about-divider"></div>
 
+      <!-- Video promocional -->
+      <div class="kith-about-inner-wrapper">
+        <div class="video-wrapper">
+          <div class="video-responsive">
+            <iframe 
+              width="100%" 
+              height="100%" 
+              src="https://www.youtube.com/embed/s-jT-Q-fVa0?si=7b3JwG3k5A6y3BqJ" 
+              frameborder="0" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+              referrerpolicy="strict-origin-when-cross-origin" 
+              allowfullscreen 
+              title="Video">
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </div>
 
+</Layout>
 
