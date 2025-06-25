@@ -1,0 +1,7 @@
+.WheelStrip {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 25px;
+  width: min(1400px, 95%);
+}

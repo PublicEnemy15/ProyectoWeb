@@ -1,0 +1,63 @@
+---
+import "@/styles/styles.css"
+import "@/styles/stylefunciona.css"
+import "@/mixins/utilities.scss"
+import "@/mixins/Reboot.scss"
+import "@/styles/BOTONES.scss"
+import "@/styles/KITHICONOS.scss"
+
+import "@/components/HEADER/HEADER.scss"
+import "@/components/HEADER/LOGIN.scss"
+import "@/components/CONTENT/CHATBOT/CHATBOT.scss"
+import "@/components/CONTENT/LUISTHERATLOADER/rata-load.css"
+
+
+import HEADER from "@/components/HEADER/HEADER.astro";
+import LOGIN from "@/components/HEADER/LOGIN.astro";
+import LOADER from "@/components/CONTENT/LUISTHERATLOADER/rata-load.astro"
+import CHADBOT from "@/components/CONTENT/CHATBOT/CHATBOT.astro"
+import FOOTER from "@/components/FOOTER/FOOTER.astro";
+
+const {
+  title = "KITH | Manga Website",
+  description = "KITH es el hogar de historias originales subidas por los propios usuarios.",
+  showChadbot = true,
+  showFooter = true,
+  showLoader = true,
+  showHeader = true,
+  showLogin = true
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="es" style="padding-right: 0px; overflow: auto;">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="author" content="KITH MANGA" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+    <link rel="preload" href="/src/assets/fonts/proximanova_bold.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/src/assets/fonts/proximanova_regular.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="icon" type="image/svg+xml" href="/rat-favicon.png" />
+
+    <title>{title}</title>
+    <meta name="description" content={description} />
+  </head>
+
+  <body class={`scroll${showLoader ? ' loader-activo' : ''}`} style="overflow: unset;">
+    <div id="root" class="body-bg">
+        {showLoader && <LOADER />}
+      <div class="Contenido-Principal" id="contenido-principal">
+        {showHeader && <HEADER />}
+        {showLogin && <LOGIN />}
+        {showChadbot && <CHADBOT />}
+        <slot />
+        {showFooter && <FOOTER />}
+      </div>
+    </div>
+
+    <script src="src/components/HEADER/LOGIN.js"></script>
+    <script type="module" src="/src/components/CONTENT/NUEVOSCAPS/wa.ts"></script>
+  </body>
+</html>

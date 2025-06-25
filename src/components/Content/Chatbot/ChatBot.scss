@@ -1,0 +1,153 @@
+.ChadBot {
+    display: none
+}
+
+.chat-dropup {
+        color: #fff;
+        display: none; /*oculto por defecto*/
+        position: fixed;
+        bottom: 100px; /* despligue debajo del icono*/
+        right: 20px;
+        background-color: #333333;
+        width: 250px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+        z-index: 100;
+        padding: 0px;
+        border: #fff;
+        height: 400px;
+        
+    }
+
+    .chat-head{
+        width: 250px;
+        height: 40px;
+        display: block;
+        background-color: #676767;
+        align-items: center;
+        align-self: center;
+        align-content: center;
+    }
+    
+    .chat-name{
+        margin: 10px;
+        display: inline;
+        float: left;
+    }
+
+    .chat-close{
+        height: 20px;
+        margin: 10px;
+        cursor: pointer;
+        display: inline;
+        float: right;
+    }
+
+    .chat-body{
+        width:100%;
+        height:calc( 100% - 80px );
+        overflow-y:auto;
+        padding:10px;
+        padding-top: 0px;
+        box-sizing: border-box;
+    }
+
+
+    .my-msg{
+        width:100%;
+        margin-top:10px;
+        display:flex;
+    }
+
+    .cont-msg{
+        width:100%;
+        margin-top:10px;
+        display:flex;
+    }
+
+    .txt-my{
+        box-sizing: border-box;
+        background-color: #3e1073;
+        padding: 10px;
+        border-radius:10px;
+    }
+
+    .txt-chat{
+        padding: 10px;
+        box-sizing: border-box;
+        background-color: #676767;
+        border-radius:10px;
+    }
+
+    .chat-msg{
+        height: 40px;
+        background-color: #676767;
+        border-style: none;
+    }
+    
+    .chat-input{
+        width: 75%;
+        height: 100%;
+        color: #000;
+        padding: 10px;     
+        border-style: none;
+    }
+
+    .chat-send{
+        cursor: pointer;
+        width: auto;
+    }
+
+@media(min-width: 1024px) {
+    .ChadBot {
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        background-color: #000;
+        border: 1px solid #fff;
+        border-radius: 50%;
+        bottom: 18px;
+        padding: 0;
+        height: 60px;
+        position: fixed;
+        transition: transform 0.3s ease-in-out;
+        right: 24px;
+        width: 60px;
+        z-index: 100;
+    }
+
+    .ChadBot:hover {
+    transform: scale(1.1);
+    }
+
+    .ChadBot>svg>path {
+        fill: #fff;
+        fill-rule: evenodd;
+    }
+
+    .ChadBot:hover>svg>path {
+        fill: #999
+    }
+
+    .ChadBot--anchor-link {
+        display: none
+    }
+}
+
+
+@media(min-width: 1024px)and (prefers-reduced-motion) {
+    .ChadBot--button {
+        display:none
+    }
+
+    .ChadBot--anchor-link {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: flex
+    }
+}

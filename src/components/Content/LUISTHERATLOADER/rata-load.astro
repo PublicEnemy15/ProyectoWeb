@@ -1,0 +1,49 @@
+<div id="contenedor-cargando">
+  <a href="/src/components/Content/Chatbot/Chatbot.astro"><img src="/src/assets/rat.gif" alt="Cargando..." class="loader-imagen"></a>
+  <br>
+  <div class="txt-cargando">
+    <p id="txtLoad">
+        Cargando
+    </p>
+  </div>
+  
+</div>
+
+<script>
+  const contenedorCargando = document.getElementById('contenedor-cargando');
+  const contenidoPrincipal = document.getElementById('contenido-principal');
+
+  function getRandomInt(min: number, max: number) {
+    return Math.floor(Math.random() * (max - min) + min);
+  }
+
+  const tiempoCarga = getRandomInt(500, 4000);
+  let cargaCompleta = false;
+
+  window.onload = function () {
+    cargaCompleta = true;
+    ocultarCargandoSiListo();
+  };
+
+  function ocultarCargando() {
+    if (contenedorCargando) contenedorCargando.style.display = 'none';
+    if (contenidoPrincipal) contenidoPrincipal.style.display = 'block';
+  }
+
+  function ocultarCargandoSiListo() {
+    if (cargaCompleta) {
+      setTimeout(ocultarCargando, tiempoCarga);
+    }
+  }
+
+  const txtLoad = document.getElementById('txtLoad');
+  let contador = 0;
+
+  function cambiarTexto() {
+    const puntos = ['.', '. .', '. . .'];
+    if (txtLoad) txtLoad.innerText = `Cargando ${puntos[contador % 3]}`;
+    contador++;
+  }
+
+  setInterval(cambiarTexto, 500);
+</script>
