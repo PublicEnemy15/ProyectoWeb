@@ -1,4 +1,0 @@
-ignoredBuiltDependencies:
-  - '@prisma/client'
-  - esbuild
-  - sharp
