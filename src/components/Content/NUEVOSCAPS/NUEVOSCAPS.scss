@@ -1,0 +1,76 @@
+.CapsWheelStrip {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 30px;
+    width: min(1400px, 95%);
+}
+
+.CapsWheelItem {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.CapsWheelItem-productSeriesLink {
+    color: #ffffff;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5px;
+}
+
+.CapsWheelItem-productSeriesLink:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+.CapsWheelItem-thumbnail {
+    margin-bottom: 10px;
+}
+
+.CapsWheelItem-title {
+    font-weight: 700;
+    font-family: "ProximaNova-Bold", "Proxima Nova", sans-serif;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    line-clamp: 1;
+    -webkit-box-orient: vertical;
+    margin-bottom: 5px;
+    line-height: 22px;
+    max-height: 22px;
+    height: 22px;
+}
+
+.CapsWheelItem-subTitle,
+.CapsWheelItem-publishDate {
+    font-family: "ProximaNova-Regular", "Proxima Nova", sans-serif;
+    font-weight: 100;
+    font-size: 14px;
+}
+
+.CapsWheelItem-readerLink {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.CapsWheelItem-readerLink:hover {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+
+@media(min-width: 1025px) {
+    .collections-grid-item__link {
+        -webkit-box-pack: start;
+        -webkit-justify-content: flex-start;
+        justify-content: flex-start;
+        padding: 20px 14px
+    }
+
+     .collections-grid-item__link:focus, .collections-grid-item__link:focus {
+        opacity: 1
+    }
+}
