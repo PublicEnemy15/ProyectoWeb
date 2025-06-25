@@ -171,7 +171,7 @@ pip install mysql-connector-python
 
 <p>
     El script esta en el archivo 
-    <span style="text-decoration:underline" href="https://github.com/PublicEnemy15/ProyectoWeb/blob/main/api/bdAPI.sql">bdAPI.sql</span>
+    <span><a href="https://github.com/PublicEnemy15/ProyectoWeb/blob/main/api/bdAPI.sql">bdAPI.sql</a></span>
 </p>
 
 >[!NOTE]
