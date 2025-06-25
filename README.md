@@ -187,5 +187,5 @@ uvicorn main:app
 ```
 
 <p>
-    Para acceder a la interfaz de la API entra </span style="text-decoration:underline" href="http://127.0.0.1:8000/docs">aquí</span>
+    Para acceder a la interfaz de la API entra </span><a href="http://127.0.0.1:8000/docs">aquí</a></span>
 </p>
