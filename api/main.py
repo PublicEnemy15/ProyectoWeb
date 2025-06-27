@@ -1,33 +1,47 @@
 from fastapi import FastAPI, HTTPException
-from pydantic import BaseModel
 from typing import List
-from connection import connection
+from BDC import cursor
+from BDC import conn
+from User import UserList
+from User import UserRegister
+from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI()
 
-class User(BaseModel):
-    id:int
-    email:str
-    pwd:str
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
-users:List[User] = []
 
-@app.get("/users", response_model=List[User])
+@app.get("/users", response_model=List[UserList])
 def get_Users():
-    return users
+    userL:List[UserList] = []
+    cursor.execute("SELECT * FROM proyectotallerweb.users")
+    rows = cursor.fetchall()
+    for row in rows:
+        userL.append(UserList(id=row[0], email=row[1], password=row[2]))
+    return userL
+    
 
-@app.post("/users", response_model=List[User])
-def post_Users(user:User):
-    for u in users:
-        if u.id == user.id:
-            raise HTTPException(status_code=400, detail='Ya esxite este ID')
-    users.append(user)
-    return user
+@app.post("/users", response_model=List[UserRegister])
+def post_Users(userR:UserRegister):
+    try:
+        cursor.execute("INSERT INTO proyectotallerweb.users(emailUser, passUser) VALUES (%s, %s)", (userR.email, userR.password))
+        conn.commit()
+        return {"message":"Usuario registrado correctamente"}
+    except Exception as e:
+            conn.rollback()
+            raise HTTPException(status_code=500, detail=f"Error al insertar usuario: {str(e)}")
+
 
 @app.delete("/users/{id}")
 def delete_Users(id:int):
-    for u in users:
+    for u in get_Users():
         if u.id == id:
-            users.remove(u)
+            #userL.remove(u) query DELETE
             return {"message": "Eliminado correctamente"}
     raise HTTPException(status_code=404, detail="No se encontró este ID")
