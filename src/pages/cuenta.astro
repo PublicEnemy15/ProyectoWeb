@@ -31,7 +31,7 @@ import 'src/components/CONTENT/EXPLORAR/EXPLORAR.scss'
         <section class="cuenta_seccion">
             <div>
                 <p class="kith-font-secundaria" style="margin: 0px 0px 16px; max-width: 400px;">Lamentamos que te vayas, pero ya fue p</p>
-                <button class="nts-button nts-button--alt cuenta_seccion-button" style="max-width: 400px;"><svg class="nts-icon nts-icon--inverted" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="margin: 0px; width: 20px; height: 20px;"><path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM8 9h8v10H8V9zm7.5-5l-1-1h-5l-1 1H5v2h14V4z"></path><path fill="none" d="M0 0h24v24H0V0z"></path></svg><span style="vertical-align: middle; display: inline-block; margin-left: 12px; padding-top: 1px;">Eliminar Cuenta</span></button>
+                <button id="btn-delete-account" class="nts-button nts-button--alt cuenta_seccion-button" style="max-width: 400px;"><svg class="nts-icon nts-icon--inverted" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="margin: 0px; width: 20px; height: 20px;"><path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM8 9h8v10H8V9zm7.5-5l-1-1h-5l-1 1H5v2h14V4z"></path><path fill="none" d="M0 0h24v24H0V0z"></path></svg><span style="vertical-align: middle; display: inline-block; margin-left: 12px; padding-top: 1px;">Eliminar Cuenta</span></button>
             </div>
         </section>
         <button class="nts-button nts-button--alt nts-button--no-border nts-button--with-icon" style="margin: 30px auto;">Salir<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="icon-sign-out" style="margin-left: 4px;"><g fill="none" fill-rule="evenodd"><path d="M0 0h24v24H0z"></path><path class="icon-sign-out__filled-path" fill="#FFF" d="M5 5v1.191h.006V17.81H5V19h5.66v-1.191H6.19V6.19h4.468V5H5zm9.592 4.066l2.341 2.341H8.277v1.186h8.656l-2.34 2.34.838.839 2.933-2.934.839-.838-.839-.838-2.933-2.934-.839.838z"></path></g></svg></button>
@@ -40,25 +40,64 @@ import 'src/components/CONTENT/EXPLORAR/EXPLORAR.scss'
 
 </Layout>
 
+
 <script>
-  // Mostrar el email (ya lo tienes)
+
+document.addEventListener('DOMContentLoaded', () => {
   const email = localStorage.getItem('loggedEmail');
   const cuentaEmailElem = document.getElementById('cuenta-email');
   if (cuentaEmailElem) {
-    if (email) {
-      cuentaEmailElem.textContent = email;
-    } else {
-      cuentaEmailElem.textContent = 'No hay usuario logeado';
-    }
+    cuentaEmailElem.textContent = email || 'No hay usuario logeado';
   }
 
-  // Desloguear al hacer click en "Salir"
   const salirBtn = document.querySelector('.nts-button--with-icon');
   if (salirBtn) {
-    salirBtn.addEventListener('click', function() {
+    salirBtn.addEventListener('click', function () {
       localStorage.removeItem('isLoggedIn');
       localStorage.removeItem('loggedEmail');
+      localStorage.removeItem('userId');
       window.location.href = '/';
     });
   }
+
+  //para eliminar la cuenta
+  
+  const deleteBtn = document.getElementById('btn-delete-account');
+  if (deleteBtn) {
+    deleteBtn.addEventListener('click', async () => {
+      const confirmDelete = confirm('¿Estás seguro de que deseas eliminar tu cuenta? Esta acción no se puede deshacer.');
+      if (!confirmDelete) return;
+
+      const userId = localStorage.getItem('userId');
+
+      if (!userId) {
+        alert('No se encontró el ID del usuario.');
+        return;
+      }
+
+      try {
+        const res = await fetch('/api/delete-account', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ userId })
+        });
+
+        const data = await res.json();
+
+        if (res.ok) {
+          alert('Cuenta eliminada correctamente.');
+          localStorage.removeItem('userId');
+          localStorage.removeItem('loggedEmail');
+          localStorage.removeItem('isLoggedIn');
+          window.location.href = '/';
+        } else {
+          alert(`Error eliminando cuenta: ${data.error}`);
+        }
+      } catch (err) {
+        console.error('Error al eliminar:', err);
+        alert('Error al eliminar la cuenta.');
+      }
+    });
+  }
+});
 </script>

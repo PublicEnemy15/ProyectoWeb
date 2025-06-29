@@ -57,3 +57,53 @@ export async function loginUser(email, password) {
     return { success: false, error: 'Error del servidor' };
   }
 }
+
+// funcion para eliminar usuario
+export async function deleteUserById(userId) {
+  try {
+    const user = await prisma.user.findUnique({
+    where: { id: parseInt(userId, 10) }
+    });
+
+    if (!user) {
+      return { success: false, error: 'Usuario no encontrado' };
+    }
+
+   await prisma.user.delete({
+    where: { id: parseInt(userId, 10) }
+   });
+
+    return { success: true };
+  } catch (error) {
+    console.error('Error en deleteUserById:', error);
+    return { success: false, error: 'Error al eliminar el usuario' };
+  }
+}
+
+//funcion para cambiar contrasenia niauwu
+export async function updatePassword(userId, currentPassword, newPassword) {
+  try {
+    const user = await prisma.user.findUnique({
+      where: { id: parseInt(userId) }
+    });
+
+    if (!user) {
+      return { success: false, error: 'Usuario no encontrado' };
+    }
+
+    if (user.password !== currentPassword) {
+      return { success: false, error: 'La contraseña actual no es correcta' };
+    }
+
+    await prisma.user.update({
+      where: { id: parseInt(userId) },
+      data: { password: newPassword }
+    });
+
+    return { success: true };
+  } catch (error) {
+    console.error('Error actualizando contraseña:', error);
+    return { success: false, error: 'Error del servidor' };
+  }
+}
+
