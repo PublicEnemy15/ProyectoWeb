@@ -43,3 +43,50 @@ import 'src/components/CONTENT/EXPLORAR/EXPLORAR.scss'
 </form>
 
 </Layout>
+
+<script type="module">
+  const form = document.querySelector('.nts-auth--reset-password');
+  const submitBtn = form.querySelector('input[type="submit"]');
+  const currentPasswordInput = form.querySelector('input[name="currentPassword"]');
+  const newPasswordInput = form.querySelector('input[name="newPassword"]');
+
+  // Mostrar/ocultar contraseña
+  document.querySelectorAll('.password-input__toggle-btn').forEach(button => {
+    button.addEventListener('click', () => {
+      const input = button.previousElementSibling;
+      const isPassword = input.getAttribute('type') === 'password';
+      input.setAttribute('type', isPassword ? 'text' : 'password');
+    });
+  });
+
+  // Habilitar botón si hay contenido válido
+  form.addEventListener('input', () => {
+    const currentVal = currentPasswordInput.value.trim();
+    const newVal = newPasswordInput.value.trim();
+    submitBtn.disabled = !(currentVal && newVal.length >= 8);
+  });
+
+  // Enviar cambio de contraseña
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    const userId = localStorage.getItem('userId');
+    const currentPassword = currentPasswordInput.value.trim();
+    const newPassword = newPasswordInput.value.trim();
+
+    const res = await fetch('/api/change-password', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ userId, currentPassword, newPassword })
+    });
+
+    const data = await res.json();
+
+    if (res.ok) {
+      alert('¡Contraseña actualizada!');
+      window.location.href = '/cuenta';
+    } else {
+      alert('Error: ' + data.error);
+    }
+  });
+</script>
