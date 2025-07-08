@@ -8,40 +8,16 @@ importers:
 
   .:
     dependencies:
-      '@astrojs/react':
-        specifier: ^4.3.0
-        version: 4.3.0(@types/react-dom@19.1.5(@types/react@19.1.5))(@types/react@19.1.5)(jiti@2.4.2)(lightningcss@1.29.2)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(sass-embedded@1.87.0)
-      '@prisma/client':
-        specifier: ^6.10.1
-        version: 6.10.1(prisma@6.10.1(typescript@5.8.3))(typescript@5.8.3)
       '@tailwindcss/vite':
         specifier: ^4.1.5
         version: 4.1.5(vite@6.3.4(jiti@2.4.2)(lightningcss@1.29.2)(sass-embedded@1.87.0))
       astro:
         specifier: ^5.7.10
         version: 5.7.10(jiti@2.4.2)(lightningcss@1.29.2)(rollup@4.40.1)(sass-embedded@1.87.0)(typescript@5.8.3)
-      react:
-        specifier: ^19.1.0
-        version: 19.1.0
-      react-dom:
-        specifier: ^19.1.0
-        version: 19.1.0(react@19.1.0)
-      swiper:
-        specifier: ^11.2.8
-        version: 11.2.8
       tailwindcss:
         specifier: ^4.1.5
         version: 4.1.5
     devDependencies:
-      '@types/react':
-        specifier: ^19.1.5
-        version: 19.1.5
-      '@types/react-dom':
-        specifier: ^19.1.5
-        version: 19.1.5(@types/react@19.1.5)
-      prisma:
-        specifier: ^6.10.1
-        version: 6.10.1(typescript@5.8.3)
       sass-embedded:
         specifier: ^1.87.0
         version: 1.87.0
@@ -64,15 +40,6 @@ packages:
   '@astrojs/prism@3.2.0':
     resolution: {integrity: sha512-GilTHKGCW6HMq7y3BUv9Ac7GMe/MO9gi9GW62GzKtth0SwukCu/qp2wLiGpEujhY+VVhaG9v7kv/5vFzvf4NYw==}
     engines: {node: ^18.17.1 || ^20.3.0 || >=22.0.0}
-
-  '@astrojs/react@4.3.0':
-    resolution: {integrity: sha512-N02aj52Iezn69qHyx5+XvPqgsPMEnel9mI5JMbGiRMTzzLMuNaxRVoQTaq2024Dpr7BLsxCjqMkNvelqMDhaHA==}
-    engines: {node: 18.20.8 || ^20.3.0 || >=22.0.0}
-    peerDependencies:
-      '@types/react': ^17.0.50 || ^18.0.21 || ^19.0.0
-      '@types/react-dom': ^17.0.17 || ^18.0.6 || ^19.0.0
-      react: ^17.0.2 || ^18.0.0 || ^19.0.0
-      react-dom: ^17.0.2 || ^18.0.0 || ^19.0.0
 
   '@astrojs/telemetry@3.2.1':
     resolution: {integrity: sha512-SSVM820Jqc6wjsn7qYfV9qfeQvePtVc1nSofhyap7l0/iakUKywj3hfy3UJAOV4sGV4Q/u450RD4AaCaFvNPlg==}
@@ -446,36 +413,6 @@ packages:
 
   '@oslojs/encoding@1.1.0':
     resolution: {integrity: sha512-70wQhgYmndg4GCPxPPxPGevRKqTIJ2Nh4OkiMWmDAVYsTQ+Ta7Sq+rPevXyXGdzr30/qZBnyOalCszoMxlyldQ==}
-
-  '@prisma/client@6.10.1':
-    resolution: {integrity: sha512-Re4pMlcUsQsUTAYMK7EJ4Bw2kg3WfZAAlr8GjORJaK4VOP6LxRQUQ1TuLnxcF42XqGkWQ36q5CQF1yVadANQ6w==}
-    engines: {node: '>=18.18'}
-    peerDependencies:
-      prisma: '*'
-      typescript: '>=5.1.0'
-    peerDependenciesMeta:
-      prisma:
-        optional: true
-      typescript:
-        optional: true
-
-  '@prisma/config@6.10.1':
-    resolution: {integrity: sha512-kz4/bnqrOrzWo8KzYguN0cden4CzLJJ+2VSpKtF8utHS3l1JS0Lhv6BLwpOX6X9yNreTbZQZwewb+/BMPDCIYQ==}
-
-  '@prisma/debug@6.10.1':
-    resolution: {integrity: sha512-k2YT53cWxv9OLjW4zSYTZ6Z7j0gPfCzcr2Mj99qsuvlxr8WAKSZ2NcSR0zLf/mP4oxnYG842IMj3utTgcd7CaA==}
-
-  '@prisma/engines-version@6.10.1-1.9b628578b3b7cae625e8c927178f15a170e74a9c':
-    resolution: {integrity: sha512-ZJFTsEqapiTYVzXya6TUKYDFnSWCNegfUiG5ik9fleQva5Sk3DNyyUi7X1+0ZxWFHwHDr6BZV5Vm+iwP+LlciA==}
-
-  '@prisma/engines@6.10.1':
-    resolution: {integrity: sha512-Q07P5rS2iPwk2IQr/rUQJ42tHjpPyFcbiH7PXZlV81Ryr9NYIgdxcUrwgVOWVm5T7ap02C0dNd1dpnNcSWig8A==}
-
-  '@prisma/fetch-engine@6.10.1':
-    resolution: {integrity: sha512-clmbG/Jgmrc/n6Y77QcBmAUlq9LrwI9Dbgy4pq5jeEARBpRCWJDJ7PWW1P8p0LfFU0i5fsyO7FqRzRB8mkdS4g==}
-
-  '@prisma/get-platform@6.10.1':
-    resolution: {integrity: sha512-4CY5ndKylcsce9Mv+VWp5obbR2/86SHOLVV053pwIkhVtT9C9A83yqiqI/5kJM9T1v1u1qco/bYjDKycmei9HA==}
 
   '@rolldown/pluginutils@1.0.0-beta.9':
     resolution: {integrity: sha512-e9MeMtVWo186sgvFFJOPGy7/d2j2mZhLJIdVW0C/xDluuOvymEATqz6zKsP0ZmXGzQtqlyjz5sC1sYQUoJG98w==}
@@ -1462,16 +1399,6 @@ packages:
     resolution: {integrity: sha512-dle9A3yYxlBSrt8Fu+IpjGT8SY8hN0mlaA6GY8t0P5PjIOZemULz/E2Bnm/2dcUOena75OTNkHI76uZBNUUq3A==}
     engines: {node: ^10 || ^12 || >=14}
 
-  prisma@6.10.1:
-    resolution: {integrity: sha512-khhlC/G49E4+uyA3T3H5PRBut486HD2bDqE2+rvkU0pwk9IAqGFacLFUyIx9Uw+W2eCtf6XGwsp+/strUwMNPw==}
-    engines: {node: '>=18.18'}
-    hasBin: true
-    peerDependencies:
-      typescript: '>=5.1.0'
-    peerDependenciesMeta:
-      typescript:
-        optional: true
-
   prismjs@1.30.0:
     resolution: {integrity: sha512-DEvV2ZF2r2/63V+tK8hQvrR2ZGn10srHbXviTlcv7Kpzw8jWiNTqbVgjO3IY8RxrrOUF8VPMQQFysYYYv0YZxw==}
     engines: {node: '>=6'}
@@ -1749,10 +1676,6 @@ packages:
   supports-color@8.1.1:
     resolution: {integrity: sha512-MpUEN2OodtUzxvKQl72cUF7RQ5EiHsGvSsVG0ia9c5RbWGL2CI4C7EpPS8UTBIplnlzZiNuV56w+FuNxy3ty2Q==}
     engines: {node: '>=10'}
-
-  swiper@11.2.8:
-    resolution: {integrity: sha512-S5FVf6zWynPWooi7pJ7lZhSUe2snTzqLuUzbd5h5PHUOhzgvW0bLKBd2wv0ixn6/5o9vwc/IkQT74CRcLJQzeg==}
-    engines: {node: '>= 4.7.0'}
 
   sync-child-process@1.0.2:
     resolution: {integrity: sha512-8lD+t2KrrScJ/7KXCSyfhT3/hRq78rC0wBFqNJXv3mZyn6hW2ypM05JmlSvtqRbeq6jqA94oHbxAr2vYsJ8vDA==}
@@ -2456,36 +2379,6 @@ snapshots:
       '@jridgewell/sourcemap-codec': 1.5.0
 
   '@oslojs/encoding@1.1.0': {}
-
-  '@prisma/client@6.10.1(prisma@6.10.1(typescript@5.8.3))(typescript@5.8.3)':
-    optionalDependencies:
-      prisma: 6.10.1(typescript@5.8.3)
-      typescript: 5.8.3
-
-  '@prisma/config@6.10.1':
-    dependencies:
-      jiti: 2.4.2
-
-  '@prisma/debug@6.10.1': {}
-
-  '@prisma/engines-version@6.10.1-1.9b628578b3b7cae625e8c927178f15a170e74a9c': {}
-
-  '@prisma/engines@6.10.1':
-    dependencies:
-      '@prisma/debug': 6.10.1
-      '@prisma/engines-version': 6.10.1-1.9b628578b3b7cae625e8c927178f15a170e74a9c
-      '@prisma/fetch-engine': 6.10.1
-      '@prisma/get-platform': 6.10.1
-
-  '@prisma/fetch-engine@6.10.1':
-    dependencies:
-      '@prisma/debug': 6.10.1
-      '@prisma/engines-version': 6.10.1-1.9b628578b3b7cae625e8c927178f15a170e74a9c
-      '@prisma/get-platform': 6.10.1
-
-  '@prisma/get-platform@6.10.1':
-    dependencies:
-      '@prisma/debug': 6.10.1
 
   '@rolldown/pluginutils@1.0.0-beta.9': {}
 
@@ -3684,13 +3577,6 @@ snapshots:
       picocolors: 1.1.1
       source-map-js: 1.2.1
 
-  prisma@6.10.1(typescript@5.8.3):
-    dependencies:
-      '@prisma/config': 6.10.1
-      '@prisma/engines': 6.10.1
-    optionalDependencies:
-      typescript: 5.8.3
-
   prismjs@1.30.0: {}
 
   prompts@2.4.2:
@@ -4025,8 +3911,6 @@ snapshots:
   supports-color@8.1.1:
     dependencies:
       has-flag: 4.0.0
-
-  swiper@11.2.8: {}
 
   sync-child-process@1.0.2:
     dependencies:
