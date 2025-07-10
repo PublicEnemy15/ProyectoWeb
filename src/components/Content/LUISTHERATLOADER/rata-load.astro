@@ -1,5 +1,5 @@
 <div id="contenedor-cargando">
-  <a href="/src/components/Content/Chatbot/Chatbot.astro"><img src="/src/assets/rat.gif" alt="Cargando..." class="loader-imagen"></a>
+  <a href="/src/components/Content/Chatbot/Chatbot.astro"><img src="/src/assets/rat.gif" alt="Cargando..." class="loader-imagen" loading="lazy"></a>
   <br>
   <div class="txt-cargando">
     <p id="txtLoad">
@@ -15,7 +15,7 @@
 
   window.onload = function () {
     if (contenedorCargando) contenedorCargando.style.display = 'none';
-    if (contenidoPrincipal) contenidoPrincipal.style.display = 'block';
+    //if (contenidoPrincipal) contenidoPrincipal.style.display = 'block';
   };
 
   const txtLoad = document.getElementById('txtLoad');
