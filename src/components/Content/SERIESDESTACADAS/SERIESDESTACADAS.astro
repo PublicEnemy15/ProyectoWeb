@@ -1,162 +1,79 @@
+---
+import { Image } from "astro:assets";
+import D1 from "../../../assets/img/Destacados/D1.webp";
+import D2 from "../../../assets/img/Destacados/D2.webp";
+
+const items = [
+  {
+    href: "/series/GOKURAKUGAI/gokurakugai",
+    img: D1,
+    alt: "MANGA 1",
+    info: "Hasta 4/28",
+    titulo: "GOKURAKUGAI",
+    autor: "Yuto Sano",
+    color: "rgb(20, 191, 161)",
+  },
+  {
+    href: "/series/THECLIMBER/theclimber",
+    img: D2,
+    alt: "MANGA 2",
+    info: "Hasta 5/12",
+    titulo: "THE CLIMBER",
+    autor: "Shinichi Sakamoto",
+    color: "rgb(18, 0, 173)",
+  },
+];
+---
+
 <div class="ArticleStrip">
-    <div class="SeriesDestacadas">
-        <h3>SERIES DESTACADAS</h3>
-        <h2>Lo más visto</h2>
+  <div class="SeriesDestacadas">
+    <h3>SERIES DESTACADAS</h3>
+    <h2>Lo más visto</h2>
     <div class="SeriesDestacadas-list">
-
-  <!---------- Item 1 ---------->
-  <div class="SeriesDestacadas-item">
-    <div class="SeriesDestacadas-imagen">
-        <a href="/series/GOKURAKUGAI/gokurakugai">
-        <div class="Poster-contenedor Poster-contenedor-hover" style="padding-top: 60%;">
-          <div class="Poster-contenedor-2">
-            <div class="Poster-contenedor-wrapper">
-              <img fetchpriority="high" loading="eager" class="Poster-contenedor-imagen" src="src/assets/img/Destacados/D1.webp" alt="MANGA 1" width="1200" height="960">
-              <div class="colorize" style="background-color: rgb(20, 191, 161);"></div>
+      {items.map(item => (
+        <div class="SeriesDestacadas-item">
+          <div class="SeriesDestacadas-imagen">
+            <a href={item.href}>
+              <div class="Poster-contenedor Poster-contenedor-hover" style="padding-top: 60%;">
+                <div class="Poster-contenedor-2">
+                  <div class="Poster-contenedor-wrapper">
+                    <Image
+                      src={item.img}
+                      alt={item.alt}
+                      width={700}
+                      height={560}
+                      sizes="(max-width: 992px) 100vw, 700px"
+                      class="Poster-contenedor-imagen"
+                      loading="eager"
+                      fetchpriority="high"
+                    />
+                    <div class="colorize" style={`background-color: ${item.color};`}></div>
+                  </div>
+                </div>
+              </div>
+            </a>
+            <div class="SeriesDestacadas-info">{item.info}</div>
+          </div>
+          <div class="SeriesDestacadas-itemFooter">
+            <div class="SeriesDestacadas-itemFooter-izquierda">
+              <a class="SeriesDestacadas-titulo" href={item.href}>{item.titulo}</a>
+              <a class="SeriesDestacadas-autor" href={item.href}>{item.autor}</a>
+            </div>
+            <div class="SeriesDestacadas-itemFooter-derecha">
+              <a href={item.href}>
+                <div role="button" class="arrow-container" aria-label="READ">
+                  <span class="arrow-btn with-arrow text-bold">LEER</span>
+                  <div class="icon-wrapper">
+                    <svg viewBox="0 0 34 34" xmlns="http://www.w3.org/2000/svg" fill="white" width="80" class="icon">
+                      <path d="m15.496 0 15.939 15.939H0v2.122h31.435L15.495 34H18.5L34 18.5v-3.004L18.5 0h-3.004Z"></path>
+                    </svg>
+                  </div>
+                </div>
+              </a>
             </div>
           </div>
         </div>
-      </a>
-    <div class="SeriesDestacadas-info">Hasta 4/28</div>
-</div>
-
-    <div class="SeriesDestacadas-itemFooter">
-        <div class="SeriesDestacadas-itemFooter-izquierda">
-        <a class="SeriesDestacadas-titulo" href="/series/GOKURAKUGAI/gokurakugai">GOKURAKUGAI</a>
-        <a class="SeriesDestacadas-autor" href="/series/GOKURAKUGAI/gokurakugai">Yuto Sano</a>
-      </div>
-      <div class="SeriesDestacadas-itemFooter-derecha">
-        <a href="/series/GOKURAKUGAI/gokurakugai">
-          <div role="button" class="arrow-container " aria-label="READ">
-            <span class="arrow-btn with-arrow text-bold undefined">LEER</span>
-            <div class="icon-wrapper">
-              <svg viewBox="0 0 34 34" xmlns="http://www.w3.org/2000/svg" fill="white" width="80" class="icon">
-                <path d="m15.496 0 15.939 15.939H0v2.122h31.435L15.495 34H18.5L34 18.5v-3.004L18.5 0h-3.004Z">
-                </path>
-              </svg>
-            </div>
-          </div>
-        </a>
-      </div>
+      ))}
     </div>
   </div>
-
-    <!---------- Item 2 ---------->
-    <div class="SeriesDestacadas-item">
-      <div class="SeriesDestacadas-imagen">
-        <a href="/series/THECLIMBER/theclimber">
-          <div class="Poster-contenedor Poster-contenedor-hover" style="padding-top: 60%;">
-            <div class="Poster-contenedor-2">
-              <div class="Poster-contenedor-wrapper">
-                <img fetchpriority="high" loading="eager" class="Poster-contenedor-imagen" src="src/assets/img/Destacados/D2.webp" alt="MANGA 2" width="1200" height="960">
-                  <div class="colorize" style="background-color: rgb(18, 0, 173);"></div>
-                  </div>
-                  </div>
-                        </div>
-                        </a>
-                    <div class="SeriesDestacadas-info">Hasta 5/12</div>
-                    </div>
-                    <div class="SeriesDestacadas-itemFooter">
-                    <div class="SeriesDestacadas-itemFooter-izquierda">
-                        <a class="SeriesDestacadas-titulo" href="/series/THECLIMBER/theclimber">THE CLIMBER</a>
-                        <a class="SeriesDestacadas-autor" href="/series/THECLIMBER/theclimber">Shinichi Sakamoto</a>
-                    </div>
-                    <div class="SeriesDestacadas-itemFooter-derecha">
-                        <a href="/series/THECLIMBER/theclimber">
-                          <div role="button" class="arrow-container " aria-label="READ">
-                            <span class="arrow-btn with-arrow text-bold undefined">LEER</span>
-                            <div class="icon-wrapper">
-                              <svg viewBox="0 0 34 34" xmlns="http://www.w3.org/2000/svg" fill="white" width="80" class="icon">
-                                <path d="m15.496 0 15.939 15.939H0v2.122h31.435L15.495 34H18.5L34 18.5v-3.004L18.5 0h-3.004Z">
-                                </path>
-                              </svg>
-                            </div>
-                          </div>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 </div>
-
-<div class="ArticleStrip"><div class="SpacerStrip" style="height: 30px;"></div></div>
-    <div class="ArticleStrip">
-        <div class="SeriesDestacadas">
-            <div class="SeriesDestacadas-list">
-
-  <!---------- Item 3 ---------->
-  <div class="SeriesDestacadas-item">
-    <div class="SeriesDestacadas-imagen">
-        <a href="/series/AKIRA/akira">
-        <div class="Poster-contenedor Poster-contenedor-hover" style="padding-top: 60%;">
-          <div class="Poster-contenedor-2">
-            <div class="Poster-contenedor-wrapper">
-              <img fetchpriority="high" loading="eager" class="Poster-contenedor-imagen" src="src/assets/img/Destacados/D3.webp" alt="MANGA 3" width="1200" height="960">
-              <div class="colorize" style="background-color: rgb(216, 36, 85);"></div>
-            </div>
-          </div>
-        </div>
-      </a>
-      <div class="SeriesDestacadas-info">Hasta 4/28</div>
-    </div>
-    <div class="SeriesDestacadas-itemFooter">
-        <div class="SeriesDestacadas-itemFooter-izquierda">
-        <a class="SeriesDestacadas-titulo" href="/series/AKIRA/akira">AKIRA</a>
-        <a class="SeriesDestacadas-autor" href="/series/AKIRA/akira">Katsuhiro Ôtomo</a>
-      </div>
-      <div class="SeriesDestacadas-itemFooter-derecha">
-        <a href="/series/AKIRA/akira">
-          <div role="button" class="arrow-container " aria-label="READ">
-            <span class="arrow-btn with-arrow text-bold undefined">LEER</span>
-            <div class="icon-wrapper">
-              <svg viewBox="0 0 34 34" xmlns="http://www.w3.org/2000/svg" fill="white" width="80" class="icon">
-                <path d="m15.496 0 15.939 15.939H0v2.122h31.435L15.495 34H18.5L34 18.5v-3.004L18.5 0h-3.004Z">
-                </path>
-              </svg>
-            </div>
-          </div>
-        </a>
-      </div>
-    </div>
-  </div>
-
-  <!---------- Item 4 ---------->
-  <div class="SeriesDestacadas-item">
-    <div class="SeriesDestacadas-imagen">
-      <a href="/series/TRIGUN/trigun">
-        <div class="Poster-contenedor Poster-contenedor-hover" style="padding-top: 60%;">
-          <div class="Poster-contenedor-2">
-            <div class="Poster-contenedor-wrapper">
-              <img fetchpriority="high" loading="eager" class="Poster-contenedor-imagen" src="src/assets/img/Destacados/D4.webp" alt="MANGA 4" width="1200" height="960">
-              <div class="colorize" style="background-color: rgb(216, 167, 36);"></div>
-            </div>
-          </div>
-        </div>
-      </a>
-        <div class="SeriesDestacadas-info">Hasta 5/12</div>
-            </div>
-                <div class="SeriesDestacadas-itemFooter">
-                <div class="SeriesDestacadas-itemFooter-izquierda">
-                        <a class="SeriesDestacadas-titulo" href="/series/TRIGUN/trigun">TRIGUN</a>
-                        <a class="SeriesDestacadas-autor" href="/series/TRIGUN/trigun">Yasuhiro Nightow</a>
-                    </div>
-                    <div class="SeriesDestacadas-itemFooter-derecha">
-                        <a href="/series/TRIGUN/trigun">
-                          <div role="button" class="arrow-container " aria-label="READ">
-                            <span class="arrow-btn with-arrow text-bold undefined">LEER</span>
-                            <div class="icon-wrapper">
-                              <svg viewBox="0 0 34 34" xmlns="http://www.w3.org/2000/svg" fill="white" width="80" class="icon">
-                                <path d="m15.496 0 15.939 15.939H0v2.122h31.435L15.495 34H18.5L34 18.5v-3.004L18.5 0h-3.004Z">
-                                </path>
-                              </svg>
-                            </div>
-                          </div>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
