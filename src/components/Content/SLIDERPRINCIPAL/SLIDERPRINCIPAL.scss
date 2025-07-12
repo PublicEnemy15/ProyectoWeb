@@ -213,12 +213,10 @@
     .highlights-panel {
         padding-right: 60%;
     }
-
     .highlights-slider__item-link::before {
         height: 30%;
         transform: translateY(10px);
     }
-
     .ArticuloPrincipal-infoBox {
         position: absolute;
         bottom: 100px;
@@ -228,19 +226,16 @@
         padding: 20px 20px;
         border: 2px solid black;
     }
-
     .ArticuloPrincipal-infoBox h1 {
         font-size: 36pt;
         line-height: 55px;
         margin: 0 0 8px 0;
     }
-
     .ArticuloPrincipal-infoBox-footer {
         flex-direction: row;
         justify-content: space-between;
         align-items: flex-end;
     }
-
     .ArticuloPrincipal-infoBox-footer a {
         margin-top: 0;
     }
@@ -286,7 +281,6 @@
         top: 0;
         filter: grayscale(1);
     }
-
     .highlights-panel {
         padding: 0 40px 0 16px;
         bottom: 56px;
