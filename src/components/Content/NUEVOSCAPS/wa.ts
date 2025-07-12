@@ -1,4 +1,4 @@
-import NuevosCapsSliderController from '../../Content/NUEVOSCAPS/NuevosCaps';
+import NuevosCapsSliderController from '../../CONTENT/NUEVOSCAPS/NuevosCaps';
 
 declare global {
   interface Window {
