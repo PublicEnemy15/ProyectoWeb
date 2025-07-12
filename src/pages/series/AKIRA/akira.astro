@@ -1,17 +1,21 @@
 ---
 import Layout from '../../../layouts/Layout.astro';
 
-import './src/mixins/utilities.scss';
-import './src/mixins/Reboot.scss';
-import './src/styles/stylefunciona.css';
-import './src/styles/styles.css';
-import './src/pages/series/_series.scss';
-import './src/components/CONTENT/PROXIMOSLANZAMIENTOS/PROXIMOSLANZAMIENTOS.scss';
-import './src/pages/series/_kithseries.scss';
-import './src/styles/BOTONES.scss'
+import '../../../mixins/utilities.scss';
 
-import './src/components/Header/Header.scss';
-import './src/components/CONTENT/SLIDERSGLOBAL/KITHSLIDER.scss';
+import '../../../mixins/Reboot.scss';                              
+import '../../../styles/stylefunciona.css';                        
+import '../../../styles/styles.css';                               
+import '../../../styles/BOTONES.scss'                              
+
+import '../_series.scss';                                       
+import '../_kithseries.scss';                                      
+
+import '../../../components/CONTENT/PROXIMOSLANZAMIENTOS/PROXIMOSLANZAMIENTOS.scss'; 
+import '../../../components/Header/Header.scss';                           
+
+
+import '../../../components/Content/SLIDERSGLOBAL/KITHSLIDER.scss'; 
 ---
 
 <Layout showChadbot={true}>
