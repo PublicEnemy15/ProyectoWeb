@@ -6,7 +6,6 @@
     "dev": "astro dev",
     "prepare": "prisma generate",
     "build": "astro build",
-    "postinstall": "prisma migrate deploy",
     "preview": "astro preview",
     "astro": "astro"
   },
