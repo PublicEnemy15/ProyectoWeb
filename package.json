@@ -4,10 +4,11 @@
   "version": "0.0.1",
   "scripts": {
     "dev": "astro dev",
+    "prepare": "prisma generate",
     "build": "astro build",
+    "postinstall": "prisma migrate deploy",
     "preview": "astro preview",
-    "astro": "astro",
-    "prepare": "prisma generate"
+    "astro": "astro"
   },
   "dependencies": {
     "@astrojs/vercel": "^8.2.1",
