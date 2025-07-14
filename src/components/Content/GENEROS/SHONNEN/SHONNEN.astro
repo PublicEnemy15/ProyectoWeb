@@ -1,12 +1,3 @@
----
-import { Image } from "astro:assets";
-import shonen1 from "@/assets/img/Gen1/Shonnen1.webp"
-import shonen2 from "@/assets/img/Gen1/Shonnen2.webp"
-import shonen3 from "@/assets/img/Gen1/Shonnen3.webp"
-import shonen4 from "@/assets/img/Gen1/Shonnen4.webp"
-import shonen5 from "@/assets/img/Gen1/Shonnen5.webp"
----
-
 <div class="ArticleStrip">
   <div class="WheelStrip">
     <section class="KITHSlider shonnen-slider">
@@ -53,15 +44,8 @@ import shonen5 from "@/assets/img/Gen1/Shonnen5.webp"
                                 <source type="image/jpeg" srcset="src/assets/img/Gen1/Shonnen1.webp?f=jpeg&amp;w=338&amp;h=500, src/assets/img/Gen1/Shonnen1.webp?f=jpeg&amp;w=338&amp;h=500 2x" media="(min-width: 1200px)">
                                 
                                 <!-- Imagen principal con carga diferida -->
-                                 <Image
-                                  src={shonen1} alt="shonen1"
-                                  fetchpriority="low"
-                                  loading="lazy"
-                                  class="ui-series-poster-image"
-                                  width="1200"
-                                  height="960"
-                                  />
-                                <!--<img fetchpriority="low" loading="lazy" class="ui-series-poster-image" src="src/assets/img/Gen1/Shonnen1.webp" alt="prueba" width="1200" height="960">-->
+                                <img fetchpriority="low" loading="lazy" class="ui-series-poster-image" src="src/assets/img/Gen1/Shonnen1.webp" alt="prueba" width="1200" height="960">
+
                               </picture>
                               
                               <div class="colorize" style="background-color: rgb(255, 159, 55);"></div>
