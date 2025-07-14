@@ -1,4 +1,9 @@
-@import "../mixins/utilities.scss";
+// C:\Users\cooki\ProyectoWeb\src\mixins\Reboot.scss
+
+// Cambiado de @import a @use.
+// Usamos 'as utils' para que todas las variables, mixins y funciones de utilities.scss
+// se accedan con el prefijo 'utils.'. Por ejemplo, $headings-margin-bottom ahora es $utils.$headings-margin-bottom.
+@use "../mixins/utilities.scss" as utils;
 
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 *,
@@ -37,8 +42,8 @@ audio:not([controls]) {
 
 hr {
   -moz-box-sizing: content-box;
-  box-sizing: content-box; 
-  overflow: visible; 
+  box-sizing: content-box;
+  overflow: visible;
   display: block; //no estaba
   height: 1px; //antes era 0
   border: 0; //antes era 0
@@ -54,14 +59,16 @@ mark {
 
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
-  margin-bottom: $headings-margin-bottom;
+  // Accediendo a la variable con el prefijo 'utils.'
+  margin-bottom: utils.$headings-margin-bottom;
   line-height: 1.2;
 }
 
 
 p {
   margin-top: 0;
-  margin-bottom: $paragraph-margin-bottom;
+  // Accediendo a la variable con el prefijo 'utils.'
+  margin-bottom: utils.$paragraph-margin-bottom;
 }
 
 abbr[title],
@@ -94,7 +101,8 @@ ul ol {
 }
 
 dt {
-  font-weight: $dt-font-weight;
+  // Accediendo a la variable con el prefijo 'utils.'
+  font-weight: utils.$dt-font-weight;
 }
 
 dd {
@@ -108,7 +116,8 @@ blockquote {
 
 b,
 strong {
-  font-weight: $font-weight-bolder;
+  // Accediendo a la variable con el prefijo 'utils.'
+  font-weight: utils.$font-weight-bolder;
 }
 
 small {
@@ -127,13 +136,15 @@ sub { bottom: -.25em; }
 sup { top: -.5em; }
 
 a {
-  color: $link-color;
-  text-decoration: $link-decoration;
+  // Accediendo a la variable con el prefijo 'utils.'
+  color: utils.$link-color;
+  text-decoration: utils.$link-decoration;
   background-color: transparent;
 
   &:hover{
-    color: $link-hover-color;
-    text-decoration: $link-hover-decoration;
+    // Accediendo a la variable con el prefijo 'utils.'
+    color: utils.$link-hover-color;
+    text-decoration: utils.$link-hover-decoration;
   }
 }
 
@@ -168,7 +179,7 @@ figure {
 
 img {
   vertical-align: middle;
-  border-style: none; 
+  border-style: none;
   border: 0;
 }
 
@@ -187,9 +198,10 @@ table {
 }
 
 caption {
-  padding-top: $table-cell-padding;
-  padding-bottom: $table-cell-padding;
-  color: $table-caption-color;
+  // Accediendo a la variable con el prefijo 'utils.'
+  padding-top: utils.$table-cell-padding;
+  padding-bottom: utils.$table-cell-padding;
+  color: utils.$table-caption-color;
   text-align: left;
   caption-side: bottom;
 }
@@ -204,7 +216,8 @@ td,th {
 
 label {
   display: inline-block;
-  margin-bottom: $label-margin-bottom;
+  // Accediendo a la variable con el prefijo 'utils.'
+  margin-bottom: utils.$label-margin-bottom;
 }
 
 button {
@@ -217,7 +230,7 @@ button:focus {
 }
 
 input,button,select,optgroup,textarea {
-  margin: 0; 
+  margin: 0;
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
@@ -248,7 +261,8 @@ button,[type="button"], [type="reset"], [type="submit"] {
   -webkit-appearance: button;
 }
 
-@if $enable-pointer-cursor-for-buttons {
+// Accediendo a la variable con el prefijo 'utils.' en la condición @if
+@if utils.$enable-pointer-cursor-for-buttons {
   button,[type="button"], [type="reset"], [type="submit"] {
     &:not(:disabled) {
       cursor: pointer;
@@ -309,7 +323,7 @@ fieldset {
 legend {
   display: block;
   width: 100%;
-  max-width: 100%; 
+  max-width: 100%;
   border: 0;
   padding: 0;
   margin-bottom: .5rem;
@@ -329,7 +343,7 @@ progress {
 }
 
 [type="search"] {
-  outline-offset: -2px; 
+  outline-offset: -2px;
   -webkit-appearance: none;
 }
 
@@ -383,7 +397,8 @@ html {
 body {
   margin: 0;
   text-align: left;
-  background-color: $body-bg; 
+  // Accediendo a la variable con el prefijo 'utils.'
+  background-color: utils.$body-bg;
   position: relative;
   min-height: 100vh;
   //margin-top: 141px

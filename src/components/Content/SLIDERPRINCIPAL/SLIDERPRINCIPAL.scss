@@ -1,8 +1,13 @@
-@import "@/mixins/utilities.scss";
+// C:\Users\cooki\ProyectoWeb\src\components\Content\SLIDERPRINCIPAL\SLIDERPRINCIPAL.scss
+
+// Cambiado de @import a @use.
+// Usamos 'as utils' para que cualquier mixin, función o variable de utilities.scss
+// se acceda con el prefijo 'utils.'.
+@use "@/mixins/utilities.scss" as utils;
 
 /* ==========================================================================
-   SLIDER PRINCIPAL
-   ========================================================================== */
+    SLIDER PRINCIPAL
+    ========================================================================== */
 
 .highlights-slider {
     height: 0;
@@ -60,8 +65,8 @@
 }
 
 /* ==========================================================================
-   PANEL DE CONTROLES
-   ========================================================================== */
+    PANEL DE CONTROLES
+    ========================================================================== */
 
 .highlights-panel {
     display: flex;
@@ -128,8 +133,8 @@
 }
 
 /* ==========================================================================
-   CAJA DE INFORMACIÓN
-   ========================================================================== */
+    CAJA DE INFORMACIÓN
+    ========================================================================== */
 
 .ArticuloPrincipal-infoBox {
     display: flex;
@@ -140,7 +145,8 @@
 }
 
 .ArticuloPrincipal-infoBox h2 {
-    @include font-bold();
+    // Accediendo al mixin con el prefijo 'utils.'
+    @include utils.font-bold();
     margin: 0 0 -1px 3px;
     color: black;
     font-size: 12pt;
@@ -148,7 +154,8 @@
 }
 
 .ArticuloPrincipal-infoBox h1 {
-    @include font-bold();
+    // Accediendo al mixin con el prefijo 'utils.'
+    @include utils.font-bold();
     font-size: 33px;
     line-height: 35px;
     color: black;
@@ -186,14 +193,15 @@
 }
 
 .ArticuloPrincipal-autor {
-    @include font-bold();
+    // Accediendo al mixin con el prefijo 'utils.'
+    @include utils.font-bold();
     color: black;
     font-size: 16pt;
 }
 
 /* ==========================================================================
-   RESPONSIVE - TABLET
-   ========================================================================== */
+    RESPONSIVE - TABLET
+    ========================================================================== */
 
 @media (max-width: 49.99em) {
     .highlights-panel {
@@ -205,12 +213,10 @@
     .highlights-panel {
         padding-right: 60%;
     }
-    
     .highlights-slider__item-link::before {
         height: 30%;
         transform: translateY(10px);
     }
-    
     .ArticuloPrincipal-infoBox {
         position: absolute;
         bottom: 100px;
@@ -220,27 +226,24 @@
         padding: 20px 20px;
         border: 2px solid black;
     }
-    
     .ArticuloPrincipal-infoBox h1 {
         font-size: 36pt;
         line-height: 55px;
         margin: 0 0 8px 0;
     }
-    
     .ArticuloPrincipal-infoBox-footer {
         flex-direction: row;
         justify-content: space-between;
         align-items: flex-end;
     }
-    
     .ArticuloPrincipal-infoBox-footer a {
         margin-top: 0;
     }
 }
 
 /* ==========================================================================
-   RESPONSIVE - DESKTOP
-   ========================================================================== */
+    RESPONSIVE - DESKTOP
+    ========================================================================== */
 
 @media (min-width: 1024px) {
     .highlights-slider {
@@ -252,24 +255,24 @@
         width: 100vw;
         padding-bottom: 0;
     }
-    
+
     .highlights-slider__item {
         min-width: 100%;
     }
-    
+
     .highlights-slider__item-link {
         height: 100%;
         width: 100%;
     }
-    
+
     .highlights-slider__item-link:before {
         height: 40%;
     }
-    
+
     .highlights-slider__small-image {
         display: none;
     }
-    
+
     .highlights-slider__large-image {
         display: block;
         width: 100%;
@@ -278,16 +281,15 @@
         top: 0;
         filter: grayscale(1);
     }
-    
     .highlights-panel {
         padding: 0 40px 0 16px;
         bottom: 56px;
     }
-    
+
     .highlights-scrollbar {
         width: 40%;
     }
-    
+
     .highlights-controls {
         display: flex;
         margin-bottom: 1px;

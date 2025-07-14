@@ -1,4 +1,9 @@
-@import "@/mixins/utilities.scss";
+// C:\Users\cooki\ProyectoWeb\src\components\Header\Header.scss
+
+// Cambiado de @import a @use.
+// Usamos 'as utils' para que cualquier mixin, función o variable de utilities.scss
+// se acceda con el prefijo 'utils.'.
+@use "@/mixins/utilities.scss" as utils;
 
 .header {
     position: fixed;
@@ -35,7 +40,8 @@
 }
 
 .header-nav-item,.header__menu-alternar {
-    @include font-bold();
+    // Accediendo al mixin con el prefijo 'utils.'
+    @include utils.font-bold();
     font-size: .75rem;
     line-height: 18px;
     letter-spacing: .10em;
@@ -60,7 +66,8 @@
 }
 
 .KITH-link {
-    @include font-bold();
+    // Accediendo al mixin con el prefijo 'utils.'
+    @include utils.font-bold();
     font-size: .75rem;
     line-height: 18px;
     letter-spacing: .10em;
@@ -271,11 +278,11 @@
         bottom: 0;
         overflow: hidden;
         transition-delay: 0s;
-        
-        -ms-overflow-style: none; 
+
+        -ms-overflow-style: none;
         scrollbar-width: none;
-        
-        &::-webkit-scrollbar {  
+
+        &::-webkit-scrollbar {
             display: none;
         }
     }
@@ -315,7 +322,7 @@
 .nav-submenu {
     display: flex;
     flex-direction: column;
-    height: 100%; 
+    height: 100%;
     opacity: 0;
     transform: translateY(-20px);
     pointer-events: none;
@@ -331,7 +338,8 @@
     align-items: center;
     font-size: 0.75rem;
     padding: 10.5px 0;
-    @include font-bold();
+    // Accediendo al mixin con el prefijo 'utils.'
+    @include utils.font-bold();
     text-transform: uppercase;
     letter-spacing: 0.1em;
 }
