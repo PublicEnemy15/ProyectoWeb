@@ -1,4 +1,9 @@
-@import "@/mixins/utilities.scss";
+// C:\Users\cooki\ProyectoWeb\src\components\Content\SLIDERSGLOBAL\KITHSLIDER.scss
+
+// Cambiado de @import a @use.
+// Usamos 'as utils' para que cualquier mixin, función o variable de utilities.scss
+// se acceda con el prefijo 'utils.'.
+@use "@/mixins/utilities.scss" as utils;
 
 .Slider {
     overflow-x: hidden;
@@ -47,7 +52,8 @@
 }
 
 .KITHSlider .KITHSlider-contentWrapper>h2 {
-    @include font-bold();
+    // Accediendo al mixin con el prefijo 'utils.'
+    @include utils.font-bold();
     text-transform: uppercase;
     font-size: 34px;
     font-weight: bold;
@@ -99,12 +105,12 @@
     display: none;
     position: absolute;
     top: 0;
-    opacity: 0; 
+    opacity: 0;
     transition: opacity 0.3s ease;
 
     &.visible {
         display: flex;
-        
+
         > button {
             opacity: 0;
             visibility: visible;
@@ -116,7 +122,7 @@
 .KITHSlider:hover {
     .KITHSlider-btnWrapper.visible {
         opacity: 1;
-        
+
         > button {
             opacity: 1;
         }

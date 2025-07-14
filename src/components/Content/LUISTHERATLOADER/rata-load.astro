@@ -1,12 +1,18 @@
+---
+import { Image } from "astro:assets";
+import rataload from "@/assets/rat.webp";
+---
+
 <div id="contenedor-cargando">
-  <a href="/src/components/Content/Chatbot/Chatbot.astro"><img src="/src/assets/rat.gif" alt="Cargando..." class="loader-imagen" loading="lazy"></a>
+  <a href="/src/components/Content/Chatbot/Chatbot.astro">
+    <Image src={rataload} alt="rata-cargando"/>
+  </a>
   <br>
   <div class="txt-cargando">
     <p id="txtLoad">
         Cargando
     </p>
   </div>
-  
 </div>
 
 <script>
