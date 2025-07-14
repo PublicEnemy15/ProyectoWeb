@@ -4,14 +4,19 @@ import Layout from '../layouts/Layout.astro';
 import '../mixins/utilities.scss'; 
 import '../mixins/Reboot.scss';  
 import '../styles/stylefunciona.css'; 
-import '../styles/styles.css';       
+import '../styles/styles.css';  
 
+import { Image } from 'astro:assets';
+import hero from "@/assets/sena.webp"
+import about1 from "assets/img/About/1.webp"
+import about2 from "assets/img/About/2.webp"
+import about3 from "assets/img/About/3.webp"
 ---
 <Layout showChadbot={true}>
   
 <div class="kith-about">
     <!-- Imagen principal de cabecera -->
-    <img class="hero-image" src="src/assets/sena.webp" alt="kith About" />
+    <Image src={hero} class="hero-image" alt="kith About"/>
 
     <!-- Sección introductoria -->
     <div class="kith-about-inner-wrapper">
@@ -39,7 +44,7 @@ import '../styles/styles.css';
         <!-- Manga -->
         <div class="paired-content">
           <div class="paired-content-lhs">
-            <img src="src/assets/img/About/1.webp" alt="Aquinopasonada" />
+            <Image src={about1} alt="Aquinopasonada"/>
           </div>
           <div class="paired-content-rhs">
             <h2>Aquí podrás</h2>
@@ -54,7 +59,7 @@ import '../styles/styles.css';
         <!-- Manhwa -->
         <div class="paired-content">
           <div class="paired-content-lhs">
-            <img src="src/assets/img/About/2.webp" alt="Solo Leveling" />
+            <Image src={about2} alt="Solo Leveling"/>
           </div>
           <div class="paired-content-rhs">
             <h2>Además</h2>
@@ -69,7 +74,7 @@ import '../styles/styles.css';
         <!-- Anime / Películas -->
         <div class="paired-content">
           <div class="paired-content-lhs">
-            <img src="src/assets/img/About/3.webp" alt="Your Name" />
+            <Image src={about3} alt="Your Name"/>
           </div>
           <div class="paired-content-rhs">
             <h2>Y por si fuera poco</h2>
