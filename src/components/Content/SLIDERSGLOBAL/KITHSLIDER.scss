@@ -1,8 +1,3 @@
-// C:\Users\cooki\ProyectoWeb\src\components\Content\SLIDERSGLOBAL\KITHSLIDER.scss
-
-// Cambiado de @import a @use.
-// Usamos 'as utils' para que cualquier mixin, función o variable de utilities.scss
-// se acceda con el prefijo 'utils.'.
 @use "@/mixins/utilities.scss" as utils;
 
 .Slider {
@@ -107,6 +102,9 @@
     top: 0;
     opacity: 0;
     transition: opacity 0.3s ease;
+    // CAMBIO: Usar aspect-ratio para mantener proporción cuadrada
+    width: calc((100% - var(--slider-gap-small)) / 2.2);
+    aspect-ratio: 1; // Esto mantiene la proporción cuadrada
 
     &.visible {
         display: flex;
@@ -118,27 +116,20 @@
     }
 }
 
-// Añadir estas reglas nuevas
-.KITHSlider:hover {
-    .KITHSlider-btnWrapper.visible {
-        opacity: 1;
-
-        > button {
-            opacity: 1;
-        }
-    }
-}
-
 .KITHSlider .KITHSlider-btnWrapper>button {
     display: flex;
     align-items: center;
-    padding: 15px;
+    justify-content: center;
     background-color: #2b2b2b;
     border: none;
     opacity: 0;
     visibility: hidden;
     cursor: pointer;
     transition: opacity 250ms;
+    // CAMBIO: Ocupar todo el contenedor con flexbox
+    width: 100%;
+    height: 100%;
+    padding: 0;
 }
 
 .KITHSlider .KITHSlider-btnWrapper>button:focus {
@@ -146,19 +137,22 @@
 }
 
 .KITHSlider .KITHSlider-btnWrapper>button>svg {
-    width: 35px;
-    height: 35px;
+    // SVG responsive que se adapta al tamaño del botón
+    width: min(35px, 15%);
+    height: min(35px, 15%);
     fill: #fff;
 }
 
 .KITHSlider .KITHSlider-btnWrapper.prev {
     left: 0;
     transform: translateX(-100%);
-    padding-right: 15px;
+    // CAMBIO: Ancho igual al del item para mantener consistencia
+    width: calc((100% - var(--slider-gap-small)) / 2.2);
 }
 
 .KITHSlider .KITHSlider-btnWrapper.prev>button {
     justify-content: flex-end;
+    padding-right: 15px;
 }
 
 .KITHSlider .KITHSlider-btnWrapper.prev>button>svg {
@@ -168,17 +162,29 @@
 .KITHSlider .KITHSlider-btnWrapper.next {
     right: 0;
     transform: translateX(100%);
-    padding-left: 15px;
+    // CAMBIO: Ancho igual al del item para mantener consistencia
+    width: calc((100% - var(--slider-gap-small)) / 2.2);
 }
 
 .KITHSlider .KITHSlider-btnWrapper.next>button {
     justify-content: flex-start;
+    padding-left: 15px;
 }
 
 .KITHSlider .TituloItem {
     font-size: 18px;
 }
 
+// Añadir estas reglas para mostrar los botones en hover
+.KITHSlider:hover {
+    .KITHSlider-btnWrapper.visible {
+        opacity: 1;
+
+        > button {
+            opacity: 1;
+        }
+    }
+}
 
 @media (min-width: 768px) {
     .KITHSlider .KITHSlider-contentWrapper {
@@ -191,6 +197,19 @@
 
     .KITHSlider .KITHSlider-btnWrapper {
         display: flex;
+        
+        &.prev,
+        &.next {
+            width: min((var(--slider-width) - (var(--slider-count) - 1) * var(--slider-gap-large)) / var(--slider-count), (100% - (var(--slider-count) - 1) * var(--slider-gap-large)) / var(--slider-count));
+        }
+        
+        &.prev {
+            transform: translateX(calc(-100% - var(--slider-gap-large)));
+        }
+        
+        &.next {
+            transform: translateX(calc(100% + var(--slider-gap-large)));
+        }
     }
 
     .KITHSlider:hover .KITHSlider-btnWrapper.visible>button {
