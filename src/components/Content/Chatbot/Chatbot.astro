@@ -1,3 +1,9 @@
+---
+import { Image } from "astro:assets";
+import rataload from "@/assets/rat.webp";
+import svgClose from "@/assets/close-icon.svg";
+---
+
 <div class="contendor-chatbot" id="container-chat">
     <button class="ChadBot ChadBot" aria-label="chadbot">
         <svg viewBox="0 0 32 21" style="width: 28px; height: 28px;">
@@ -7,7 +13,7 @@
     <div class="chat-dropup" id="chatDropUp">
         <div class="chat-head">
             <p class="chat-name">ChadMNG 7.27 by TravLabs</p>
-            <img src="/src/assets/close-icon.svg" id="chatClose" class="chat-close" alt="">
+            <Image src={svgClose} id="chatClose" class="chat-close" alt=""/>
         </div>
         <div class="chat-body" id="chat-body">
             <!-- ELEMENTOS DEL CHAT (OVERFLOW: AUTO) -->
@@ -63,6 +69,8 @@
     }
 
     function answersChat(message:string){
+        const rataloadAlt = "rata-load"
+        const imgRata = "<Image src='@/assets/rat.webp' alt="+rataloadAlt+">"
         if (message.includes("integrantes") || message.includes("grupo")){
             return "Integrantes:<br>Yefferson Farfan<br>Gabriel Flores<br>Polux Morales<br>Walter Rosell<br>Franco Siesquen";
         }
@@ -74,19 +82,13 @@
             return "Este proyecto es para el curso de Taller Web";
         }
         else if (message.includes("paginas")){
-            const src = "src/assets/img/404/rat.gif";
-            var ansF:string = "<img src="+src+">";
-            return "Muchas paginas o secciones siguen bajo construccion, proximamente disponibles<br>"+ansF;
+            return "Muchas paginas o secciones siguen bajo construccion, proximamente disponibles<br>"+imgRata;
         }
         else if (message.includes("ti")){
-            const src = "src/assets/img/404/rat.gif";
-            var ansF:string = "<img src="+src+">";
-            return "Yo estoy para resolver sus dudas y guiarlo, proximamente estaré mejorado<br>"+ansF;
+            return "Yo estoy para resolver sus dudas y guiarlo, proximamente estaré mejorado<br>"+imgRata;
         }
         else{
-            const src = "src/assets/img/404/rat.gif";
-            var ansF:string = "<img src="+src+">";
-            return "noc<br>"+ansF;
+            return "noc<br>"+imgRata;
         }
     }
 

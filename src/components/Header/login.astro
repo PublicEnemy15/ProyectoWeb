@@ -1,3 +1,8 @@
+---
+import { Image } from "astro:assets";
+import loginHeader from "@/assets/img/LoginBanner.webp"
+---
+
 <!-- Fase 1: Introducir Email -->
 <div class="auth-backdrop" id="login-phase-1" style="display: none;">
   <div class="auth-modal-container">
@@ -7,7 +12,7 @@
         <path class="PLUS_svg__cls-1" d="M512 224.35v63.29H0v-63.29z"></path>
       </svg>
     </div>
-    <img src="src/assets/img/LoginBanner.webp" alt="kodansha-login-header" class="auth-header-poster">
+    <Image src={loginHeader} alt="kodansha-login-header" class="auth-header-poster"/>
     <div class="auth-login-container">
       <span class="auth-login-title">Mi KITH</span>
       <span class="auth-login-subtitle">Como lector de KITH, obtendrás:</span>
@@ -53,7 +58,7 @@
         <path class="PLUS_svg__cls-1" d="M512 224.35v63.29H0v-63.29z"></path>
       </svg>
     </div>
-    <img src="src/assets/img/LoginBanner.webp" alt="kodansha-login-header" class="auth-header-poster"/>
+    <Image src={loginHeader} alt="kodansha-login-header" class="auth-header-poster"/>
     <div class="auth-login-container">
       <span class="auth-login-title">Crea tu cuenta</span>
       <span class="auth-signup-text">Confirma tu contraseña para comenzar con tu nueva cuenta</span>
@@ -133,7 +138,7 @@
         <path class="PLUS_svg__cls-1" d="M512 224.35v63.29H0v-63.29z"></path>
       </svg>
     </div>
-    <img src="src/assets/img/LoginBanner.webp" alt="kodansha-login-header" class="auth-header-poster"/>
+    <Image src={loginHeader} alt="kodansha-login-header" class="auth-header-poster"/>
     <div class="auth-login-container">
       <span class="auth-login-title auth-login-title-2">Ya estas por convertirte en miembro de KITH!</span>
       <span class="auth-signup-finished-text">Simplemente verifique su cuenta siguiendo las instrucciones que le enviamos a:</span>
@@ -156,7 +161,7 @@
         <path class="PLUS_svg__cls-1" d="M512 224.35v63.29H0v-63.29z"></path>
       </svg>
     </div>
-    <img src="src/assets/img/LoginBanner.webp" alt="kodansha-login-header" class="auth-header-poster"/>
+    <Image src={loginHeader} alt="kodansha-login-header" class="auth-header-poster"/>
     <div class="auth-login-container">
       <span class="auth-login-title">Log in</span>
       <span class="auth-signup-text">Ingrese su contraseña para acceder a su cuenta de lector KITH.</span>

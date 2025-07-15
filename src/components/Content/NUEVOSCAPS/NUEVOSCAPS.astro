@@ -1,3 +1,12 @@
+---
+import { Image } from "astro:assets";
+import manga1 from "@/assets/img/Cap1.webp";
+import manga2 from "@/assets/img/Cap2.webp";
+import manga3 from "@/assets/img/Cap3.webp";
+import manga4 from "@/assets/img/Cap4.webp";
+import manga5 from "@/assets/img/Cap5.webp";
+---
+
 <div class="ArticleStrip">
     <div class="CapsWheelStrip">
         <section class="KITHSlider nuevoscaps-slider">
@@ -15,15 +24,16 @@
                                             <div class="ui-series-poster-container ui-series-poster-container-hover" style="padding-top: 100%;">
                                                 <div class="ui-series-poster-container-2">
                                                     <div class="ui-series-poster-wrapper">
-                                                        <img 
+                                                        <Image
+                                                            src={manga1}
+                                                            alt="MANGA 1"
                                                             loading="lazy" 
                                                             decoding="async"
-                                                            class="ui-series-poster-image" 
-                                                            src="src/assets/img/Cap1.webp" 
-                                                            alt="MANGA 1" 
+                                                            class="ui-series-poster-image"
                                                             width="338" 
                                                             height="500"
-                                                            sizes="(max-width: 767px) 240px, (max-width: 991px) 162px, (max-width: 1199px) 212px, 338px">
+                                                            sizes="(max-width: 767px) 240px, (max-width: 991px) 162px, (max-width: 1199px) 212px, 338px"
+                                                        />
                                                         <div class="colorize" style="background-color: #6A64F6"></div>
                                                     </div>
                                                 </div>
@@ -46,16 +56,17 @@
                                             <div class="ui-series-poster-container ui-series-poster-container-hover" style="padding-top: 100%;">
                                                 <div class="ui-series-poster-container-2">
                                                     <div class="ui-series-poster-wrapper">
-                                                        <img 
+                                                        <Image
+                                                            src={manga2}
+                                                            alt="MANGA 2"
                                                             loading="lazy" 
                                                             decoding="async"
-                                                            class="ui-series-poster-image" 
-                                                            src="src/assets/img/Cap2.webp" 
-                                                            alt="MANGA 2" 
+                                                            class="ui-series-poster-image"
                                                             width="338" 
                                                             height="500"
-                                                            sizes="(max-width: 767px) 240px, (max-width: 991px) 162px, (max-width: 1199px) 212px, 338px">
-                                                        <div class="colorize" style="background-color: #bf1494;"></div>
+                                                            sizes="(max-width: 767px) 240px, (max-width: 991px) 162px, (max-width: 1199px) 212px, 338px"
+                                                        />
+                                                    <div class="colorize" style="background-color: #bf1494;"></div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -77,15 +88,16 @@
                                             <div class="ui-series-poster-container ui-series-poster-container-hover" style="padding-top: 100%;">
                                                 <div class="ui-series-poster-container-2">
                                                     <div class="ui-series-poster-wrapper">
-                                                        <img 
+                                                        <Image
+                                                            src={manga3}
+                                                            alt="MANGA 3"
                                                             loading="lazy" 
                                                             decoding="async"
-                                                            class="ui-series-poster-image" 
-                                                            src="src/assets/img/Cap3.webp" 
-                                                            alt="MANGA 3" 
+                                                            class="ui-series-poster-image"
                                                             width="338" 
                                                             height="500"
-                                                            sizes="(max-width: 767px) 240px, (max-width: 991px) 162px, (max-width: 1199px) 212px, 338px">
+                                                            sizes="(max-width: 767px) 240px, (max-width: 991px) 162px, (max-width: 1199px) 212px, 338px"
+                                                        />
                                                         <div class="colorize" style="background-color: #4F7AE8;"></div>
                                                     </div>
                                                 </div>
@@ -108,15 +120,16 @@
                                             <div class="ui-series-poster-container ui-series-poster-container-hover" style="padding-top: 100%;">
                                                 <div class="ui-series-poster-container-2">
                                                     <div class="ui-series-poster-wrapper">
-                                                        <img 
+                                                        <Image
+                                                            src={manga4}
+                                                            alt="MANGA 4"
                                                             loading="lazy" 
                                                             decoding="async"
-                                                            class="ui-series-poster-image" 
-                                                            src="src/assets/img/Cap4.webp" 
-                                                            alt="MANGA 4" 
+                                                            class="ui-series-poster-image"
                                                             width="338" 
                                                             height="500"
-                                                            sizes="(max-width: 767px) 240px, (max-width: 991px) 162px, (max-width: 1199px) 212px, 338px">
+                                                            sizes="(max-width: 767px) 240px, (max-width: 991px) 162px, (max-width: 1199px) 212px, 338px"
+                                                        />
                                                         <div class="colorize" style="background-color: #8f4fff;"></div>
                                                     </div>
                                                 </div>
@@ -139,15 +152,16 @@
                                             <div class="ui-series-poster-container ui-series-poster-container-hover" style="padding-top: 100%;">
                                                 <div class="ui-series-poster-container-2">
                                                     <div class="ui-series-poster-wrapper">
-                                                        <img 
+                                                        <Image
+                                                            src={manga5}
+                                                            alt="MANGA 5"
                                                             loading="lazy" 
                                                             decoding="async"
-                                                            class="ui-series-poster-image" 
-                                                            src="src/assets/img/Cap5.webp" 
-                                                            alt="MANGA 5" 
+                                                            class="ui-series-poster-image"
                                                             width="338" 
                                                             height="500"
-                                                            sizes="(max-width: 767px) 240px, (max-width: 991px) 162px, (max-width: 1199px) 212px, 338px">
+                                                            sizes="(max-width: 767px) 240px, (max-width: 991px) 162px, (max-width: 1199px) 212px, 338px"
+                                                        />
                                                         <div class="colorize" style="background-color: #bd0909;"></div>
                                                     </div>
                                                 </div>
