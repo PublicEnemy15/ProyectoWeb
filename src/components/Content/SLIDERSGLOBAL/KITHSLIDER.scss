@@ -102,9 +102,6 @@
     top: 0;
     opacity: 0;
     transition: opacity 0.3s ease;
-    // Remover width y aspect-ratio fijos ya que se manejarán desde JS
-    // width: calc((100% - var(--slider-gap-small)) / 2.2);
-    // aspect-ratio: 1;
 
     &.visible {
         display: flex;
@@ -126,7 +123,6 @@
     visibility: hidden;
     cursor: pointer;
     transition: opacity 250ms;
-    // CAMBIO: Ocupar todo el contenedor con flexbox
     width: 100%;
     height: 100%;
     padding: 0;
@@ -137,7 +133,6 @@
 }
 
 .KITHSlider .KITHSlider-btnWrapper>button>svg {
-    // SVG responsive que se adapta al tamaño del botón
     width: min(35px, 15%);
     height: min(35px, 15%);
     fill: #fff;
@@ -146,8 +141,6 @@
 .KITHSlider .KITHSlider-btnWrapper.prev {
     left: 0;
     transform: translateX(-100%);
-    // Remover width fijo
-    // width: calc((100% - var(--slider-gap-small)) / 2.2);
 }
 
 .KITHSlider .KITHSlider-btnWrapper.prev>button {
@@ -162,8 +155,6 @@
 .KITHSlider .KITHSlider-btnWrapper.next {
     right: 0;
     transform: translateX(100%);
-    // Remover width fijo
-    // width: calc((100% - var(--slider-gap-small)) / 2.2);
 }
 
 .KITHSlider .KITHSlider-btnWrapper.next>button {
@@ -175,17 +166,7 @@
     font-size: 18px;
 }
 
-// Añadir estas reglas para mostrar los botones en hover
-.KITHSlider:hover {
-    .KITHSlider-btnWrapper.visible {
-        opacity: 1;
-
-        > button {
-            opacity: 1;
-        }
-    }
-}
-
+// CAMBIO IMPORTANTE: Solo mostrar botones en desktop (768px+)
 @media (min-width: 768px) {
     .KITHSlider .KITHSlider-contentWrapper {
         width: min(100%, 100vw - 130px - 30px);
@@ -198,12 +179,6 @@
     .KITHSlider .KITHSlider-btnWrapper {
         display: flex;
         
-        // Remover widths fijos ya que se manejarán desde JS
-        // &.prev,
-        // &.next {
-        //     width: min((var(--slider-width) - (var(--slider-count) - 1) * var(--slider-gap-large)) / var(--slider-count), (100% - (var(--slider-count) - 1) * var(--slider-gap-large)) / var(--slider-count));
-        // }
-        
         &.prev {
             transform: translateX(calc(-100% - var(--slider-gap-large)));
         }
@@ -213,12 +188,31 @@
         }
     }
 
+    // Mostrar botones en hover solo en desktop
+    .KITHSlider:hover {
+        .KITHSlider-btnWrapper.visible {
+            opacity: 1;
+
+            > button {
+                opacity: 1;
+            }
+        }
+    }
+
     .KITHSlider:hover .KITHSlider-btnWrapper.visible>button {
         opacity: 1;
         visibility: visible;
     }
 }
 
+// NUEVO: Ocultar completamente los botones en móvil
+@media (max-width: 767px) {
+    .KITHSlider .KITHSlider-btnWrapper {
+        display: none !important;
+        opacity: 0 !important;
+        visibility: hidden !important;
+    }
+}
 
 .ui-series-poster-container {
     display: flex;
