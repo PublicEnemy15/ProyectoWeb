@@ -43,8 +43,8 @@ export const seriesData = [
     author: 'Kei Urana',
     description: 'Gachiakuta cuenta la historia de Rudo, un joven que vive en los suburbios marginados de una ciudad dividida por clases sociales. Acusado injustamente de un crimen, es arrojado al Abismo, una zona llena de basura y peligros mortales. Allí descubre un nuevo mundo dominado por monstruos creados a partir de la basura y conoce a los "Limpiadores", guerreros que luchan contra estas criaturas. Rudo inicia una lucha por la verdad, la justicia y su redención.',
     portada: {
-      desktop: '/imagen/gachiakuta/portada.webp',
-      mobile: '/imagen/gachiakuta/portada.webp',
+      desktop: '/imagen/gokurakugai/2.webp',
+      mobile: '/imagen/gokurakugai/2.webp',
     },
     pg: '192 páginas',
     enlace: 'https://zonatmo.com/viewer/64da982a08e24019692ef2ac2e1e9891/cascade',
@@ -60,7 +60,7 @@ export const seriesData = [
     volumes: [
       {
         title: 'Volumen 1',
-        img: '/imagen/gachiakuta/vol1.webp',
+        img: '/imagen/gokurakugai/2.webp',
         link: 'https://zonatmo.com/viewer/64da982a08e24019692ef2ac2e1e9891/cascade',
         fecha: '17/02/2022',
         paginas: 192
@@ -73,8 +73,8 @@ export const seriesData = [
     author: 'Shinichi Sakamoto',
     description: 'The Climber (Kokou no Hito) sigue a Mori Buntarou, un solitario estudiante de secundaria que descubre una pasión por la escalada libre. A medida que se enfrenta a desafiantes acantilados, montañas implacables y sus propios demonios internos, Mori se convierte en un escalador legendario en una historia intensa y psicológica de autosuperación y obsesión.',
     portada: {
-      desktop: '/imagen/theclimber/1.webp',
-      mobile: '/imagen/theclimber/1.webp',
+      desktop: '/imagen/gokurakugai/2.webp',
+      mobile: '/imagen/gokurakugai/2.webp',
     },
     pg: '210 páginas',
     enlace: '#',
@@ -85,7 +85,7 @@ export const seriesData = [
     volumes: [
       {
         title: 'Volumen 1',
-        img: '/imagen/theclimber/1.webp',
+        img: '/imagen/gokurakugai/2.webp',
         link: '#',
         fecha: '10/05/2007',
         paginas: 210
@@ -100,8 +100,8 @@ export const seriesData = [
     author: 'Eiichiro Oda',
     description: 'One Piece narra la aventura épica de Monkey D. Luffy, un joven pirata con el poder de estirarse como la goma tras comer una Fruta del Diablo. Luffy recorre el vasto océano en busca del legendario tesoro One Piece para convertirse en el Rey de los Piratas. A lo largo de su viaje, reúne una tripulación carismática, enfrenta poderosos enemigos y explora islas llenas de misterios, acción y emoción.',
     portada: {
-      desktop: '/imagen/onepiece/1.webp',
-      mobile: '/imagen/onepiece/1.webp',
+      desktop: '/imagen/gokurakugai/2.webp',
+      mobile: '/imagen/gokurakugai/2.webp',
     },
     pg: 'Varía por volumen',
     enlace: 'https://mangaplus.shueisha.co.jp/titles/100020',
@@ -117,7 +117,7 @@ export const seriesData = [
     volumes: [
       {
         title: 'Volumen 1',
-        img: '/imagen/onepiece/1.webp',
+        img: '/imagen/gokurakugai/2.webp',
         link: 'https://mangaplus.shueisha.co.jp/viewer/1000200',
         fecha: '20/07/1997',
         paginas: 192
@@ -130,8 +130,8 @@ export const seriesData = [
     author: 'Akira Toriyama',
     description: 'Dragon Ball Super continúa la icónica historia de Goku y sus amigos después de la derrota de Majin Buu. Con la llegada de nuevos dioses, torneos multiversales y amenazas como Black Goku y Moro, Goku alcanza nuevas formas de poder como el Ultra Instinto. Una saga llena de batallas espectaculares y una expansión del universo Dragon Ball.',
     portada: {
-      desktop: '/imagen/dragonballsuper/1.webp',
-      mobile: '/imagen/dragonballsuper/1.webp',
+      desktop: '/imagen/gokurakugai/2.webp',
+      mobile: '/imagen/gokurakugai/2.webp',
     },
     pg: 'Varía por volumen',
     enlace: 'https://mangaplus.shueisha.co.jp/titles/100034',
@@ -147,7 +147,7 @@ export const seriesData = [
     volumes: [
       {
         title: 'Volumen 1',
-        img: '/imagen/dragonballsuper/1.webp',
+        img: '/imagen/gokurakugai/2.webp',
         link: 'https://mangaplus.shueisha.co.jp/viewer/1000340',
         fecha: '20/06/2015',
         paginas: 208
@@ -160,8 +160,8 @@ export const seriesData = [
     author: 'Masashi Kishimoto',
     description: 'Naruto sigue la historia de un joven ninja llamado Naruto Uzumaki, quien sueña con convertirse en el Hokage de su aldea para ser reconocido por todos. Acompañado de amigos como Sasuke y Sakura, y guiado por su maestro Kakashi, Naruto enfrenta poderosos enemigos y descubre la verdad sobre su pasado y el zorro demonio sellado dentro de él.',
     portada: {
-      desktop: '/imagen/naruto/1.webp',
-      mobile: '/imagen/naruto/1.webp',
+      desktop: '/imagen/gokurakugai/2.webp',
+      mobile: '/imagen/gokurakugai/2.webp',
     },
     pg: 'Varía por volumen',
     enlace: 'https://mangaplus.shueisha.co.jp/titles/100020',
@@ -177,7 +177,7 @@ export const seriesData = [
     volumes: [
       {
         title: 'Volumen 1',
-        img: '/imagen/naruto/1.webp',
+        img: '/imagen/gokurakugai/2.webp',
         link: 'https://mangaplus.shueisha.co.jp/viewer/1000200',
         fecha: '21/09/1999',
         paginas: 192
@@ -190,8 +190,8 @@ export const seriesData = [
     author: 'Tite Kubo',
     description: 'Ichigo Kurosaki, un adolescente con la habilidad de ver fantasmas, obtiene los poderes de un Shinigami (dios de la muerte) y se ve obligado a proteger a los vivos de espíritus malignos conocidos como Hollows. A medida que lucha, descubre conspiraciones, secretos sobre su origen y se enfrenta a enemigos cada vez más poderosos en el universo del Soul Society.',
     portada: {
-      desktop: '/imagen/bleach/1.webp',
-      mobile: '/imagen/bleach/1.webp'
+      desktop: '/imagen/gokurakugai/2.webp',
+      mobile: '/imagen/gokurakugai/2.webp'
     },
     pg: '220 páginas',
     enlace: 'https://www.viz.com/bleach',
@@ -207,7 +207,7 @@ export const seriesData = [
     volumes: [
       {
         title: 'Volumen 1',
-        img: '/imagen/bleach/1.webp',
+        img: '/imagen/gokurakugai/2.webp',
         link: 'https://www.viz.com/read/manga/bleach/product/63',
         fecha: '05/08/2001',
         paginas: 220
@@ -220,8 +220,8 @@ export const seriesData = [
     author: 'Gege Akutami',
     description: 'Yuji Itadori, un estudiante de secundaria con una fuerza física increíble, se ve arrastrado al mundo de las maldiciones cuando consume un objeto maldito: un dedo del legendario demonio Sukuna. Para salvar a sus amigos y destruir las maldiciones que amenazan a la humanidad, Yuji se convierte en aprendiz de hechicero en la Escuela Técnica de Hechicería. Allí, junto a compañeros como Megumi y Nobara, enfrentará terrores sobrenaturales en una lucha constante entre la vida, la muerte y el destino.',
     portada: {
-      desktop: '/imagen/jujutsu-kaisen/1.webp',
-      mobile: '/imagen/jujutsu-kaisen/1.webp'
+      desktop: '/imagen/gokurakugai/2.webp',
+      mobile: '/imagen/gokurakugai/2.webp'
     },
     pg: '192 páginas',
     enlace: 'https://mangaplus.shueisha.co.jp/titles/100112',
@@ -237,7 +237,7 @@ export const seriesData = [
     volumes: [
       {
         title: 'Volumen 1',
-        img: '/imagen/jujutsu-kaisen/1.webp',
+        img: '/imagen/gokurakugai/2.webp',
         link: 'https://mangaplus.shueisha.co.jp/viewer/1001121',
         fecha: '04/07/2018',
         paginas: 192
@@ -252,8 +252,8 @@ export const seriesData = [
     author: 'Makoto Yukimura',
     description: 'Ambientado en la era de los vikingos, sigue la vida de Thorfinn, un joven guerrero que busca venganza por la muerte de su padre mientras se enfrenta a la brutalidad de la guerra, el honor y la búsqueda de un nuevo mundo de paz. La serie combina historia, acción y drama de forma intensa y realista.',
     portada: {
-      desktop: '/imagen/vinland-saga/1.webp',
-      mobile: '/imagen/vinland-saga/1.webp'
+      desktop: '/imagen/gokurakugai/2.webp',
+      mobile: '/imagen/gokurakugai/2.webp'
     },
     pg: '210 páginas',
     enlace: 'https://kodansha.us/series/vinland-saga/',
@@ -269,7 +269,7 @@ export const seriesData = [
     volumes: [
       {
         title: 'Volumen 1',
-        img: '/imagen/vinland-saga/1.webp',
+        img: '/imagen/gokurakugai/2.webp',
         link: 'https://kodansha.us/product/vinland-saga-1/',
         fecha: '13/10/2005',
         paginas: 210
@@ -282,8 +282,8 @@ export const seriesData = [
     author: 'Kentaro Miura',
     description: 'Una oscura y violenta historia de venganza, redención y lucha contra el destino. Guts, un espadachín maldito, recorre un mundo medieval plagado de demonios y corrupción. A través de su brutal camino, se enfrenta a horrores inhumanos y a su propio pasado, en una obra maestra del manga seinen.',
     portada: {
-      desktop: '/imagen/berserk/1.webp',
-      mobile: '/imagen/berserk/1.webp'
+      desktop: '/imagen/gokurakugai/2.webp',
+      mobile: '/imagen/gokurakugai/2.webp'
     },
     pg: '240 páginas',
     enlace: 'https://www.darkhorse.com/Comics/3000-001/Berserk-Volume-1-TPB',
@@ -299,7 +299,7 @@ export const seriesData = [
     volumes: [
       {
         title: 'Volumen 1',
-        img: '/imagen/berserk/1.webp',
+        img: '/imagen/gokurakugai/2.webp',
         link: 'https://www.darkhorse.com/Comics/3000-001/Berserk-Volume-1-TPB',
         fecha: '01/11/1990',
         paginas: 240
@@ -312,8 +312,8 @@ export const seriesData = [
     author: 'Takehiko Inoue',
     description: 'Inspirada en la vida de Miyamoto Musashi, esta obra retrata el camino de un samurái en busca de la verdadera fuerza. Con un arte impresionante y una profunda introspección filosófica, Vagabond es una obra que trasciende el género del manga y explora el significado del poder y la iluminación.',
     portada: {
-      desktop: '/imagen/vagabond/1.webp',
-      mobile: '/imagen/vagabond/1.webp'
+      desktop: '/imagen/gokurakugai/2.webp',
+      mobile: '/imagen/gokurakugai/2.webp'
     },
     pg: '216 páginas',
     enlace: 'https://www.viz.com/vagabond',
@@ -329,7 +329,7 @@ export const seriesData = [
     volumes: [
       {
         title: 'Volumen 1',
-        img: '/imagen/vagabond/1.webp',
+        img: '/imagen/gokurakugai/2.webp',
         link: 'https://www.viz.com/read/manga/vagabond/product/603',
         fecha: '03/03/1999',
         paginas: 216
@@ -342,8 +342,8 @@ export const seriesData = [
     author: 'Naoki Urasawa',
     description: 'El doctor Kenzo Tenma, un brillante neurocirujano japonés en Alemania, toma una decisión que cambia su vida: salvar a un niño en lugar del alcalde. Años después, ese niño se convierte en un despiadado asesino en serie, y Tenma se embarca en una persecución psicológica y filosófica por toda Europa para detener el monstruo que ayudó a crear.',
     portada: {
-      desktop: '/imagen/monster/1.webp',
-      mobile: '/imagen/monster/1.webp'
+      desktop: '/imagen/gokurakugai/2.webp',
+      mobile: '/imagen/gokurakugai/2.webp'
     },
     pg: '220 páginas',
     enlace: 'https://www.viz.com/monster',
@@ -359,7 +359,7 @@ export const seriesData = [
     volumes: [
       {
         title: 'Volumen 1',
-        img: '/imagen/monster/1.webp',
+        img: '/imagen/gokurakugai/2.webp',
         link: 'https://www.viz.com/monster',
         fecha: '01/12/1994',
         paginas: 220
@@ -372,8 +372,8 @@ export const seriesData = [
     author: 'Sui Ishida',
     description: 'En un Tokio donde criaturas llamadas "ghouls" viven entre los humanos, Ken Kaneki, un estudiante universitario, se convierte en medio ghoul después de un accidente. Luchando con su nueva identidad, se enfrenta a dilemas morales, la discriminación, y el instinto depredador que ahora vive dentro de él.',
     portada: {
-      desktop: '/imagen/tokyo-ghoul/1.webp',
-      mobile: '/imagen/tokyo-ghoul/1.webp'
+      desktop: '/imagen/gokurakugai/2.webp',
+      mobile: '/imagen/gokurakugai/2.webp'
     },
     pg: '224 páginas',
     enlace: 'https://www.viz.com/tokyo-ghoul',
@@ -389,7 +389,7 @@ export const seriesData = [
     volumes: [
       {
         title: 'Volumen 1',
-        img: '/imagen/tokyo-ghoul/1.webp',
+        img: '/imagen/gokurakugai/2.webp',
         link: 'https://www.viz.com/read/manga/tokyo-ghoul/product/4311',
         fecha: '03/09/2011',
         paginas: 224
@@ -404,8 +404,8 @@ export const seriesData = [
     author: 'Karuho Shiina',
     description: 'Sawako Kuronuma es una chica dulce pero incomprendida debido a su parecido con la protagonista de "El Aro". Su vida cambia cuando Shouta Kazehaya, un chico popular, comienza a hablar con ella, ayudándola a abrirse a los demás y encontrar la amistad y el amor en el instituto.',
     portada: {
-      desktop: '/imagen/kimi-ni-todoke/1.webp',
-      mobile: '/imagen/kimi-ni-todoke/1.webp'
+      desktop: '/imagen/gokurakugai/2.webp',
+      mobile: '/imagen/gokurakugai/2.webp'
     },
     pg: '180 páginas',
     enlace: 'https://www.viz.com/kimi-ni-todoke',
@@ -421,7 +421,7 @@ export const seriesData = [
     volumes: [
       {
         title: 'Volumen 1',
-        img: '/imagen/kimi-ni-todoke/1.webp',
+        img: '/imagen/gokurakugai/2.webp',
         link: 'https://www.viz.com/read/manga/kimi-ni-todoke/product/2067',
         fecha: '11/05/2006',
         paginas: 180
@@ -434,8 +434,8 @@ export const seriesData = [
     author: 'Io Sakisaka',
     description: 'Futaba Yoshioka quiere rehacer su imagen en el instituto tras ser rechazada por sus compañeras en secundaria. Sin embargo, su mundo se pone patas arriba cuando reencuentra a su primer amor, Kou Mabuchi, que ha cambiado drásticamente. Juntos exploran los altibajos del amor adolescente.',
     portada: {
-      desktop: '/imagen/ao-haru-ride/1.webp',
-      mobile: '/imagen/ao-haru-ride/1.webp'
+      desktop: '/imagen/gokurakugai/2.webp',
+      mobile: '/imagen/gokurakugai/2.webp'
     },
     pg: '192 páginas',
     enlace: 'https://www.viz.com/ao-haru-ride',
@@ -451,7 +451,7 @@ export const seriesData = [
     volumes: [
       {
         title: 'Volumen 1',
-        img: '/imagen/ao-haru-ride/1.webp',
+        img: '/imagen/gokurakugai/2.webp',
         link: 'https://www.viz.com/read/manga/ao-haru-ride/product/6187',
         fecha: '13/01/2011',
         paginas: 192
@@ -464,8 +464,8 @@ export const seriesData = [
     author: 'Fujita',
     description: 'Narumi es una otaku que intenta ocultar su afición en su nuevo trabajo, pero termina reencontrándose con Hirotaka, un amigo de la infancia que también es gamer. Juntos, comienzan una relación romántica entre frikis mientras exploran las complejidades de amar siendo fanáticos del anime, manga y videojuegos.',
     portada: {
-      desktop: '/imagen/wotakoi/1.webp',
-      mobile: '/imagen/wotakoi/1.webp'
+      desktop: '/imagen/gokurakugai/2.webp',
+      mobile: '/imagen/gokurakugai/2.webp'
     },
     pg: '128 páginas',
     enlace: 'https://kodansha.us/series/wotakoi-love-is-hard-for-otaku/',
@@ -481,7 +481,7 @@ export const seriesData = [
     volumes: [
       {
         title: 'Volumen 1',
-        img: '/imagen/wotakoi/1.webp',
+        img: '/imagen/gokurakugai/2.webp',
         link: 'https://kodansha.us/product/wotakoi-love-is-hard-for-otaku-1/',
         fecha: '05/04/2015',
         paginas: 128
@@ -494,8 +494,8 @@ export const seriesData = [
     author: 'Aka Akasaka',
     description: 'Miyuki Shirogane y Kaguya Shinomiya, dos estudiantes brillantes y orgullosos, están atrapados en una guerra de amor. Ambos están enamorados del otro, pero demasiado orgullosos para confesarlo. En su lugar, manipulan y conspiran para que el otro se rinda primero. Una comedia romántica inteligente, hilarante y con toques de drama.',
     portada: {
-      desktop: '/imagen/kaguya-sama/1.webp',
-      mobile: '/imagen/kaguya-sama/1.webp'
+      desktop: '/imagen/gokurakugai/2.webp',
+      mobile: '/imagen/gokurakugai/2.webp'
     },
     pg: '210 páginas',
     enlace: 'https://www.viz.com/kaguya-sama-love-is-war',
@@ -511,7 +511,7 @@ export const seriesData = [
     volumes: [
       {
         title: 'Volumen 1',
-        img: '/imagen/kaguya-sama/1.webp',
+        img: '/imagen/gokurakugai/2.webp',
         link: 'https://www.viz.com/read/manga/kaguya-sama-love-is-war/product/5919',
         fecha: '07/05/2015',
         paginas: 210
@@ -524,8 +524,8 @@ export const seriesData = [
     author: 'Kenjirou Hata',
     description: 'Nasa Yuzaki, un joven extremadamente inteligente, conoce a una misteriosa chica llamada Tsukasa el mismo día en que sufre un accidente. Después de que ella lo salve, Nasa le confiesa su amor y ella acepta salir con él con la condición de que se casen primero. Así comienza una tierna, divertida y única historia de matrimonio adolescente y amor verdadero con muchos momentos adorables y enigmáticos.',
     portada: {
-      desktop: '/imagen/tonikaku-kawaii/1.webp',
-      mobile: '/imagen/tonikaku-kawaii/1.webp'
+      desktop: '/imagen/gokurakugai/2.webp',
+      mobile: '/imagen/gokurakugai/2.webp'
     },
     pg: '190 páginas',
     enlace: 'https://www.viz.com/tonikaku-kawaii',
@@ -541,7 +541,7 @@ export const seriesData = [
     volumes: [
       {
         title: 'Volumen 1',
-        img: '/imagen/tonikaku-kawaii/1.webp',
+        img: '/imagen/gokurakugai/2.webp',
         link: 'https://www.viz.com/read/manga/tonikaku-kawaii/product/6522',
         fecha: '18/02/2018',
         paginas: 190
@@ -556,8 +556,8 @@ export const seriesData = [
     author: 'Junji Ito',
     description: 'En la ciudad de Kurouzu-cho, una espiral maldita comienza a influir en los residentes, llevándolos a la locura, mutaciones y horrores inimaginables. "Uzumaki" es una obra maestra del terror psicológico y corporal que te atrapa con su atmósfera inquietante y su dibujo hipnótico.',
     portada: {
-      desktop: '/imagen/uzumaki/1.webp',
-      mobile: '/imagen/uzumaki/1.webp'
+      desktop: '/imagen/gokurakugai/2.webp',
+      mobile: '/imagen/gokurakugai/2.webp'
     },
     pg: '648 páginas',
     enlace: 'https://www.viz.com/read/manga/uzumaki/product/699',
@@ -573,7 +573,7 @@ export const seriesData = [
     volumes: [
       {
         title: 'Volumen único',
-        img: '/imagen/uzumaki/1.webp',
+        img: '/imagen/gokurakugai/2.webp',
         link: 'https://www.viz.com/read/manga/uzumaki/product/699',
         fecha: '15/08/2000',
         paginas: 648
@@ -586,8 +586,8 @@ export const seriesData = [
     author: 'Masaaki Nakayama',
     description: 'Una antología de terror en viñetas cortas que explora miedos profundos relacionados con traumas, espíritus antiguos y horrores psicológicos. Masaaki Nakayama entrelaza leyendas urbanas con terror moderno en esta serie perturbadora.',
     portada: {
-      desktop: '/imagen/ptsd-radio/1.webp',
-      mobile: '/imagen/ptsd-radio/1.webp'
+      desktop: '/imagen/gokurakugai/2.webp',
+      mobile: '/imagen/gokurakugai/2.webp'
     },
     pg: '210 páginas',
     enlace: 'https://kodansha.us/series/ptsd-radio/',
@@ -603,7 +603,7 @@ export const seriesData = [
     volumes: [
       {
         title: 'Volumen 1',
-        img: '/imagen/ptsd-radio/1.webp',
+        img: '/imagen/gokurakugai/2.webp',
         link: 'https://kodansha.us/product/ptsd-radio-1/',
         fecha: '01/02/2014',
         paginas: 210
@@ -616,8 +616,8 @@ export const seriesData = [
     author: 'N/A',
     description: 'Saiko Kuro es un manga poco conocido que combina horror sobrenatural con elementos surrealistas y visuales intensos. Una obra experimental con una narrativa enigmática que explora los límites de la percepción y la identidad.',
     portada: {
-      desktop: '/imagen/saiko-kuro/1.webp',
-      mobile: '/imagen/saiko-kuro/1.webp'
+      desktop: '/imagen/gokurakugai/2.webp',
+      mobile: '/imagen/gokurakugai/2.webp'
     },
     pg: '180 páginas',
     enlace: '#',
@@ -633,7 +633,7 @@ export const seriesData = [
     volumes: [
       {
         title: 'Volumen único',
-        img: '/imagen/saiko-kuro/1.webp',
+        img: '/imagen/gokurakugai/2.webp',
         link: '#',
         fecha: '??/??/20??',
         paginas: 180
@@ -646,8 +646,8 @@ export const seriesData = [
     author: 'Masaya Hokazono',
     description: 'Una historia de terror y gore donde una asesina enmascarada con cabeza de calabaza busca venganza contra sus antiguos compañeros de secundaria. Repleta de sangre, muertes creativas y un trasfondo trágico que revela la oscuridad humana.',
     portada: {
-      desktop: '/imagen/pumpkin-knight/1.webp',
-      mobile: '/imagen/pumpkin-knight/1.webp'
+      desktop: '/imagen/gokurakugai/2.webp',
+      mobile: '/imagen/gokurakugai/2.webp'
     },
     pg: '170 páginas',
     enlace: 'https://mangadex.org/title/738c36f2-5cb3-4f0f-91c6-f3e3b19fa3c9/pumpkin-knight',
@@ -663,7 +663,7 @@ export const seriesData = [
     volumes: [
       {
         title: 'Volumen 1',
-        img: '/imagen/pumpkin-knight/1.webp',
+        img: '/imagen/gokurakugai/2.webp',
         link: 'https://mangadex.org/title/738c36f2-5cb3-4f0f-91c6-f3e3b19fa3c9/pumpkin-knight',
         fecha: '18/10/2017',
         paginas: 170
@@ -676,8 +676,8 @@ export const seriesData = [
     author: 'Usamaru Furuya',
     description: 'Una historia oscura y grotesca sobre un grupo de adolescentes que forman un club secreto con el objetivo de crear un ser artificial perfecto. A medida que sus ideales degeneran, el club cae en la locura, la violencia y el horror. Basado en una obra teatral de culto.',
     portada: {
-      desktop: '/imagen/litchi-hikari-club/1.webp',
-      mobile: '/imagen/litchi-hikari-club/1.webp'
+      desktop: '/imagen/gokurakugai/2.webp',
+      mobile: '/imagen/gokurakugai/2.webp'
     },
     pg: '180 páginas',
     enlace: 'https://sevenseasentertainment.com/series/lychee-light-club/',
@@ -693,7 +693,7 @@ export const seriesData = [
     volumes: [
       {
         title: 'Volumen único',
-        img: '/imagen/litchi-hikari-club/1.webp',
+        img: '/imagen/gokurakugai/2.webp',
         link: 'https://sevenseasentertainment.com/series/lychee-light-club/',
         fecha: '20/04/2006',
         paginas: 180
@@ -709,8 +709,8 @@ export const seriesData = [
     author: 'Yutaka Hara',
     description: 'Kaiketsu Zorori es una serie infantil japonesa que sigue a Zorori, un astuto zorro que sueña con convertirse en el rey de las bromas, tener su propio castillo y casarse con una princesa. Acompañado por los traviesos jabalíes Ishishi y Noshishi, se embarca en aventuras llenas de humor, juegos de palabras y lecciones de vida. Aunque su tono es ligero y cómico, las historias están llenas de ingenio e imaginación.',
     portada: {
-      desktop: '/imagen/kaiketsu-zorori/portada.webp',
-      mobile: '/imagen/kaiketsu-zorori/portada.webp',
+      desktop: '/imagen/gokurakugai/2.webp',
+      mobile: '/imagen/gokurakugai/2.webp',
     },
     pg: '96 páginas',
     enlace: 'https://zonatmo.com/viewer/kaiketsu-zorori-vol1',
@@ -721,7 +721,7 @@ export const seriesData = [
     volumes: [
       {
         title: 'Volumen 1',
-        img: '/imagen/kaiketsu-zorori/vol1.webp',
+        img: '/imagen/gokurakugai/2.webp',
         link: 'https://zonatmo.com/viewer/kaiketsu-zorori-vol1',
         fecha: '25/11/1987',
         paginas: 96
@@ -734,8 +734,8 @@ export const seriesData = [
     author: 'Kei Urana',
     description: 'Gachiakuta cuenta la historia de Rudo, un joven que vive en los suburbios marginados de una ciudad dividida por clases sociales. Acusado injustamente de un crimen, es arrojado al Abismo, una zona llena de basura y peligros mortales. Allí descubre un nuevo mundo dominado por monstruos creados a partir de la basura y conoce a los "Limpiadores", guerreros que luchan contra estas criaturas. Rudo inicia una lucha por la verdad, la justicia y su redención, mientras desentraña los secretos ocultos de la sociedad que lo condenó. Con un arte espectacular, crítica social y un ritmo vertiginoso, Gachiakuta se ha convertido en una revelación del manga moderno.',
     portada: {
-      desktop: '/imagen/gachiakuta/portada.webp',
-      mobile: '/imagen/gachiakuta/portada.webp',
+      desktop: '/imagen/gokurakugai/2.webp',
+      mobile: '/imagen/gokurakugai/2.webp',
     },
     pg: '192 páginas',
     enlace: 'https://zonatmo.com/viewer/64da982a08e24019692ef2ac2e1e9891/cascade',
@@ -751,7 +751,7 @@ export const seriesData = [
     volumes: [
       {
         title: 'Volumen 1',
-        img: '/imagen/gachiakuta/vol1.webp',
+        img: '/imagen/gokurakugai/2.webp',
         link: 'https://zonatmo.com/viewer/64da982a08e24019692ef2ac2e1e9891/cascade',
         fecha: '17/02/2022',
         paginas: 192
@@ -764,8 +764,8 @@ export const seriesData = [
     author: 'Eiichiro Oda',
     description: 'Monsters es una historia corta escrita e ilustrada por Eiichiro Oda antes de crear One Piece. Nos presenta a Ryuma, un samurái errante que llega a un pueblo aterrorizado por un dragón. La historia mezcla aventura, honor y combate con una narrativa condensada pero poderosa. Fue tan popular que Ryuma pasó a formar parte del universo de One Piece como un personaje legendario.',
     portada: {
-      desktop: '/imagen/monsters/portada.webp',
-      mobile: '/imagen/monsters/portada.webp',
+      desktop: '/imagen/gokurakugai/2.webp',
+      mobile: '/imagen/gokurakugai/2.webp',
     },
     pg: '55 páginas',
     enlace: 'https://zonatmo.com/viewer/monsters-vol1',
@@ -781,7 +781,7 @@ export const seriesData = [
     volumes: [
       {
         title: 'One-shot',
-        img: '/imagen/monsters/vol1.webp',
+        img: '/imagen/gokurakugai/2.webp',
         link: 'https://zonatmo.com/viewer/monsters-vol1',
         fecha: '30/10/1994',
         paginas: 55
@@ -794,8 +794,8 @@ export const seriesData = [
     author: 'Katsuhiro Otomo',
     description: 'AKIRA es una obra maestra del cyberpunk que revolucionó el manga y el anime. Ambientada en Neo-Tokyo después de una explosión que destruyó la ciudad, la historia sigue a Kaneda y su amigo Tetsuo, quien desarrolla poderes psíquicos incontrolables. En medio de rebeliones, conspiraciones gubernamentales y caos social, AKIRA explora el poder, la identidad y la destrucción. Con un arte detallado y cinematográfico, sigue siendo un referente cultural y visual incluso décadas después.',
     portada: {
-      desktop: '/imagen/akira/portada.webp',
-      mobile: '/imagen/akira/portada.webp',
+      desktop: '/imagen/gokurakugai/2.webp',
+      mobile: '/imagen/gokurakugai/2.webp',
     },
     pg: '362 páginas',
     enlace: 'https://zonatmo.com/viewer/akira-vol1',
@@ -809,7 +809,7 @@ export const seriesData = [
     volumes: [
       {
         title: 'Volumen 1',
-        img: '/imagen/akira/vol1.webp',
+        img: '/imagen/gokurakugai/2.webp',
         link: 'https://zonatmo.com/viewer/akira-vol1',
         fecha: '20/09/1982',
         paginas: 362
@@ -822,8 +822,8 @@ export const seriesData = [
     author: 'Satoru Noda',
     description: 'Golden Kamuy combina historia, supervivencia, acción y comedia con una narrativa brillante. Tras la guerra ruso-japonesa, el exsoldado Sugimoto busca un tesoro de oro escondido por un grupo de presos tatuados con partes del mapa. En su viaje por Hokkaido, forma alianza con Asirpa, una joven ainu, enfrentando a soldados, criminales y bestias salvajes. El manga destaca por su fidelidad histórica, cultura ainu, y brutalidad gráfica combinada con momentos cómicos.',
     portada: {
-      desktop: '/imagen/golden-kamuy/portada.webp',
-      mobile: '/imagen/golden-kamuy/portada.webp',
+      desktop: '/imagen/gokurakugai/2.webp',
+      mobile: '/imagen/gokurakugai/2.webp',
     },
     pg: '206 páginas',
     enlace: 'https://zonatmo.com/viewer/golden-kamuy-vol1',
@@ -837,7 +837,7 @@ export const seriesData = [
     volumes: [
       {
         title: 'Volumen 1',
-        img: '/imagen/golden-kamuy/vol1.webp',
+        img: '/imagen/gokurakugai/2.webp',
         link: 'https://zonatmo.com/viewer/golden-kamuy-vol1',
         fecha: '19/08/2014',
         paginas: 206
@@ -853,8 +853,8 @@ export const seriesData = [
     author: 'Douman Seiman',
     description: 'The Voynich Hotel es una obra surrealista cargada de humor negro, situaciones bizarras y personajes extravagantes. Situada en una isla remota, la historia sigue a un ex-mafioso japonés que se hospeda en un hotel administrado por dos sirvientas algo siniestras. Entre asesinos seriales, brujería, y habitaciones malditas, el protagonista se ve envuelto en un torbellino de eventos extraños, a la vez que intenta encontrar algo de paz. Es un manga que mezcla violencia, misterio y comedia absurda de forma brillante.',
     portada: {
-      desktop: '/imagen/the-voynich-hotel/portada.webp',
-      mobile: '/imagen/the-voynich-hotel/portada.webp',
+      desktop: '/imagen/gokurakugai/2.webp',
+      mobile: '/imagen/gokurakugai/2.webp',
     },
     pg: '192 páginas',
     enlace: '#',
@@ -870,8 +870,8 @@ export const seriesData = [
     author: 'Kazuhiro Fujita',
     description: 'Karakuri Circus narra la historia de Masaru, un niño que hereda una fortuna tras la muerte de su padre, y es perseguido por personas que quieren su herencia. Es rescatado por Narumi, un hombre con una enfermedad misteriosa, y por Shirogane, una joven que controla una marioneta gigante. Juntos enfrentan a enemigos que usan marionetas de combate en una historia que combina acción intensa, drama emocional y elementos sobrenaturales. Con una narrativa única y personajes profundos, esta serie es una joya del shounen clásico.',
     portada: {
-      desktop: '/imagen/karakuri-circus/portada.webp',
-      mobile: '/imagen/karakuri-circus/portada.webp',
+      desktop: '/imagen/gokurakugai/2.webp',
+      mobile: '/imagen/gokurakugai/2.webp',
     },
     pg: '208 páginas',
     enlace: '#',
@@ -887,8 +887,8 @@ export const seriesData = [
     author: 'Nisio Isin',
     description: 'Owarimonogatari forma parte del complejo y poético universo Monogatari. Esta entrega se centra en el pasado del protagonista, Araragi, y su relación con la misteriosa Ougi Oshino. A través de diálogos filosóficos, juegos mentales y simbolismo visual, la historia revela oscuros secretos del protagonista mientras se enfrenta a sus traumas más profundos. Ideal para quienes disfrutan el misterio psicológico, los personajes enigmáticos y una estética experimental en narrativa y animación.',
     portada: {
-      desktop: '/imagen/owarimonogatari/portada.webp',
-      mobile: '/imagen/owarimonogatari/portada.webp',
+      desktop: '/imagen/gokurakugai/2.webp',
+      mobile: '/imagen/gokurakugai/2.webp',
     },
     pg: '232 páginas',
     enlace: '#',
@@ -904,8 +904,8 @@ export const seriesData = [
     author: 'AidaIro',
     description: 'En la Academia Kamome circula el rumor de que el baño del tercer piso está habitado por un espíritu capaz de conceder deseos. Nene Yashiro, una chica romántica, invoca al legendario "Hanako-san", pero se encuentra con un espíritu muy diferente al que esperaba. Hanako resulta ser un chico travieso que mantiene el equilibrio entre el mundo espiritual y el humano. Con una mezcla de comedia, romance ligero y misterio sobrenatural, este manga destaca por su arte estilizado y una atmósfera encantadora.',
     portada: {
-      desktop: '/imagen/jibaku-shounen-hanako-kun/portada.webp',
-      mobile: '/imagen/jibaku-shounen-hanako-kun/portada.webp',
+      desktop: '/imagen/gokurakugai/2.webp',
+      mobile: '/imagen/gokurakugai/2.webp',
     },
     pg: '176 páginas',
     enlace: '#',
@@ -921,8 +921,8 @@ export const seriesData = [
     author: 'Tatsuya Iguchi',
     description: 'OUT relata la historia de Iguchi, un joven que sale de prisión intentando rehacer su vida. Sin embargo, el mundo de la delincuencia y la violencia de pandillas lo arrastra de nuevo a un entorno brutal. Este manga ofrece una mirada cruda al conflicto entre reinserción social y lealtades callejeras, con una narrativa realista, personajes complejos y escenas de acción intensas. Ideal para lectores que buscan drama urbano con tensión constante.',
     portada: {
-      desktop: '/imagen/out/portada.webp',
-      mobile: '/imagen/out/portada.webp',
+      desktop: '/imagen/gokurakugai/2.webp',
+      mobile: '/imagen/gokurakugai/2.webp',
     },
     pg: '208 páginas',
     enlace: '#',
@@ -938,8 +938,8 @@ export const seriesData = [
     author: 'Sui Ishida',
     description: 'En un mundo donde ciertas personas despiertan poderes llamados “Choujin”, Tokio Kurohara se ve envuelto en una batalla que lo obliga a convertirse en uno. Con una atmósfera oscura y un estilo artístico experimental, esta obra del autor de Tokyo Ghoul explora la moral, la deformidad y el caos en una sociedad que teme lo diferente. Choujin X es una historia cruda, reflexiva y cargada de acción, con personajes inestables y situaciones impredecibles.',
     portada: {
-      desktop: '/imagen/choujin-x/portada.webp',
-      mobile: '/imagen/choujin-x/portada.webp',
+      desktop: '/imagen/gokurakugai/2.webp',
+      mobile: '/imagen/gokurakugai/2.webp',
     },
     pg: '224 páginas',
     enlace: 'https://mangaplus.shueisha.co.jp/titles/200018',
@@ -960,8 +960,8 @@ export const seriesData = [
     author: 'Yuto Suzuki',
     description: 'Taro Sakamoto fue uno de los asesinos más temidos del mundo, pero tras enamorarse decide retirarse y vivir como un amable dueño de tienda de conveniencia. Sin embargo, su pasado regresa con fuerza, y deberá defender su nueva vida sin dejar de ser un padre adorable y un asesino letal. Con acción trepidante, humor excelente y un protagonista entrañable, Sakamoto Days se ha convertido en uno de los shounens más populares de la actualidad.',
     portada: {
-      desktop: '/imagen/sakamoto-days/portada.webp',
-      mobile: '/imagen/sakamoto-days/portada.webp',
+      desktop: '/imagen/gokurakugai/2.webp',
+      mobile: '/imagen/gokurakugai/2.webp',
     },
     pg: '192 páginas',
     enlace: 'https://mangaplus.shueisha.co.jp/titles/100149',
@@ -982,8 +982,8 @@ export const seriesData = [
     author: 'Kei Azumi',
     description: 'En esta comedia absurda, los estudiantes más extraños del mundo asisten a una escuela supuestamente “normal”. Desde alienígenas, demonios hasta dioses, cada personaje rompe con la lógica de lo cotidiano. Con un estilo que parodia clichés del anime escolar y del battle shounen, esta obra es ideal para quienes buscan algo exagerado, meta y autoreferencial, con mucho humor y caos controlado.',
     portada: {
-      desktop: '/imagen/youkoso-futsuu-no-gakuen-e/portada.webp',
-      mobile: '/imagen/youkoso-futsuu-no-gakuen-e/portada.webp',
+      desktop: '/imagen/gokurakugai/2.webp',
+      mobile: '/imagen/gokurakugai/2.webp',
     },
     pg: '190 páginas',
     enlace: '#',
