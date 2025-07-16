@@ -26,7 +26,6 @@ export class HORRORSlider {
         this.currentPage = 1;
         this.itemsPerPage = config.itemsPerPage;
         
-        // Modifica los selectores para incluir la clase única
         this.slider = document.querySelector('.horror-slider .Slider-tape');
         const allItems = document.querySelectorAll<HTMLElement>('.horror-slider .Slider-item');
         this.items = Array.from(allItems);
@@ -44,34 +43,36 @@ export class HORRORSlider {
         this.init();
     }
 
-private init(): void {
-    // Esperar a que las dimensiones estén disponibles
-    this.waitForDimensions(() => {
-        this.generateBullets();
-        this.updateButtons();
-        this.calculateDimensions();
-        this.updateSlider();
-        
-        // Event listeners
-        this.nextBtn?.addEventListener('click', () => this.nextPage());
-        this.prevBtn?.addEventListener('click', () => this.prevPage());
-
-        window.addEventListener('resize', () => {
+    private init(): void {
+        this.waitForDimensions(() => {
+            this.generateBullets();
+            this.updateButtons();
             this.calculateDimensions();
             this.updateSlider();
+            this.resizeButtonsToImageContainer(); // Nueva función
+            
+            // Event listeners
+            this.nextBtn?.addEventListener('click', () => this.nextPage());
+            this.prevBtn?.addEventListener('click', () => this.prevPage());
+
+            window.addEventListener('resize', this.debounce(() => {
+                this.calculateDimensions();
+                this.updateSlider();
+                this.resizeButtonsToImageContainer(); // Redimensionar en resize
+            }, 100));
         });
-    });
-}
-private waitForDimensions(callback: () => void): void {
-    const checkDimensions = () => {
-        if (this.items.length > 0 && this.items[0].offsetWidth > 0) {
-            callback();
-        } else {
-            requestAnimationFrame(checkDimensions);
-        }
-    };
-    checkDimensions();
-}
+    }
+
+    private waitForDimensions(callback: () => void): void {
+        const checkDimensions = () => {
+            if (this.items.length > 0 && this.items[0].offsetWidth > 0) {
+                callback();
+            } else {
+                requestAnimationFrame(checkDimensions);
+            }
+        };
+        checkDimensions();
+    }
 
     private calculateDimensions(): void {
         if (this.items.length > 0) {
@@ -84,6 +85,61 @@ private waitForDimensions(callback: () => void): void {
             }
             
             this.slideDistance = (this.itemWidth + this.gap);
+        }
+    }
+
+    // Nueva función para redimensionar botones basándose en el contenedor de imagen
+    private resizeButtonsToImageContainer(): void {
+        if (this.items.length === 0) return;
+        
+        // Buscar el contenedor de imagen en el primer item
+        const firstItem = this.items[0];
+        const imageContainer = firstItem.querySelector('.ui-series-poster-container') as HTMLElement;
+        
+        if (!imageContainer) return;
+        
+        // Obtener dimensiones del contenedor de imagen
+        const containerRect = imageContainer.getBoundingClientRect();
+        const containerWidth = containerRect.width;
+        const containerHeight = containerRect.height;
+        
+        // Aplicar dimensiones a los wrappers de botones
+        const prevWrapper = document.querySelector('.horror-slider .KITHSlider-btnWrapper.prev') as HTMLElement;
+        const nextWrapper = document.querySelector('.horror-slider .KITHSlider-btnWrapper.next') as HTMLElement;
+        
+        if (prevWrapper) {
+            prevWrapper.style.width = `${containerWidth}px`;
+            prevWrapper.style.height = `${containerHeight}px`;
+        }
+        
+        if (nextWrapper) {
+            nextWrapper.style.width = `${containerWidth}px`;
+            nextWrapper.style.height = `${containerHeight}px`;
+        }
+        
+        // Opcional: Ajustar posición vertical para centrar con el contenedor de imagen
+        this.adjustButtonVerticalPosition(imageContainer);
+    }
+
+    // Función auxiliar para centrar verticalmente los botones con el contenedor de imagen
+    private adjustButtonVerticalPosition(imageContainer: HTMLElement): void {
+        const containerRect = imageContainer.getBoundingClientRect();
+        const sliderRect = this.slider?.getBoundingClientRect();
+        
+        if (!sliderRect) return;
+        
+        // Calcular offset vertical relativo al slider
+        const verticalOffset = containerRect.top - sliderRect.top;
+        
+        const prevWrapper = document.querySelector('.horror-slider .KITHSlider-btnWrapper.prev') as HTMLElement;
+        const nextWrapper = document.querySelector('.horror-slider .KITHSlider-btnWrapper.next') as HTMLElement;
+        
+        if (prevWrapper) {
+            prevWrapper.style.top = `${verticalOffset}px`;
+        }
+        
+        if (nextWrapper) {
+            nextWrapper.style.top = `${verticalOffset}px`;
         }
     }
 

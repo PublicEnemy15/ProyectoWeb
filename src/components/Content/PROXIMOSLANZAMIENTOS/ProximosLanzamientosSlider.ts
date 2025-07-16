@@ -16,6 +16,8 @@ export class ProximosLanzamientosSlider {
     private totalPages: number;
     private nextBtn: HTMLButtonElement | null;
     private prevBtn: HTMLButtonElement | null;
+    private nextBtnWrapper: HTMLElement | null;
+    private prevBtnWrapper: HTMLElement | null;
     private bulletsContainer: HTMLElement | null;
     private bullets: NodeListOf<HTMLButtonElement> | null = null;
     private itemWidth: number;
@@ -35,6 +37,8 @@ export class ProximosLanzamientosSlider {
         
         this.nextBtn = document.querySelector('.prox-lanzamientos-slider .KITHSlider-btnWrapper.next button');
         this.prevBtn = document.querySelector('.prox-lanzamientos-slider .KITHSlider-btnWrapper.prev button');
+        this.nextBtnWrapper = document.querySelector('.prox-lanzamientos-slider .KITHSlider-btnWrapper.next');
+        this.prevBtnWrapper = document.querySelector('.prox-lanzamientos-slider .KITHSlider-btnWrapper.prev');
         this.bulletsContainer = document.querySelector('.prox-lanzamientos-slider .KITHSlider-bullets');
         
         this.itemWidth = this.items[0]?.offsetWidth || 0;
@@ -43,34 +47,40 @@ export class ProximosLanzamientosSlider {
         
         this.init();
     }
-private init(): void {
-    // Esperar a que las dimensiones estén disponibles
-    this.waitForDimensions(() => {
-        this.generateBullets();
-        this.updateButtons();
-        this.calculateDimensions();
-        this.updateSlider();
-        
-        // Event listeners
-        this.nextBtn?.addEventListener('click', () => this.nextPage());
-        this.prevBtn?.addEventListener('click', () => this.prevPage());
 
-        window.addEventListener('resize', () => {
+    private init(): void {
+        // Esperar a que las dimensiones estén disponibles
+        this.waitForDimensions(() => {
+            this.generateBullets();
+            this.updateButtons();
             this.calculateDimensions();
+            this.resizeButtonsToImageContainers();
             this.updateSlider();
+            
+            // Event listeners
+            this.nextBtn?.addEventListener('click', () => this.nextPage());
+            this.prevBtn?.addEventListener('click', () => this.prevPage());
+
+            const debouncedResize = this.debounce(() => {
+                this.calculateDimensions();
+                this.resizeButtonsToImageContainers();
+                this.updateSlider();
+            }, 100);
+
+            window.addEventListener('resize', debouncedResize);
         });
-    });
-}
-private waitForDimensions(callback: () => void): void {
-    const checkDimensions = () => {
-        if (this.items.length > 0 && this.items[0].offsetWidth > 0) {
-            callback();
-        } else {
-            requestAnimationFrame(checkDimensions);
-        }
-    };
-    checkDimensions();
-}
+    }
+
+    private waitForDimensions(callback: () => void): void {
+        const checkDimensions = () => {
+            if (this.items.length > 0 && this.items[0].offsetWidth > 0) {
+                callback();
+            } else {
+                requestAnimationFrame(checkDimensions);
+            }
+        };
+        checkDimensions();
+    }
 
     private calculateDimensions(): void {
         if (this.items.length > 0) {
@@ -84,6 +94,43 @@ private waitForDimensions(callback: () => void): void {
             
             this.slideDistance = (this.itemWidth + this.gap);
         }
+    }
+
+    private resizeButtonsToImageContainers(): void {
+        if (!this.items.length || !this.nextBtnWrapper || !this.prevBtnWrapper) return;
+
+        // Buscar el contenedor de imagen en el primer item visible
+        const firstVisibleItem = this.items[0];
+        const imageContainer = firstVisibleItem.querySelector('.ui-product-poster-container') as HTMLElement;
+        
+        if (!imageContainer) return;
+
+        // Obtener las dimensiones del contenedor de imagen
+        const containerRect = imageContainer.getBoundingClientRect();
+        const containerWidth = imageContainer.offsetWidth;
+        const containerHeight = imageContainer.offsetHeight;
+
+        // Aplicar las dimensiones a los wrappers de los botones
+        this.nextBtnWrapper.style.width = `${containerWidth}px`;
+        this.nextBtnWrapper.style.height = `${containerHeight}px`;
+        
+        this.prevBtnWrapper.style.width = `${containerWidth}px`;
+        this.prevBtnWrapper.style.height = `${containerHeight}px`;
+
+        // Calcular la posición vertical correcta
+        const itemRect = firstVisibleItem.getBoundingClientRect();
+        const sliderRect = this.slider?.getBoundingClientRect();
+        
+        if (sliderRect) {
+            const topOffset = itemRect.top - sliderRect.top;
+            this.nextBtnWrapper.style.top = `${topOffset}px`;
+            this.prevBtnWrapper.style.top = `${topOffset}px`;
+        }
+
+        // Ajustar las transformaciones para mantener la posición correcta
+        const gap = this.gap;
+        this.prevBtnWrapper.style.transform = `translateX(calc(-100% - ${gap}px))`;
+        this.nextBtnWrapper.style.transform = `translateX(calc(100% + ${gap}px))`;
     }
 
     private updateSlider(): void {
@@ -104,6 +151,8 @@ private waitForDimensions(callback: () => void): void {
         });
         
         this.updateButtons();
+        // Actualizar el tamaño de los botones después de cambiar de página
+        this.resizeButtonsToImageContainers();
     }
 
     private updateButtons(): void {

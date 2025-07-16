@@ -67,14 +67,15 @@ class NuevosCapsSliderController {
             this.calculateDimensions();
             this.updateButtons();
             this.updateSlider();
+            this.resizeButtonsToImageContainer(); // Nueva función
             
             // Event listeners
             this.nextBtn?.addEventListener('click', () => this.nextPage());
             this.prevBtn?.addEventListener('click', () => this.prevPage());
 
-            window.addEventListener('resize', () => {
+            window.addEventListener('resize', this.debounce(() => {
                 this.handleResize();
-            });
+            }, 100));
         });
     }
 
@@ -87,6 +88,55 @@ class NuevosCapsSliderController {
             }
         };
         checkDimensions();
+    }
+
+    // Nueva función para redimensionar botones basándose en el contenedor de imagen
+    private resizeButtonsToImageContainer(): void {
+        if (this.items.length === 0) return;
+        
+        // Buscar el contenedor de imagen en el primer item
+        const firstItem = this.items[0];
+        const imageContainer = firstItem.querySelector('.ui-series-poster-container') as HTMLElement;
+        
+        if (!imageContainer) return;
+        
+        // Obtener dimensiones del contenedor de imagen
+        const containerRect = imageContainer.getBoundingClientRect();
+        const containerWidth = containerRect.width;
+        const containerHeight = containerRect.height;
+        
+        // Aplicar dimensiones a los wrappers de botones
+        if (this.prevWrapper) {
+            this.prevWrapper.style.width = `${containerWidth}px`;
+            this.prevWrapper.style.height = `${containerHeight}px`;
+        }
+        
+        if (this.nextWrapper) {
+            this.nextWrapper.style.width = `${containerWidth}px`;
+            this.nextWrapper.style.height = `${containerHeight}px`;
+        }
+        
+        // Opcional: Ajustar posición vertical para centrar con el contenedor de imagen
+        this.adjustButtonVerticalPosition(imageContainer);
+    }
+
+    // Función auxiliar para centrar verticalmente los botones con el contenedor de imagen
+    private adjustButtonVerticalPosition(imageContainer: HTMLElement): void {
+        const containerRect = imageContainer.getBoundingClientRect();
+        const sliderRect = this.slider?.getBoundingClientRect();
+        
+        if (!sliderRect) return;
+        
+        // Calcular offset vertical relativo al slider
+        const verticalOffset = containerRect.top - sliderRect.top;
+        
+        if (this.prevWrapper) {
+            this.prevWrapper.style.top = `${verticalOffset}px`;
+        }
+        
+        if (this.nextWrapper) {
+            this.nextWrapper.style.top = `${verticalOffset}px`;
+        }
     }
 
     private generateBullets(): void {
@@ -168,6 +218,9 @@ class NuevosCapsSliderController {
         
         // Actualizar slider
         this.updateSlider();
+        
+        // Redimensionar botones en resize
+        this.resizeButtonsToImageContainer();
     }
 
     private updateButtons(): void {
@@ -254,11 +307,23 @@ class NuevosCapsSliderController {
         this.generateBullets();
         this.calculateDimensions();
         this.updateSlider();
+        
+        // Redimensionar botones después de agregar nuevos items
+        this.resizeButtonsToImageContainer();
     }
 
     // Método público para forzar recalculo (útil para debugging)
     public recalculate(): void {
         this.handleResize();
+    }
+
+    // Función debounce para optimizar performance en resize
+    private debounce(func: Function, wait: number): (...args: any[]) => void {
+        let timeout: NodeJS.Timeout;
+        return (...args: any[]) => {
+            clearTimeout(timeout);
+            timeout = setTimeout(() => func.apply(this, args), wait);
+        };
     }
 }
 

@@ -102,9 +102,9 @@
     top: 0;
     opacity: 0;
     transition: opacity 0.3s ease;
-    // CAMBIO: Usar aspect-ratio para mantener proporción cuadrada
-    width: calc((100% - var(--slider-gap-small)) / 2.2);
-    aspect-ratio: 1; // Esto mantiene la proporción cuadrada
+    // Remover width y aspect-ratio fijos ya que se manejarán desde JS
+    // width: calc((100% - var(--slider-gap-small)) / 2.2);
+    // aspect-ratio: 1;
 
     &.visible {
         display: flex;
@@ -146,8 +146,8 @@
 .KITHSlider .KITHSlider-btnWrapper.prev {
     left: 0;
     transform: translateX(-100%);
-    // CAMBIO: Ancho igual al del item para mantener consistencia
-    width: calc((100% - var(--slider-gap-small)) / 2.2);
+    // Remover width fijo
+    // width: calc((100% - var(--slider-gap-small)) / 2.2);
 }
 
 .KITHSlider .KITHSlider-btnWrapper.prev>button {
@@ -162,8 +162,8 @@
 .KITHSlider .KITHSlider-btnWrapper.next {
     right: 0;
     transform: translateX(100%);
-    // CAMBIO: Ancho igual al del item para mantener consistencia
-    width: calc((100% - var(--slider-gap-small)) / 2.2);
+    // Remover width fijo
+    // width: calc((100% - var(--slider-gap-small)) / 2.2);
 }
 
 .KITHSlider .KITHSlider-btnWrapper.next>button {
@@ -198,10 +198,11 @@
     .KITHSlider .KITHSlider-btnWrapper {
         display: flex;
         
-        &.prev,
-        &.next {
-            width: min((var(--slider-width) - (var(--slider-count) - 1) * var(--slider-gap-large)) / var(--slider-count), (100% - (var(--slider-count) - 1) * var(--slider-gap-large)) / var(--slider-count));
-        }
+        // Remover widths fijos ya que se manejarán desde JS
+        // &.prev,
+        // &.next {
+        //     width: min((var(--slider-width) - (var(--slider-count) - 1) * var(--slider-gap-large)) / var(--slider-count), (100% - (var(--slider-count) - 1) * var(--slider-gap-large)) / var(--slider-count));
+        // }
         
         &.prev {
             transform: translateX(calc(-100% - var(--slider-gap-large)));
