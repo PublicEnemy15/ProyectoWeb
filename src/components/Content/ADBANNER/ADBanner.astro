@@ -18,56 +18,61 @@
 
 
 <script is:inline>
-  if (!window.YT) {
-    const tag = document.createElement('script');
-    tag.src = "https://www.youtube.com/iframe_api";
-    document.body.appendChild(tag);
-  }
+    if (!window.YT) {
+      const tag = document.createElement('script');
+      tag.src = "https://www.youtube.com/iframe_api";
+      document.body.appendChild(tag);
+    }
 
-  window.onYouTubeIframeAPIReady = () => {
-    const ytPlayer = new YT.Player('youtube-container', {
-      videoId: 's-jT-Q-fVa0',
-      playerVars: {
-        autoplay: 1,
-        controls: 0,
-        modestbranding: 1,
-        loop: 1,
-        mute: 1,
-        rel: 0,
-        showinfo: 0,
-        playlist: 's-jT-Q-fVa0',
-        enablejsapi: 1,
-        playsinline: 1
-      },
-      events: {
-        onReady: () => {
-          const section = document.getElementById('yt-section');
-          const playBtn = document.getElementById('play-button');
+    window.onYouTubeIframeAPIReady = () => {
+      // Detectar si es móvil
+      const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+      
+      const ytPlayer = new YT.Player('youtube-container', {
+        videoId: 's-jT-Q-fVa0',
+        playerVars: {
+          autoplay: isMobile ? 0 : 1, // Sin autoplay en móviles
+          controls: 0,
+          modestbranding: 1,
+          loop: 1,
+          mute: 1,
+          rel: 0,
+          showinfo: 0,
+          playlist: 's-jT-Q-fVa0',
+          enablejsapi: 1,
+          playsinline: 1
+        },
+        events: {
+          onReady: () => {
+            const section = document.getElementById('yt-section');
+            const playBtn = document.getElementById('play-button');
 
-          // Reproducir video on hover
-          section.addEventListener('mouseenter', () => {
-            ytPlayer.playVideo();
-            playBtn.classList.add('playing');
-          });
+            // Solo agregar eventos hover en desktop
+            if (!isMobile) {
+              section.addEventListener('mouseenter', () => {
+                ytPlayer.playVideo();
+                playBtn.classList.add('playing');
+              });
 
-          section.addEventListener('mouseleave', () => {
-            ytPlayer.pauseVideo();
-            playBtn.classList.remove('playing');
-          });
-
-          // También play/pause al click en el botón (opcional)
-          playBtn.addEventListener('click', () => {
-            const playerState = ytPlayer.getPlayerState();
-            if (playerState !== YT.PlayerState.PLAYING) {
-              ytPlayer.playVideo();
-              playBtn.classList.add('playing');
-            } else {
-              ytPlayer.pauseVideo();
-              playBtn.classList.remove('playing');
+              section.addEventListener('mouseleave', () => {
+                ytPlayer.pauseVideo();
+                playBtn.classList.remove('playing');
+              });
             }
-          });
+
+            // Play/pause al click en el botón (funciona en móviles y desktop)
+            playBtn.addEventListener('click', () => {
+              const playerState = ytPlayer.getPlayerState();
+              if (playerState !== YT.PlayerState.PLAYING) {
+                ytPlayer.playVideo();
+                playBtn.classList.add('playing');
+              } else {
+                ytPlayer.pauseVideo();
+                playBtn.classList.remove('playing');
+              }
+            });
+          }
         }
-      }
-    });
-  };
+      });
+    };
 </script>
