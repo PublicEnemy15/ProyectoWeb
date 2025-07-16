@@ -46,9 +46,9 @@ class NuevosCapsSliderController {
         const allItems = document.querySelectorAll<HTMLElement>('.nuevoscaps-slider .Slider-item');
         this.items = Array.from(allItems);
         
-        // Calculate initial state
+        // Calculate initial state - ahora cada página es 1 item
         this.state.totalItems = this.items.length;
-        this.calculateTotalPages();
+        this.state.totalPages = this.state.totalItems; // Cada item es una página
         
         // Get control elements
         this.nextBtn = document.querySelector('.KITHSlider-btnWrapper.next button');
@@ -88,19 +88,6 @@ class NuevosCapsSliderController {
             }
         };
         checkDimensions();
-    }
-
-    // Calcular el número total de páginas según el dispositivo
-    private calculateTotalPages(): void {
-        const isMobile = window.innerWidth < 768;
-        
-        if (isMobile) {
-            // En móvil: cada item es una página
-            this.state.totalPages = this.state.totalItems;
-        } else {
-            // En PC: mantener el comportamiento original (4 items por página)
-            this.state.totalPages = Math.ceil(this.state.totalItems / this.itemsPerPage);
-        }
     }
 
     // Nueva función para redimensionar botones basándose en el contenedor de imagen
@@ -192,24 +179,14 @@ class NuevosCapsSliderController {
                 this.state.gap = parseInt(gapValue) || this.getResponsiveGap();
             }
             
-            // Calcular slideDistance según el dispositivo
-            const isMobile = window.innerWidth < 768;
-            
-            if (isMobile) {
-                // En móvil: mover 1 item por vez para smooth scrolling
-                this.state.slideDistance = this.state.itemWidth + this.state.gap;
-            } else {
-                // En PC: mantener el comportamiento original (4 items por página)
-                this.state.slideDistance = (this.state.itemWidth + this.state.gap) * this.itemsPerPage;
-            }
+            // CAMBIO PRINCIPAL: Ahora la distancia es solo 1 item + gap
+            this.state.slideDistance = this.state.itemWidth + this.state.gap;
             
             console.log('Dimensiones calculadas:', {
                 itemWidth: this.state.itemWidth,
                 gap: this.state.gap,
                 slideDistance: this.state.slideDistance,
-                totalItems: this.state.totalItems,
-                totalPages: this.state.totalPages,
-                isMobile: isMobile
+                totalItems: this.state.totalItems
             });
         }
     }
@@ -226,8 +203,8 @@ class NuevosCapsSliderController {
         // Recalcular dimensiones
         this.calculateDimensions();
         
-        // Recalcular total de páginas
-        this.calculateTotalPages();
+        // CAMBIO: Ahora totalPages siempre es igual a totalItems
+        this.state.totalPages = this.state.totalItems;
         
         // Ajustar página actual si es necesario
         if (this.state.currentPage > this.state.totalPages) {
@@ -284,36 +261,15 @@ class NuevosCapsSliderController {
     private updateSlider(): void {
         if (!this.slider) return;
         
-        const isMobile = window.innerWidth < 768;
-        let offset = 0;
-        
-        if (isMobile) {
-            // En móvil: movimiento suave item por item
-            // Calcular el offset máximo para evitar espacios extra al final
-            const maxOffset = Math.max(0, (this.state.totalItems - 1) * this.state.slideDistance);
-            const currentOffset = (this.state.currentPage - 1) * this.state.slideDistance;
-            offset = Math.min(currentOffset, maxOffset);
-        } else {
-            // En PC: mantener comportamiento original
-            offset = (this.state.currentPage - 1) * this.state.slideDistance;
-        }
-        
+        // CAMBIO PRINCIPAL: Ahora el offset es simplemente (currentPage - 1) * slideDistance
+        // Esto mueve el slider exactamente 1 item por vez
+        const offset = (this.state.currentPage - 1) * this.state.slideDistance;
         this.slider.style.transform = `translateX(-${offset}px)`;
         
-        // Actualizar items activos
+        // Opcional: Mantener la lógica de visibilidad si quieres ocultar items que no están "activos"
+        // Pero ahora solo 1 item estará "activo" por página
         this.items.forEach((item, index) => {
-            let isActive = false;
-            
-            if (isMobile) {
-                // En móvil: solo el item actual está activo
-                isActive = index === (this.state.currentPage - 1);
-            } else {
-                // En PC: los 4 items de la página actual están activos
-                const startIndex = (this.state.currentPage - 1) * this.itemsPerPage;
-                const endIndex = startIndex + this.itemsPerPage - 1;
-                isActive = index >= startIndex && index <= endIndex;
-            }
-            
+            const isActive = index === (this.state.currentPage - 1);
             item.classList.toggle('Slider-item-active', isActive);
         });
         
@@ -340,9 +296,9 @@ class NuevosCapsSliderController {
             return !hasHiddenClass && !isEmpty;
         });
         
-        // Update state
+        // Update state - CAMBIO: totalPages = totalItems
         this.state.totalItems = this.items.length;
-        this.calculateTotalPages();
+        this.state.totalPages = this.state.totalItems;
         
         this.generateBullets();
         this.calculateDimensions();
