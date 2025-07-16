@@ -193,8 +193,8 @@ class NuevosCapsSliderController {
         const deltaTime = Date.now() - this.touchState.startTime;
         const velocity = Math.abs(deltaX) / deltaTime;
         
-        // Determinar si debe cambiar de página
-        const threshold = this.state.itemWidth * 0.3; // 30% del ancho del item
+        // CAMBIO: Umbral más pequeño para móvil (50px o velocidad > 0.3)
+        const threshold = 50;
         const shouldChangePage = Math.abs(deltaX) > threshold || velocity > 0.3;
         
         if (shouldChangePage) {
@@ -295,19 +295,26 @@ class NuevosCapsSliderController {
             }
             
             const currentItemsPerPage = this.getResponsiveItemsPerPage();
-            this.state.slideDistance = currentItemsPerPage * (this.state.itemWidth + this.state.gap);
+            
+            // CAMBIO: Para móvil, calcular distancia basada en 1 item completo + gap
+            if (window.innerWidth < 768) {
+                this.state.slideDistance = this.state.itemWidth + this.state.gap;
+            } else {
+                this.state.slideDistance = currentItemsPerPage * (this.state.itemWidth + this.state.gap);
+            }
             
             console.log('Dimensiones calculadas:', {
                 itemWidth: this.state.itemWidth,
                 gap: this.state.gap,
                 slideDistance: this.state.slideDistance,
-                itemsPerPage: currentItemsPerPage
+                itemsPerPage: currentItemsPerPage,
+                isMobile: window.innerWidth < 768
             });
         }
     }
 
     private getResponsiveItemsPerPage(): number {
-        return window.innerWidth >= 768 ? 4 : 2.2;
+        return window.innerWidth >= 768 ? 4 : 1;
     }
 
     private getResponsiveGap(): number {

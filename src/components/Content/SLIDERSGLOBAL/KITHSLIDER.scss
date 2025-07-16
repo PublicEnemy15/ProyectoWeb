@@ -16,7 +16,7 @@
     flex-shrink: 0;
     display: flex;
     align-items: flex-end;
-    width: calc((100% - var(--slider-gap-small)) / 2.2);
+    width: calc((100% - var(--slider-gap-small)) / 1);
 }
 
 @media (min-width: 768px) {
