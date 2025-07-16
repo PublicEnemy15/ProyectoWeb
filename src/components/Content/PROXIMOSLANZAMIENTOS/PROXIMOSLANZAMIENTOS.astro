@@ -1,9 +1,20 @@
 ---
-// Define el tipo de datos para los mangas
+import { Image } from 'astro:assets';
+
+import portada1 from '../../../assets/img/Portadas/Portada1.webp';
+import portada2 from '../../../assets/img/Portadas/Portada2.webp';
+import portada3 from '../../../assets/img/Portadas/Portada3.webp';
+import portada4 from '../../../assets/img/Portadas/Portada4.webp';
+import portada5 from '../../../assets/img/Portadas/Portada5.webp';
+import portada6 from '../../../assets/img/Portadas/Portada6.webp';
+import portada7 from '../../../assets/img/Portadas/Portada7.webp';
+import portada8 from '../../../assets/img/Portadas/Portada8.webp';
+
+// Define el tipo de datos
 interface MangaItem {
   id: string;
   title: string;
-  image: string;
+  image: ImageMetadata;
   href: string;
   alt?: string;
 }
@@ -17,59 +28,19 @@ interface Props {
   calendarText?: string;
 }
 
-// Datos de ejemplo con los mangas originales
+// Datos por defecto
 const defaultMangas: MangaItem[] = [
-  {
-    id: "1",
-    title: "TESTING COMO ASAP",
-    image: "src/assets/img/Portadas/Portada1.webp",
-    href: "/404"
-  },
-  {
-    id: "2",
-    title: "TESTING COMO ASAP",
-    image: "src/assets/img/Portadas/Portada2.webp",
-    href: "/404"
-  },
-  {
-    id: "3",
-    title: "TESTING COMO ASAP",
-    image: "src/assets/img/Portadas/Portada3.webp",
-    href: "/404"
-  },
-  {
-    id: "4",
-    title: "TESTING COMO ASAP",
-    image: "src/assets/img/Portadas/Portada4.webp",
-    href: "/404"
-  },
-  {
-    id: "5",
-    title: "TESTING COMO ASAP",
-    image: "src/assets/img/Portadas/Portada5.webp",
-    href: "/product/origin-10/"
-  },
-  {
-    id: "6",
-    title: "TESTING COMO ASAP",
-    image: "src/assets/img/Portadas/Portada6.webp",
-    href: "/product/origin-10/"
-  },
-  {
-    id: "7",
-    title: "TESTING COMO ASAP",
-    image: "src/assets/img/Portadas/Portada7.webp",
-    href: "/product/origin-10/"
-  },
-  {
-    id: "8",
-    title: "TESTING COMO ASAP",
-    image: "src/assets/img/Portadas/Portada8.webp",
-    href: "/product/origin-10/"
-  }
+  { id: "1", title: "TESTING COMO ASAP", image: portada1, href: "/404" },
+  { id: "2", title: "TESTING COMO ASAP", image: portada2, href: "/404" },
+  { id: "3", title: "TESTING COMO ASAP", image: portada3, href: "/404" },
+  { id: "4", title: "TESTING COMO ASAP", image: portada4, href: "/404" },
+  { id: "5", title: "TESTING COMO ASAP", image: portada5, href: "/product/origin-10/" },
+  { id: "6", title: "TESTING COMO ASAP", image: portada6, href: "/product/origin-10/" },
+  { id: "7", title: "TESTING COMO ASAP", image: portada7, href: "/product/origin-10/" },
+  { id: "8", title: "TESTING COMO ASAP", image: portada8, href: "/product/origin-10/" }
 ];
 
-// Datos por defecto o recibidos como props
+// Props o datos por defecto
 const {
   mangas = defaultMangas,
   title = "PROXIMOS LANZAMIENTOS",
@@ -77,145 +48,66 @@ const {
   calendarLink = "/404",
   calendarText = "Calendario de lanzamientos"
 } = Astro.props;
-
-// Función para generar las fuentes responsive
-const generateSources = (imagePath: string) => {
-  const webpSources = [
-    { media: "(max-width: 991px)", width: "145" },
-    { media: "(min-width: 992px) and (max-width: 1199px)", width: "288" },
-    { media: "(min-width: 1200px)", width: "405" }
-  ];
-  
-  const jpegSources = [...webpSources];
-  
-  return { webpSources, jpegSources };
-};
 ---
 
 <div class="ArticleStrip">
   <div class="ProxLanzWheel">
     <section class="KITHSlider prox-lanzamientos-slider">
       <div class="KITHSlider-contentWrapper">
-        
-        <!-- Títulos del slider -->
         <h3>{title}</h3>
         <h2>{subtitle}</h2>
-        
-        <!-- Contenedor del slider -->
+
         <div class="KITHSlider-sliderWrapper">
           <div class="Slider">
-            
-            <!-- Contenedor de elementos deslizables -->
             <div class="Slider-tape" style="transform: translateX(0px);">
-              
               {mangas.map((manga, index) => {
-                const { webpSources, jpegSources } = generateSources(manga.image);
                 const isHidden = index >= 4;
-                
                 return (
-                  <div 
-                    class={`Slider-item ${isHidden ? 'Slider-item-hidden Slider-item-right Slider-item-1' : ''}`}
-                  >
-                    <a 
-                      class="KITHWheelItem" 
-                      aria-label={manga.title} 
-                      href={manga.href}
-                    >
-                      
-                      <!-- Borde interno del producto -->
+                  <div class={`Slider-item ${isHidden ? 'Slider-item-hidden Slider-item-right Slider-item-1' : ''}`}>
+                    <a class="KITHWheelItem" aria-label={manga.title} href={manga.href}>
                       <div class="InnerBorder-Product">
-                        
-                        <!-- Thumbnail/miniatura del producto -->
-                        <div 
-                          class="Item-Thumbnail-Product" 
-                          aria-label={manga.title}
-                        >
-                          
-                          <!-- Contenedor del poster con hover -->
-                          <div 
-                            class="ui-product-poster-container ui-product-poster-container-hover" 
-                            style="padding-top: 125%;"
-                          >
+                        <div class="Item-Thumbnail-Product" aria-label={manga.title}>
+                          <div class="ui-product-poster-container ui-product-poster-container-hover" style="padding-top: 125%;">
                             <div class="ui-product-poster-container-2">
                               <div class="ui-product-poster-wrapper">
-                                
-                                <!-- Imagen responsive con múltiples fuentes -->
-                                <picture>
-                                  <!-- Fuentes WebP para diferentes tamaños de pantalla -->
-                                  {webpSources.map(source => (
-                                    <source 
-                                      type="image/webp" 
-                                      srcset={`${manga.image}?f=webp&w=${source.width}, ${manga.image}?f=webp&w=${source.width} 2x`}
-                                      media={source.media}
-                                    />
-                                  ))}
-                                  
-                                  <!-- Fuentes JPEG como fallback -->
-                                  {jpegSources.map(source => (
-                                    <source 
-                                      type="image/jpeg" 
-                                      srcset={`${manga.image}?f=jpeg&w=${source.width}, ${manga.image}?f=jpeg&w=${source.width} 2x`}
-                                      media={source.media}
-                                    />
-                                  ))}
-                                  
-                                  <!-- Imagen principal -->
-                                  <img 
-                                    fetchpriority="low" 
-                                    loading="lazy" 
-                                    class="ui-product-poster-image" 
-                                    src={manga.image} 
-                                    alt={manga.alt || manga.title} 
-                                    width="1763" 
-                                    height="2530"
-                                  />
-                                </picture>
+                                <Image
+                                  src={manga.image}
+                                  alt={manga.alt || manga.title}
+                                  sizes="(max-width: 991px) 145px, (max-width: 1199px) 288px, 405px"
+                                  loading="lazy"
+                                  class="ui-product-poster-image"
+                                />
                               </div>
                             </div>
                           </div>
                         </div>
                       </div>
-                      
-                      <!-- Título del producto -->
-                      <div 
-                        class="TituloItem" 
-                        aria-label={`title for ${manga.title}`}
-                      >
+                      <div class="TituloItem" aria-label={`title for ${manga.title}`}>
                         {manga.title}
                       </div>
                     </a>
                   </div>
                 );
               })}
-              
             </div>
-            
-            <!-- Indicadores de páginas (bullets) -->
+
             <div class="KITHSlider-bullets">
               {Array.from({ length: Math.ceil(mangas.length / 4) }, (_, i) => (
-                <button 
-                  type="button" 
-                  class={i === 0 ? "active" : ""} 
-                  title={`Page ${i + 1}`}
-                ></button>
+                <button type="button" class={i === 0 ? "active" : ""} title={`Page ${i + 1}`}></button>
               ))}
             </div>
-            
-            <!-- Botón anterior del slider -->
+
             <div class="KITHSlider-btnWrapper prev">
               <button type="button" tabindex="-1">
                 <svg viewBox="0 0 96 96" xmlns="http://www.w3.org/2000/svg">
-                  <title></title>
                   <path d="M69.8437,43.3876,33.8422,13.3863a6.0035,6.0035,0,0,0-7.6878,9.223l30.47,25.39-30.47,25.39a6.0035,6.0035,0,0,0,7.6878,9.2231L69.8437,52.6106a6.0091,6.0091,0,0,0,0-9.223Z"></path>
                 </svg>
               </button>
             </div>
-            
-            <!-- Botón siguiente del slider -->
+
             <div class="KITHSlider-btnWrapper next visible">
               <button type="button" tabindex="-1">
                 <svg viewBox="0 0 96 96" xmlns="http://www.w3.org/2000/svg">
-                  <title></title>
                   <path d="M69.8437,43.3876,33.8422,13.3863a6.0035,6.0035,0,0,0-7.6878,9.223l30.47,25.39-30.47,25.39a6.0035,6.0035,0,0,0,7.6878,9.2231L69.8437,52.6106a6.0091,6.0091,0,0,0,0-9.223Z"></path>
                 </svg>
               </button>
@@ -224,29 +116,12 @@ const generateSources = (imagePath: string) => {
         </div>
       </div>
     </section>
-    
-    <!-- Enlace para ver el calendario completo -->
+
     <a href={calendarLink}>
-      <div 
-        role="button" 
-        class="arrow-container" 
-        aria-label="View Release Schedule"
-      >
-        
-        <!-- Texto del botón -->
-        <span class="arrow-btn with-arrow text-bold undefined">
-          {calendarText}
-        </span>
-        
-        <!-- Icono de flecha -->
+      <div role="button" class="arrow-container" aria-label="View Release Schedule">
+        <span class="arrow-btn with-arrow text-bold undefined">{calendarText}</span>
         <div class="icon-wrapper">
-          <svg 
-            viewBox="0 0 34 34" 
-            xmlns="http://www.w3.org/2000/svg" 
-            fill="white" 
-            width="80" 
-            class="icon"
-          >
+          <svg viewBox="0 0 34 34" xmlns="http://www.w3.org/2000/svg" fill="white" width="80" class="icon">
             <path d="m15.496 0 15.939 15.939H0v2.122h31.435L15.495 34H18.5L34 18.5v-3.004L18.5 0h-3.004Z"></path>
           </svg>
         </div>
@@ -254,6 +129,7 @@ const generateSources = (imagePath: string) => {
     </a>
   </div>
 </div>
+
 
 <script>
   import { ProximosLanzamientosSlider } from './ProximosLanzamientosSlider';
