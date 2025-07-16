@@ -1,41 +1,38 @@
-#error-page {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    color: #fff;
-    align-content: center;
-    background: url("@/assets/img/404/rat.webp");
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center calc(50% - 5vh); 
-    font-family: "ProximaNova-Bold", "Proxima Nova", sans-serif;
-}
+$font-family-bold: "ProximaNova-Bold", "Proxima Nova", sans-serif;
+$text-color: #fff;
+$background-image: url("../../../assets/rat.webp");
 
-#error-page #error--text {
-    position: absolute;
+.error-page {
+  position: absolute;
+  inset: 0;
+  color: $text-color;
+  background: $background-image no-repeat center calc(50% - 5vh);
+  background-size: contain;
+  font-family: $font-family-bold;
+  display: grid;
+  place-content: center; 
+
+  .error-text {
     max-width: 100%;
-    min-width: 100%;
-    top: calc(50% - 40px);
-    left: 50%;
-    transform: translate(-50%);
     text-align: center;
-    text-transform: uppercase
-}
+    text-transform: uppercase;
 
-#error-page #error--text h1 {
-    margin: 0;
-    font-weight: 700;
-    font-family: "ProximaNova-Bold", "Proxima Nova", sans-serif;
-}
-
-#error-page a {
-    color: #fff
-}
-
-@media(prefers-reduced-motion) {
-    #error-page {
-        background-image: none
+    h1 {
+      margin: 0;
+      font-weight: 700;
+      font-family: $font-family-bold;
     }
+
+    .hidden {
+      display: none;
+    }
+  }
+
+  a {
+    color: $text-color;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    background-image: none;
+  }
 }
