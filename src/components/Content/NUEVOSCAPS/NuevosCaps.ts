@@ -297,12 +297,8 @@ class NuevosCapsSliderController {
             const currentItemsPerPage = this.getResponsiveItemsPerPage();
             
             // CAMBIO: Para móvil, calcular distancia basada en 1 item completo + gap
-            if (window.innerWidth < 768) {
-                this.state.slideDistance = this.state.itemWidth + this.state.gap;
-            } else {
-                this.state.slideDistance = currentItemsPerPage * (this.state.itemWidth + this.state.gap);
-            }
-            
+            this.state.slideDistance = currentItemsPerPage * (this.state.itemWidth + this.state.gap);
+
             console.log('Dimensiones calculadas:', {
                 itemWidth: this.state.itemWidth,
                 gap: this.state.gap,
@@ -314,7 +310,7 @@ class NuevosCapsSliderController {
     }
 
     private getResponsiveItemsPerPage(): number {
-        return window.innerWidth >= 768 ? 4 : 1;
+        return window.innerWidth >= 768 ? 4 : 2.2;
     }
 
     private getResponsiveGap(): number {
