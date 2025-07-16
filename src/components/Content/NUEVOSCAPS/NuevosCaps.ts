@@ -10,7 +10,6 @@ interface SliderState {
     itemWidth: number;
     gap: number;
     slideDistance: number;
-    itemsPerView: number; // Nuevo: Cantidad de ítems visibles por vez
 }
 
 class NuevosCapsSliderController {
@@ -23,15 +22,15 @@ class NuevosCapsSliderController {
     private prevWrapper: HTMLElement | null;
     private bulletsContainer: HTMLElement | null;
     private bullets: NodeListOf<HTMLButtonElement> | null = null;
-    private desktopItemsPerPage: number; // Para mantener 4 en PC
+    private itemsPerPage: number;
 
     constructor(props: SliderProps = {}) {
         const {
             initialPage = 1,
-            itemsPerPage = 4 // Valor predeterminado para PC
+            itemsPerPage = 4
         } = props;
 
-        this.desktopItemsPerPage = itemsPerPage; // Guardamos el valor de PC
+        this.itemsPerPage = itemsPerPage;
 
         this.state = {
             currentPage: initialPage,
@@ -39,8 +38,7 @@ class NuevosCapsSliderController {
             totalPages: 0,
             itemWidth: 0,
             gap: 15,
-            slideDistance: 0,
-            itemsPerView: 0 // Se calculará dinámicamente
+            slideDistance: 0
         };
 
         // Initialize DOM elements
@@ -48,7 +46,9 @@ class NuevosCapsSliderController {
         const allItems = document.querySelectorAll<HTMLElement>('.nuevoscaps-slider .Slider-item');
         this.items = Array.from(allItems);
         
+        // Calculate initial state
         this.state.totalItems = this.items.length;
+        this.calculateTotalPages();
         
         // Get control elements
         this.nextBtn = document.querySelector('.KITHSlider-btnWrapper.next button');
@@ -61,9 +61,10 @@ class NuevosCapsSliderController {
     }
 
     private init(): void {
+        // Esperar a que las dimensiones estén disponibles
         this.waitForDimensions(() => {
-            this.handleResize(); // Llama a handleResize al inicio para calcular todo
             this.generateBullets();
+            this.calculateDimensions();
             this.updateButtons();
             this.updateSlider();
             this.resizeButtonsToImageContainer();
@@ -74,7 +75,7 @@ class NuevosCapsSliderController {
 
             window.addEventListener('resize', this.debounce(() => {
                 this.handleResize();
-            }, 100)); // Debounce para optimizar el resize
+            }, 100));
         });
     }
 
@@ -89,18 +90,35 @@ class NuevosCapsSliderController {
         checkDimensions();
     }
 
+    // Calcular el número total de páginas según el dispositivo
+    private calculateTotalPages(): void {
+        const isMobile = window.innerWidth < 768;
+        
+        if (isMobile) {
+            // En móvil: cada item es una página
+            this.state.totalPages = this.state.totalItems;
+        } else {
+            // En PC: mantener el comportamiento original (4 items por página)
+            this.state.totalPages = Math.ceil(this.state.totalItems / this.itemsPerPage);
+        }
+    }
+
+    // Nueva función para redimensionar botones basándose en el contenedor de imagen
     private resizeButtonsToImageContainer(): void {
         if (this.items.length === 0) return;
         
+        // Buscar el contenedor de imagen en el primer item
         const firstItem = this.items[0];
         const imageContainer = firstItem.querySelector('.ui-series-poster-container') as HTMLElement;
         
         if (!imageContainer) return;
         
+        // Obtener dimensiones del contenedor de imagen
         const containerRect = imageContainer.getBoundingClientRect();
         const containerWidth = containerRect.width;
         const containerHeight = containerRect.height;
         
+        // Aplicar dimensiones a los wrappers de botones
         if (this.prevWrapper) {
             this.prevWrapper.style.width = `${containerWidth}px`;
             this.prevWrapper.style.height = `${containerHeight}px`;
@@ -111,15 +129,18 @@ class NuevosCapsSliderController {
             this.nextWrapper.style.height = `${containerHeight}px`;
         }
         
+        // Opcional: Ajustar posición vertical para centrar con el contenedor de imagen
         this.adjustButtonVerticalPosition(imageContainer);
     }
 
+    // Función auxiliar para centrar verticalmente los botones con el contenedor de imagen
     private adjustButtonVerticalPosition(imageContainer: HTMLElement): void {
         const containerRect = imageContainer.getBoundingClientRect();
         const sliderRect = this.slider?.getBoundingClientRect();
         
         if (!sliderRect) return;
         
+        // Calcular offset vertical relativo al slider
         const verticalOffset = containerRect.top - sliderRect.top;
         
         if (this.prevWrapper) {
@@ -151,59 +172,75 @@ class NuevosCapsSliderController {
     }
 
     private calculateDimensions(): void {
-        if (this.items.length > 0 && this.slider) {
+        if (this.items.length > 0) {
             const firstItem = this.items[0];
             
-            this.state.itemWidth = firstItem.offsetWidth;
+            // Verificar que el elemento tenga dimensiones
+            if (firstItem.offsetWidth === 0) {
+                // Si no tiene dimensiones, intentar forzar el cálculo
+                const computedStyle = window.getComputedStyle(firstItem);
+                if (computedStyle.width && computedStyle.width !== 'auto') {
+                    this.state.itemWidth = parseFloat(computedStyle.width);
+                }
+            } else {
+                this.state.itemWidth = firstItem.offsetWidth;
+            }
             
             const sliderTape = document.querySelector('.Slider-tape');
             if (sliderTape) {
-                // Obtenemos el gap real del CSS
-                const computedGap = window.getComputedStyle(sliderTape).gap;
-                this.state.gap = parseInt(computedGap) || 0; // Usamos 0 si no se puede parsear
+                const gapValue = window.getComputedStyle(sliderTape).gap;
+                this.state.gap = parseInt(gapValue) || this.getResponsiveGap();
             }
-
-            // Determinar itemsPerView y totalPages basado en el tamaño de la ventana
+            
+            // Calcular slideDistance según el dispositivo
             const isMobile = window.innerWidth < 768;
-
+            
             if (isMobile) {
-                // En móvil, queremos que un "swipe" mueva un solo item
-                this.state.itemsPerView = 1;
-                // Calculamos totalPages para que el último item quede al final
-                // Si cada página es 1 item, totalPages es totalItems
-                this.state.totalPages = this.state.totalItems;
+                // En móvil: mover 1 item por vez para smooth scrolling
                 this.state.slideDistance = this.state.itemWidth + this.state.gap;
-                
             } else {
-                // En PC, mantenemos los 4 items por página
-                this.state.itemsPerView = this.desktopItemsPerPage;
-                // Calculamos el número de páginas redondeando hacia arriba
-                this.state.totalPages = Math.ceil(this.state.totalItems / this.state.itemsPerView);
-                this.state.slideDistance = (this.state.itemWidth * this.state.itemsPerView) + (this.state.gap * (this.state.itemsPerView - 1));
+                // En PC: mantener el comportamiento original (4 items por página)
+                this.state.slideDistance = (this.state.itemWidth + this.state.gap) * this.itemsPerPage;
             }
             
             console.log('Dimensiones calculadas:', {
                 itemWidth: this.state.itemWidth,
                 gap: this.state.gap,
-                itemsPerView: this.state.itemsPerView,
                 slideDistance: this.state.slideDistance,
                 totalItems: this.state.totalItems,
                 totalPages: this.state.totalPages,
-                currentPage: this.state.currentPage
+                isMobile: isMobile
             });
         }
     }
 
+    private getResponsiveItemsPerPage(): number {
+        return window.innerWidth >= 768 ? 4 : 2.2;
+    }
+
+    private getResponsiveGap(): number {
+        return window.innerWidth >= 768 ? 15 : 10;
+    }
+
     private handleResize(): void {
+        // Recalcular dimensiones
         this.calculateDimensions();
         
-        // Ajustar página actual si es necesario (para evitar ir a una página que ya no existe)
+        // Recalcular total de páginas
+        this.calculateTotalPages();
+        
+        // Ajustar página actual si es necesario
         if (this.state.currentPage > this.state.totalPages) {
             this.state.currentPage = Math.max(1, this.state.totalPages);
         }
         
+        // Regenerar bullets para el nuevo número de páginas
         this.generateBullets();
+        
+        // Actualizar slider
         this.updateSlider();
+        
+        // Redimensionar botones en resize
         this.resizeButtonsToImageContainer();
     }
 
@@ -246,35 +283,39 @@ class NuevosCapsSliderController {
 
     private updateSlider(): void {
         if (!this.slider) return;
-
-        let offset = 0;
+        
         const isMobile = window.innerWidth < 768;
-
+        let offset = 0;
+        
         if (isMobile) {
-            // En móvil, la distancia es por un item individual para un swipe más suave
-            offset = (this.state.currentPage - 1) * (this.state.itemWidth + this.state.gap);
-
-            // Ajuste para el último elemento en móvil: asegurar que quede al final del contenedor
-            // Si estamos en la última página, ajustamos el offset para que el último item
-            // quede visible y no haya espacio extra.
-            const totalWidthOfItems = this.state.totalItems * this.state.itemWidth + (this.state.totalItems - 1) * this.state.gap;
-            const sliderContainerWidth = this.slider.parentElement?.offsetWidth || 0;
-
-            if (this.state.currentPage === this.state.totalPages && totalWidthOfItems > sliderContainerWidth) {
-                // Calculamos el offset máximo posible para que el último elemento sea visible
-                offset = totalWidthOfItems - sliderContainerWidth;
-                // Nos aseguramos de que el offset no sea negativo
-                offset = Math.max(0, offset);
-            }
-            
+            // En móvil: movimiento suave item por item
+            // Calcular el offset máximo para evitar espacios extra al final
+            const maxOffset = Math.max(0, (this.state.totalItems - 1) * this.state.slideDistance);
+            const currentOffset = (this.state.currentPage - 1) * this.state.slideDistance;
+            offset = Math.min(currentOffset, maxOffset);
         } else {
-            // En PC, la distancia es por el grupo de items por página
+            // En PC: mantener comportamiento original
             offset = (this.state.currentPage - 1) * this.state.slideDistance;
         }
         
-        // Aplicar la transición CSS. Añadir `transition` aquí si no está en CSS
-        // Considera añadir 'transition: transform 0.5s ease-in-out;' a .Slider-tape en tu CSS
         this.slider.style.transform = `translateX(-${offset}px)`;
+        
+        // Actualizar items activos
+        this.items.forEach((item, index) => {
+            let isActive = false;
+            
+            if (isMobile) {
+                // En móvil: solo el item actual está activo
+                isActive = index === (this.state.currentPage - 1);
+            } else {
+                // En PC: los 4 items de la página actual están activos
+                const startIndex = (this.state.currentPage - 1) * this.itemsPerPage;
+                const endIndex = startIndex + this.itemsPerPage - 1;
+                isActive = index >= startIndex && index <= endIndex;
+            }
+            
+            item.classList.toggle('Slider-item-active', isActive);
+        });
         
         this.updateButtons();
     }
@@ -290,6 +331,7 @@ class NuevosCapsSliderController {
             this.slider?.appendChild(item);
         });
         
+        // Recalculate valid items
         const allItems = document.querySelectorAll<HTMLElement>('.Slider-item');
         this.items = Array.from(allItems).filter(item => {
             const hasHiddenClass = item.classList.contains('Slider-item-hidden');
@@ -298,14 +340,24 @@ class NuevosCapsSliderController {
             return !hasHiddenClass && !isEmpty;
         });
         
+        // Update state
         this.state.totalItems = this.items.length;
-        this.handleResize(); // Recalcular todo después de añadir nuevos ítems
+        this.calculateTotalPages();
+        
+        this.generateBullets();
+        this.calculateDimensions();
+        this.updateSlider();
+        
+        // Redimensionar botones después de agregar nuevos items
+        this.resizeButtonsToImageContainer();
     }
 
+    // Método público para forzar recalculo (útil para debugging)
     public recalculate(): void {
         this.handleResize();
     }
 
+    // Función debounce para optimizar performance en resize
     private debounce(func: Function, wait: number): (...args: any[]) => void {
         let timeout: NodeJS.Timeout;
         return (...args: any[]) => {
