@@ -46,9 +46,9 @@ class NuevosCapsSliderController {
         const allItems = document.querySelectorAll<HTMLElement>('.nuevoscaps-slider .Slider-item');
         this.items = Array.from(allItems);
         
-        // Calculate initial state - ahora cada página es 1 item
+        // Calculate initial state
         this.state.totalItems = this.items.length;
-        this.state.totalPages = this.state.totalItems; // Cada item es una página
+        this.state.totalPages = Math.ceil(this.state.totalItems / this.itemsPerPage);
         
         // Get control elements
         this.nextBtn = document.querySelector('.KITHSlider-btnWrapper.next button');
@@ -67,7 +67,7 @@ class NuevosCapsSliderController {
             this.calculateDimensions();
             this.updateButtons();
             this.updateSlider();
-            this.resizeButtonsToImageContainer();
+            this.resizeButtonsToImageContainer(); // Nueva función
             
             // Event listeners
             this.nextBtn?.addEventListener('click', () => this.nextPage());
@@ -148,7 +148,7 @@ class NuevosCapsSliderController {
             for (let i = 0; i < this.state.totalPages; i++) {
                 const bullet = document.createElement('button');
                 bullet.type = 'button';
-                bullet.title = `Item ${i + 1}`;
+                bullet.title = `Página ${i + 1}`;
                 bullet.className = i + 1 === this.state.currentPage ? 'active' : '';
                 bullet.addEventListener('click', () => this.goToPage(i + 1));
                 this.bulletsContainer.appendChild(bullet);
@@ -179,14 +179,15 @@ class NuevosCapsSliderController {
                 this.state.gap = parseInt(gapValue) || this.getResponsiveGap();
             }
             
-            // CAMBIO PRINCIPAL: Ahora la distancia es solo 1 item + gap
-            this.state.slideDistance = this.state.itemWidth + this.state.gap;
+            // Calcular distancia basada en items per page responsive
+            const currentItemsPerPage = this.getResponsiveItemsPerPage();
+            this.state.slideDistance = currentItemsPerPage * (this.state.itemWidth + this.state.gap);
             
             console.log('Dimensiones calculadas:', {
                 itemWidth: this.state.itemWidth,
                 gap: this.state.gap,
                 slideDistance: this.state.slideDistance,
-                totalItems: this.state.totalItems
+                itemsPerPage: currentItemsPerPage
             });
         }
     }
@@ -203,8 +204,9 @@ class NuevosCapsSliderController {
         // Recalcular dimensiones
         this.calculateDimensions();
         
-        // CAMBIO: Ahora totalPages siempre es igual a totalItems
-        this.state.totalPages = this.state.totalItems;
+        // Recalcular total de páginas basado en items responsive
+        const currentItemsPerPage = this.getResponsiveItemsPerPage();
+        this.state.totalPages = Math.ceil(this.state.totalItems / currentItemsPerPage);
         
         // Ajustar página actual si es necesario
         if (this.state.currentPage > this.state.totalPages) {
@@ -261,16 +263,17 @@ class NuevosCapsSliderController {
     private updateSlider(): void {
         if (!this.slider) return;
         
-        // CAMBIO PRINCIPAL: Ahora el offset es simplemente (currentPage - 1) * slideDistance
-        // Esto mueve el slider exactamente 1 item por vez
         const offset = (this.state.currentPage - 1) * this.state.slideDistance;
         this.slider.style.transform = `translateX(-${offset}px)`;
         
-        // Opcional: Mantener la lógica de visibilidad si quieres ocultar items que no están "activos"
-        // Pero ahora solo 1 item estará "activo" por página
+        const currentItemsPerPage = this.getResponsiveItemsPerPage();
+        const startIndex = (this.state.currentPage - 1) * currentItemsPerPage;
+        const endIndex = startIndex + currentItemsPerPage;
+        
         this.items.forEach((item, index) => {
-            const isActive = index === (this.state.currentPage - 1);
-            item.classList.toggle('Slider-item-active', isActive);
+            const isVisible = index >= startIndex && index < endIndex;
+            item.classList.toggle('Slider-item-hidden', !isVisible);
+            item.classList.toggle('Slider-item-right', !isVisible);
         });
         
         this.updateButtons();
@@ -296,9 +299,10 @@ class NuevosCapsSliderController {
             return !hasHiddenClass && !isEmpty;
         });
         
-        // Update state - CAMBIO: totalPages = totalItems
+        // Update state
         this.state.totalItems = this.items.length;
-        this.state.totalPages = this.state.totalItems;
+        const currentItemsPerPage = this.getResponsiveItemsPerPage();
+        this.state.totalPages = Math.max(1, Math.ceil(this.state.totalItems / currentItemsPerPage));
         
         this.generateBullets();
         this.calculateDimensions();
