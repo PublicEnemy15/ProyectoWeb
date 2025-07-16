@@ -4,9 +4,10 @@
     align-items: center;
     justify-content: center;
     border-bottom: 1px solid #fff;
-    height: 100vh; /* Cambiado de 100vw a 100vh para móviles */
+    height: 60vh; /* Altura fija para móviles */
     width: 100%;
     min-height: 320px;
+    max-height: 500px; /* Evitar que sea demasiado alto */
     position: relative;
     opacity: 1;
 }
@@ -23,19 +24,33 @@
   z-index: 0;
 }
 
-.banner-ad__video iframe {
-  position: relative;
-  top: 0;
-  left: 0;
+.banner-ad__video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
   width: 100%;
   height: 100%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
   pointer-events: none;
-  z-index: 0;
-  object-fit: cover;
+}
+
+.banner-ad__video iframe {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100vw;
+  height: 56.25vw; /* Aspecto 16:9 */
+  min-height: 100%;
+  min-width: 177.78vh; /* Para mantener aspecto en orientación vertical */
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 1;
+  border: none;
 }
 
 #play-button {
-  display: none !important; /* Fuerza que no se muestre */
+  display: none !important;
 }
 
 .banner-ad__bg-image {
@@ -54,17 +69,6 @@
     display: none
 }
 
-.banner-ad__video {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 200%; 
-  height: 100vh;
-  transform: translate(-50%, -50%);
-  z-index: 1;
-  pointer-events: none;
-}
-
 .banner-ad__overlay {
     background-color: #000;
     height: 100%;
@@ -77,10 +81,10 @@
 }
 
 .banner-ad__info {
-    padding: 0 20px; /* Añadido solo padding para móviles */
+    padding: 0 20px;
     position: relative;
     text-align: center;
-    z-index: 2
+    z-index: 3
 }
 
 .banner-ad__cta {
@@ -90,8 +94,8 @@
 .banner-ad__heading {
     font-weight: 700;
     text-transform: uppercase;
-    font-size: 24px;
-    line-height: 28px;
+    font-size: 20px;
+    line-height: 24px;
     margin: 0;
     margin-bottom: 18px
 }
@@ -103,11 +107,17 @@
 
 @media(min-width: 768px) {
     .banner-ad {
-        height: auto
+        height: auto;
+        max-height: none;
     }
 
     .banner-ad__info {
-        padding: 0 0px; /* Restaura padding original en tablet+ */
+        padding: 0 0px;
+    }
+
+    .banner-ad__heading {
+        font-size: 24px;
+        line-height: 28px;
     }
 
     .banner-ad__bg-image--small {
@@ -116,6 +126,11 @@
 
     .banner-ad__bg-image--medium {
         display: block
+    }
+
+    .banner-ad__video {
+        width: 200%; 
+        height: 100vh;
     }
 }
 
