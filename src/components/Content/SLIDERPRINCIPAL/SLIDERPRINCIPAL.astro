@@ -124,8 +124,19 @@ const mangas = [
 </div>
 
 <script>
+  interface TouchData {
+    startX: number;
+    startY: number;
+    currentX: number;
+    currentY: number;
+    startTime: number;
+    isActive: boolean;
+    direction: 'horizontal' | 'vertical' | null;
+  }
+
   class MangaSlider {
     private slides: NodeListOf<HTMLElement>;
+    private sliderContainer: HTMLElement | null;
     private indexDisplay: HTMLElement | null;
     private infoBox: HTMLElement | null;
     private scrollbarThumb: HTMLElement | null;
@@ -138,8 +149,25 @@ const mangas = [
     private totalSlides: number;
     private isTransitioning = false;
 
+    // Touch/Swipe properties
+    private touchData: TouchData = {
+      startX: 0,
+      startY: 0,
+      currentX: 0,
+      currentY: 0,
+      startTime: 0,
+      isActive: false,
+      direction: null
+    };
+
+    private readonly SWIPE_THRESHOLD = 50; // Distancia mínima para swipe
+    private readonly SWIPE_VELOCITY_THRESHOLD = 0.5; // Velocidad mínima para swipe rápido
+    private readonly VERTICAL_TOLERANCE = 30; // Tolerancia para movimientos verticales
+    private readonly isMobile = window.innerWidth <= 768;
+
     constructor() {
       this.slides = document.querySelectorAll<HTMLElement>(".highlights-slider__item");
+      this.sliderContainer = document.querySelector<HTMLElement>(".highlights-slider__items");
       this.indexDisplay = document.querySelector(".highlights-tracker__index");
       this.infoBox = document.querySelector('.ArticuloPrincipal-infoBox');
       this.scrollbarThumb = document.querySelector<HTMLElement>(".highlights-scrollbar-thumb");
@@ -155,6 +183,7 @@ const mangas = [
       
       this.setupSlides();
       this.bindEvents();
+      this.bindTouchEvents();
       this.showSlide(0);
       this.updateIcon();
       
@@ -198,6 +227,200 @@ const mangas = [
       slider?.addEventListener('mouseleave', () => this.resumeOnLeave());
 
       document.addEventListener('keydown', (e) => this.handleKeyboard(e));
+    }
+
+    private bindTouchEvents(): void {
+      if (!this.sliderContainer) return;
+
+      // Touch Events
+      this.sliderContainer.addEventListener('touchstart', (e) => this.handleTouchStart(e), { passive: false });
+      this.sliderContainer.addEventListener('touchmove', (e) => this.handleTouchMove(e), { passive: false });
+      this.sliderContainer.addEventListener('touchend', (e) => this.handleTouchEnd(e), { passive: false });
+      this.sliderContainer.addEventListener('touchcancel', () => this.handleTouchCancel());
+
+      // Mouse Events para desktop 
+      if (!this.isMobile) {
+        this.sliderContainer.addEventListener('mousedown', (e) => this.handleMouseStart(e));
+        this.sliderContainer.addEventListener('mousemove', (e) => this.handleMouseMove(e));
+        this.sliderContainer.addEventListener('mouseup', (e) => this.handleMouseEnd(e));
+        this.sliderContainer.addEventListener('mouseleave', () => this.handleTouchCancel());
+      }
+    }
+
+    private handleTouchStart(e: TouchEvent): void {
+      if (this.isTransitioning) return;
+
+      const touch = e.touches[0];
+      this.touchData = {
+        startX: touch.clientX,
+        startY: touch.clientY,
+        currentX: touch.clientX,
+        currentY: touch.clientY,
+        startTime: Date.now(),
+        isActive: true,
+        direction: null
+      };
+
+      // Pausar autoplay durante el swipe
+      this.stopAutoplay();
+    }
+
+    private handleTouchMove(e: TouchEvent): void {
+      if (!this.touchData.isActive || this.isTransitioning) return;
+
+      const touch = e.touches[0];
+      this.touchData.currentX = touch.clientX;
+      this.touchData.currentY = touch.clientY;
+
+      const deltaX = Math.abs(this.touchData.currentX - this.touchData.startX);
+      const deltaY = Math.abs(this.touchData.currentY - this.touchData.startY);
+
+      // Determinar dirección del swipe
+      if (this.touchData.direction === null && (deltaX > 10 || deltaY > 10)) {
+        this.touchData.direction = deltaX > deltaY ? 'horizontal' : 'vertical';
+      }
+
+      // Si es swipe horizontal, prevenir scroll vertical
+      if (this.touchData.direction === 'horizontal') {
+        e.preventDefault();
+        
+        // Aplicar transformación en tiempo real para feedback visual
+        const deltaX = this.touchData.currentX - this.touchData.startX;
+        const resistance = 0.3; // Resistencia para efecto elástico
+        
+        this.slides.forEach((slide, i) => {
+          const currentTransform = (i - this.currentIndex) * 100;
+          const swipeOffset = (deltaX / window.innerWidth) * 100 * resistance;
+          slide.style.transform = `translateX(${currentTransform + swipeOffset}%)`;
+        });
+      }
+
+      // Si es vertical y el movimiento horizontal es mínimo, permitir scroll
+      if (this.touchData.direction === 'vertical' && deltaX < this.VERTICAL_TOLERANCE) {
+        return; // Permitir scroll vertical normal
+      }
+    }
+
+    private handleTouchEnd(e: TouchEvent): void {
+      if (!this.touchData.isActive) return;
+
+      const deltaX = this.touchData.currentX - this.touchData.startX;
+      const deltaY = this.touchData.currentY - this.touchData.startY;
+      const deltaTime = Date.now() - this.touchData.startTime;
+      const velocity = Math.abs(deltaX) / deltaTime;
+
+      // Restablecer transformaciones
+      this.slides.forEach((slide, i) => {
+        slide.style.transform = `translateX(${(i - this.currentIndex) * 100}%)`;
+      });
+
+      // Solo procesar swipes horizontales
+      if (this.touchData.direction === 'horizontal') {
+        const shouldSwipe = Math.abs(deltaX) > this.SWIPE_THRESHOLD || 
+                           velocity > this.SWIPE_VELOCITY_THRESHOLD;
+
+        if (shouldSwipe) {
+          if (deltaX > 0) {
+            // Swipe hacia la derecha - slide anterior
+            this.goToPrevious();
+          } else {
+            // Swipe hacia la izquierda - slide siguiente
+            this.goToNext();
+          }
+        }
+      }
+
+      this.touchData.isActive = false;
+      this.touchData.direction = null;
+
+      // Reanudar autoplay después del swipe
+      this.resetAutoplay();
+    }
+
+    private handleTouchCancel(): void {
+      if (!this.touchData.isActive) return;
+
+      // Restablecer transformaciones
+      this.slides.forEach((slide, i) => {
+        slide.style.transform = `translateX(${(i - this.currentIndex) * 100}%)`;
+      });
+
+      this.touchData.isActive = false;
+      this.touchData.direction = null;
+      this.resetAutoplay();
+    }
+
+    // Eventos de mouse para desktop (opcional)
+    private handleMouseStart(e: MouseEvent): void {
+      if (this.isMobile) return;
+
+      this.touchData = {
+        startX: e.clientX,
+        startY: e.clientY,
+        currentX: e.clientX,
+        currentY: e.clientY,
+        startTime: Date.now(),
+        isActive: true,
+        direction: null
+      };
+
+      this.stopAutoplay();
+    }
+
+    private handleMouseMove(e: MouseEvent): void {
+      if (!this.touchData.isActive || this.isTransitioning || this.isMobile) return;
+
+      this.touchData.currentX = e.clientX;
+      this.touchData.currentY = e.clientY;
+
+      const deltaX = Math.abs(this.touchData.currentX - this.touchData.startX);
+      const deltaY = Math.abs(this.touchData.currentY - this.touchData.startY);
+
+      if (this.touchData.direction === null && (deltaX > 10 || deltaY > 10)) {
+        this.touchData.direction = deltaX > deltaY ? 'horizontal' : 'vertical';
+      }
+
+      if (this.touchData.direction === 'horizontal') {
+        e.preventDefault();
+        
+        const deltaX = this.touchData.currentX - this.touchData.startX;
+        const resistance = 0.2;
+        
+        this.slides.forEach((slide, i) => {
+          const currentTransform = (i - this.currentIndex) * 100;
+          const swipeOffset = (deltaX / window.innerWidth) * 100 * resistance;
+          slide.style.transform = `translateX(${currentTransform + swipeOffset}%)`;
+        });
+      }
+    }
+
+    private handleMouseEnd(e: MouseEvent): void {
+      if (!this.touchData.isActive || this.isMobile) return;
+
+      const deltaX = this.touchData.currentX - this.touchData.startX;
+      const deltaTime = Date.now() - this.touchData.startTime;
+      const velocity = Math.abs(deltaX) / deltaTime;
+
+      this.slides.forEach((slide, i) => {
+        slide.style.transform = `translateX(${(i - this.currentIndex) * 100}%)`;
+      });
+
+      if (this.touchData.direction === 'horizontal') {
+        const shouldSwipe = Math.abs(deltaX) > this.SWIPE_THRESHOLD || 
+                           velocity > this.SWIPE_VELOCITY_THRESHOLD;
+
+        if (shouldSwipe) {
+          if (deltaX > 0) {
+            this.goToPrevious();
+          } else {
+            this.goToNext();
+          }
+        }
+      }
+
+      this.touchData.isActive = false;
+      this.touchData.direction = null;
+      this.resetAutoplay();
     }
 
     private showSlide(index: number): void {
