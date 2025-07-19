@@ -559,8 +559,8 @@ function toggleCustomCheckbox(checkboxInput, checkmark) {
 
 // Event Listeners (sin cambios en la estructura)
 document.addEventListener('DOMContentLoaded', function() {
-  const loginButton = document.getElementById('login-button');
-  if (loginButton) {
+  const loginButtons = document.querySelectorAll('.login-trigger');
+  loginButtons.forEach(loginButton => {
     if (localStorage.getItem('isLoggedIn') === 'true') {
       loginButton.textContent = 'Mi KITH';
       loginButton.onclick = function() {
@@ -571,8 +571,7 @@ document.addEventListener('DOMContentLoaded', function() {
         showPhase(1);
       };
     }
-  }
-  
+  });
   const closeButtons = document.querySelectorAll('.auth-close-wrapper');
   closeButtons.forEach(button => {
     button.addEventListener('click', closeModal);
