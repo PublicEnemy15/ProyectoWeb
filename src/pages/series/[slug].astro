@@ -12,6 +12,7 @@ import "./_kithseries.scss";
 import "../../components/Content/PROXIMOSLANZAMIENTOS/PROXIMOSLANZAMIENTOS.scss";
 import "../../components/Header/Header.scss";
 import "../../components/Content/SLIDERSGLOBAL/KITHSLIDER.scss";
+import { Image } from "astro:assets";
 
 const { slug } = Astro.params;
 const serie = seriesData.find((s) => s.slug === slug);
@@ -54,11 +55,13 @@ export async function getStaticPaths() {
                     <div class="ui-product-poster-container-2">
                       <div class="ui-product-poster-wrapper">
                         <picture>
-                          <ResponsiveImage
+                          <Image
                             loading="lazy"
                             class="ui-product-poster-image"
-                            src={serie.volumes[0]?.img ?? serie.portada.desktop} 
-                            alt="Thumbnail"
+                            src={serie.volumes?.[0]?.img ?? serie.portada.desktop}
+                            alt={`Thumbnail for ${serie.title}`}
+                            width="1763"
+                            height="2530"
                           />
                         </picture>
                       </div>
@@ -105,6 +108,7 @@ export async function getStaticPaths() {
             <!-- Mobile Poster -->
             <div class="hide-breadcrumb-on-desktop">
               <ResponsiveImage
+                loading="lazy"
                 src={serie.portada.mobile}
                 alt={`Portada de ${serie.title}`}
                 paddingTop="80%"
@@ -115,6 +119,7 @@ export async function getStaticPaths() {
             <!-- Desktop Poster -->
             <div class="hide-on-mobile-series">
               <ResponsiveImage
+                loading="lazy"
                 src={serie.portada.desktop}
                 alt={`Portada de ${serie.title}`}
                 paddingTop="114%"
@@ -215,81 +220,84 @@ export async function getStaticPaths() {
           </div>
         </div>
       </div>
-      
-      <!-- VOLUMENES -->
-      {serie.volumes?.length > 0 && (
-  <div class="series-max-wrapper">
-    <div class="series-desktop-volume-container series-products-container">
-      <div class="series-tabs-desktop-container">
-        <div class="series-tabs-desktop-wrapper">
-          <h2 class="series-tabs-desktop-volumes-text">
-            {serie.volumes.length} Volúmenes
-          </h2>
-        </div>
-      </div>
 
-      <div class="series-desktop-volume-grid false">
-        {serie.volumes.map((volumen) => (
-          <div class="series-volumeItem">
-            <div class="series-volume-item-top-container series-volume-item-top-container-desktop">
-              <div class="series-volume-item-container series-volume-item-container-normal">
-                <div class="product-item-column-wrapper">
-                  <div class="product-item-wrapper">
-                    <a href={volumen.link}>
-                      <div
-                        class="ui-product-poster-container"
-                        style="padding-top: 125%;"
-                      >
-                        <div class="ui-product-poster-container-2">
-                          <div class="ui-product-poster-wrapper">
-                            <picture>
-                              <img
-                                loading="lazy"
-                                class="ui-product-poster-image"
-                                src={volumen.img}
-                                alt={volumen.title}
-                              />
-                            </picture>
-                          </div>
-                        </div>
-                      </div>
-                    </a>
-                    <div class="info-wrapper">
-                      <a class="info-wrapper-title" href={volumen.link}>
-                        <h3 class="product-name">{volumen.title}</h3>
-                      </a>
-                      <div class="date-price-wrapper">
-                        <span class="date-pages">
-                          <span>{volumen.fecha}</span> |{" "}
-                          <span>{volumen.paginas} páginas</span>
-                        </span>
-                      </div>
-                      <a href={volumen.link}>
-                        <div class="actions">
-                          <div
-                            role="button"
-                            class="arrow-container"
-                            aria-label="BUY DIGITAL"
-                          >
-                            <span class="arrow-btn no-arrow text-bold">
-                              LEER AHORA
-                            </span>
-                          </div>
-                        </div>
-                      </a>
-                    </div>
-                  </div>
+      <!-- VOLUMENES -->
+      {
+        serie.volumes?.length > 0 && (
+          <div class="series-max-wrapper">
+            <div class="series-desktop-volume-container series-products-container">
+              <div class="series-tabs-desktop-container">
+                <div class="series-tabs-desktop-wrapper">
+                  <h2 class="series-tabs-desktop-volumes-text">
+                    {serie.volumes.length} Volúmenes
+                  </h2>
                 </div>
               </div>
-              <div class="series-desktop-volume-divider" />
+
+              <div class="series-desktop-volume-grid false">
+                {serie.volumes.map((volumen) => (
+                  <div class="series-volumeItem">
+                    <div class="series-volume-item-top-container series-volume-item-top-container-desktop">
+                      <div class="series-volume-item-container series-volume-item-container-normal">
+                        <div class="product-item-column-wrapper">
+                          <div class="product-item-wrapper">
+                            <a href={volumen.link}>
+                              <div
+                                class="ui-product-poster-container"
+                                style="padding-top: 125%;"
+                              >
+                                <div class="ui-product-poster-container-2">
+                                  <div class="ui-product-poster-wrapper">
+                                    <picture>
+                                      <img
+                                        loading="lazy"
+                                        class="ui-product-poster-image"
+                                        src={volumen.img}
+                                        alt={volumen.title}
+                                      />
+                                    </picture>
+                                  </div>
+                                </div>
+                              </div>
+                            </a>
+                            <div class="info-wrapper">
+                              <a class="info-wrapper-title" href={volumen.link}>
+                                <h3 class="product-name">{volumen.title}</h3>
+                              </a>
+                              <div class="date-price-wrapper">
+                                <span class="date-pages">
+                                  <span>{volumen.fecha}</span> |{" "}
+                                  <span>{volumen.paginas} páginas</span>
+                                </span>
+                              </div>
+                              <a href={volumen.link}>
+                                <div class="actions">
+                                  <div
+                                    role="button"
+                                    class="arrow-container"
+                                    aria-label="BUY DIGITAL"
+                                  >
+                                    <span class="arrow-btn no-arrow text-bold">
+                                      LEER AHORA
+                                    </span>
+                                  </div>
+                                </div>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="series-desktop-volume-divider" />
+                    </div>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
-        ))}
-      </div>
+        )
+      }
     </div>
-  </div>
-)}
   </main>
-</Layout>
 
-<div style="margin-top: 80px;"></div>
+  <div style="margin-top: 80px;"></div>
+</Layout>
