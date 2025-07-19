@@ -1,3 +1,8 @@
+---
+import { seriesData } from "@/data/mangas"
+import ResponsiveImage from "@/pages/series/ResponsiveImage.astro"
+---
+
 <div class="KodanshaBrowse">
     <section class="KodanshaBrowse-Inner">
         <header aria-label="EXPLORAR" class="browse-page-header">
@@ -231,63 +236,34 @@
                         
                         <div class="divider"></div>
                     </div>
-
+                    <!-- WAAAA -->
                     <div class="library-your-list-items-container">
-                            <a class="library-your-list-item-container" aria-label="DATA" href="/series/GOKURAKUGAI/gokurakugai">
-                                
-                                <div class="poster-wrapper">
-                                    <div class="ui-series-poster-container ui-series-poster-container-hover" style="padding-top: 140%;">
-                                        <div class="ui-series-poster-container-2">
-                                            <div class="ui-series-poster-wrapper">
-                                                
+                        {seriesData.slice(0, 24).map((serie) => (
+                        <a class="library-your-list-item-container" href={`/series/${serie.slug}`} aria-label={serie.title}>
+                            <div class="poster-wrapper">
+                                <div class="ui-series-poster-container ui-series-poster-container-hover" style="padding-top: 140%;">
+                                    <!--{<span class="on-sale">NUEVO</span>} -->  
+                                    <div class="ui-series-poster-container-2">
+                                        <div class="ui-series-poster-wrapper">
                                                 <picture>
-                                                    <source type="image/webp" srcset="src/assets/img/Series/Gokurakugai/1.webp?f=webp&w=228&h=375, src/assets/img/Series/Gokurakugai/1.webp?f=webp&w=228&h=375 2x" media="(max-width: 767px)">
-                                                    <source type="image/webp" srcset="src/assets/img/Series/Gokurakugai/1.webp?f=webp&w=120&h=250, src/assets/img/Series/Gokurakugai/1.webp?f=webp&w=120&h=250 2x" media="(min-width: 768px) and (max-width: 991px)">
-                                                    <source type="image/webp" srcset="src/assets/img/Series/Gokurakugai/1.webp?f=webp&w=191&h=250, src/assets/img/Series/Gokurakugai/1.webp?f=webp&w=191&h=250 2x" media="(min-width: 992px) and (max-width: 1199px)">
-                                                    <source type="image/webp" srcset="src/assets/img/Series/Gokurakugai/1.webp?f=webp&w=235&h=375, src/assets/img/Series/Gokurakugai/1.webp?f=webp&w=235&h=375 2x" media="(min-width: 1200px)">
-                                                    <source type="image/jpeg" srcset="src/assets/img/Series/Gokurakugai/1.webp?f=jpeg&w=228&h=375, src/assets/img/Series/Gokurakugai/1.webp?f=jpeg&w=228&h=375 2x" media="(max-width: 767px)">
-                                                    <source type="image/jpeg" srcset="src/assets/img/Series/Gokurakugai/1.webp?f=jpeg&w=120&h=250, src/assets/img/Series/Gokurakugai/1.webp?f=jpeg&w=120&h=250 2x" media="(min-width: 768px) and (max-width: 991px)">
-                                                    <source type="image/jpeg" srcset="src/assets/img/Series/Gokurakugai/1.webp?f=jpeg&w=191&h=250, src/assets/img/Series/Gokurakugai/1.webp?f=jpeg&w=191&h=250 2x" media="(min-width: 992px) and (max-width: 1199px)">
-                                                    <source type="image/jpeg" srcset="src/assets/img/Series/Gokurakugai/1.webp?f=jpeg&w=235&h=375, src/assets/img/Series/Gokurakugai/1.webp?f=jpeg&w=235&h=375 2x" media="(min-width: 1200px)">
-                                                    <img fetchpriority="auto" class="ui-series-poster-image" src="src/assets/img/Series/Gokurakugai/1.webp" alt="COVER PARA DATA" width="1200" height="960">
+                                                    <ResponsiveImage
+                                                    fetchpriority="auto"
+                                                    class="ui-series-poster-image"
+                                                    src={serie.portada.desktop}
+                                                    alt={`Portada para ${serie.title}`}
+                                                    width="1200"
+                                                    height="960"
+                                                    />
                                                 </picture>
-
-                                                <div class="colorize" style="background-color: rgb(246, 117, 153);"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            <span class="name" title="DATA">GOKURAKUGAI</span>
-                         </a>
-
-                    <a class="library-your-list-item-container" aria-label="DATA 2" href="/series/GOKURAKUGAI/gokurakugai">
-                        <div class="poster-wrapper">
-                            <div class="ui-series-poster-container ui-series-poster-container-hover" style="padding-top: 140%;">
-                                <span class="on-sale ">NUEVO</span>
-                                <div class="ui-series-poster-container-2">
-                                    <div class="ui-series-poster-wrapper">
-
-                                        <picture>
-                                            <source type="image/webp" srcset="src/assets/img/Series/Gokurakugai/1.webp?f=webp&w=228&h=375, src/assets/img/Series/Gokurakugai/1.webp?f=webp&w=228&h=375 2x" media="(max-width: 767px)">
-                                            <source type="image/webp" srcset="src/assets/img/Series/Gokurakugai/1.webp?f=webp&w=120&h=250, src/assets/img/Series/Gokurakugai/1.webp?f=webp&w=120&h=250 2x" media="(min-width: 768px) and (max-width: 991px)">
-                                            <source type="image/webp" srcset="src/assets/img/Series/Gokurakugai/1.webp?f=webp&w=191&h=250, src/assets/img/Series/Gokurakugai/1.webp?f=webp&w=191&h=250 2x" media="(min-width: 992px) and (max-width: 1199px)">
-                                            <source type="image/webp" srcset="src/assets/img/Series/Gokurakugai/1.webp?f=webp&w=235&h=375, src/assets/img/Series/Gokurakugai/1.webp?f=webp&w=235&h=375 2x" media="(min-width: 1200px)">
-                                            <source type="image/jpeg" srcset="src/assets/img/Series/Gokurakugai/1.webp?f=jpeg&w=228&h=375, src/assets/img/Series/Gokurakugai/1.webp?f=jpeg&w=228&h=375 2x" media="(max-width: 767px)">
-                                            <source type="image/jpeg" srcset="src/assets/img/Series/Gokurakugai/1.webp?f=jpeg&w=120&h=250, src/assets/img/Series/Gokurakugai/1.webp?f=jpeg&w=120&h=250 2x" media="(min-width: 768px) and (max-width: 991px)">
-                                            <source type="image/jpeg" srcset="src/assets/img/Series/Gokurakugai/1.webp?f=jpeg&w=191&h=250, src/assets/img/Series/Gokurakugai/1.webp?f=jpeg&w=191&h=250 2x" media="(min-width: 992px) and (max-width: 1199px)">
-                                            <source type="image/jpeg" srcset="src/assets/img/Series/Gokurakugai/1.webp?f=jpeg&w=235&h=375, src/assets/img/Series/Gokurakugai/1.webp?f=jpeg&w=235&h=375 2x" media="(min-width: 1200px)">
-                                            <img fetchpriority="auto" class="ui-series-poster-image" src="src/assets/img/Series/Gokurakugai/1.webp" alt="COVER PARA DATA 2" width="1200" height="960">
-                                        </picture>
-
-                                            <div class="colorize" style="background-color: rgb(20, 191, 161);"></div>
+                                            <!-- <div class="colorize" style={`background-color: ${serie.color || '#ccc'};`}></div>-->
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        <span class="name" title="DATA 2">GOKURAKUGAI</span>
-                    </a>
-
-                </div>
+                            <span class="name" title={serie.title}>{serie.title}</span>
+                        </a>
+                        ))}   
+                    </div>
 
                     <div class="divider divider-desktop"></div>
 
