@@ -43,8 +43,8 @@ export const seriesData = [
     author: 'Kei Urana',
     description: 'Gachiakuta cuenta la historia de Rudo, un joven que vive en los suburbios marginados de una ciudad dividida por clases sociales. Acusado injustamente de un crimen, es arrojado al Abismo, una zona llena de basura y peligros mortales. Allí descubre un nuevo mundo dominado por monstruos creados a partir de la basura y conoce a los "Limpiadores", guerreros que luchan contra estas criaturas. Rudo inicia una lucha por la verdad, la justicia y su redención.',
     portada: {
-      desktop: '/imagen/gachiakuta/1.webp',
-      mobile: '/imagen/gachiakuta/1.webp',
+      desktop: '/imagen/gachiakuta/portada.webp',
+      mobile: '/imagen/gachiakuta/portada.webp',
     },
     pg: '192 páginas',
     enlace: 'https://zonatmo.com/viewer/64da982a08e24019692ef2ac2e1e9891/cascade',
@@ -73,8 +73,8 @@ export const seriesData = [
     author: 'Shinichi Sakamoto',
     description: 'The Climber (Kokou no Hito) sigue a Mori Buntarou, un solitario estudiante de secundaria que descubre una pasión por la escalada libre. A medida que se enfrenta a desafiantes acantilados, montañas implacables y sus propios demonios internos, Mori se convierte en un escalador legendario en una historia intensa y psicológica de autosuperación y obsesión.',
     portada: {
-      desktop: '/imagen/theclimber/2.webp',
-      mobile: '/imagen/theclimber/2.webp',
+      desktop: '/imagen/theclimber/portada.webp',
+      mobile: '/imagen/theclimber/portada.webp',
     },
     pg: '210 páginas',
     enlace: '#',
@@ -100,8 +100,8 @@ export const seriesData = [
     author: 'Eiichiro Oda',
     description: 'One Piece narra la aventura épica de Monkey D. Luffy, un joven pirata con el poder de estirarse como la goma tras comer una Fruta del Diablo. Luffy recorre el vasto océano en busca del legendario tesoro One Piece para convertirse en el Rey de los Piratas. A lo largo de su viaje, reúne una tripulación carismática, enfrenta poderosos enemigos y explora islas llenas de misterios, acción y emoción.',
     portada: {
-      desktop: '/imagen/onepiece/2.webp',
-      mobile: '/imagen/onepiece/2.webp',
+      desktop: '/imagen/onepiece/portada.webp',
+      mobile: '/imagen/onepiece/portada.webp',
     },
     pg: 'Varía por volumen',
     enlace: 'https://mangaplus.shueisha.co.jp/titles/100020',
@@ -130,8 +130,8 @@ export const seriesData = [
     author: 'Akira Toriyama',
     description: 'Dragon Ball Super continúa la icónica historia de Goku y sus amigos después de la derrota de Majin Buu. Con la llegada de nuevos dioses, torneos multiversales y amenazas como Black Goku y Moro, Goku alcanza nuevas formas de poder como el Ultra Instinto. Una saga llena de batallas espectaculares y una expansión del universo Dragon Ball.',
     portada: {
-      desktop: '/imagen/dragonballsuper/2.webp',
-      mobile: '/imagen/dragonballsuper/2.webp',
+      desktop: '/imagen/dragonballsuper/portada.webp',
+      mobile: '/imagen/dragonballsuper/portada.webp',
     },
     pg: 'Varía por volumen',
     enlace: 'https://mangaplus.shueisha.co.jp/titles/100034',
@@ -160,8 +160,8 @@ export const seriesData = [
     author: 'Masashi Kishimoto',
     description: 'Naruto sigue la historia de un joven ninja llamado Naruto Uzumaki, quien sueña con convertirse en el Hokage de su aldea para ser reconocido por todos. Acompañado de amigos como Sasuke y Sakura, y guiado por su maestro Kakashi, Naruto enfrenta poderosos enemigos y descubre la verdad sobre su pasado y el zorro demonio sellado dentro de él.',
     portada: {
-      desktop: '/imagen/naruto/2.webp',
-      mobile: '/imagen/naruto/2.webp',
+      desktop: '/imagen/naruto/portada.webp',
+      mobile: '/imagen/naruto/portada.webp',
     },
     pg: 'Varía por volumen',
     enlace: 'https://mangaplus.shueisha.co.jp/titles/100020',
@@ -190,8 +190,8 @@ export const seriesData = [
     author: 'Tite Kubo',
     description: 'Ichigo Kurosaki, un adolescente con la habilidad de ver fantasmas, obtiene los poderes de un Shinigami (dios de la muerte) y se ve obligado a proteger a los vivos de espíritus malignos conocidos como Hollows. A medida que lucha, descubre conspiraciones, secretos sobre su origen y se enfrenta a enemigos cada vez más poderosos en el universo del Soul Society.',
     portada: {
-      desktop: '/imagen/bleach/2.webp',
-      mobile: '/imagen/bleach/2.webp'
+      desktop: '/imagen/bleach/portada.webp',
+      mobile: '/imagen/bleach/portada.webp'
     },
     pg: '220 páginas',
     enlace: 'https://www.viz.com/bleach',
@@ -220,8 +220,8 @@ export const seriesData = [
     author: 'Gege Akutami',
     description: 'Yuji Itadori, un estudiante de secundaria con una fuerza física increíble, se ve arrastrado al mundo de las maldiciones cuando consume un objeto maldito: un dedo del legendario demonio Sukuna. Para salvar a sus amigos y destruir las maldiciones que amenazan a la humanidad, Yuji se convierte en aprendiz de hechicero en la Escuela Técnica de Hechicería. Allí, junto a compañeros como Megumi y Nobara, enfrentará terrores sobrenaturales en una lucha constante entre la vida, la muerte y el destino.',
     portada: {
-      desktop: '/imagen/jujutsu/2.webp',
-      mobile: '/imagen/jujutsu/2.webp'
+      desktop: '/imagen/jujutsu/portada.webp',
+      mobile: '/imagen/jujutsu/portada.webp'
     },
     pg: '192 páginas',
     enlace: 'https://mangaplus.shueisha.co.jp/titles/100112',
@@ -252,8 +252,8 @@ export const seriesData = [
     author: 'Makoto Yukimura',
     description: 'Ambientado en la era de los vikingos, sigue la vida de Thorfinn, un joven guerrero que busca venganza por la muerte de su padre mientras se enfrenta a la brutalidad de la guerra, el honor y la búsqueda de un nuevo mundo de paz. La serie combina historia, acción y drama de forma intensa y realista.',
     portada: {
-      desktop: '/imagen/vinland/2.webp',
-      mobile: '/imagen/vinland/2.webp'
+      desktop: '/imagen/vinland/portada.webp',
+      mobile: '/imagen/vinland/portada.webp'
     },
     pg: '210 páginas',
     enlace: 'https://kodansha.us/series/vinland-saga/',
@@ -282,8 +282,8 @@ export const seriesData = [
     author: 'Kentaro Miura',
     description: 'Una oscura y violenta historia de venganza, redención y lucha contra el destino. Guts, un espadachín maldito, recorre un mundo medieval plagado de demonios y corrupción. A través de su brutal camino, se enfrenta a horrores inhumanos y a su propio pasado, en una obra maestra del manga seinen.',
     portada: {
-      desktop: '/imagen/berserk/2.webp',
-      mobile: '/imagen/berserk/2.webp'
+      desktop: '/imagen/berserk/portada.webp',
+      mobile: '/imagen/berserk/portada.webp'
     },
     pg: '240 páginas',
     enlace: 'https://www.darkhorse.com/Comics/3000-001/Berserk-Volume-1-TPB',
@@ -312,8 +312,8 @@ export const seriesData = [
     author: 'Takehiko Inoue',
     description: 'Inspirada en la vida de Miyamoto Musashi, esta obra retrata el camino de un samurái en busca de la verdadera fuerza. Con un arte impresionante y una profunda introspección filosófica, Vagabond es una obra que trasciende el género del manga y explora el significado del poder y la iluminación.',
     portada: {
-      desktop: '/imagen/vagabond/2.webp',
-      mobile: '/imagen/vagabond/2.webp'
+      desktop: '/imagen/vagabond/portada.webp',
+      mobile: '/imagen/vagabond/portada.webp'
     },
     pg: '216 páginas',
     enlace: 'https://www.viz.com/vagabond',
@@ -342,8 +342,8 @@ export const seriesData = [
     author: 'Sui Ishida',
     description: 'En un Tokio donde criaturas llamadas "ghouls" viven entre los humanos, Ken Kaneki, un estudiante universitario, se convierte en medio ghoul después de un accidente. Luchando con su nueva identidad, se enfrenta a dilemas morales, la discriminación, y el instinto depredador que ahora vive dentro de él.',
     portada: {
-      desktop: '/imagen/tokyo/2.webp',
-      mobile: '/imagen/tokyo/2.webp'
+      desktop: '/imagen/tokyo/portada.webp',
+      mobile: '/imagen/tokyo/portada.webp'
     },
     pg: '224 páginas',
     enlace: 'https://www.viz.com/tokyo-ghoul',
@@ -374,8 +374,8 @@ export const seriesData = [
     author: 'Karuho Shiina',
     description: 'Sawako Kuronuma es una chica dulce pero incomprendida debido a su parecido con la protagonista de "El Aro". Su vida cambia cuando Shouta Kazehaya, un chico popular, comienza a hablar con ella, ayudándola a abrirse a los demás y encontrar la amistad y el amor en el instituto.',
     portada: {
-      desktop: '/imagen/kiminitodoke/2.webp',
-      mobile: '/imagen/kiminitodoke/2.webp'
+      desktop: '/imagen/kiminitodoke/portada.webp',
+      mobile: '/imagen/kiminitodoke/portada.webp'
     },
     pg: '180 páginas',
     enlace: 'https://www.viz.com/kimi-ni-todoke',
@@ -404,8 +404,8 @@ export const seriesData = [
     author: 'Io Sakisaka',
     description: 'Futaba Yoshioka quiere rehacer su imagen en el instituto tras ser rechazada por sus compañeras en secundaria. Sin embargo, su mundo se pone patas arriba cuando reencuentra a su primer amor, Kou Mabuchi, que ha cambiado drásticamente. Juntos exploran los altibajos del amor adolescente.',
     portada: {
-      desktop: '/imagen/aoharuride/2.webp',
-      mobile: '/imagen/aoharuride/2.webp'
+      desktop: '/imagen/aoharuride/portada.webp',
+      mobile: '/imagen/aoharuride/portada.webp'
     },
     pg: '192 páginas',
     enlace: 'https://www.viz.com/ao-haru-ride',
@@ -434,8 +434,8 @@ export const seriesData = [
     author: 'Fujita',
     description: 'Narumi es una otaku que intenta ocultar su afición en su nuevo trabajo, pero termina reencontrándose con Hirotaka, un amigo de la infancia que también es gamer. Juntos, comienzan una relación romántica entre frikis mientras exploran las complejidades de amar siendo fanáticos del anime, manga y videojuegos.',
     portada: {
-      desktop: '/imagen/wotakoi/2.webp',
-      mobile: '/imagen/wotakoi/2.webp'
+      desktop: '/imagen/wotakoi/portada.webp',
+      mobile: '/imagen/wotakoi/portada.webp'
     },
     pg: '128 páginas',
     enlace: 'https://kodansha.us/series/wotakoi-love-is-hard-for-otaku/',
@@ -464,8 +464,8 @@ export const seriesData = [
     author: 'Aka Akasaka',
     description: 'Miyuki Shirogane y Kaguya Shinomiya, dos estudiantes brillantes y orgullosos, están atrapados en una guerra de amor. Ambos están enamorados del otro, pero demasiado orgullosos para confesarlo. En su lugar, manipulan y conspiran para que el otro se rinda primero. Una comedia romántica inteligente, hilarante y con toques de drama.',
     portada: {
-      desktop: '/imagen/kaguyasama/2.webp',
-      mobile: '/imagen/kaguyasama/2.webp'
+      desktop: '/imagen/kaguyasama/portada.webp',
+      mobile: '/imagen/kaguyasama/portada.webp'
     },
     pg: '210 páginas',
     enlace: 'https://www.viz.com/kaguya-sama-love-is-war',
@@ -494,8 +494,8 @@ export const seriesData = [
     author: 'Kenjirou Hata',
     description: 'Nasa Yuzaki, un joven extremadamente inteligente, conoce a una misteriosa chica llamada Tsukasa el mismo día en que sufre un accidente. Después de que ella lo salve, Nasa le confiesa su amor y ella acepta salir con él con la condición de que se casen primero. Así comienza una tierna, divertida y única historia de matrimonio adolescente y amor verdadero con muchos momentos adorables y enigmáticos.',
     portada: {
-      desktop: '/imagen/tonikaku/2.webp',
-      mobile: '/imagen/gtonikaku/2.webp'
+      desktop: '/imagen/tonikaku/portada.webp',
+      mobile: '/imagen/gtonikaku/portada.webp'
     },
     pg: '190 páginas',
     enlace: 'https://www.viz.com/tonikaku-kawaii',
@@ -526,8 +526,8 @@ export const seriesData = [
     author: 'Junji Ito',
     description: 'En la ciudad de Kurouzu-cho, una espiral maldita comienza a influir en los residentes, llevándolos a la locura, mutaciones y horrores inimaginables. "Uzumaki" es una obra maestra del terror psicológico y corporal que te atrapa con su atmósfera inquietante y su dibujo hipnótico.',
     portada: {
-      desktop: '/imagen/uzumaki/2.webp',
-      mobile: '/imagen/uzumaki/2.webp'
+      desktop: '/imagen/uzumaki/portada.webp',
+      mobile: '/imagen/uzumaki/portada.webp'
     },
     pg: '648 páginas',
     enlace: 'https://www.viz.com/read/manga/uzumaki/product/699',
@@ -556,8 +556,8 @@ export const seriesData = [
     author: 'Masaaki Nakayama',
     description: 'Una antología de terror en viñetas cortas que explora miedos profundos relacionados con traumas, espíritus antiguos y horrores psicológicos. Masaaki Nakayama entrelaza leyendas urbanas con terror moderno en esta serie perturbadora.',
     portada: {
-      desktop: '/imagen/pstsdradio/2.webp',
-      mobile: '/imagen/pstsdradio/2.webp'
+      desktop: '/imagen/pstsdradio/portada.webp',
+      mobile: '/imagen/pstsdradio/portada.webp'
     },
     pg: '210 páginas',
     enlace: 'https://kodansha.us/series/ptsd-radio/',
@@ -586,8 +586,8 @@ export const seriesData = [
     author: 'N/A',
     description: 'Saiko Kuro es un manga poco conocido que combina horror sobrenatural con elementos surrealistas y visuales intensos. Una obra experimental con una narrativa enigmática que explora los límites de la percepción y la identidad.',
     portada: {
-      desktop: '/imagen/saikokuro/2.webp',
-      mobile: '/imagen/saikokuro/2.webp'
+      desktop: '/imagen/saikokuro/portada.webp',
+      mobile: '/imagen/saikokuro/portada.webp'
     },
     pg: '180 páginas',
     enlace: '#',
@@ -616,8 +616,8 @@ export const seriesData = [
     author: 'Masaya Hokazono',
     description: 'Una historia de terror y gore donde una asesina enmascarada con cabeza de calabaza busca venganza contra sus antiguos compañeros de secundaria. Repleta de sangre, muertes creativas y un trasfondo trágico que revela la oscuridad humana.',
     portada: {
-      desktop: '/imagen/pumpkin/2.webp',
-      mobile: '/imagen/pumpkin/2.webp'
+      desktop: '/imagen/pumpkin/portada.webp',
+      mobile: '/imagen/pumpkin/portada.webp'
     },
     pg: '170 páginas',
     enlace: 'https://mangadex.org/title/738c36f2-5cb3-4f0f-91c6-f3e3b19fa3c9/pumpkin-knight',
@@ -646,8 +646,8 @@ export const seriesData = [
     author: 'Usamaru Furuya',
     description: 'Una historia oscura y grotesca sobre un grupo de adolescentes que forman un club secreto con el objetivo de crear un ser artificial perfecto. A medida que sus ideales degeneran, el club cae en la locura, la violencia y el horror. Basado en una obra teatral de culto.',
     portada: {
-      desktop: '/imagen/litchi/2.webp',
-      mobile: '/imagen/litchi/2.webp'
+      desktop: '/imagen/litchi/portada.webp',
+      mobile: '/imagen/litchi/portada.webp'
     },
     pg: '180 páginas',
     enlace: 'https://sevenseasentertainment.com/series/lychee-light-club/',
@@ -679,8 +679,8 @@ export const seriesData = [
     author: 'Yutaka Hara',
     description: 'Kaiketsu Zorori es una serie infantil japonesa que sigue a Zorori, un astuto zorro que sueña con convertirse en el rey de las bromas, tener su propio castillo y casarse con una princesa. Acompañado por los traviesos jabalíes Ishishi y Noshishi, se embarca en aventuras llenas de humor, juegos de palabras y lecciones de vida. Aunque su tono es ligero y cómico, las historias están llenas de ingenio e imaginación.',
     portada: {
-      desktop: '/imagen/kaiketsu/2.webp',
-      mobile: '/imagen/kaiketsu/2.webp',
+      desktop: '/imagen/kaiketsu/portada.webp',
+      mobile: '/imagen/kaiketsu/portada.webp',
     },
     pg: '96 páginas',
     enlace: 'https://zonatmo.com/viewer/kaiketsu-zorori-vol1',
@@ -705,8 +705,8 @@ export const seriesData = [
     author: 'Eiichiro Oda',
     description: 'Monsters es una historia corta escrita e ilustrada por Eiichiro Oda antes de crear One Piece. Nos presenta a Ryuma, un samurái errante que llega a un pueblo aterrorizado por un dragón. La historia mezcla aventura, honor y combate con una narrativa condensada pero poderosa. Fue tan popular que Ryuma pasó a formar parte del universo de One Piece como un personaje legendario.',
     portada: {
-      desktop: '/imagen/monster/2.webp',
-      mobile: '/imagen/monster/2.webp',
+      desktop: '/imagen/monster/portada.webp',
+      mobile: '/imagen/monster/portada.webp',
     },
     pg: '55 páginas',
     enlace: 'https://zonatmo.com/viewer/monsters-vol1',
