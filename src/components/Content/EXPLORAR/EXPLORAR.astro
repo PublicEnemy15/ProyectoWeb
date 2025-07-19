@@ -2,6 +2,14 @@
 import { seriesData } from "@/data/mangas"
 import ResponsiveImage from "@/pages/series/ResponsiveImage.astro"
 import { Image } from "astro:assets"
+
+// Array de colores disponibles
+const colors = ['#14bfa1', '#3cc8e1', '#f67599', '#001a70', '#ffe600', '#ff9f37', '#6A64F6', '#d30000'];
+
+// Función para obtener un color aleatorio
+function getRandomColor() {
+    return colors[Math.floor(Math.random() * colors.length)];
+}
 ---
 
 <div class="KodanshaBrowse">
@@ -237,7 +245,8 @@ import { Image } from "astro:assets"
                         
                         <div class="divider"></div>
                     </div>
-                    <!-- WAAAA -->
+                    
+                    <!-- SECCIÓN DE ITEMS CON COLORES ALEATORIOS -->
                     <div class="library-your-list-items-container">
                         {seriesData.slice(0, 24).map((serie) => (
                         <a class="library-your-list-item-container" href={`/series/${serie.slug}`} aria-label={serie.title}>
@@ -246,17 +255,17 @@ import { Image } from "astro:assets"
                                     <!--{<span class="on-sale">NUEVO</span>} -->  
                                     <div class="ui-series-poster-container-2">
                                         <div class="ui-series-poster-wrapper">
-                                                <picture>
-                                                    <Image
-                                                    fetchpriority="auto"
-                                                    class="ui-series-poster-image"
-                                                    src={serie.portada.desktop}
-                                                    alt={`Portada para ${serie.title}`}
-                                                    width="1200"
-                                                    height="960"
-                                                    />
-                                                </picture>
-                                            <!-- <div class="colorize" style={`background-color: ${serie.color || '#ccc'};`}></div>-->
+                                            <picture>
+                                                <Image
+                                                fetchpriority="auto"
+                                                class="ui-series-poster-image"
+                                                src={serie.portada.desktop}
+                                                alt={`Portada para ${serie.title}`}
+                                                width="1200"
+                                                height="960"
+                                                />
+                                            </picture>
+                                            <div class="colorize" style={`background-color: ${getRandomColor()};`}></div>
                                         </div>
                                     </div>
                                 </div>
