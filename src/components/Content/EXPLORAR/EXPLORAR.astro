@@ -1,6 +1,7 @@
 ---
 import { seriesData } from "@/data/mangas"
 import ResponsiveImage from "@/pages/series/ResponsiveImage.astro"
+import { Image } from "astro:assets"
 ---
 
 <div class="KodanshaBrowse">
@@ -246,7 +247,7 @@ import ResponsiveImage from "@/pages/series/ResponsiveImage.astro"
                                     <div class="ui-series-poster-container-2">
                                         <div class="ui-series-poster-wrapper">
                                                 <picture>
-                                                    <ResponsiveImage
+                                                    <Image
                                                     fetchpriority="auto"
                                                     class="ui-series-poster-image"
                                                     src={serie.portada.desktop}
