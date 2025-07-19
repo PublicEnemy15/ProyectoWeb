@@ -6,9 +6,19 @@ import { Image } from "astro:assets"
 // Array de colores disponibles
 const colors = ['#14bfa1', '#3cc8e1', '#f67599', '#001a70', '#ffe600', '#ff9f37', '#6A64F6', '#d30000'];
 
-// Función para obtener un color aleatorio
-function getRandomColor() {
-    return colors[Math.floor(Math.random() * colors.length)];
+// Función para obtener un color consistente basado en el slug de la serie
+function getConsistentColor(slug: string) { 
+    // Crear un hash simple del slug
+    let hash = 0;
+    for (let i = 0; i < slug.length; i++) {
+        const char = slug.charCodeAt(i);
+        hash = ((hash << 5) - hash) + char;
+        hash = hash & hash; // Convertir a entero de 32 bits
+    }
+    
+    // Usar el valor absoluto del hash para obtener un índice
+    const index = Math.abs(hash) % colors.length;
+    return colors[index];
 }
 ---
 
@@ -246,7 +256,7 @@ function getRandomColor() {
                         <div class="divider"></div>
                     </div>
                     
-                    <!-- SECCIÓN DE ITEMS CON COLORES ALEATORIOS -->
+                    <!-- SECCIÓN DE ITEMS CON COLORES CONSISTENTES -->
                     <div class="library-your-list-items-container">
                         {seriesData.slice(0, 24).map((serie) => (
                         <a class="library-your-list-item-container" href={`/series/${serie.slug}`} aria-label={serie.title}>
@@ -265,7 +275,7 @@ function getRandomColor() {
                                                 height="960"
                                                 />
                                             </picture>
-                                            <div class="colorize" style={`background-color: ${getRandomColor()};`}></div>
+                                            <div class="colorize" style={`background-color: ${getConsistentColor(serie.slug)};`}></div>
                                         </div>
                                     </div>
                                 </div>

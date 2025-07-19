@@ -21,6 +21,27 @@ if (!serie) {
   throw new Error(`Serie con slug "${slug}" no encontrada.`);
 }
 
+// Array de colores disponibles (mismo que en explorar.astro)
+const colors = ['#14bfa1', '#3cc8e1', '#f67599', '#001a70', '#ffe600', '#ff9f37', '#6A64F6', '#d30000'];
+
+// Función para obtener un color consistente basado en el slug de la serie (mismo que en explorar.astro)
+function getConsistentColor(slug: string) { 
+    // Crear un hash simple del slug
+    let hash = 0;
+    for (let i = 0; i < slug.length; i++) {
+        const char = slug.charCodeAt(i);
+        hash = ((hash << 5) - hash) + char;
+        hash = hash & hash; // Convertir a entero de 32 bits
+    }
+    
+    // Usar el valor absoluto del hash para obtener un índice
+    const index = Math.abs(hash) % colors.length;
+    return colors[index];
+}
+
+// Obtener el color para esta serie específica
+const serieColor = getConsistentColor(serie.slug);
+
 export async function getStaticPaths() {
   return seriesData.map((serie) => ({
     params: { slug: serie.slug },
@@ -112,7 +133,7 @@ export async function getStaticPaths() {
                 src={serie.portada.mobile}
                 alt={`Portada de ${serie.title}`}
                 paddingTop="80%"
-                bgColor="rgb(246, 117, 153)"
+                bgColor={serieColor}
               />
             </div>
 
@@ -123,7 +144,7 @@ export async function getStaticPaths() {
                 src={serie.portada.desktop}
                 alt={`Portada de ${serie.title}`}
                 paddingTop="114%"
-                bgColor="rgb(246, 117, 153)"
+                bgColor={serieColor}
               />
             </div>
           </div>
