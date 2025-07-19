@@ -424,3 +424,24 @@
     font-size: 16pt;
     padding: 14px 0 10px 0;
 }
+
+/* Overlay para dar énfasis al submenú */
+.nav-submenu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 9999;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    pointer-events: none;
+}
+
+.nav-submenu-overlay--show {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}

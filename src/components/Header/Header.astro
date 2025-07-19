@@ -63,7 +63,7 @@
     </button>
 </header>
 
-
+<div class="nav-submenu-overlay"></div>
 <!-- SUBMENÚ DESKTOP -->
 <div class="nav-submenu-container nav-submenu-container--desktop">
   <div class="nav-submenu text-uppercase">
@@ -233,40 +233,46 @@ document.addEventListener('DOMContentLoaded', function () {
   const menuToggle = document.querySelector('.header__menu-alternar');
   const submenuDes = document.querySelector('.nav-submenu-container--desktop');
   const submenuMob = document.querySelector('.nav-submenu-container--mobile');
+  const overlay = document.querySelector('.nav-submenu-overlay');
 
-  function closeAllMenus() {
+function closeAllMenus() {
+  if (submenuDes) submenuDes.classList.remove('nav-submenu-container--show');
+  if (submenuMob) submenuMob.classList.remove('nav-submenu-container--show');
+  if (menuToggle) menuToggle.classList.remove('header__menu-alternar--open');
+  if (overlay) overlay.classList.remove('nav-submenu-overlay--show'); // ← NUEVA LÍNEA
+}
+
+function openMenuForCurrentBreakpoint() {
+  const isMobile = window.matchMedia('(max-width: 767px)').matches;
+  if (isMobile) {
     if (submenuDes) submenuDes.classList.remove('nav-submenu-container--show');
+    if (submenuMob) submenuMob.classList.add('nav-submenu-container--show');
+    if (menuToggle) menuToggle.classList.add('header__menu-alternar--open');
+    if (overlay) overlay.classList.add('nav-submenu-overlay--show'); // ← NUEVA LÍNEA
+  } else {
     if (submenuMob) submenuMob.classList.remove('nav-submenu-container--show');
-    if (menuToggle) menuToggle.classList.remove('header__menu-alternar--open');
+    if (submenuDes) submenuDes.classList.add('nav-submenu-container--show');
+    if (menuToggle) menuToggle.classList.add('header__menu-alternar--open');
+    if (overlay) overlay.classList.add('nav-submenu-overlay--show'); // ← NUEVA LÍNEA
   }
+}
 
-  function openMenuForCurrentBreakpoint() {
-    const isMobile = window.matchMedia('(max-width: 767px)').matches;
-    if (isMobile) {
-      if (submenuDes) submenuDes.classList.remove('nav-submenu-container--show');
-      if (submenuMob) submenuMob.classList.add('nav-submenu-container--show');
-      if (menuToggle) menuToggle.classList.add('header__menu-alternar--open');
-    } else {
-      if (submenuMob) submenuMob.classList.remove('nav-submenu-container--show');
-      if (submenuDes) submenuDes.classList.add('nav-submenu-container--show');
-      if (menuToggle) menuToggle.classList.add('header__menu-alternar--open');
-    }
+function toggleMenu() {
+  const isMobile = window.matchMedia('(max-width: 767px)').matches;
+  if (isMobile) {
+    if (submenuDes) submenuDes.classList.remove('nav-submenu-container--show');
+    if (submenuMob) submenuMob.classList.toggle('nav-submenu-container--show');
+    if (menuToggle && submenuMob)
+      menuToggle.classList.toggle('header__menu-alternar--open', submenuMob.classList.contains('nav-submenu-container--show'));
+    if (overlay && submenuMob) overlay.classList.toggle('nav-submenu-overlay--show', submenuMob.classList.contains('nav-submenu-container--show')); // ← NUEVA LÍNEA
+  } else {
+    if (submenuMob) submenuMob.classList.remove('nav-submenu-container--show');
+    if (submenuDes) submenuDes.classList.toggle('nav-submenu-container--show');
+    if (menuToggle && submenuDes)
+      menuToggle.classList.toggle('header__menu-alternar--open', submenuDes.classList.contains('nav-submenu-container--show'));
+    if (overlay && submenuDes) overlay.classList.toggle('nav-submenu-overlay--show', submenuDes.classList.contains('nav-submenu-container--show')); // ← NUEVA LÍNEA
   }
-
-  function toggleMenu() {
-    const isMobile = window.matchMedia('(max-width: 767px)').matches;
-    if (isMobile) {
-      if (submenuDes) submenuDes.classList.remove('nav-submenu-container--show');
-      if (submenuMob) submenuMob.classList.toggle('nav-submenu-container--show');
-      if (menuToggle && submenuMob)
-        menuToggle.classList.toggle('header__menu-alternar--open', submenuMob.classList.contains('nav-submenu-container--show'));
-    } else {
-      if (submenuMob) submenuMob.classList.remove('nav-submenu-container--show');
-      if (submenuDes) submenuDes.classList.toggle('nav-submenu-container--show');
-      if (menuToggle && submenuDes)
-        menuToggle.classList.toggle('header__menu-alternar--open', submenuDes.classList.contains('nav-submenu-container--show'));
-    }
-  }
+}
 
   if (menuToggle && submenuDes && submenuMob) {
     menuToggle.addEventListener('click', toggleMenu);
