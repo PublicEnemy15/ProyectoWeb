@@ -26,6 +26,7 @@ import svgClose from "@/assets/close-icon.svg";
 </div>
 
 <script>
+    window.rataLoadSrc = "{ratImg.src}";
     const chatIcon = document.querySelector('.ChadBot');
     const chatDropUp = document.getElementById('chatDropUp');
     const chatClose = document.getElementById('chatClose');
@@ -69,8 +70,7 @@ import svgClose from "@/assets/close-icon.svg";
     }
 
     function answersChat(message:string){
-        const rataloadAlt = "rata-load"
-        const imgRata = "<Image src='@/assets/rat.webp' alt="+rataloadAlt+">"
+        const imgRata = `<img src="${window.rataLoadSrc}" alt="rata-load" loading="lazy" width="40" height="40">`;
         if (message.includes("integrantes") || message.includes("grupo")){
             return "Integrantes:<br>Yefferson Farfan<br>Gabriel Flores<br>Polux Morales<br>Walter Rosell<br>Franco Siesquen";
         }
