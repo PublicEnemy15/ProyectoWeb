@@ -26,7 +26,6 @@ import svgClose from "@/assets/close-icon.svg";
 </div>
 
 <script>
-    window.rataLoadSrc = "{ratImg.src}";
     const chatIcon = document.querySelector('.ChadBot');
     const chatDropUp = document.getElementById('chatDropUp');
     const chatClose = document.getElementById('chatClose');
@@ -70,7 +69,6 @@ import svgClose from "@/assets/close-icon.svg";
     }
 
     function answersChat(message:string){
-        const imgRata = `<img src="${window.rataLoadSrc}" alt="rata-load" loading="lazy" width="40" height="40">`;
         if (message.includes("integrantes") || message.includes("grupo")){
             return "Integrantes:<br>Yefferson Farfan<br>Gabriel Flores<br>Polux Morales<br>Walter Rosell<br>Franco Siesquen";
         }
@@ -82,13 +80,13 @@ import svgClose from "@/assets/close-icon.svg";
             return "Este proyecto es para el curso de Taller Web";
         }
         else if (message.includes("paginas")){
-            return "Muchas paginas o secciones siguen bajo construccion, proximamente disponibles<br>"+imgRata;
+            return "Muchas paginas o secciones siguen bajo construccion, proximamente disponibles";
         }
         else if (message.includes("ti")){
-            return "Yo estoy para resolver sus dudas y guiarlo, proximamente estaré mejorado<br>"+imgRata;
+            return "Yo estoy para resolver sus dudas y guiarlo, proximamente estaré mejorado";
         }
         else{
-            return "noc<br>"+imgRata;
+            return "noc";
         }
     }
 
