@@ -10,12 +10,12 @@ export const seriesData = [
       mobile: '/imagen/gokurakugai/2.webp',
     },
     pg: '192 páginas',
-    enlace: 'https://zonatmo.com/viewer/557347620484cf276a1351f8dec1877f/cascade',
+    enlace: 'https://mangaplus.shueisha.co.jp/viewer/1018629?timestamp=1752985011239',
     edadr: '+16',
     status: 'En curso',
     recursos: [
       {
-        nombre: 'Mangaplus',
+        nombre: 'Manga plus',
         url: 'https://mangaplus.shueisha.co.jp/titles/100230'
       },
     ],
@@ -24,19 +24,22 @@ export const seriesData = [
       {
         title: 'Volumen 1',
         img: '/imagen/gokurakugai/1.webp',
-        link: 'https://zonatmo.com/viewer/557347620484cf276a1351f8dec1877f/cascade',
+        link: 'https://mangaplus.shueisha.co.jp/viewer/1018629?timestamp=1752985011239',
         fecha: '01/03/2023',
         paginas: 192
       },
       {
         title: 'Volumen 2',
         img: '/imagen/gokurakugai/3.webp',
-        link: 'https://zonatmo.com/viewer/557347620484cf276a1351f8dec1877f/cascade',
+        link: 'https://mangaplus.shueisha.co.jp/viewer/1018630?timestamp=1752985037280',
         fecha: '15/06/2023',
         paginas: 200
       }
     ]
   },
+
+  //
+
   {
     slug: 'gachiakuta',
     title: 'Gachiakuta',
@@ -52,8 +55,8 @@ export const seriesData = [
     status: 'En curso',
     recursos: [
       {
-        nombre: 'Mangaplus',
-        url: 'https://mangaplus.shueisha.co.jp/titles/200033'
+        nombre: 'VisorManga',
+        url: 'https://www.visormanga.com/manga/gachiakuta'
       },
     ],
     tags: ['Acción', 'Postapocalíptico', 'Crimen', 'Drama'],
@@ -67,6 +70,9 @@ export const seriesData = [
       }
     ]
   },
+
+  //
+
   {
     slug: 'the-climber',
     title: 'The Climber',
@@ -77,16 +83,21 @@ export const seriesData = [
       mobile: '/imagen/theclimber/portada.webp',
     },
     pg: '210 páginas',
-    enlace: '#',
+    enlace: 'https://mangadex.org/chapter/e4eb466a-2797-4b65-aa0f-7213581a301c/1',
     edadr: '+16',
     status: 'Finalizado',
-    recursos: [],
+    recursos: [
+      {
+        nombre: 'MangaDex',
+        url: 'https://mangadex.org/title/bb8310e4-6050-4a43-984e-f7bbdfce23b1/kokou-no-hito'
+      },
+    ],
     tags: ['Deporte', 'Psicológico', 'Drama', 'Superación'],
     volumes: [
       {
         title: 'Volumen 1',
         img: '/imagen/theclimber/1.webp',
-        link: '#',
+        link: 'https://mangadex.org/chapter/e4eb466a-2797-4b65-aa0f-7213581a301c/1',
         fecha: '10/05/2007',
         paginas: 210
       }
@@ -104,13 +115,13 @@ export const seriesData = [
       mobile: '/imagen/onepiece/portada.webp',
     },
     pg: 'Varía por volumen',
-    enlace: 'https://mangaplus.shueisha.co.jp/titles/100020',
+    enlace: 'https://mangaplus.shueisha.co.jp/viewer/2000767?timestamp=1752984527436',
     edadr: '+12',
     status: 'En curso',
     recursos: [
       {
-        nombre: 'Mangaplus',
-        url: 'https://mangaplus.shueisha.co.jp/titles/100020'
+        nombre: 'Manga plus',
+        url: 'https://mangaplus.shueisha.co.jp/titles/200016'
       }
     ],
     tags: ['Aventura', 'Acción', 'Fantasía', 'Comedia'],
@@ -118,12 +129,15 @@ export const seriesData = [
       {
         title: 'Volumen 1',
         img: '/imagen/onepiece/1.webp',
-        link: 'https://mangaplus.shueisha.co.jp/viewer/1000200',
+        link: 'https://mangaplus.shueisha.co.jp/viewer/2000767?timestamp=1752984527436',
         fecha: '20/07/1997',
         paginas: 192
       }
     ]
   },
+
+  //
+
   {
     slug: 'dragon-ball-super',
     title: 'Dragon Ball Super',
@@ -134,13 +148,13 @@ export const seriesData = [
       mobile: '/imagen/dragonballsuper/portada.webp',
     },
     pg: 'Varía por volumen',
-    enlace: 'https://mangaplus.shueisha.co.jp/titles/100034',
+    enlace: 'https://mangaplus.shueisha.co.jp/viewer/2000909?timestamp=1752986741036',
     edadr: '+12',
     status: 'En curso',
     recursos: [
       {
-        nombre: 'Mangaplus',
-        url: 'https://mangaplus.shueisha.co.jp/titles/100034'
+        nombre: 'Manga plus',
+        url: 'https://mangaplus.shueisha.co.jp/titles/200025'
       }
     ],
     tags: ['Acción', 'Artes Marciales', 'Fantasía'],
@@ -148,12 +162,15 @@ export const seriesData = [
       {
         title: 'Volumen 1',
         img: '/imagen/dragonballsuper/1.webp',
-        link: 'https://mangaplus.shueisha.co.jp/viewer/1000340',
+        link: 'https://mangaplus.shueisha.co.jp/viewer/2000909?timestamp=1752986741036',
         fecha: '20/06/2015',
         paginas: 208
       }
     ]
   },
+
+  //
+
   {
     slug: 'naruto',
     title: 'Naruto',
@@ -164,13 +181,13 @@ export const seriesData = [
       mobile: '/imagen/naruto/portada.webp',
     },
     pg: 'Varía por volumen',
-    enlace: 'https://mangaplus.shueisha.co.jp/titles/100020',
+    enlace: 'https://mangaplus.shueisha.co.jp/viewer/2000045?timestamp=1752986879144',
     edadr: '+13',
     status: 'Finalizado',
     recursos: [
       {
-        nombre: 'Mangaplus',
-        url: 'https://mangaplus.shueisha.co.jp/titles/100020'
+        nombre: 'Manga plus',
+        url: 'https://mangaplus.shueisha.co.jp/titles/200001'
       }
     ],
     tags: ['Acción', 'Aventura', 'Ninjas', 'Shonen'],
@@ -178,12 +195,15 @@ export const seriesData = [
       {
         title: 'Volumen 1',
         img: '/imagen/naruto/1.webp',
-        link: 'https://mangaplus.shueisha.co.jp/viewer/1000200',
+        link: 'https://mangaplus.shueisha.co.jp/viewer/2000045?timestamp=1752986879144',
         fecha: '21/09/1999',
         paginas: 192
       }
     ]
   },
+
+  //
+
   {
     slug: 'bleach',
     title: 'Bleach',
@@ -194,13 +214,13 @@ export const seriesData = [
       mobile: '/imagen/bleach/portada.webp'
     },
     pg: '220 páginas',
-    enlace: 'https://www.viz.com/bleach',
+    enlace: 'https://mangaplus.shueisha.co.jp/viewer/2000698?timestamp=1752987035183',
     edadr: '+16',
     status: 'Finalizado',
     recursos: [
       {
-        nombre: 'VIZ',
-        url: 'https://www.viz.com/bleach'
+        nombre: 'Manga plus',
+        url: 'https://mangaplus.shueisha.co.jp/titles/200012'
       }
     ],
     tags: ['Acción', 'Sobrenatural', 'Shinigami', 'Shonen'],
@@ -208,12 +228,15 @@ export const seriesData = [
       {
         title: 'Volumen 1',
         img: '/imagen/bleach/1.webp',
-        link: 'https://www.viz.com/read/manga/bleach/product/63',
+        link: 'https://mangaplus.shueisha.co.jp/viewer/2000698?timestamp=1752987035183',
         fecha: '05/08/2001',
         paginas: 220
       }
     ]
   },
+
+  //
+
   {
     slug: 'jujutsu-kaisen',
     title: 'Jujutsu Kaisen',
@@ -224,13 +247,13 @@ export const seriesData = [
       mobile: '/imagen/jujutsu/portada.webp'
     },
     pg: '192 páginas',
-    enlace: 'https://mangaplus.shueisha.co.jp/titles/100112',
+    enlace: 'https://mangaplus.shueisha.co.jp/viewer/2000800?timestamp=1752987131720',
     edadr: '+16',
     status: 'En curso',
     recursos: [
       {
-        nombre: 'Manga Plus',
-        url: 'https://mangaplus.shueisha.co.jp/titles/100112'
+        nombre: 'Manga plus',
+        url: 'https://mangaplus.shueisha.co.jp/titles/200018'
       }
     ],
     tags: ['Acción', 'Sobrenatural', 'Shonen', 'Oscuro'],
@@ -238,7 +261,7 @@ export const seriesData = [
       {
         title: 'Volumen 1',
         img: '/imagen/jujutsu/1.webp',
-        link: 'https://mangaplus.shueisha.co.jp/viewer/1001121',
+        link: 'https://mangaplus.shueisha.co.jp/viewer/2000800?timestamp=1752987131720',
         fecha: '04/07/2018',
         paginas: 192
       }
@@ -256,13 +279,13 @@ export const seriesData = [
       mobile: '/imagen/vinland/portada.webp'
     },
     pg: '210 páginas',
-    enlace: 'https://kodansha.us/series/vinland-saga/',
+    enlace: 'https://vinlandsagachapter.com/manga/vinland-saga-chapter-1/',
     edadr: '+18',
     status: 'En curso',
     recursos: [
       {
-        nombre: 'Kodansha',
-        url: 'https://kodansha.us/series/vinland-saga/'
+        nombre: 'VINLAND SAGA MANGA ONLINE',
+        url: 'https://vinlandsagachapter.com/'
       }
     ],
     tags: ['Histórico', 'Acción', 'Drama', 'Seinen'],
@@ -270,12 +293,15 @@ export const seriesData = [
       {
         title: 'Volumen 1',
         img: '/imagen/vinland/1.webp',
-        link: 'https://kodansha.us/product/vinland-saga-1/',
+        link: 'https://vinlandsagachapter.com/manga/vinland-saga-chapter-1/',
         fecha: '13/10/2005',
         paginas: 210
       }
     ]
   },
+
+  //
+
   {
     slug: 'berserk',
     title: 'Berserk',
@@ -286,13 +312,13 @@ export const seriesData = [
       mobile: '/imagen/berserk/portada.webp'
     },
     pg: '240 páginas',
-    enlace: 'https://www.darkhorse.com/Comics/3000-001/Berserk-Volume-1-TPB',
+    enlace: 'https://readberserk.com/chapter/berserk-chapter-001/',
     edadr: '+18',
     status: 'Inconcluso',
     recursos: [
       {
-        nombre: 'Dark Horse',
-        url: 'https://www.darkhorse.com/Comics/3000-001/Berserk-Volume-1-TPB'
+        nombre: 'READ BERSERK MANGA ONLINE',
+        url: 'https://readberserk.com/'
       }
     ],
     tags: ['Oscuro', 'Acción', 'Fantasía', 'Seinen'],
@@ -300,12 +326,15 @@ export const seriesData = [
       {
         title: 'Volumen 1',
         img: '/imagen/berserk/1.webp',
-        link: 'https://www.darkhorse.com/Comics/3000-001/Berserk-Volume-1-TPB',
+        link: 'https://readberserk.com/chapter/berserk-chapter-001/',
         fecha: '01/11/1990',
         paginas: 240
       }
     ]
   },
+
+  //
+
   {
     slug: 'vagabond',
     title: 'Vagabond',
@@ -316,13 +345,13 @@ export const seriesData = [
       mobile: '/imagen/vagabond/portada.webp'
     },
     pg: '216 páginas',
-    enlace: 'https://www.viz.com/vagabond',
+    enlace: 'https://readvagabond-manga.online/manga/vagabond-chapter-1-2/',
     edadr: '+18',
     status: 'Hiato',
     recursos: [
       {
-        nombre: 'VIZ',
-        url: 'https://www.viz.com/vagabond'
+        nombre: 'VAGABOND MANGA ONLINE',
+        url: 'https://readvagabond-manga.online/'
       }
     ],
     tags: ['Samurái', 'Histórico', 'Seinen', 'Filosofía'],
@@ -330,12 +359,15 @@ export const seriesData = [
       {
         title: 'Volumen 1',
         img: '/imagen/vagabond/1.webp',
-        link: 'https://www.viz.com/read/manga/vagabond/product/603',
+        link: 'https://readvagabond-manga.online/manga/vagabond-chapter-1-2/',
         fecha: '03/03/1999',
         paginas: 216
       }
     ]
   },
+
+  //
+
   {
     slug: 'tokyo-ghoul',
     title: 'Tokyo Ghoul',
@@ -346,13 +378,13 @@ export const seriesData = [
       mobile: '/imagen/tokyo/portada.webp'
     },
     pg: '224 páginas',
-    enlace: 'https://www.viz.com/tokyo-ghoul',
+    enlace: 'https://mangaplus.shueisha.co.jp/viewer/2000421?timestamp=1752988452382',
     edadr: '+18',
     status: 'Finalizado',
     recursos: [
       {
-        nombre: 'VIZ',
-        url: 'https://www.viz.com/tokyo-ghoul'
+        nombre: 'MANGA PLUS',
+        url: 'https://mangaplus.shueisha.co.jp/titles/200006'
       }
     ],
     tags: ['Terror', 'Acción', 'Drama', 'Seinen'],
@@ -360,7 +392,7 @@ export const seriesData = [
       {
         title: 'Volumen 1',
         img: '/imagen/tokyo/1.webp',
-        link: 'https://www.viz.com/read/manga/tokyo-ghoul/product/4311',
+        link: 'https://mangaplus.shueisha.co.jp/viewer/2000421?timestamp=1752988452382',
         fecha: '03/09/2011',
         paginas: 224
       }
@@ -378,13 +410,13 @@ export const seriesData = [
       mobile: '/imagen/kiminitodoke/portada.webp'
     },
     pg: '180 páginas',
-    enlace: 'https://www.viz.com/kimi-ni-todoke',
+    enlace: 'https://www.kiminitodoke.net/manga/kimi-ni-todoke-chapter-1/',
     edadr: '+13',
     status: 'Finalizado',
     recursos: [
       {
-        nombre: 'VIZ',
-        url: 'https://www.viz.com/kimi-ni-todoke'
+        nombre: 'KIMI NI TODOKE MANGA',
+        url: 'https://www.kiminitodoke.net/'
       }
     ],
     tags: ['Romance', 'Escolar', 'Shoujo', 'Drama'],
@@ -392,12 +424,15 @@ export const seriesData = [
       {
         title: 'Volumen 1',
         img: '/imagen/kiminitodoke/1.webp',
-        link: 'https://www.viz.com/read/manga/kimi-ni-todoke/product/2067',
+        link: 'https://www.kiminitodoke.net/manga/kimi-ni-todoke-chapter-1/',
         fecha: '11/05/2006',
         paginas: 180
       }
     ]
   },
+
+  //
+
   {
     slug: 'ao-haru-ride',
     title: 'Ao Haru Ride',
@@ -408,13 +443,13 @@ export const seriesData = [
       mobile: '/imagen/aoharuride/portada.webp'
     },
     pg: '192 páginas',
-    enlace: 'https://www.viz.com/ao-haru-ride',
+    enlace: 'https://ao-haru-ride.online/manga/ao-haru-ride-chapter-1-2/',
     edadr: '+13',
     status: 'Finalizado',
     recursos: [
       {
-        nombre: 'VIZ',
-        url: 'https://www.viz.com/ao-haru-ride'
+        nombre: 'AO HARU RIDE MANGA ONLINE',
+        url: 'https://ao-haru-ride.online/'
       }
     ],
     tags: ['Romance', 'Shoujo', 'Escolar', 'Drama'],
@@ -422,12 +457,15 @@ export const seriesData = [
       {
         title: 'Volumen 1',
         img: '/imagen/aoharuride/1.webp',
-        link: 'https://www.viz.com/read/manga/ao-haru-ride/product/6187',
+        link: 'https://ao-haru-ride.online/manga/ao-haru-ride-chapter-1-2/',
         fecha: '13/01/2011',
         paginas: 192
       }
     ]
   },
+
+  //
+
   {
     slug: 'wotakoi',
     title: 'Wotakoi: El amor es difícil para un otaku',
@@ -438,13 +476,13 @@ export const seriesData = [
       mobile: '/imagen/wotakoi/portada.webp'
     },
     pg: '128 páginas',
-    enlace: 'https://kodansha.us/series/wotakoi-love-is-hard-for-otaku/',
+    enlace: 'https://bato.to/chapter/1591865',
     edadr: '+15',
     status: 'Finalizado',
     recursos: [
       {
-        nombre: 'Kodansha',
-        url: 'https://kodansha.us/series/wotakoi-love-is-hard-for-otaku/'
+        nombre: 'BATO.TO',
+        url: 'https://bato.to/series/82386/wotaku-ni-koi-wa-muzukashii-official'
       }
     ],
     tags: ['Romance', 'Comedia', 'Oficina', 'Otaku'],
@@ -452,12 +490,15 @@ export const seriesData = [
       {
         title: 'Volumen 1',
         img: '/imagen/wotakoi/1.webp',
-        link: 'https://kodansha.us/product/wotakoi-love-is-hard-for-otaku-1/',
+        link: 'https://bato.to/chapter/1591865',
         fecha: '05/04/2015',
         paginas: 128
       }
     ]
   },
+
+  //
+
   {
     slug: 'kaguya-sama',
     title: 'Kaguya-sama: Love is War',
@@ -468,13 +509,13 @@ export const seriesData = [
       mobile: '/imagen/kaguyasama/portada.webp'
     },
     pg: '210 páginas',
-    enlace: 'https://www.viz.com/kaguya-sama-love-is-war',
+    enlace: 'https://guya.cubari.moe/read/manga/Kaguya-Wants-To-Be-Confessed-To/1/1/',
     edadr: '+13',
     status: 'Finalizado',
     recursos: [
       {
-        nombre: 'VIZ',
-        url: 'https://www.viz.com/kaguya-sama-love-is-war'
+        nombre: 'KAGUYA-SAMA MANGA',
+        url: 'https://guya.cubari.moe/'
       }
     ],
     tags: ['Comedia', 'Romance', 'Escolar', 'Psicológico'],
@@ -482,12 +523,15 @@ export const seriesData = [
       {
         title: 'Volumen 1',
         img: '/imagen/kaguyasama/1.webp',
-        link: 'https://www.viz.com/read/manga/kaguya-sama-love-is-war/product/5919',
+        link: 'https://guya.cubari.moe/read/manga/Kaguya-Wants-To-Be-Confessed-To/1/1/',
         fecha: '07/05/2015',
         paginas: 210
       }
     ]
   },
+
+  //
+
   {
     slug: 'tonikaku-kawaii',
     title: 'Tonikaku Kawaii',
@@ -498,13 +542,13 @@ export const seriesData = [
       mobile: '/imagen/gtonikaku/portada.webp'
     },
     pg: '190 páginas',
-    enlace: 'https://www.viz.com/tonikaku-kawaii',
+    enlace: 'https://mangadex.org/chapter/eebb969d-d67b-4716-9f35-c4ade6cd7c34/1',
     edadr: '+13',
     status: 'En curso',
     recursos: [
       {
-        nombre: 'VIZ',
-        url: 'https://www.viz.com/tonikaku-kawaii'
+        nombre: 'MANGADEX',
+        url: 'https://mangadex.org/title/30f3ac69-21b6-45ad-a110-d011b7aaadaa/tonikaku-kawaii?order=asc'
       }
     ],
     tags: ['Romance', 'Comedia', 'Slice of Life', 'Misterio', 'Matrimonio'],
@@ -512,7 +556,7 @@ export const seriesData = [
       {
         title: 'Volumen 1',
         img: '/imagen/tonikaku/1.webp',
-        link: 'https://www.viz.com/read/manga/tonikaku-kawaii/product/6522',
+        link: 'https://mangadex.org/chapter/eebb969d-d67b-4716-9f35-c4ade6cd7c34/1',
         fecha: '18/02/2018',
         paginas: 190
       }
@@ -530,26 +574,29 @@ export const seriesData = [
       mobile: '/imagen/uzumaki/portada.webp'
     },
     pg: '648 páginas',
-    enlace: 'https://www.viz.com/read/manga/uzumaki/product/699',
+    enlace: 'https://w3.junji-ito.com/manga/uzumaki-chapter-1/',
     edadr: '+18',
     status: 'Finalizado',
     recursos: [
       {
-        nombre: 'VIZ',
-        url: 'https://www.viz.com/read/manga/uzumaki/product/699'
+        nombre: 'JUNJI ITO MANGA ONLINE',
+        url: 'https://w3.junji-ito.com/uzumaki/'
       }
     ],
     tags: ['Terror', 'Psicológico', 'Horror corporal', 'Sobrenatural'],
     volumes: [
       {
-        title: 'Volumen único',
+        title: 'Volumen 1',
         img: '/imagen/uzumaki/1.webp',
-        link: 'https://www.viz.com/read/manga/uzumaki/product/699',
+        link: 'https://w3.junji-ito.com/manga/uzumaki-chapter-1/',
         fecha: '15/08/2000',
         paginas: 648
       }
     ]
   },
+
+  //
+
   {
     slug: 'ptsd-radio',
     title: 'PTSD Radio',
@@ -560,13 +607,13 @@ export const seriesData = [
       mobile: '/imagen/pstsdradio/portada.webp'
     },
     pg: '210 páginas',
-    enlace: 'https://kodansha.us/series/ptsd-radio/',
+    enlace: 'https://mangadex.org/chapter/2d5fef40-ec77-4ab8-83c7-4734ef20b8a0',
     edadr: '+18',
     status: 'En curso',
     recursos: [
       {
-        nombre: 'Kodansha',
-        url: 'https://kodansha.us/series/ptsd-radio/'
+        nombre: 'MANGADEX',
+        url: 'https://mangadex.org/title/2954a23f-22c1-4bce-a2fc-0a0dc3e201a7/ptsd-radio?order=asc'
       }
     ],
     tags: ['Terror', 'Antología', 'Psicológico', 'Leyendas'],
@@ -574,12 +621,15 @@ export const seriesData = [
       {
         title: 'Volumen 1',
         img: '/imagen/pstsdradio/1.webp',
-        link: 'https://kodansha.us/product/ptsd-radio-1/',
+        link: 'https://mangadex.org/chapter/2d5fef40-ec77-4ab8-83c7-4734ef20b8a0',
         fecha: '01/02/2014',
         paginas: 210
       }
     ]
   },
+
+  //
+
   {
     slug: 'saiko-kuro',
     title: 'Saiko Kuro',
@@ -590,13 +640,13 @@ export const seriesData = [
       mobile: '/imagen/saikokuro/portada.webp'
     },
     pg: '180 páginas',
-    enlace: '#',
+    enlace: 'https://mangadex.org/title/3f0c534c-04b9-4954-afc8-2c8908a3b063/saiko',
     edadr: '+18',
     status: 'Desconocido',
     recursos: [
       {
-        nombre: 'Sin información oficial',
-        url: '#'
+        nombre: 'MANGADEX',
+        url: 'https://mangadex.org/title/3f0c534c-04b9-4954-afc8-2c8908a3b063/saiko'
       }
     ],
     tags: ['Terror', 'Surrealismo', 'Experimental', 'Psicológico'],
@@ -604,15 +654,18 @@ export const seriesData = [
       {
         title: 'Volumen único',
         img: '/imagen/saikokuro/1.webp',
-        link: '#',
+        link: 'https://mangadex.org/title/3f0c534c-04b9-4954-afc8-2c8908a3b063/saiko',
         fecha: '??/??/20??',
         paginas: 180
       }
     ]
   },
+
+  //
+
   {
     slug: 'pumpkin-knight',
-    title: 'Pumpkin Knight',
+    title: 'Pumpkin night',
     author: 'Masaya Hokazono',
     description: 'Una historia de terror y gore donde una asesina enmascarada con cabeza de calabaza busca venganza contra sus antiguos compañeros de secundaria. Repleta de sangre, muertes creativas y un trasfondo trágico que revela la oscuridad humana.',
     portada: {
@@ -620,13 +673,13 @@ export const seriesData = [
       mobile: '/imagen/pumpkin/portada.webp'
     },
     pg: '170 páginas',
-    enlace: 'https://mangadex.org/title/738c36f2-5cb3-4f0f-91c6-f3e3b19fa3c9/pumpkin-knight',
+    enlace: 'https://mangadex.org/chapter/517f38ce-9c10-4e3d-8db4-728334e08b74',
     edadr: '+18',
     status: 'Finalizado',
     recursos: [
       {
         nombre: 'MangaDex',
-        url: 'https://mangadex.org/title/738c36f2-5cb3-4f0f-91c6-f3e3b19fa3c9/pumpkin-knight'
+        url: 'https://mangadex.org/title/4e421eb8-d4a0-4096-86db-ca5e3fc42c5d/pumpkin-night?order=asc'
       }
     ],
     tags: ['Terror', 'Gore', 'Venganza', 'Psicológico'],
@@ -634,7 +687,7 @@ export const seriesData = [
       {
         title: 'Volumen 1',
         img: '/imagen/pumpkin/1.webp',
-        link: 'https://mangadex.org/title/738c36f2-5cb3-4f0f-91c6-f3e3b19fa3c9/pumpkin-knight',
+        link: 'https://mangadex.org/chapter/517f38ce-9c10-4e3d-8db4-728334e08b74',
         fecha: '18/10/2017',
         paginas: 170
       }
@@ -650,13 +703,13 @@ export const seriesData = [
       mobile: '/imagen/litchi/portada.webp'
     },
     pg: '180 páginas',
-    enlace: 'https://sevenseasentertainment.com/series/lychee-light-club/',
+    enlace: 'https://mangadex.org/chapter/73a74f0f-45fd-4f34-aefb-51a7b460d4dc',
     edadr: '+18',
     status: 'Finalizado',
     recursos: [
       {
-        nombre: 'Seven Seas',
-        url: 'https://sevenseasentertainment.com/series/lychee-light-club/'
+        nombre: 'MANGADEX',
+        url: 'https://mangadex.org/title/07053359-746d-4217-82e5-add1e2c99239/lychee-light-club?order=asc'
       }
     ],
     tags: ['Terror', 'Psicológico', 'Culto', 'Gore'],
@@ -664,7 +717,7 @@ export const seriesData = [
       {
         title: 'Volumen único',
         img: '/imagen/litchi/1.webp',
-        link: 'https://sevenseasentertainment.com/series/lychee-light-club/',
+        link: 'https://mangadex.org/chapter/73a74f0f-45fd-4f34-aefb-51a7b460d4dc',
         fecha: '20/04/2006',
         paginas: 180
       }
@@ -683,16 +736,21 @@ export const seriesData = [
       mobile: '/imagen/kaiketsu/portada.webp',
     },
     pg: '96 páginas',
-    enlace: 'https://zonatmo.com/viewer/kaiketsu-zorori-vol1',
+    enlace: 'https://mangadex.org/chapter/7c3e4299-3add-4703-812b-f6b2e532160f',
     edadr: 'ATP',
     status: 'En curso',
-    recursos: [],
+    recursos: [
+      {
+        nombre: 'MANGADEX',
+        url: 'https://mangadex.org/title/0394d3dd-4029-4314-94ec-02e19985e451/kaiketsu-zorori-sorairo-ongaku'
+      }
+    ],
     tags: ['Infantil', 'Aventura', 'Comedia'],
     volumes: [
       {
-        title: 'Volumen 1',
+        title: 'ONE SHOT',
         img: '/imagen/kaiketsu/1.webp',
-        link: 'https://zonatmo.com/viewer/kaiketsu-zorori-vol1',
+        link: 'https://mangadex.org/chapter/7c3e4299-3add-4703-812b-f6b2e532160f',
         fecha: '25/11/1987',
         paginas: 96
       }
@@ -701,34 +759,37 @@ export const seriesData = [
 
   {
     slug: 'monster',
-    title: 'Monsters',
+    title: 'Monster',
     author: 'Eiichiro Oda',
-    description: 'Monsters es una historia corta escrita e ilustrada por Eiichiro Oda antes de crear One Piece. Nos presenta a Ryuma, un samurái errante que llega a un pueblo aterrorizado por un dragón. La historia mezcla aventura, honor y combate con una narrativa condensada pero poderosa. Fue tan popular que Ryuma pasó a formar parte del universo de One Piece como un personaje legendario.',
+    description: 'Monster es una historia corta escrita e ilustrada por Eiichiro Oda antes de crear One Piece. Nos presenta a Ryuma, un samurái errante que llega a un pueblo aterrorizado por un dragón. La historia mezcla aventura, honor y combate con una narrativa condensada pero poderosa. Fue tan popular que Ryuma pasó a formar parte del universo de One Piece como un personaje legendario.',
     portada: {
       desktop: '/imagen/monster/portada.webp',
       mobile: '/imagen/monster/portada.webp',
     },
     pg: '55 páginas',
-    enlace: 'https://zonatmo.com/viewer/monsters-vol1',
+    enlace: 'https://read-monster.com/manga/monster-chapter-1/',
     edadr: '+13',
     status: 'One-shot',
     recursos: [
       {
-        nombre: 'Anime (Especial TV)',
-        url: 'https://www.crunchyroll.com/series/GVDHX8J14/monsters-ima-mahoutsukai-shirazu'
+        nombre: 'MONSTER MANGA ONLINE',
+        url: 'https://read-monster.com/'
       }
     ],
     tags: ['Aventura', 'Samuráis', 'Fantasía'],
     volumes: [
       {
-        title: 'One-shot',
+        title: 'Volumen 1',
         img: '/imagen/monster/1.webp',
-        link: 'https://zonatmo.com/viewer/monsters-vol1',
+        link: 'https://read-monster.com/manga/monster-chapter-1/',
         fecha: '30/10/1994',
         paginas: 55
       }
     ]
   },
+
+  //
+
   {
     slug: 'akira',
     title: 'AKIRA',
@@ -739,24 +800,27 @@ export const seriesData = [
       mobile: '/imagen/akira/2.webp',
     },
     pg: '362 páginas',
-    enlace: 'https://zonatmo.com/viewer/akira-vol1',
+    enlace: 'https://akiramanga.com/manga/akira-chapter-1/',
     edadr: '+18',
     status: 'Finalizado',
     recursos: [
       { nombre: 'Anime', url: 'https://www.crunchyroll.com/akira' },
-      { nombre: 'Manga', url: 'https://www.kodansha.us/series/akira/' }
+      { nombre: 'AKIRA MANGA ONLINE', url: 'https://akiramanga.com/' }
     ],
     tags: ['Cyberpunk', 'Acción', 'Psicológico', 'Distopía'],
     volumes: [
       {
         title: 'Volumen 1',
         img: '/imagen/akira/1.webp',
-        link: 'https://zonatmo.com/viewer/akira-vol1',
+        link: 'https://akiramanga.com/manga/akira-chapter-1/',
         fecha: '20/09/1982',
         paginas: 362
       }
     ]
   },
+
+  //
+
   {
     slug: 'golden-kamuy',
     title: 'Golden Kamuy',
@@ -767,19 +831,19 @@ export const seriesData = [
       mobile: '/imagen/goldenkamuy/2.webp',
     },
     pg: '206 páginas',
-    enlace: 'https://zonatmo.com/viewer/golden-kamuy-vol1',
+    enlace: 'https://www.goldenkamuy.org/comic/goldenkamuy-chapter-1/',
     edadr: '+18',
     status: 'Finalizado',
     recursos: [
       { nombre: 'Anime', url: 'https://www.crunchyroll.com/golden-kamuy' },
-      { nombre: 'Manga', url: 'https://www.viz.com/golden-kamuy' }
+      { nombre: 'GOLDEN KAMUY MANGA ONLINE', url: 'https://www.goldenkamuy.org/' }
     ],
     tags: ['Histórico', 'Aventura', 'Seinen', 'Acción'],
     volumes: [
       {
         title: 'Volumen 1',
         img: '/imagen/goldenkamuy/1.webp',
-        link: 'https://zonatmo.com/viewer/golden-kamuy-vol1',
+        link: 'https://www.goldenkamuy.org/comic/goldenkamuy-chapter-1/',
         fecha: '19/08/2014',
         paginas: 206
       }
